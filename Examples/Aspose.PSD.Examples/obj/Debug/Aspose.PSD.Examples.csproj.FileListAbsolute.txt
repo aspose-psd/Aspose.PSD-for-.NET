@@ -1,0 +1,8 @@
+C:\Users\Muhammad\Desktop\TestExp\Aspose.PSD.Examples\Aspose.PSD.Examples\bin\Debug\Aspose.PSD.Examples.exe.config
+C:\Users\Muhammad\Desktop\TestExp\Aspose.PSD.Examples\Aspose.PSD.Examples\bin\Debug\Aspose.PSD.Examples.exe
+C:\Users\Muhammad\Desktop\TestExp\Aspose.PSD.Examples\Aspose.PSD.Examples\bin\Debug\Aspose.PSD.Examples.pdb
+C:\Users\Muhammad\Desktop\TestExp\Aspose.PSD.Examples\Aspose.PSD.Examples\bin\Debug\Aspose.PSD.dll
+C:\Users\Muhammad\Desktop\TestExp\Aspose.PSD.Examples\Aspose.PSD.Examples\bin\Debug\Aspose.PSD.xml
+C:\Users\Muhammad\Desktop\TestExp\Aspose.PSD.Examples\Aspose.PSD.Examples\obj\Debug\Aspose.PSD.Examples.csprojResolveAssemblyReference.cache
+C:\Users\Muhammad\Desktop\TestExp\Aspose.PSD.Examples\Aspose.PSD.Examples\obj\Debug\Aspose.PSD.Examples.exe
+C:\Users\Muhammad\Desktop\TestExp\Aspose.PSD.Examples\Aspose.PSD.Examples\obj\Debug\Aspose.PSD.Examples.pdb
