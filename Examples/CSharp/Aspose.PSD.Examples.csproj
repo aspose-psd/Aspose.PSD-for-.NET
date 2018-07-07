@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aspose\Conversion\LoadingFromStream.cs" />
     <Compile Include="Aspose\Conversion\SavingtoStream.cs" />
     <Compile Include="Aspose\Conversion\SavingtoDisk.cs" />
     <Compile Include="Aspose\Conversion\SettingforReplacingMissingFonts.cs" />

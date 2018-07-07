@@ -48,6 +48,7 @@ namespace Aspose.PSD.Examples
             //SettingforReplacingMissingFonts.Run();
             //SavingtoDisk.Run();
             //SavingtoStream.Run();
+            //LoadingFromStream.Run();
             //ExportImagesinMultiThreadEnv.Run();
 
 
@@ -64,7 +65,7 @@ namespace Aspose.PSD.Examples
 
 
             //This one failed
-           // CreatingUsingStream.Run();
+            // CreatingUsingStream.Run();
 
 
             //CroppingbyShifts.Run();
