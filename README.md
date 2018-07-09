@@ -20,5 +20,5 @@ Directory | Description
 + **Product Home:** [Aspose.PSD for .NET](https://products.aspose.com/psd/net)
 + **Download:** [Download Aspose.PSD for .NET](https://www.nuget.org/packages/Aspose.Psd/)
 + **Documentation:** [Aspose.PSD for .NET Documentation](https://docs.aspose.com/display/psdnet/Home)
-+ **Forum:** [Aspose.PSD for .NET Forum](https://forum.aspose.com/c/aspose-psd-product-family)
++ **Forum:** [Aspose.PSD for .NET Forum](https://forum.aspose.com/c/psd)
 + **Blog:** [Aspose.PSD for .NET Blog](https://blog.aspose.com/category/aspose-products/aspose.psd-product-family/)
