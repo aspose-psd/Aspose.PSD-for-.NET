@@ -6,6 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Aspose.PSD.Examples.Aspose.Conversion;
 using Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages;
+using Aspose.PSD.Examples.Aspose.DrawingImages;
+using Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.JPEG;
+using Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PNG;
+using Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD;
+using Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.TIFF;
 using Aspose.PSD.Examples.Licensing;
 
 namespace Aspose.PSD.Examples
@@ -82,6 +87,78 @@ namespace Aspose.PSD.Examples
             //BluranImage.Run();
             //VerifyImageTransparency.Run();
             //ImplementLossyGIFCompressor.Run();
+            ForceFontCache.Run();
+            FontReplacement.Run();
+
+            //Drawing Images
+            DrawingLines.Run();
+            DrawingEllipse.Run();
+            DrawingRectangle.Run();
+            DrawingArc.Run();
+            DrawingBezier.Run();
+            CoreDrawingFeatures.Run();
+            DrawingUsingGraphics.Run();
+            DrawingUsingGraphicsPath.Run();
+
+            //Modifying and Converting Images
+            //JPEG
+            ReadAllEXIFTags.Run();
+            ReadSpecificEXIFTagsInformation.Run();
+            WritingAndModifyingEXIFData.Run();
+            ExtractThumbnailFromPSD.Run();
+            ExtractThumbnailFromJFIF.Run();
+            AddThumbnailToJFIFSegment.Run();
+            AddThumbnailToEXIFSegment.Run();
+            ReadandModifyJpegEXIFTags.Run();
+            ReadAllEXIFTagList.Run();
+            AutoCorrectOrientationOfJPEGImages.Run();
+            SupportForJPEG_LSWithCMYK.Run();
+            SupportFor2_7BitsJPEG.Run();
+            ColorTypeAndCompressionType.Run();
+
+            //PSD
+            ExportImageToPSD.Run();
+            ImportImageToPSDLayer.Run();
+            ColorReplacementInPSD.Run();
+            CreateThumbnailsFromPSDFiles.Run();
+            CreateIndexedPSDFiles.Run();
+            ExportPSDLayerToRasterImage.Run();
+            UpdateTextLayerInPSDFile.Run();
+            DetectFlattenedPSD.Run();
+            MergePSDlayers.Run();
+            GrayScaleSupportForAlpha.Run();
+            SupportLayerForPSD.Run();
+
+
+            //PNG
+            SpecifyTransparency.Run();
+            SettingResolution.Run();
+            CompressingFiles.Run();
+            SpecifyBitDepth.Run();
+            ApplyFilterMethod.Run();
+            ChangeBackgroundColor.Run();
+
+            //TIFF
+            ExportToMultiPageTiff.Run();
+            TiffOptionsConfiguration.Run();
+            TIFFwithDeflateCompression.Run();
+            TIFFwithAdobeDeflateCompression.Run();
+            CompressingTiff.Run();
+
+
+
+            //Technical Articles
+            UncompressedImageUsingFile.Run();
+            UncompressedImageStreamObject.Run();
+            ControllCacheReallocation.Run();
+            AddWatermark.Run();
+            AddDiagnolWatermark.Run();
+            ColorConversionUsingICCProfiles.Run();
+            ColorConversionUsingDefaultProfiles.Run();
+            AddSignatureToImage.Run();
+            SupportForInterruptMonitor.Run();
+
+
 
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
