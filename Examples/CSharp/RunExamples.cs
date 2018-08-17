@@ -29,8 +29,10 @@ namespace Aspose.PSD.Examples
             //Metered Licensing
             //MeteredLicensing.Run();
             String licPath = GetDataDir_PSD() + @"Aspose.PSD.NET.lic";
-            //License lic = new License();
-            //lic.SetLicense(licPath);
+            License lic = new License();
+     //       lic.SetLicense(licPath);
+            lic.SetLicense(@"C:\Aspose Data\Licenses\Aspose.Total.lic");
+
             //bool isLicensd = lic.IsLicensed;
 
             //// =====================================================
@@ -55,7 +57,31 @@ namespace Aspose.PSD.Examples
             //SavingtoStream.Run();
             //LoadingFromStream.Run();
             //ExportImagesinMultiThreadEnv.Run();
-
+            //LayerCreationDateTime.Run();
+            //SheetColorHighlighting.Run();
+            //MergeOnePSDlayerToOther.Run();
+            //TextLayerBoundBox.Run();
+            //AddIopaResource.Run();
+            //LayerEffectsForPSD.Run();
+            //InterruptMonitorTest.Run();
+            //PossibilityToFlattenLayers.Run();
+            //FillOpacityOfLayers.Run ();
+            //RenderingOfCurvesAdjustmentLayer.Run();
+            //AddCurvesAdjustmentLayer.Run();
+            //RenderingOfLevelAdjustmentLayer.Run();
+            //AddLevelAdjustmentLayer.Run();
+            //AddChannelMixerAdjustmentLayer.Run();
+            AddHueSaturationAdjustmentLayer.Run();
+            //RenderingExposureAdjustmentLayer.Run();
+            //RenderingExportOfChannelMixerAdjusmentLyer.Run();
+            //SupportOfClippingMask.Run();
+            //SupportOfLayerMask.Run();
+            //ManagePhotoFilterAdjustmentLayer.Run();
+            //ManageChannelMixerAdjusmentLayer.Run();
+            //ManageExposureAdjustmentLayer.Run();
+            //ManageBrightnessContrastAdjustmentLayer.Run();
+            //SupportOfAdjusmentLayers.Run();
+            //AddTextLayerOnRuntime.Run();
 
             //// =====================================================
             //// =====================================================
@@ -87,76 +113,79 @@ namespace Aspose.PSD.Examples
             //BluranImage.Run();
             //VerifyImageTransparency.Run();
             //ImplementLossyGIFCompressor.Run();
-            ForceFontCache.Run();
-            FontReplacement.Run();
+            //ForceFontCache.Run();
+            //FontReplacement.Run();
 
             //Drawing Images
-            DrawingLines.Run();
-            DrawingEllipse.Run();
-            DrawingRectangle.Run();
-            DrawingArc.Run();
-            DrawingBezier.Run();
-            CoreDrawingFeatures.Run();
-            DrawingUsingGraphics.Run();
-            DrawingUsingGraphicsPath.Run();
+            //DrawingLines.Run();
+            //DrawingEllipse.Run();
+            //DrawingRectangle.Run();
+            //DrawingArc.Run();
+            //DrawingBezier.Run();
+            //CoreDrawingFeatures.Run();
+            //DrawingUsingGraphics.Run();
+            //DrawingUsingGraphicsPath.Run();
 
             //Modifying and Converting Images
             //JPEG
-            ReadAllEXIFTags.Run();
-            ReadSpecificEXIFTagsInformation.Run();
-            WritingAndModifyingEXIFData.Run();
-            ExtractThumbnailFromPSD.Run();
-            ExtractThumbnailFromJFIF.Run();
-            AddThumbnailToJFIFSegment.Run();
-            AddThumbnailToEXIFSegment.Run();
-            ReadandModifyJpegEXIFTags.Run();
-            ReadAllEXIFTagList.Run();
-            AutoCorrectOrientationOfJPEGImages.Run();
-            SupportForJPEG_LSWithCMYK.Run();
-            SupportFor2_7BitsJPEG.Run();
-            ColorTypeAndCompressionType.Run();
+            //ReadAllEXIFTags.Run();
+            //ReadSpecificEXIFTagsInformation.Run();
+            //WritingAndModifyingEXIFData.Run();
+            //ExtractThumbnailFromPSD.Run();
+            //ExtractThumbnailFromJFIF.Run();
+            //AddThumbnailToJFIFSegment.Run();
+            //AddThumbnailToEXIFSegment.Run();
+            //ReadandModifyJpegEXIFTags.Run();
+            //ReadAllEXIFTagList.Run();
+            //AutoCorrectOrientationOfJPEGImages.Run();
+            //SupportForJPEG_LSWithCMYK.Run();
+            //SupportFor2_7BitsJPEG.Run();
+            //ColorTypeAndCompressionType.Run();
 
             //PSD
-            ExportImageToPSD.Run();
-            ImportImageToPSDLayer.Run();
-            ColorReplacementInPSD.Run();
-            CreateThumbnailsFromPSDFiles.Run();
-            CreateIndexedPSDFiles.Run();
-            ExportPSDLayerToRasterImage.Run();
-            UpdateTextLayerInPSDFile.Run();
-            DetectFlattenedPSD.Run();
-            MergePSDlayers.Run();
-            GrayScaleSupportForAlpha.Run();
-            SupportLayerForPSD.Run();
+            //ExportImageToPSD.Run();
+            //ImportImageToPSDLayer.Run();
+            //ColorReplacementInPSD.Run();
+            //CreateThumbnailsFromPSDFiles.Run();
+            //CreateIndexedPSDFiles.Run();
+            //ExportPSDLayerToRasterImage.Run();
+            //UpdateTextLayerInPSDFile.Run();
+            //DetectFlattenedPSD.Run();
+            //MergePSDlayers.Run();
+            //GrayScaleSupportForAlpha.Run();
+            //SupportLayerForPSD.Run();
 
 
             //PNG
-            SpecifyTransparency.Run();
-            SettingResolution.Run();
-            CompressingFiles.Run();
-            SpecifyBitDepth.Run();
-            ApplyFilterMethod.Run();
-            ChangeBackgroundColor.Run();
+            //SpecifyTransparency.Run();
+            //SettingResolution.Run();
+            //CompressingFiles.Run();
+            //SpecifyBitDepth.Run();
+            //ApplyFilterMethod.Run();
+            //ChangeBackgroundColor.Run();
 
             //TIFF
-            ExportToMultiPageTiff.Run();
-            TiffOptionsConfiguration.Run();
-            TIFFwithDeflateCompression.Run();
-            TIFFwithAdobeDeflateCompression.Run();
-            CompressingTiff.Run();
+            //ExportToMultiPageTiff.Run();
+            //TiffOptionsConfiguration.Run();
+            //TIFFwithDeflateCompression.Run();
+            //TIFFwithAdobeDeflateCompression.Run();
+            //CompressingTiff.Run();
 
 
 
             //Technical Articles
-            UncompressedImageUsingFile.Run();
-            UncompressedImageStreamObject.Run();
-            ControllCacheReallocation.Run();
-            AddWatermark.Run();
-            AddDiagnolWatermark.Run();
-            ColorConversionUsingICCProfiles.Run();
-            ColorConversionUsingDefaultProfiles.Run();
-            AddSignatureToImage.Run();
-            SupportForInterruptMonitor.Run();
+            //UncompressedImageUsingFile.Run();
+            //UncompressedImageStreamObject.Run();
+
+            //This example has exception
+            //ControllCacheReallocation.Run();
+
+            //AddWatermark.Run();
+            //AddDiagnolWatermark.Run();
+            //ColorConversionUsingICCProfiles.Run();
+            //ColorConversionUsingDefaultProfiles.Run();
+            //AddSignatureToImage.Run();
+            //SupportForInterruptMonitor.Run();
 
 
 
@@ -217,6 +246,10 @@ namespace Aspose.PSD.Examples
         public static String GetDataDir_PSD()
         {
             return Path.GetFullPath(GetDataDir_Data() + "PSD/");
+        }
+        public static String GetDataDir_PSB()
+        {
+            return Path.GetFullPath(GetDataDir_Data() + "PSB/");
         }
 
         public static String GetDataDir_WebPImages()

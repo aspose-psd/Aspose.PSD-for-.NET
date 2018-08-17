@@ -70,8 +70,8 @@ namespace Aspose.PSD.Examples.Aspose.Conversion
                 image.Save(dataDir+"Default_profiles.jpg");
 
                 // Update color profile.
-                StreamSource rgbprofile = new StreamSource(File.OpenRead("eciRGB_v2.icc"));
-                StreamSource cmykprofile = new StreamSource(File.OpenRead("ISOcoated_v2_FullGamut4.icc"));
+                StreamSource rgbprofile = new StreamSource(File.OpenRead(dataDir+"eciRGB_v2.icc"));
+                StreamSource cmykprofile = new StreamSource(File.OpenRead(dataDir + "ISOcoated_v2_FullGamut4.icc"));
                 image.RgbColorProfile = rgbprofile;
                 image.CmykColorProfile = cmykprofile;
 

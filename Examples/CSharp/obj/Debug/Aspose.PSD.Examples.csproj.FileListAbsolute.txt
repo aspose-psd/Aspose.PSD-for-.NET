@@ -13,3 +13,4 @@ C:\Github\Official Git\Aspose_PSD_for_NET\Examples\CSharp\bin\Debug\Aspose.PSD.d
 C:\Github\Official Git\Aspose_PSD_for_NET\Examples\CSharp\bin\Debug\Aspose.PSD.xml
 C:\Github\Official Git\Aspose_PSD_for_NET\Examples\CSharp\obj\Debug\Aspose.PSD.Examples.exe
 C:\Github\Official Git\Aspose_PSD_for_NET\Examples\CSharp\obj\Debug\Aspose.PSD.Examples.pdb
+C:\Github\Official Git\Aspose_PSD_NET\Examples\CSharp\bin\Debug\Aspose.PSD.Examples.exe.config

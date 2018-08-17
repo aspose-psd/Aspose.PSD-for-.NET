@@ -33,8 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.PSD">
-      <HintPath>..\References\Aspose.PSD.dll</HintPath>
+    <Reference Include="Aspose.PSD, Version=18.8.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.PSD.18.8.0\lib\net40\Aspose.PSD.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -120,6 +125,31 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\PNG\SettingResolution.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PNG\SpecifyBitDepth.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PNG\SpecifyTransparency.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\InterruptMonitorTest.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\ManageBrightnessContrastAdjustmentLayer.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\ManageExposureAdjustmentLayer.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\ManageChannelMixerAdjusmentLayer.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\RenderingExportOfChannelMixerAdjusmentLyer.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\ManagePhotoFilterAdjustmentLayer.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\AddTextLayerOnRuntime.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfAdjusmentLayers.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfLayerMask.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfClippingMask.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\RenderingExposureAdjustmentLayer.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\AddHueSaturationAdjustmentLayer.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\AddCurvesAdjustmentLayer.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\AddChannelMixerAdjustmentLayer.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\AddLevelAdjustmentLayer.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\RenderingOfLevelAdjustmentLayer.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\RenderingOfCurvesAdjustmentLayer.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\FillOpacityOfLayers.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\PossibilityToFlattenLayers.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\LayerEffectsForPSD.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\AddIopaResource.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\TextLayerBoundBox.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\MergeOnePSDlayerToOther.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SheetColorHighlighting.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\LayerCreationDateTime.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\AddDiagnolWatermark.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\AddWatermark.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\ColorReplacementInPSD.cs" />
@@ -146,6 +176,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
