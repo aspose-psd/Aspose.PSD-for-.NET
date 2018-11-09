@@ -67,5 +67,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 				}
 			}
 		}
+		//ExEnd:SupportBlendModes
+
 	}
 }
