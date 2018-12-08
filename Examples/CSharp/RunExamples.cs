@@ -31,7 +31,7 @@ namespace Aspose.PSD.Examples
             String licPath = GetDataDir_PSD() + @"Aspose.PSD.NET.lic";
             License lic = new License();
      //       lic.SetLicense(licPath);
-            lic.SetLicense(@"F:\Aspose Work\Aspose.Total.lic");
+            lic.SetLicense(@"C:\Aspose Data\Licenses_2019\Aspose.Total.NET.lic");
 
             //bool isLicensd = lic.IsLicensed;
 
@@ -72,127 +72,132 @@ namespace Aspose.PSD.Examples
             //AddLevelAdjustmentLayer.Run();
             //AddChannelMixerAdjustmentLayer.Run();
             //AddHueSaturationAdjustmentLayer.Run();
-			//RenderingExposureAdjustmentLayer.Run();
-			//RenderingExportOfChannelMixerAdjusmentLyer.Run();
-			//SupportOfClippingMask.Run();
-			//SupportOfLayerMask.Run();
-			//ManagePhotoFilterAdjustmentLayer.Run();
-			//ManageChannelMixerAdjusmentLayer.Run();
-			//ManageExposureAdjustmentLayer.Run();
-			//ManageBrightnessContrastAdjustmentLayer.Run();
-			//SupportOfAdjusmentLayers.Run();
-			//AddTextLayerOnRuntime.Run();
+            //RenderingExposureAdjustmentLayer.Run();
+            //RenderingExportOfChannelMixerAdjusmentLyer.Run();
+            //SupportOfClippingMask.Run();
+            //SupportOfLayerMask.Run();
+            //ManagePhotoFilterAdjustmentLayer.Run();
+            //ManageChannelMixerAdjusmentLayer.Run();
+            //ManageExposureAdjustmentLayer.Run();
+            //ManageBrightnessContrastAdjustmentLayer.Run();
+            //SupportOfAdjusmentLayers.Run();
+            //AddTextLayerOnRuntime.Run();
 
-			//// =====================================================
-			//// =====================================================
-			////            Drawing and Formatting Images
-			//// =====================================================
-			//// =====================================================
-			//CombiningImages.Run();
-			//ExpandandCropImages.Run();
-			//CreateXMPMetadata.Run();
-			//CreatingbySettingPath.Run();
-			RenderingDropShadow.Run();
-			//SupportBlendModes.Run();
-		//RenderingColorEffect.Run();
-			//AddEffectAtRunTime.Run();
-			//ColorOverLayEffect.Run();
-			//SupportShadowEffect.Run();
-			//This one failed
-			// CreatingUsingStream.Run();
+            //// =====================================================
+            //// =====================================================
+            ////            Drawing and Formatting Images
+            //// =====================================================
+            //// =====================================================
+            //CombiningImages.Run();
+            //ExpandandCropImages.Run();
+            //CreateXMPMetadata.Run();
+            //CreatingbySettingPath.Run();
+            //RenderingDropShadow.Run();
+            //SupportBlendModes.Run();
+            //RenderingColorEffect.Run();
+            //AddEffectAtRunTime.Run();
+            //ColorOverLayEffect.Run();
+            //SupportShadowEffect.Run();
+            //This one failed
+            // CreatingUsingStream.Run();
+            //CroppingbyShifts.Run();
+            //CroppingbyRectangle.Run();
+            //RotatinganImage.Run();
+            //RotatinganImageonaSpecificAngle.Run();
+            //SimpleResizing.Run();
+            //ResizingwithResizeTypeEnumeration.Run();
+            //ResizeImageProportionally.Run();
+            //DitheringforRasterImages.Run();
+            //AdjustingBrightness.Run();
+            //AdjustingContrast.Run();
+            //AdjustingGamma.Run();
+            //BluranImage.Run();
+            //VerifyImageTransparency.Run();
+            //ImplementLossyGIFCompressor.Run();
+            //ForceFontCache.Run();
+            //FontReplacement.Run();
 
-
-			//CroppingbyShifts.Run();
-			//CroppingbyRectangle.Run();
-			//RotatinganImage.Run();
-			//RotatinganImageonaSpecificAngle.Run();
-			//SimpleResizing.Run();
-			//ResizingwithResizeTypeEnumeration.Run();
-			//ResizeImageProportionally.Run();
-			//DitheringforRasterImages.Run();
-			//AdjustingBrightness.Run();
-			//AdjustingContrast.Run();
-			//AdjustingGamma.Run();
-			//BluranImage.Run();
-			//VerifyImageTransparency.Run();
-			//ImplementLossyGIFCompressor.Run();
-			//ForceFontCache.Run();
-			//FontReplacement.Run();
-
-			//Drawing Images
-			//DrawingLines.Run();
-			//DrawingEllipse.Run();
-			//DrawingRectangle.Run();
-			//DrawingArc.Run();
-			//DrawingBezier.Run();
-			//CoreDrawingFeatures.Run();
-			//DrawingUsingGraphics.Run();
-			//DrawingUsingGraphicsPath.Run();
-
-			//Modifying and Converting Images
-			//JPEG
-			//ReadAllEXIFTags.Run();
-			//ReadSpecificEXIFTagsInformation.Run();
-			//WritingAndModifyingEXIFData.Run();
-			//ExtractThumbnailFromPSD.Run();
-			//ExtractThumbnailFromJFIF.Run();
-			//AddThumbnailToJFIFSegment.Run();
-			//AddThumbnailToEXIFSegment.Run();
-			//ReadandModifyJpegEXIFTags.Run();
-			//ReadAllEXIFTagList.Run();
-			//AutoCorrectOrientationOfJPEGImages.Run();
-			//SupportForJPEG_LSWithCMYK.Run();
-			//SupportFor2_7BitsJPEG.Run();
-			//ColorTypeAndCompressionType.Run();
-
-			//PSD
-			//ExportImageToPSD.Run();
-			//ImportImageToPSDLayer.Run();
-			//ColorReplacementInPSD.Run();
-			//CreateThumbnailsFromPSDFiles.Run();
-			//CreateIndexedPSDFiles.Run();
-			//ExportPSDLayerToRasterImage.Run();
-			//UpdateTextLayerInPSDFile.Run();
-			//DetectFlattenedPSD.Run();
-			//MergePSDlayers.Run();
-			//GrayScaleSupportForAlpha.Run();
-			//SupportLayerForPSD.Run();
+            //Drawing Images
+            //DrawingLines.Run();
+            //DrawingEllipse.Run();
+            //DrawingRectangle.Run();
+            //DrawingArc.Run();
+            //DrawingBezier.Run();
+            //CoreDrawingFeatures.Run();
+            //DrawingUsingGraphics.Run();
+            //DrawingUsingGraphicsPath.Run();
+            AddStrokeLayer_Pattern.Run();
+            AddStrokeLayer_Gradient.Run();
+            AddStrokeLayer_Color.Run();
+            AddGradientEffects.Run();
+            AddPatternEffects.Run();
+            AddNewRegularLayerToPSD.Run();
 
 
-			//PNG
-			//SpecifyTransparency.Run();
-			//SettingResolution.Run();
-			//CompressingFiles.Run();
-			//SpecifyBitDepth.Run();
-			//ApplyFilterMethod.Run();
-			//ChangeBackgroundColor.Run();
+            //Modifying and Converting Images
+            //JPEG
+            //ReadAllEXIFTags.Run();
+            //ReadSpecificEXIFTagsInformation.Run();
+            //WritingAndModifyingEXIFData.Run();
+            //ExtractThumbnailFromPSD.Run();
+            //ExtractThumbnailFromJFIF.Run();
+            //AddThumbnailToJFIFSegment.Run();
+            //AddThumbnailToEXIFSegment.Run();
+            //ReadandModifyJpegEXIFTags.Run();
+            //ReadAllEXIFTagList.Run();
+            //AutoCorrectOrientationOfJPEGImages.Run();
+            //SupportForJPEG_LSWithCMYK.Run();
+            //SupportFor2_7BitsJPEG.Run();
+            //ColorTypeAndCompressionType.Run();
 
-			//TIFF
-			//ExportToMultiPageTiff.Run();
-			//TiffOptionsConfiguration.Run();
-			//TIFFwithDeflateCompression.Run();
-			//TIFFwithAdobeDeflateCompression.Run();
-			//CompressingTiff.Run();
+            //PSD
+            //ExportImageToPSD.Run();
+            //ImportImageToPSDLayer.Run();
+            //ColorReplacementInPSD.Run();
+            //CreateThumbnailsFromPSDFiles.Run();
+            //CreateIndexedPSDFiles.Run();
+            //ExportPSDLayerToRasterImage.Run();
+            //UpdateTextLayerInPSDFile.Run();
+            //DetectFlattenedPSD.Run();
+            //MergePSDlayers.Run();
+            //GrayScaleSupportForAlpha.Run();
+            //SupportLayerForPSD.Run();
 
 
+            //PNG
+            //SpecifyTransparency.Run();
+            //SettingResolution.Run();
+            //CompressingFiles.Run();
+            //SpecifyBitDepth.Run();
+            //ApplyFilterMethod.Run();
+            //ChangeBackgroundColor.Run();
 
-			//Technical Articles
-			//UncompressedImageUsingFile.Run();
-			//UncompressedImageStreamObject.Run();
-
-			//This example has exception
-			//ControllCacheReallocation.Run();
-
-			//AddWatermark.Run();
-			//AddDiagnolWatermark.Run();
-			//ColorConversionUsingICCProfiles.Run();
-			//ColorConversionUsingDefaultProfiles.Run();
-			//AddSignatureToImage.Run();
-			//SupportForInterruptMonitor.Run();
+            //TIFF
+            //ExportToMultiPageTiff.Run();
+            //TiffOptionsConfiguration.Run();
+            //TIFFwithDeflateCompression.Run();
+            //TIFFwithAdobeDeflateCompression.Run();
+            //CompressingTiff.Run();
 
 
 
-			Console.WriteLine("Press any key to continue...");
+            //Technical Articles
+            //UncompressedImageUsingFile.Run();
+            //UncompressedImageStreamObject.Run();
+
+            //This example has exception
+            //ControllCacheReallocation.Run();
+
+            //AddWatermark.Run();
+            //AddDiagnolWatermark.Run();
+            //ColorConversionUsingICCProfiles.Run();
+            //ColorConversionUsingDefaultProfiles.Run();
+            //AddSignatureToImage.Run();
+            //SupportForInterruptMonitor.Run();
+
+
+
+            Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
         }
 

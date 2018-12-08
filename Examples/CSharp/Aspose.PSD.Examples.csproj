@@ -33,8 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.PSD, Version=18.10.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.PSD.18.10.0\lib\net40\Aspose.PSD.dll</HintPath>
+    <Reference Include="Aspose.PSD, Version=18.12.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.PSD.18.12.0\lib\net40\Aspose.PSD.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -102,6 +103,12 @@
     <Compile Include="Aspose\Conversion\Bradleythreshold.cs" />
     <Compile Include="Aspose\Conversion\CroppingPSDWhenConvertingToPNG.cs" />
     <Compile Include="Aspose\Conversion\PSDToRasterImageFormats.cs" />
+    <Compile Include="Aspose\DrawingImages\AddNewRegularLayerToPSD.cs" />
+    <Compile Include="Aspose\DrawingImages\AddPatternEffects.cs" />
+    <Compile Include="Aspose\DrawingImages\AddGradientEffects.cs" />
+    <Compile Include="Aspose\DrawingImages\AddStrokeLayer_Color.cs" />
+    <Compile Include="Aspose\DrawingImages\AddStrokeLayer_Gradient.cs" />
+    <Compile Include="Aspose\DrawingImages\AddStrokeLayer_Pattern.cs" />
     <Compile Include="Aspose\DrawingImages\AddSignatureToImage.cs" />
     <Compile Include="Aspose\DrawingImages\CoreDrawingFeatures.cs" />
     <Compile Include="Aspose\DrawingImages\DrawingArc.cs" />
