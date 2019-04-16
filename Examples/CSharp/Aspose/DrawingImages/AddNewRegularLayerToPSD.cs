@@ -7,7 +7,7 @@ using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerEffects;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerResources;
-using Aspose.PSD.FileFormats.Psd.Layers.LayerResources.Lfx2Resources;
+
 using Aspose.PSD.ImageLoadOptions;
 using Aspose.PSD.ImageOptions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;

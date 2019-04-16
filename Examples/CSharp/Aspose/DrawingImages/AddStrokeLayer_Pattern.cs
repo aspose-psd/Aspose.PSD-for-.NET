@@ -10,6 +10,7 @@ using Aspose.PSD.FileFormats.Psd.Layers.LayerResources;
 using Aspose.PSD.ImageLoadOptions;
 using Aspose.PSD.ImageOptions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Aspose.PSD.FileFormats.Psd.Layers.FillSettings;
 
 namespace Aspose.PSD.Examples.Aspose.DrawingImages
 {
