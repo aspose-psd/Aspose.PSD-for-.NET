@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -126,12 +126,12 @@ namespace Aspose.PSD.Examples
             //CoreDrawingFeatures.Run();
             //DrawingUsingGraphics.Run();
             //DrawingUsingGraphicsPath.Run();
-            AddStrokeLayer_Pattern.Run();
-            AddStrokeLayer_Gradient.Run();
-            AddStrokeLayer_Color.Run();
-            AddGradientEffects.Run();
-            AddPatternEffects.Run();
-            AddNewRegularLayerToPSD.Run();
+            //AddStrokeLayer_Pattern.Run();
+            //AddStrokeLayer_Gradient.Run();
+            //AddStrokeLayer_Color.Run();
+            //AddGradientEffects.Run();
+            //AddPatternEffects.Run();
+            //AddNewRegularLayerToPSD.Run();
 
 
             //Modifying and Converting Images
@@ -162,7 +162,9 @@ namespace Aspose.PSD.Examples
             //MergePSDlayers.Run();
             //GrayScaleSupportForAlpha.Run();
             //SupportLayerForPSD.Run();
-
+            //LoadImageToPSD.Run();
+            //SupportOfRGBColor.Run();
+            //SupportOfRotateLayer.Run();
 
             //PNG
             //SpecifyTransparency.Run();
