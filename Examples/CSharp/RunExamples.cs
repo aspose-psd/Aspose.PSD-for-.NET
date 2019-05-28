@@ -165,6 +165,10 @@ namespace Aspose.PSD.Examples
             //LoadImageToPSD.Run();
             //SupportOfRGBColor.Run();
             //SupportOfRotateLayer.Run();
+             //PatternFillLayer.Run();
+            //SupportOfPtFlResource.Run();
+            //CropPSDFile.Run();
+            //SupportOfVsmsResource.Run();
 
             //PNG
             //SpecifyTransparency.Run();
