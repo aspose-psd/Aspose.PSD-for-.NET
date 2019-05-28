@@ -33,8 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.PSD, Version=19.4.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.PSD.19.4.0\lib\net40\Aspose.PSD.dll</HintPath>
+    <Reference Include="Aspose.PSD, Version=19.5.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.PSD.19.5.0\lib\net40\Aspose.PSD.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="Aspose\Conversion\ColorConversionUsingDefaultProfiles.cs" />
     <Compile Include="Aspose\Conversion\ColorConversionUsingICCProfiles.cs" />
+    <Compile Include="Aspose\Conversion\CropPSDFile.cs" />
     <Compile Include="Aspose\Conversion\LoadingFromStream.cs" />
     <Compile Include="Aspose\Conversion\SaveImageWorker.cs" />
     <Compile Include="Aspose\Conversion\SavingtoStream.cs" />
@@ -156,6 +157,9 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\AddLevelAdjustmentLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\RenderingOfLevelAdjustmentLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\RenderingOfCurvesAdjustmentLayer.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\PatternFillLayer.cs" />
+      <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfPtFlResource.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfVsmsResource.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\FillOpacityOfLayers.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\PossibilityToFlattenLayers.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\LayerEffectsForPSD.cs" />
