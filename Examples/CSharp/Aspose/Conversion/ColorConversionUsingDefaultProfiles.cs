@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Aspose.PSD.FileFormats.Jpeg;
 using Aspose.PSD.ImageOptions;
 using Aspose.PSD.Sources;
+using Aspose.PSD.FileFormats.Psd;
 
 namespace Aspose.PSD.Examples.Aspose.Conversion
 {
@@ -20,8 +21,8 @@ namespace Aspose.PSD.Examples.Aspose.Conversion
 
             //ExStart:ColorConversionUsingDefaultProfiles
 
-            // Create a new JpegImage.
-            using (JpegImage image = new JpegImage(500, 500))
+            // Create a new Image.
+            using (PsdImage image = new PsdImage(500, 500))
             {
                 // Fill image data.
                 int count = image.Width * image.Height;
@@ -67,13 +68,13 @@ namespace Aspose.PSD.Examples.Aspose.Conversion
                 image.SaveArgb32Pixels(image.Bounds, pixels);
 
                 // Save the newly created image.
-                image.Save(dataDir+"Default.jpg");
+                image.Save(dataDir+"Default.jpg",new JpegOptions());
 
                 // Update color profile.
                 StreamSource rgbprofile = new StreamSource(File.OpenRead(dataDir + "eciRGB_v2.icc"));
                 StreamSource cmykprofile = new StreamSource(File.OpenRead(dataDir + "ISOcoated_v2_FullGamut4.icc"));
-                image.DestinationRgbColorProfile = rgbprofile;
-                image.DestinationCmykColorProfile = cmykprofile;
+                image.RgbColorProfile = rgbprofile;
+                image.CmykColorProfile = cmykprofile;
 
                 // Save the resultant image with new YCCK profiles. You will notice differences in color values if compare the images.
                 JpegOptions options = new JpegOptions();

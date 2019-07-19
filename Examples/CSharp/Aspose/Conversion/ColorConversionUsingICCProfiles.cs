@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Aspose.PSD.FileFormats.Jpeg;
 using Aspose.PSD.ImageOptions;
 using Aspose.PSD.Sources;
+using Aspose.PSD.FileFormats.Psd;
 
 namespace Aspose.PSD.Examples.Aspose.Conversion
 {
@@ -20,8 +21,8 @@ namespace Aspose.PSD.Examples.Aspose.Conversion
 
             //ExStart:ColorConversionUsingICCProfiles
 
-            // Create a new JpegImage.
-            using (JpegImage image = new JpegImage(500, 500))
+            // Create a new Image.
+            using (PsdImage image = new PsdImage(500, 500))
             {
                 // Fill image data.
                 int count = image.Width * image.Height;
@@ -67,7 +68,7 @@ namespace Aspose.PSD.Examples.Aspose.Conversion
                 image.SaveArgb32Pixels(image.Bounds, pixels);
 
                 // Save the resultant image with default Icc profiles.
-                image.Save(dataDir+"Default_profiles.jpg");
+                image.Save(dataDir+"Default_profiles.jpg",new JpegOptions());
 
                 // Update color profile.
                 StreamSource rgbprofile = new StreamSource(File.OpenRead(dataDir+"eciRGB_v2.icc"));
