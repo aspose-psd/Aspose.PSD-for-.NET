@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Aspose.PSD.FileFormats.Tiff;
 using Aspose.PSD.FileFormats.Tiff.Enums;
 using Aspose.PSD.ImageOptions;
+using Aspose.PSD.FileFormats.Psd;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.TIFF
 {
@@ -31,20 +32,24 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.TIFF
             // Set the Compression to AdobeDeflate
             options.Compression = TiffCompressions.AdobeDeflate;
 
-            // Create a new TiffImage with specific size and TiffOptions settings
-            using (TiffImage tiffImage = new TiffImage(new TiffFrame(options, 100, 100)))
+            //Create a new image with specific size and TiffOptions settings
+            using (PsdImage image = new PsdImage(100, 100))
             {
-                // Loop over the pixels to set the color to red
-                for (int j = 0; j < tiffImage.Height; j++)
-                {
-                    for (int i = 0; i < tiffImage.Width; i++)
-                    {
-                        tiffImage.ActiveFrame.SetPixel(i, j, Color.Red);
-                    }
+
+                // Fill image data.
+                int count = image.Width * image.Height;
+                int[] pixels = new int[count];
+
+                for (int i = 0; i < count; i++) {
+
+                    pixels[i] = Color.Red.ToArgb();
                 }
 
+                // Save the newly created pixels.
+                image.SaveArgb32Pixels(image.Bounds, pixels);
+
                 // Save resultant image
-                tiffImage.Save(dataDir+"TIFFwithAdobeDeflateCompression_output.tif");
+                image.Save(dataDir + "TIFFwithAdobeDeflateCompression_output.tif", options);
             }
 
 
