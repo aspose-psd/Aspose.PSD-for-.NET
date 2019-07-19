@@ -18,20 +18,20 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
             string dataDir = RunExamples.GetDataDir_PSD();
 
             // Create a new image from scratch.
-            using (BmpImage bmpImage = new BmpImage(300, 300))
+            using (PsdImage image = new PsdImage(300, 300))
             {
                 // Fill image data.
-                Graphics graphics = new Graphics(bmpImage);
+                Graphics graphics = new Graphics(image);
                 graphics.Clear(Color.White);
                 var pen = new Pen(Color.Brown);
-                graphics.DrawRectangle(pen, bmpImage.Bounds);
+                graphics.DrawRectangle(pen, image.Bounds);
 
                 // Create an instance of PsdOptions, Set it's various properties Save image to disk in PSD format
                 PsdOptions psdOptions = new PsdOptions();
                 psdOptions.ColorMode = ColorModes.Rgb;
                 psdOptions.CompressionMethod = CompressionMethod.Raw;
                 psdOptions.Version = 4;
-                bmpImage.Save(dataDir+"ExportImageToPSD_output.psd", psdOptions);
+                image.Save(dataDir+"ExportImageToPSD_output.psd", psdOptions);
             }
 
             //ExEnd:ExportImageToPSD

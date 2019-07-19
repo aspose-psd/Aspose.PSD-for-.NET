@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Aspose.PSD.FileFormats.Png;
 using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers;
+using Aspose.PSD.ImageOptions;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
@@ -24,7 +25,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                 Layer layer = image.Layers[1];
 
                 // Create an image that is needed to be imported into the PSD file.
-                using (PngImage drawImage = new PngImage(200, 200))
+                using (PsdImage drawImage = new PsdImage(200, 200))
                 {
                     // Fill image surface as needed.
                     Graphics g = new Graphics(drawImage);

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Aspose.PSD.FileFormats.Bmp;
 using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Resources;
+using Aspose.PSD.ImageOptions;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
@@ -32,10 +33,11 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                         var thumbnail = (ThumbnailResource)resource;
                         if (thumbnail.Format == ThumbnailFormat.KJpegRgb)
                         {
-                            // Create a new BmpImage by specifying the width and height,  Store the pixels of thumbnail on to the newly created BmpImage and save image
-                            BmpImage thumnailImage = new BmpImage(thumbnail.Width, thumbnail.Height);
+                            // Create a new image by specifying the width and height,  Store the pixels of thumbnail on to the newly created image and save image
+                           PsdImage thumnailImage = new PsdImage(thumbnail.Width, thumbnail.Height);
+
                             thumnailImage.SavePixels(thumnailImage.Bounds, thumbnail.ThumbnailData);
-                            thumnailImage.Save(dataDir + "CreateThumbnailsFromPSDFiles_out_"+index.ToString()+".bmp");
+                            thumnailImage.Save(dataDir + "CreateThumbnailsFromPSDFiles_out_"+index.ToString()+".bmp", new BmpOptions());
                         }
                     }
                 }

@@ -38,9 +38,13 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
             // At any time you can check how many bytes are currently allocated for the cache in memory or on disk By examining the following properties
             long l1 = Cache.AllocatedDiskBytesCount;
             long l2 = Cache.AllocatedMemoryBytesCount;
-            GifOptions options = new GifOptions();
+
+            PsdOptions options = new PsdOptions();
+            
+            //GifOptions options = new GifOptions();
             options.Palette = new ColorPalette(new[] { Color.Red, Color.Blue, Color.Black, Color.White });
             options.Source = new StreamSource(new MemoryStream(), true);
+
             using (RasterImage image = (RasterImage)Image.Create(options, 100, 100))
             {
                 Color[] pixels = new Color[10000];
