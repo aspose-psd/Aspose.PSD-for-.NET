@@ -18,7 +18,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.JPEG
             string dataDir = RunExamples.GetDataDir_PSD();
 
             // Load PSD image.
-            using (PsdImage image = (PsdImage)Image.Load(dataDir + "1280px-Zebras_Serengeti.psd"))
+            using (PsdImage image = (PsdImage)Image.Load(dataDir + "aspose_out.psd"))
             {
                 // Iterate over resources.
                 foreach (var resource in image.ImageResources)
@@ -32,11 +32,11 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.JPEG
                         if (exifData != null && exifData.Thumbnail != null)
                         {
                             // If there is thumbnail stored then auto-rotate it.
-                            JpegImage jpegImage = exifData.Thumbnail as JpegImage;
-                            if (jpegImage != null)
-                            {
-                                jpegImage.AutoRotate();
-                            }
+                           // JpegImage jpegImage = exifData.Thumbnail as JpegImage;
+                           // if (jpegImage != null)
+                           // {
+                            //    jpegImage.AutoRotate();
+                           // }
                         }
                     }
                 }

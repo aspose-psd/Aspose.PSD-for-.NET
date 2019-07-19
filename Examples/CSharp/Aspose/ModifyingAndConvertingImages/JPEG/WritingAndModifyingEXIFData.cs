@@ -18,7 +18,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.JPEG
             string dataDir = RunExamples.GetDataDir_PSD();
 
             // Load PSD image.
-            using (PsdImage image = (PsdImage)Image.Load(dataDir+"1280px-Zebras_Serengeti.psd"))
+            using (PsdImage image = (PsdImage)Image.Load(dataDir+"sample.psd"))
             {
                 // Iterate over resources.
                 foreach (var resource in image.ImageResources)

@@ -19,7 +19,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.JPEG
             string dataDir = RunExamples.GetDataDir_PSD();
 
             // Load PSD image.
-            using (PsdImage image = (PsdImage)Image.Load(dataDir+"1280px-Zebras_Serengeti.psd"))
+            using (PsdImage image = (PsdImage)Image.Load(dataDir+ "aspose_out.psd"))
             {
                 // Iterate over resources.
                 foreach (var resource in image.ImageResources)
@@ -30,7 +30,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.JPEG
                         // Adjust thumbnail data.
                         var thumbnail = (ThumbnailResource)resource;
                         var jfifData = new FileFormats.Jpeg.JFIFData();
-                        var thumbnailImage = new JpegImage(100, 100);
+                        var thumbnailImage = new PsdImage(100, 100);
                         try
                         {
                             // Fill thumbnail data.
@@ -56,6 +56,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.JPEG
                 }
 
                 image.Save();
+                
             }
             //ExEnd:AddThumbnailToJFIFSegment
 
