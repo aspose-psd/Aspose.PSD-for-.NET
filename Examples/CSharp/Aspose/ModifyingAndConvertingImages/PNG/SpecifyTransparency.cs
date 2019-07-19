@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Aspose.PSD.FileFormats.Png;
 using Aspose.PSD.FileFormats.Psd;
+using Aspose.PSD.ImageOptions;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PNG
 {
@@ -19,14 +20,13 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PNG
             // Load a PSD file as an image and cast it into PsdImage
             using (PsdImage psdImage = (PsdImage)Image.Load(dataDir + "sample.psd"))
             {
-                // Initialize PNG image with psd image pixel data.
-                using (PngImage pngImage = new PngImage(psdImage))
-                {
-                    // specify the PNG image transparency options and save to file.
-                    pngImage.TransparentColor = Color.White;
-                    pngImage.HasTransparentColor = true;
-                    pngImage.Save(dataDir+"Specify_Transparency_result.png");
-                }
+
+                // specify the PNG image transparency options and save to file.
+                psdImage.TransparentColor = Color.White;
+                psdImage.HasTransparentColor = true;
+                PngOptions opt = new PngOptions();
+                psdImage.Save(dataDir+"Specify_Transparency_result.png", new PngOptions());
+                
             }
 
             //ExEnd:SpecifyTransparency
