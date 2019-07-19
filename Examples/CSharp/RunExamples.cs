@@ -12,6 +12,7 @@ using Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PNG;
 using Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD;
 using Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.TIFF;
 using Aspose.PSD.Examples.Licensing;
+using Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSB;
 
 namespace Aspose.PSD.Examples
 {
@@ -169,6 +170,8 @@ namespace Aspose.PSD.Examples
             //SupportOfPtFlResource.Run();
             //CropPSDFile.Run();
             //SupportOfVsmsResource.Run();
+            //PSDToPSB.Run();
+            //SetTextLayerPosition.Run();
 
             //PNG
             //SpecifyTransparency.Run();
@@ -200,7 +203,10 @@ namespace Aspose.PSD.Examples
             //ColorConversionUsingDefaultProfiles.Run();
             //AddSignatureToImage.Run();
             //SupportForInterruptMonitor.Run();
-
+      
+             //PSB
+            //PSBToPSD.Run();
+           // PSBToJPG.Run();
 
 
             Console.WriteLine("Press any key to continue...");
