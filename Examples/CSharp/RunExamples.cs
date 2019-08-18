@@ -13,6 +13,7 @@ using Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD;
 using Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.TIFF;
 using Aspose.PSD.Examples.Licensing;
 using Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSB;
+using Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.AI;
 
 namespace Aspose.PSD.Examples
 {
@@ -172,6 +173,9 @@ namespace Aspose.PSD.Examples
             //SupportOfVsmsResource.Run();
             //PSDToPSB.Run();
             //SetTextLayerPosition.Run();
+            //SupportOfLayerVectorMask.Run();
+            //ResizePSDFile.Run();
+            //PSDToPDF.Run();
 
             //PNG
             //SpecifyTransparency.Run();
@@ -207,6 +211,13 @@ namespace Aspose.PSD.Examples
              //PSB
             //PSBToPSD.Run();
            // PSBToJPG.Run();
+            
+            //AI
+            //AIToPSD.Run();
+            //AIToPNG.Run();
+            //AIToJPG.Run();
+            //AIToGIF.Run();
+            //AIToTIFF.Run();
 
 
             Console.WriteLine("Press any key to continue...");
@@ -280,6 +291,11 @@ namespace Aspose.PSD.Examples
         public static String GetDataDir_DjVu()
         {
             return Path.GetFullPath(GetDataDir_Data() + "DjVu/");
+        }
+        
+        public static String GetDataDir_AI()
+        {
+            return Path.GetFullPath(GetDataDir_Data() + "AI/");
         }
 
         public static string GetDataDir_Data()
