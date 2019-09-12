@@ -14,6 +14,7 @@ using Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.TIFF;
 using Aspose.PSD.Examples.Licensing;
 using Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSB;
 using Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.AI;
+using Aspose.PSD.Examples.Aspose.Opening;
 
 namespace Aspose.PSD.Examples
 {
@@ -176,6 +177,10 @@ namespace Aspose.PSD.Examples
             //SupportOfLayerVectorMask.Run();
             //ResizePSDFile.Run();
             //PSDToPDF.Run();
+            //GradientFillLayers.Run();
+            //PSDToPDFWithSelectableText.Run();
+            //AddTextLayer.Run();
+            //LoadPSDWithReadOnlyMode.Run();
 
             //PNG
             //SpecifyTransparency.Run();
@@ -211,6 +216,7 @@ namespace Aspose.PSD.Examples
              //PSB
             //PSBToPSD.Run();
            // PSBToJPG.Run();
+            //PSBToPDF.Run();
             
             //AI
             //AIToPSD.Run();
@@ -219,7 +225,9 @@ namespace Aspose.PSD.Examples
             //AIToGIF.Run();
             //AIToTIFF.Run();
 
-
+            //Opening
+            //LoadingImageFromStream.Run();
+            
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
         }
@@ -296,6 +304,10 @@ namespace Aspose.PSD.Examples
         public static String GetDataDir_AI()
         {
             return Path.GetFullPath(GetDataDir_Data() + "AI/");
+        }
+        public static String GetDataDir_Opening()
+        {
+            return Path.GetFullPath(GetDataDir_Data() + "Opening/");
         }
 
         public static string GetDataDir_Data()
