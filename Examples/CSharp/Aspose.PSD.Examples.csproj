@@ -33,8 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.PSD, Version=19.7.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.PSD.19.7.0\lib\net40\Aspose.PSD.dll</HintPath>
+    <Reference Include="Aspose.PSD, Version=19.8.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.PSD.19.8.0\lib\net40\Aspose.PSD.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -102,9 +102,14 @@
     <Compile Include="Aspose\Conversion\GIFImageLayersToTIFF.cs" />
     <Compile Include="Aspose\Conversion\Garysacling.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSB\PSBToJPG.cs" />
+      <Compile Include="Aspose\ModifyingAndConvertingImages\PSB\PSBToPDF.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSB\PSBToPSD.cs" />
+      <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\AddTextLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\ColorFillLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\GradientFillLayer.cs" />
+      <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\GradientFillLayers.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\LoadPSDWithReadOnlyMode.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\PSDToPDFWithSelectableText.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\PSDToPSB.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\PSDToPDF.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\RenderingOfRotatedTextLayer.cs" />
@@ -209,6 +214,7 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\TIFF\TiffOptionsConfiguration.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\TIFF\TIFFwithAdobeDeflateCompression.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\TIFF\TIFFwithDeflateCompression.cs" />
+      <Compile Include="Aspose\Opening\LoadingImageFromStream.cs" />
     <Compile Include="RunExamples.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
