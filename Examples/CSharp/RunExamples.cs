@@ -181,6 +181,10 @@ namespace Aspose.PSD.Examples
             //PSDToPDFWithSelectableText.Run();
             //AddTextLayer.Run();
             //LoadPSDWithReadOnlyMode.Run();
+            //ExtractLayerName.Run();
+            //SupportOfScaleProperty.Run();
+            //CreateLayerGroups.Run();
+            //GetTextPropertiesFromTextLayer.Run();
 
             //PNG
             //SpecifyTransparency.Run();
