@@ -119,6 +119,9 @@ namespace Aspose.PSD.Examples
             //ImplementLossyGIFCompressor.Run();
             //ForceFontCache.Run();
             //FontReplacement.Run();
+            //ColorBalanceAdjustment.Run();
+            //InvertAdjustmentLayer.Run();
+            //ImplementBicubicResampler.Run();
 
             //Drawing Images
             //DrawingLines.Run();
@@ -185,6 +188,8 @@ namespace Aspose.PSD.Examples
             //SupportOfScaleProperty.Run();
             //CreateLayerGroups.Run();
             //GetTextPropertiesFromTextLayer.Run();
+            //PSDToPDFWithClippingMask.Run();
+            //PSDToPDFWithAdjustmentLayers.Run();
 
             //PNG
             //SpecifyTransparency.Run();
