@@ -190,6 +190,9 @@ namespace Aspose.PSD.Examples
             //GetTextPropertiesFromTextLayer.Run();
             //PSDToPDFWithClippingMask.Run();
             //PSDToPDFWithAdjustmentLayers.Run();
+            //SupportOfInnerShadowLayerEffect.Run();
+            //ImplementPatternFillLayer.Run();
+            //GetPropertiesOfInlineFormattingOfTextLayer.Run();
 
             //PNG
             //SpecifyTransparency.Run();
@@ -233,6 +236,7 @@ namespace Aspose.PSD.Examples
             //AIToJPG.Run();
             //AIToGIF.Run();
             //AIToTIFF.Run();
+            //SupportOfRasterImagesInAI.Run();
 
             //Opening
             //LoadingImageFromStream.Run();
