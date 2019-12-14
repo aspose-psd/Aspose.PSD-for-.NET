@@ -33,8 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.PSD, Version=19.11.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.PSD.19.11.0\lib\net40\Aspose.PSD.dll</HintPath>
+    <Reference Include="Aspose.PSD, Version=19.12.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.PSD.19.12.0\lib\net40\Aspose.PSD.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -127,7 +127,9 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\StrokeEffectWithColorFill .cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfGdFlResource.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfInnerShadowLayerEffect.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfLinkedLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfScaleProperty.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfSoCoResource.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfVmskResource.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfLayerVectorMask.cs" />
     <Compile Include="Aspose\Conversion\Bradleythreshold.cs" />
