@@ -193,6 +193,8 @@ namespace Aspose.PSD.Examples
             //SupportOfInnerShadowLayerEffect.Run();
             //ImplementPatternFillLayer.Run();
             //GetPropertiesOfInlineFormattingOfTextLayer.Run();
+            //SupportOfLinkedLayer.Run();
+            //SupportOfSoCoResource.Run();
 
             //PNG
             //SpecifyTransparency.Run();
