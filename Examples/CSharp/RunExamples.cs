@@ -15,6 +15,7 @@ using Aspose.PSD.Examples.Licensing;
 using Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSB;
 using Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.AI;
 using Aspose.PSD.Examples.Aspose.Opening;
+using Aspose.PSD.Examples.Aspose.WorkingWithPSD;
 
 namespace Aspose.PSD.Examples
 {
@@ -31,10 +32,9 @@ namespace Aspose.PSD.Examples
 
             //Metered Licensing
             //MeteredLicensing.Run();
-            String licPath = GetDataDir_PSD() + @"Aspose.PSD.NET.lic";
-            License lic = new License();
-     //       lic.SetLicense(licPath);
-            lic.SetLicense(@"C:\Aspose Data\Licenses_2019\Aspose.Total.NET.lic");
+            //String licPath =  @"Aspose.PSD.NET.lic";
+            //License lic = new License();
+            //lic.SetLicense(licPath);
 
             //bool isLicensd = lic.IsLicensed;
 
@@ -85,6 +85,12 @@ namespace Aspose.PSD.Examples
             //ManageBrightnessContrastAdjustmentLayer.Run();
             //SupportOfAdjusmentLayers.Run();
             //AddTextLayerOnRuntime.Run();
+            //RenderTextWithDifferentColorsInTextLayer.Run();
+            //SupportForClblResource.Run();
+            //SupportForBlwhResource.Run();
+            //ExportLayerGroupToImage.Run();
+            //SupportForLspfResource.Run();
+            //SupportForInfxResource.Run();
 
             //// =====================================================
             //// =====================================================
@@ -171,7 +177,7 @@ namespace Aspose.PSD.Examples
             //LoadImageToPSD.Run();
             //SupportOfRGBColor.Run();
             //SupportOfRotateLayer.Run();
-             //PatternFillLayer.Run();
+            //PatternFillLayer.Run();
             //SupportOfPtFlResource.Run();
             //CropPSDFile.Run();
             //SupportOfVsmsResource.Run();
@@ -226,12 +232,12 @@ namespace Aspose.PSD.Examples
             //ColorConversionUsingDefaultProfiles.Run();
             //AddSignatureToImage.Run();
             //SupportForInterruptMonitor.Run();
-      
-             //PSB
+
+            //PSB
             //PSBToPSD.Run();
-           // PSBToJPG.Run();
+            // PSBToJPG.Run();
             //PSBToPDF.Run();
-            
+
             //AI
             //AIToPSD.Run();
             //AIToPNG.Run();
@@ -242,7 +248,7 @@ namespace Aspose.PSD.Examples
 
             //Opening
             //LoadingImageFromStream.Run();
-            
+
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
         }
@@ -323,6 +329,10 @@ namespace Aspose.PSD.Examples
         public static String GetDataDir_Opening()
         {
             return Path.GetFullPath(GetDataDir_Data() + "Opening/");
+        }
+        public static String GetDataDir_Output()
+        {
+            return Path.GetFullPath(GetDataDir_Data() + "1_Output/");
         }
 
         public static string GetDataDir_Data()
