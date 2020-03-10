@@ -12,7 +12,7 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithPSD
             string SourceDir = RunExamples.GetDataDir_PSD();
             string OutputDir = RunExamples.GetDataDir_Output();
 
-            //ExStart:1
+            //ExStart:SupportForLspfResource
             const string ActualPropertyValueIsWrongMessage = "Expected property value is not equal to actual value";
             void AssertIsTrue(bool condition, string message)
             {
@@ -97,7 +97,7 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithPSD
 
             AssertIsTrue(isRequiredResourceFound, "The specified LspfResource not found");
             Console.WriteLine("LspfResource updating works as expected. Press any key.");
-            //ExEnd:1
+            //ExEnd:SupportForLspfResource
 
             Console.WriteLine("SupportForLspfResource executed successfully");
         }

@@ -2,11 +2,6 @@
 using Aspose.PSD.FileFormats.Psd.Layers.LayerEffects;
 using Aspose.PSD.ImageLoadOptions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 {
@@ -20,8 +15,8 @@ namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 			//ExStart:ColorOverLayEffect
 
 			// ColorOverlay effect editing
-			string sourceFileName = dataDir+"ColorOverlay.psd";
-			string psdPathAfterChange =dataDir+ "ColorOverlayChanged.psd";
+			string sourceFileName = dataDir + "ColorOverlay.psd";
+			string psdPathAfterChange = dataDir + "ColorOverlayChanged.psd";
 
 			var loadOptions = new PsdLoadOptions()
 			{

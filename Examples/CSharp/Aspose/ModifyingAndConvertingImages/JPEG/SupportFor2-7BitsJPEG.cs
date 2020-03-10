@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.FileFormats.Jpeg;
+﻿using Aspose.PSD.FileFormats.Jpeg;
 using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.ImageOptions;
 
@@ -13,9 +8,10 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.JPEG
     {
         public static void Run()
         {
-            //ExStart:SupportFor2_7BitsJPEG
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
+
+            //ExStart:SupportFor2_7BitsJPEG
 
             // Load PSD image.
             using (PsdImage image = (PsdImage)Image.Load(dataDir + "PsdImage.psd"))
@@ -35,7 +31,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.JPEG
                 options.RgbColorProfile = null;
                 options.CmykColorProfile = null;
 
-                image.Save(dataDir+ "2_7BitsJPEG_output.jpg", options);
+                image.Save(dataDir + "2_7BitsJPEG_output.jpg", options);
             }
 
 

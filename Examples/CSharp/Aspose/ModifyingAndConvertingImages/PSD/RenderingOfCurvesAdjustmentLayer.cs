@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.FileFormats.Png;
+﻿using Aspose.PSD.FileFormats.Png;
 using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers.AdjustmentLayers;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerResources;
@@ -15,9 +10,10 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
     {
         public static void Run()
         {
-            //ExStart:RenderingOfCurvesAdjustmentLayer
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
+
+            //ExStart:RenderingOfCurvesAdjustmentLayer
 
             // Curves layer editing
             string sourceFileName = dataDir + "CurvesAdjustmentLayer";
@@ -50,19 +46,18 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                             }
                         }
                     }
-               
-                // Save PSD
-                im.Save(psdPathAfterChange + j.ToString() + ".psd");
 
-                // Save PNG
-                var saveOptions = new PngOptions();
-                saveOptions.ColorType = PngColorType.TruecolorWithAlpha;
-                im.Save(pngExportPath + j.ToString() + ".png", saveOptions);
+                    // Save PSD
+                    im.Save(psdPathAfterChange + j.ToString() + ".psd");
+
+                    // Save PNG
+                    var saveOptions = new PngOptions();
+                    saveOptions.ColorType = PngColorType.TruecolorWithAlpha;
+                    im.Save(pngExportPath + j.ToString() + ".png", saveOptions);
+                }
             }
-        }
             //ExEnd:RenderingOfCurvesAdjustmentLayer
 
         }
-
     }
 }

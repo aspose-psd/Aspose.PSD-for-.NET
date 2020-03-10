@@ -2,22 +2,17 @@
 using Aspose.PSD.FileFormats.Psd.Layers;
 using Aspose.PSD.ImageOptions;
 using Aspose.PSD.Sources;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
     class CreateLayerGroups
     {
-        public static void Run() {
-
-            //ExStart:CreateLayerGroups
-
+        public static void Run()
+        {
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
+
+            //ExStart:CreateLayerGroups
 
             string inputFile = dataDir + "ButtonTemp.psd";
 
@@ -47,7 +42,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                 layer4.Name = "Layer 4";
                 group1.AddLayer(layer4);
 
-                psdImage.Save(dataDir +"LayerGroups_out.psd");
+                psdImage.Save(dataDir + "LayerGroups_out.psd");
             }
             //ExEnd:CreateLayerGroups
 

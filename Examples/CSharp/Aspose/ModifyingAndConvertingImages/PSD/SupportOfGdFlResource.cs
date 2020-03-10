@@ -4,20 +4,17 @@ using Aspose.PSD.FileFormats.Psd.Layers.FillSettings;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerResources;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
     class SupportOfGdFlResource
     {
-
         public static void Run()
         {
-            //ExStart:SupportOfGdFlResource
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
+
+            //ExStart:SupportOfGdFlResource
 
             // Support of GdFlResource
             string sourceFileName = dataDir + "ComplexGradientFillLayer.psd";

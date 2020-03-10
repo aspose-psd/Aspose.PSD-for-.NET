@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.FileFormats.Psd;
-using Aspose.PSD.FileFormats.Tiff.Enums;
-using Aspose.PSD.ImageFilters.FilterOptions;
+﻿using Aspose.PSD.ImageFilters.FilterOptions;
 using Aspose.PSD.ImageOptions;
-using Aspose.PSD.Sources;
 
 namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 {
@@ -20,7 +12,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 
             //ExStart:BluranImage
 
-            String sourceFile = dataDir + @"sample.psd";
+            string sourceFile = dataDir + @"sample.psd";
             string destName = dataDir + @"BlurAnImage_out.gif";
 
             // Load an existing image into an instance of RasterImage class

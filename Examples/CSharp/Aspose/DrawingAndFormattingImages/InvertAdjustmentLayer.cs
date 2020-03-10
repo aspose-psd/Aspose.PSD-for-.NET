@@ -1,9 +1,4 @@
 ﻿using Aspose.PSD.FileFormats.Psd;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 {
@@ -11,14 +6,12 @@ namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
     {
         public static void Run()
         {
-
-            //ExStart:InvertAdjustmentLayer
             // Add color overlay layer effect at runtime
             string dataDir = RunExamples.GetDataDir_PSD();
 
-
+            //ExStart:InvertAdjustmentLayer
             var filePath = dataDir + "InvertStripes_before.psd";
-            var outputPath = dataDir +  "InvertStripes_after.psd";
+            var outputPath = dataDir + "InvertStripes_after.psd";
             using (var im = (PsdImage)Image.Load(filePath))
             {
                 im.AddInvertAdjustmentLayer();

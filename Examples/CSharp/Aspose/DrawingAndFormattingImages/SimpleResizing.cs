@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.ImageOptions;
-using Aspose.PSD.Sources;
+﻿using Aspose.PSD.ImageOptions;
 
 namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 {
@@ -17,7 +11,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 
             //ExStart:SimpleResizing
 
-            String sourceFile = dataDir + @"sample.psd";
+            string sourceFile = dataDir + @"sample.psd";
             string destName = dataDir + @"SimpleResizing_out.jpg";
 
             // Load an existing image into an instance of RasterImage class
@@ -26,7 +20,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
                 image.Resize(300, 300);
                 image.Save(destName, new JpegOptions());
             }
-            
+
             //ExEnd:SimpleResizing
 
         }

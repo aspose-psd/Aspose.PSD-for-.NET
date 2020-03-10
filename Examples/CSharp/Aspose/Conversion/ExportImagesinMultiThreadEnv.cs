@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.ImageFilters.FilterOptions;
-using Aspose.PSD.ImageOptions;
+﻿using Aspose.PSD.ImageOptions;
 
 namespace Aspose.PSD.Examples.Aspose.Conversion
 {
@@ -17,11 +11,11 @@ namespace Aspose.PSD.Examples.Aspose.Conversion
 
             //ExStart:ExportImagesinMultiThreadEnv
 
-            String imageDataPath = dataDir + @"sample.psd";
-          
+            string imageDataPath = dataDir + @"sample.psd";
+
             try
             {
-               
+
                 // Create the stream of the existing image file.   
                 using (System.IO.FileStream fileStream = System.IO.File.Create(imageDataPath))
                 {

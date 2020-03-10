@@ -1,22 +1,16 @@
 ﻿using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
     class SupportOfLinkedLayer
     {
-        public static void Run() {
-
-            //ExStart:SupportOfLinkedLayer
-
-                      
+        public static void Run()
+        {
             string dataDir = RunExamples.GetDataDir_PSD();
 
+            //ExStart:SupportOfLinkedLayer
             using (var psd = (PsdImage)Image.Load(dataDir + "LinkedLayerexample.psd"))
             {
                 Layer[] layers = psd.Layers;
@@ -49,9 +43,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                 psd.Save(dataDir + "LinkedLayerexample_output.psd");
             }
 
-
             //ExEnd:SupportOfLinkedLayer
-
         }
     }
 }

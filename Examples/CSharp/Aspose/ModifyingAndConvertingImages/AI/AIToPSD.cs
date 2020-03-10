@@ -1,10 +1,5 @@
 ﻿using Aspose.PSD.FileFormats.Ai;
 using Aspose.PSD.ImageOptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.AI
 {
@@ -12,11 +7,10 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.AI
     {
         public static void Run()
         {
-
-            //ExStart:AIToPSD
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_AI();
 
+            //ExStart:AIToPSD
             string[] sourcesFiles = new string[]
             {
                 @"34992OStroke",
@@ -28,7 +22,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.AI
                 string name = sourcesFiles[i];
                 string sourceFileName = dataDir + name + ".ai";
                 string outFileName = dataDir + name + ".psd";
-                
+
 
                 using (AiImage image = (AiImage)Image.Load(sourceFileName))
                 {

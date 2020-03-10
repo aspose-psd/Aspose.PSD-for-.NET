@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.FileFormats.Png;
-using Aspose.PSD.FileFormats.Psd;
+﻿using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers.AdjustmentLayers;
-using Aspose.PSD.FileFormats.Psd.Layers.LayerResources;
-using Aspose.PSD.ImageOptions;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
@@ -15,12 +7,13 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
     {
         public static void Run()
         {
-            //ExStart:AddChannelMixerAdjustmentLayer
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
 
-            string sourceFileName = dataDir+"ChannelMixerAdjustmentLayerRgb.psd";
-            string psdPathAfterChange = dataDir+ "ChannelMixerAdjustmentLayerRgbChanged.psd";
+            //ExStart:AddChannelMixerAdjustmentLayer
+
+            string sourceFileName = dataDir + "ChannelMixerAdjustmentLayerRgb.psd";
+            string psdPathAfterChange = dataDir + "ChannelMixerAdjustmentLayerRgbChanged.psd";
 
             using (var im = (PsdImage)Image.Load(sourceFileName))
             {
@@ -39,7 +32,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
             }
 
             // Cmyk Channel Mixer
-            sourceFileName = dataDir+"ChannelMixerAdjustmentLayerCmyk.psd";
+            sourceFileName = dataDir + "ChannelMixerAdjustmentLayerCmyk.psd";
             psdPathAfterChange = dataDir + "ChannelMixerAdjustmentLayerCmykChanged.psd";
 
             using (var im = (PsdImage)Image.Load(sourceFileName))
@@ -61,8 +54,8 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 
 
             // Adding the new layer(Cmyk for this example)
-            sourceFileName = dataDir+"CmykWithAlpha.psd";
-            psdPathAfterChange = dataDir+"ChannelMixerAdjustmentLayerCmykChanged.psd";
+            sourceFileName = dataDir + "CmykWithAlpha.psd";
+            psdPathAfterChange = dataDir + "ChannelMixerAdjustmentLayerCmykChanged.psd";
 
             using (var im = (PsdImage)Image.Load(sourceFileName))
             {

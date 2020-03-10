@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.FileFormats.Psd;
-using Aspose.PSD.FileFormats.Tiff;
-using Aspose.PSD.ImageOptions;
+﻿using Aspose.PSD.FileFormats.Psd;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.TIFF
 {
@@ -13,10 +6,10 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.TIFF
     {
         public static void Run()
         {
-
-            //ExStart:ExportToMultiPageTiff
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
+
+            //ExStart:ExportToMultiPageTiff
 
             // Load a PSD file as an image and cast it into PsdImage
             using (PsdImage psdImage = (PsdImage)Image.Load(dataDir + "layers.psd"))
@@ -34,7 +27,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.TIFF
 
                 // Create a new TiffImage with frames created earlier and save to disk.
                 //TiffImage tiffImage = new TiffImage(frames.ToArray());
-                //tiffImage.Save(dataDir+ "ExportToMultiPageTiff_output.tif");
+                //tiffImage.Save(dataDir + "ExportToMultiPageTiff_output.tif");
             }
             //ExEnd:ExportToMultiPageTiff
         }

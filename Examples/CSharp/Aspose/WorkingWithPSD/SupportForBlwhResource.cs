@@ -13,7 +13,7 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithPSD
             string SourceDir = RunExamples.GetDataDir_PSD();
             string OutputDir = RunExamples.GetDataDir_Output();
 
-            //ExStart:1
+            //ExStart:SupportForBlwhResource
             const string ActualPropertyValueIsWrongMessage = "Expected property value is not equal to actual value";
             void AssertIsTrue(bool condition, string message)
             {
@@ -160,7 +160,7 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithPSD
                 63.9990234375,
                 -1015744,
                 -4963324);
-            //ExEnd:1
+            //ExEnd:SupportForBlwhResource
 
             Console.WriteLine("SupportForBlwhResource executed successfully");
         }

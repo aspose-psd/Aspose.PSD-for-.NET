@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.FileFormats.Jpeg;
+﻿using Aspose.PSD.FileFormats.Jpeg;
+using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.ImageOptions;
 using Aspose.PSD.Sources;
-using Aspose.PSD.FileFormats.Psd;
+using System.IO;
 
 namespace Aspose.PSD.Examples.Aspose.Conversion
 {
@@ -68,10 +63,10 @@ namespace Aspose.PSD.Examples.Aspose.Conversion
                 image.SaveArgb32Pixels(image.Bounds, pixels);
 
                 // Save the resultant image with default Icc profiles.
-                image.Save(dataDir+"Default_profiles.jpg",new JpegOptions());
+                image.Save(dataDir + "Default_profiles.jpg", new JpegOptions());
 
                 // Update color profile.
-                StreamSource rgbprofile = new StreamSource(File.OpenRead(dataDir+"eciRGB_v2.icc"));
+                StreamSource rgbprofile = new StreamSource(File.OpenRead(dataDir + "eciRGB_v2.icc"));
                 StreamSource cmykprofile = new StreamSource(File.OpenRead(dataDir + "ISOcoated_v2_FullGamut4.icc"));
                 image.RgbColorProfile = rgbprofile;
                 image.CmykColorProfile = cmykprofile;

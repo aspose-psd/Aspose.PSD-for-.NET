@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.FileFormats.Psd;
+﻿using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.ImageOptions;
 using Aspose.PSD.Sources;
 
@@ -13,13 +8,14 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
     {
         public static void Run()
         {
-            //ExStart:CreateIndexedPSDFiles
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
 
+            //ExStart:CreateIndexedPSDFiles
+
             // Create an instance of PsdOptions and set it's properties
             var createOptions = new PsdOptions();
-            createOptions.Source = new FileCreateSource(dataDir+"Newsample_out.psd", false);
+            createOptions.Source = new FileCreateSource(dataDir + "Newsample_out.psd", false);
             createOptions.ColorMode = ColorModes.Indexed;
             createOptions.Version = 5;
 

@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.FileFormats.Psd;
+﻿using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Resources;
+using System;
+using System.Reflection;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.JPEG
 {
@@ -13,10 +9,10 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.JPEG
     {
         public static void Run()
         {
-            //ExStart:ReadAllEXIFTagList
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
 
+            //ExStart:ReadAllEXIFTagList
             // Load PSD image.
             using (PsdImage image = (PsdImage)Image.Load(dataDir + "1280px-Zebras_Serengeti.psd"))
             {
@@ -43,7 +39,6 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.JPEG
             }
 
             //ExEnd:ReadAllEXIFTagList
-
         }
     }
 }

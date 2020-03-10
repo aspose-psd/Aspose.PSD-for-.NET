@@ -1,12 +1,7 @@
 ﻿using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers.FillLayers;
 using Aspose.PSD.FileFormats.Psd.Layers.FillSettings;
-using Aspose.PSD.ImageOptions;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
@@ -14,12 +9,13 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
     {
         public static void Run()
         {
-            //ExStart:ColorFillLayer
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
 
+            //ExStart:ColorFillLayer
+
             string sourceFileName = dataDir + "ColorFillLayer.psd";
-            string exportPath     = dataDir + "ColorFillLayer_output.psd";
+            string exportPath = dataDir + "ColorFillLayer_output.psd";
 
             var im = (PsdImage)Image.Load(sourceFileName);
 

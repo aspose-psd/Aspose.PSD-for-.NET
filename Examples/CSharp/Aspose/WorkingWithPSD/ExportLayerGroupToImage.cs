@@ -13,7 +13,7 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithPSD
             string SourceDir = RunExamples.GetDataDir_PSD();
             string OutputDir = RunExamples.GetDataDir_Output();
 
-            //ExStart:1
+            //ExStart:ExportLayerGroupToImage
             using (var psdImage = (PsdImage)Image.Load(SourceDir + "ExportLayerGroupToImageSample.psd"))
             {
                 // folder with background
@@ -24,7 +24,7 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithPSD
                 bg_folder.Save(OutputDir + "background.png", new PngOptions());
                 content_folder.Save(OutputDir + "content.png", new PngOptions());
             }
-            //ExEnd:1
+            //ExEnd:ExportLayerGroupToImage
 
             Console.WriteLine("ExportLayerGroupToImage executed successfully");
         }

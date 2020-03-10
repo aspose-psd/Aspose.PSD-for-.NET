@@ -1,33 +1,30 @@
 ﻿using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.Opening
 {
     class LoadingImageFromStream
     {
-        public static void Run() {
-
-            //ExStart:LoadingImageFromStream
+        public static void Run()
+        {
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_Opening();
+
+            //ExStart:LoadingImageFromStream
 
             string outputFilePath = dataDir + "PsdResult.psd";
 
             var filesList = new string[]
             {
-             "PsdExample.psd",
-             "BmpExample.bmp",
-             "GifExample.gif",
-             "Jpeg2000Example.jpf",
-             "JpegExample.jpg",
-             "PngExample.png",
-             "TiffExample.tif",
+                "PsdExample.psd",
+                "BmpExample.bmp",
+                "GifExample.gif",
+                "Jpeg2000Example.jpf",
+                "JpegExample.jpg",
+                "PngExample.png",
+                "TiffExample.tif",
             };
             using (var image = new PsdImage(200, 200))
             {

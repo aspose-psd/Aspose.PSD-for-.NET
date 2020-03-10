@@ -2,32 +2,25 @@
 using Aspose.PSD.FileFormats.Psd.Layers.LayerEffects;
 using Aspose.PSD.ImageLoadOptions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 {
 	class SupportShadowEffect
 	{
-
 		public static void Run()
 		{
-		
-			//ExStart:SupportShadowEffect
 			// The path to the documents directory.
 			string dataDir = RunExamples.GetDataDir_PSD();
-			string sourceFileName = dataDir+"Shadow.psd";
-			string psdPathAfterChange = dataDir+"ShadowChanged.psd";
+
+			//ExStart:SupportShadowEffect
+			string sourceFileName = dataDir + "Shadow.psd";
+			string psdPathAfterChange = dataDir + "ShadowChanged.psd";
 			var loadOptions = new PsdLoadOptions()
 			{
 				LoadEffectsResource = true
 			};
 
 			using (var im = (PsdImage)Image.Load(sourceFileName, loadOptions))
-		//using (var im = (PsdImage)Image.Load(sourceFileName))
 			{
 				var shadowEffect = (DropShadowEffect)(im.Layers[1].BlendingOptions.Effects[0]);
 

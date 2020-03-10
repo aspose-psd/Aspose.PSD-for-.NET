@@ -3,24 +3,20 @@ using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.ImageLoadOptions;
 using Aspose.PSD.ImageOptions;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
     class LoadPSDWithReadOnlyMode
     {
-        public static void Run() {
-
-            //ExStart:LoadPSDWithReadOnlyMode
-
+        public static void Run()
+        {
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
 
-            string sourceFileName = dataDir +"White 3D Text Effect.psd";
-            string outFileName = dataDir +  "Exported.png";
+            //ExStart:LoadPSDWithReadOnlyMode
+
+            string sourceFileName = dataDir + "White 3D Text Effect.psd";
+            string outFileName = dataDir + "Exported.png";
 
             LoadOptions loadOptions = new PsdLoadOptions() { ReadOnlyMode = true };
             ImageOptionsBase saveOptions = new PngOptions() { ColorType = PngColorType.TruecolorWithAlpha };
@@ -36,7 +32,6 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                 throw new Exception("Usage of memory is too big");
             }
             //ExEnd:LoadPSDWithReadOnlyMode
-
         }
     }
 }

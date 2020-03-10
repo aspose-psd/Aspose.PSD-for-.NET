@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.Brushes;
-using Aspose.PSD.FileFormats.Psd;
+﻿using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerResources;
-using Aspose.PSD.ImageOptions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
@@ -15,13 +8,12 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
     {
         public static void Run()
         {
-
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
 
             //ExStart:SheetColorHighlighting
-            string sourceFileName = dataDir+"SheetColorHighlightExample.psd";
-            string exportPath = dataDir+"SheetColorHighlightExampleChanged.psd";
+            string sourceFileName = dataDir + "SheetColorHighlightExample.psd";
+            string exportPath = dataDir + "SheetColorHighlightExampleChanged.psd";
 
 
             // Load a PSD file as an image and cast it into PsdImage
@@ -37,7 +29,6 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 
                 im.Save(exportPath);
             }
-
 
             //ExEnd:SheetColorHighlighting
         }

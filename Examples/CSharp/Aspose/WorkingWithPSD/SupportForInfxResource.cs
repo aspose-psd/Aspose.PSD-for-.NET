@@ -12,7 +12,7 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithPSD
             string SourceDir = RunExamples.GetDataDir_PSD();
             string OutputDir = RunExamples.GetDataDir_Output();
 
-            //ExStart:1
+            //ExStart:SupportForInfxResource
             void AssertIsTrue(bool condition, string message)
             {
                 if (!condition)
@@ -67,7 +67,7 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithPSD
             }
 
             AssertIsTrue(isRequiredResourceFound, "The specified InfxResource not found");
-            //ExEnd:1
+            //ExEnd:SupportForInfxResource
 
             Console.WriteLine("SupportForInfxResource executed successfully");
         }

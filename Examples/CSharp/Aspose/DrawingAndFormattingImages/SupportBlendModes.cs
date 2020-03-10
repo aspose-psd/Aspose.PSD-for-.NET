@@ -1,11 +1,6 @@
 ﻿using Aspose.PSD.FileFormats.Png;
 using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.ImageOptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 {
@@ -20,39 +15,39 @@ namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 			//ExStart:SupportBlendModes
 			var files = new string[]
 	  {
-	       "Normal",
-	       "Dissolve",
-	       "Darken",
-	       "Multiply",
-	       "ColorBurn",
-	       "LinearBurn",
-	       "DarkerColor",
-	       "Lighten",
-	       "Screen",
-	       "ColorDodge",
-	       "LinearDodgeAdd",
-	       "LightenColor",
-	       "Overlay",
-	       "SoftLight",
-	       "HardLight",
-	       "VividLight",
-	       "LinearLight",
-	       "PinLight",
-	       "HardMix",
-	       "Difference",
-	       "Exclusion",
-	       "Subtract",
-	       "Divide",
-	        "Hue",
-	       "Saturation",
-	        "Color",
-	       "Luminosity",
+		   "Normal",
+		   "Dissolve",
+		   "Darken",
+		   "Multiply",
+		   "ColorBurn",
+		   "LinearBurn",
+		   "DarkerColor",
+		   "Lighten",
+		   "Screen",
+		   "ColorDodge",
+		   "LinearDodgeAdd",
+		   "LightenColor",
+		   "Overlay",
+		   "SoftLight",
+		   "HardLight",
+		   "VividLight",
+		   "LinearLight",
+		   "PinLight",
+		   "HardMix",
+		   "Difference",
+		   "Exclusion",
+		   "Subtract",
+		   "Divide",
+			"Hue",
+		   "Saturation",
+			"Color",
+		   "Luminosity",
 			};
 
 			foreach (var fileName in files)
 			{
 
-				using (var im = (PsdImage)Image.Load(fileName + ".psd"))
+				using (var im = (PsdImage)Image.Load(dataDir + fileName + ".psd"))
 				{
 					// Export to PNG
 					var saveOptions = new PngOptions();

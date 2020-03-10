@@ -1,10 +1,5 @@
 ﻿using Aspose.PSD.FileFormats.Ai;
 using Aspose.PSD.ImageOptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.AI
 {
@@ -12,10 +7,10 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.AI
     {
         public static void Run()
         {
-
-            //ExStart:AIToGIF
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_AI();
+
+            //ExStart:AIToGIF
 
             string[] sourcesFiles = new string[]
             {

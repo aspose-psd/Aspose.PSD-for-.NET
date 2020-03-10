@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using Aspose.PSD.ImageOptions;
+﻿using Aspose.PSD.ImageOptions;
 using Aspose.PSD.Multithreading;
+using System;
+using System.IO;
+using System.Threading;
 
 namespace Aspose.PSD.Examples.Aspose.Conversion
 {
@@ -15,9 +10,10 @@ namespace Aspose.PSD.Examples.Aspose.Conversion
     {
         public static void Run()
         {
+            string dataDir = RunExamples.GetDataDir_PNG();
+
             //ExStart:SupportForInterruptMonitor
 
-            string dataDir =  RunExamples.GetDataDir_PNG();
             ImageOptionsBase saveOptions = new PngOptions();
             InterruptMonitor monitor = new InterruptMonitor();
             string source = Path.Combine(dataDir, "big2.psb");
@@ -48,12 +44,12 @@ namespace Aspose.PSD.Examples.Aspose.Conversion
                     File.Delete(output);
                 }
             }
-        
+
             //ExEnd:SupportForInterruptMonitor
         }
 
 
-        }
-
-
     }
+
+
+}

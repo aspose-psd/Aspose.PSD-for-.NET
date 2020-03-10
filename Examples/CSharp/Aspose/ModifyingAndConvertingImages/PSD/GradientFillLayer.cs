@@ -5,9 +5,6 @@ using Aspose.PSD.FileFormats.Psd.Layers.FillSettings;
 using Aspose.PSD.ImageOptions;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
@@ -94,6 +91,5 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
             //ExEnd:GradientFillLayer
 
         }
-
     }
 }

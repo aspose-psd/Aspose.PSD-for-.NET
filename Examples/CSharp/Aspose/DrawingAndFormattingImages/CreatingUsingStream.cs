@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.FileFormats.Psd;
-using Aspose.PSD.ImageOptions;
+﻿using Aspose.PSD.ImageOptions;
 using Aspose.PSD.Sources;
+using System.IO;
 
 namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 {

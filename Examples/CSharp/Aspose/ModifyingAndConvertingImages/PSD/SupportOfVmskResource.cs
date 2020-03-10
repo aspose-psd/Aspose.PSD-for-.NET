@@ -2,10 +2,6 @@
 using Aspose.PSD.FileFormats.Psd.Layers.LayerResources;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerResources.VectorPaths;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
@@ -15,7 +11,6 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
         //ExStart:SupportOfVmskResource
         public static void Run()
         {
-
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
 

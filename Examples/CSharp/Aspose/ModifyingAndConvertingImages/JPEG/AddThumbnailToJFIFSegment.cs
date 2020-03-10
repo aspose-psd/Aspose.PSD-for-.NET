@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.FileFormats.Jpeg;
-using Aspose.PSD.FileFormats.Psd;
+﻿using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Resources;
-using Aspose.PSD.ImageOptions;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.JPEG
 {
@@ -14,12 +7,13 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.JPEG
     {
         public static void Run()
         {
-            //ExStart:AddThumbnailToJFIFSegment
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
 
+            //ExStart:AddThumbnailToJFIFSegment
+
             // Load PSD image.
-            using (PsdImage image = (PsdImage)Image.Load(dataDir+ "aspose_out.psd"))
+            using (PsdImage image = (PsdImage)Image.Load(dataDir + "aspose_out.psd"))
             {
                 // Iterate over resources.
                 foreach (var resource in image.ImageResources)
@@ -56,7 +50,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.JPEG
                 }
 
                 image.Save();
-                
+
             }
             //ExEnd:AddThumbnailToJFIFSegment
 

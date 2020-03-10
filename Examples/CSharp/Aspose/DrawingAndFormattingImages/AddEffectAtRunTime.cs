@@ -1,12 +1,6 @@
 ﻿using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers;
 using Aspose.PSD.ImageLoadOptions;
-using Aspose.PSD.ImageOptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 {
@@ -14,11 +8,12 @@ namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 	{
 		public static void Run()
 		{
-			//ExStart:AddEffectAtRunTime
-			// Add color overlay layer effect at runtime
 			string dataDir = RunExamples.GetDataDir_PSD();
-			string sourceFileName =dataDir+"ThreeRegularLayers.psd";
-			string exportPath = dataDir+"ThreeRegularLayersChanged.psd";
+			//ExStart:AddEffectAtRunTime
+
+			// Add color overlay layer effect at runtime
+			string sourceFileName = dataDir + "ThreeRegularLayers.psd";
+			string exportPath = dataDir + "ThreeRegularLayersChanged.psd";
 
 			var loadOptions = new PsdLoadOptions()
 			{
