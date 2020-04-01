@@ -1,20 +1,16 @@
 ﻿using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.ImageOptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
     class PSDToPDF
     {
-        public static void Run() {
-
-            //ExStart:PSDToPDF
+        public static void Run()
+        {
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
+
+            //ExStart:PSDToPDF
 
             // Add support of PSD export to PDF
             string[] sourcesFiles = new string[]
@@ -37,10 +33,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                 }
             }
 
-
             //ExEnd:PSDToPDF
-
-
         }
     }
 }

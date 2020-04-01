@@ -2,25 +2,19 @@
 using Aspose.PSD.FileFormats.Psd.Layers.LayerEffects;
 using Aspose.PSD.ImageLoadOptions;
 using Aspose.PSD.ImageOptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
     class SupportOfInnerShadowLayerEffect
     {
-        public static void Run() {
-
-            //ExStart:SupportOfInnerShadowLayerEffect
-
+        public static void Run()
+        {
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
 
+            //ExStart:SupportOfInnerShadowLayerEffect
             string sourceFile = dataDir + "innershadow.psd";
-            string destName   = dataDir+ "innershadow_out.psd";
+            string destName = dataDir + "innershadow_out.psd";
 
             var loadOptions = new PsdLoadOptions()
             {

@@ -1,21 +1,17 @@
 ﻿using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
     class SetTextLayerPosition
     {
-        public static void Run() {
-
-            //ExStart:SetTextLayerPosition
+        public static void Run()
+        {
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
 
+            //ExStart:SetTextLayerPosition
             string sourceFileName = dataDir + "OneLayer.psd";
             string exportPath = dataDir + "OneLayer_Edited.psd";
             int leftPos = 99;
@@ -29,7 +25,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                 {
                     throw new Exception("Was created incorrect Text Layer");
                 }
-                
+
                 im.Save(exportPath);
             }
 

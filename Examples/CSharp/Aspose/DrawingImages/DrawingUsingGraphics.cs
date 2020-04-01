@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.Brushes;
+﻿using Aspose.PSD.Brushes;
 using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.ImageOptions;
 
@@ -17,7 +12,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
             string dataDir = RunExamples.GetDataDir_PSD();
 
             //ExStart:DrawingUsingGraphics
-         
+
             // Create an instance of Image
             using (PsdImage image = new PsdImage(500, 500))
             {
@@ -35,7 +30,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                 }
 
                 // export modified image.
-                image.Save(dataDir+ "DrawingUsingGraphics_output.bmp", new BmpOptions());
+                image.Save(dataDir + "DrawingUsingGraphics_output.bmp", new BmpOptions());
             }
 
 

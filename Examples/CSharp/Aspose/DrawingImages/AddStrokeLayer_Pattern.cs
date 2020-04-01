@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.FileFormats.Psd;
+﻿using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers;
+using Aspose.PSD.FileFormats.Psd.Layers.FillSettings;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerEffects;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerResources;
 using Aspose.PSD.ImageLoadOptions;
-using Aspose.PSD.ImageOptions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Aspose.PSD.FileFormats.Psd.Layers.FillSettings;
+using System;
 
 namespace Aspose.PSD.Examples.Aspose.DrawingImages
 {
@@ -18,15 +13,14 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
     {
         public static void Run()
         {
-
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
 
             //ExStart:AddStrokeLayer_Pattern
 
             // Stroke effect. FillType - Pattern. Example
-            string sourceFileName = dataDir+"Stroke.psd";
-            string exportPath = dataDir+"StrokePatternChanged.psd";
+            string sourceFileName = dataDir + "Stroke.psd";
+            string exportPath = dataDir + "StrokePatternChanged.psd";
 
             var loadOptions = new PsdLoadOptions()
             {
@@ -112,9 +106,9 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
 
                     Assert.AreEqual(FillType.Pattern, fillSettings.FillType);
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
-                    String ex = e.StackTrace;
+                    string ex = e.StackTrace;
 
                 }
             }

@@ -1,11 +1,6 @@
 ﻿using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Tiff.Enums;
 using Aspose.PSD.ImageOptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 {
@@ -13,12 +8,10 @@ namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
     {
         public static void Run()
         {
-            //ExStart:AdjustingBrightness
-
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
 
-            
+            //ExStart:AdjustingBrightness
 
             string sourceFile = dataDir + @"sample.psd";
             string destName = dataDir + @"AdjustBrightness_out.tiff";
@@ -31,7 +24,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
                 rasterImage.AdjustBrightness(-50);
 
                 TiffOptions tiffOptions = new TiffOptions(TiffExpectedFormat.Default);
-                rasterImage.Save(destName,tiffOptions);
+                rasterImage.Save(destName, tiffOptions);
             }
 
             //ExEnd:AdjustingBrightness

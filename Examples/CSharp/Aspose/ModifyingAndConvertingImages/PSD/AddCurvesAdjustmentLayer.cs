@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.FileFormats.Png;
-using Aspose.PSD.FileFormats.Psd;
+﻿using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers.AdjustmentLayers;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerResources;
-using Aspose.PSD.ImageOptions;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
@@ -15,13 +8,14 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
     {
         public static void Run()
         {
-            //ExStart:AddCurvesAdjustmentLayer
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
 
+            //ExStart:AddCurvesAdjustmentLayer
+
             // Curves layer editing
-            string sourceFileName = dataDir+"CurvesAdjustmentLayer";
-            string psdPathAfterChange = dataDir+ "CurvesAdjustmentLayerChanged";
+            string sourceFileName = dataDir + "CurvesAdjustmentLayer";
+            string psdPathAfterChange = dataDir + "CurvesAdjustmentLayerChanged";
 
             for (int j = 1; j < 2; j++)
             {

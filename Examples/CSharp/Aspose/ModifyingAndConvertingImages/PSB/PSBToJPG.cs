@@ -1,21 +1,17 @@
 ﻿using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.ImageLoadOptions;
 using Aspose.PSD.ImageOptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSB
 {
     class PSBToJPG
     {
-        public static void Run() {
-
-            //ExStart:PSBToJPG
+        public static void Run()
+        {
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSB();
+
+            //ExStart:PSBToJPG
 
             string[] sourceFileNames = new string[] { 
                //Test files with layers
@@ -33,7 +29,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSB
                 {
                     // All jpeg and psd files must be readable
                     image.Save(dataDir + fileName + "_output.jpg", new JpegOptions() { Quality = 95 });
-                    image.Save(dataDir +  fileName + "_output.psb");
+                    image.Save(dataDir + fileName + "_output.psb");
                 }
             }
             //ExEnd:PSBToJPG

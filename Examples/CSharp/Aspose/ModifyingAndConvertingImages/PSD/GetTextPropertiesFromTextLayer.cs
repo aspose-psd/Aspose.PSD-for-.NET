@@ -2,27 +2,21 @@
 using Aspose.PSD.FileFormats.Psd.Layers;
 using Aspose.PSD.ImageOptions;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
     class GetTextPropertiesFromTextLayer
     {
-
         public static void Run()
         {
-
-            //ExStart:GetTextPropertiesFromTextLayer
-
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
 
+            //ExStart:GetTextPropertiesFromTextLayer
+
             const double Tolerance = 0.0001;
             var filePath = dataDir + "ThreeColorsParagraphs.psd";
-            var outputPath = dataDir+  "ThreeColorsParagraph_out.psd";
+            var outputPath = dataDir + "ThreeColorsParagraph_out.psd";
             using (var im = (PsdImage)Image.Load(filePath))
             {
                 for (int i = 0; i < im.Layers.Length; i++)

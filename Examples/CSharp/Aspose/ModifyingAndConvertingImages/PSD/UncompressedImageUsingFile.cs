@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.FileFormats.Psd;
+﻿using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.ImageOptions;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
@@ -12,7 +7,6 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
     {
         public static void Run()
         {
-
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
 
@@ -23,11 +17,11 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
             {
                 PsdOptions saveOptions = new PsdOptions();
                 saveOptions.CompressionMethod = CompressionMethod.Raw;
-                psdImage.Save(dataDir+"uncompressed_out.psd", saveOptions);
+                psdImage.Save(dataDir + "uncompressed_out.psd", saveOptions);
             }
 
             // Now reopen the newly created image.
-            using (PsdImage psdImage = (PsdImage)Image.Load(dataDir+"uncompressed_out.psd"))
+            using (PsdImage psdImage = (PsdImage)Image.Load(dataDir + "uncompressed_out.psd"))
             {
                 Graphics graphics = new Graphics(psdImage);
                 // Perform graphics operations.

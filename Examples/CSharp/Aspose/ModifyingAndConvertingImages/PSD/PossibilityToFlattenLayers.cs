@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.Brushes;
-using Aspose.PSD.FileFormats.Psd;
+﻿using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers;
-using Aspose.PSD.ImageOptions;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
@@ -15,13 +7,11 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
     {
         public static void Run()
         {
-
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
 
             //ExStart:PossibilityToFlattenLayers
 
-       
             // Flatten whole PSD
             string sourceFileName = dataDir + "ThreeRegularLayersSemiTransparent.psd";
             string exportPath = dataDir + "ThreeRegularLayersSemiTransparentFlattened.psd";
@@ -33,7 +23,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
             }
 
             // Merge one layer in another
-             exportPath = dataDir + "ThreeRegularLayersSemiTransparentFlattenedLayerByLayer.psd";
+            exportPath = dataDir + "ThreeRegularLayersSemiTransparentFlattenedLayerByLayer.psd";
 
             using (var im = (PsdImage)(Image.Load(sourceFileName)))
             {

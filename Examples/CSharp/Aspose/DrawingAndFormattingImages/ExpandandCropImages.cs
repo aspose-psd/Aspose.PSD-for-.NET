@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.ImageOptions;
-using Aspose.PSD.Sources;
+﻿using Aspose.PSD.ImageOptions;
 
 namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 {
@@ -17,7 +11,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 
             //ExStart:ExpandandCropImages
 
-            String sourceFile = dataDir + @"example1.psd";
+            string sourceFile = dataDir + @"example1.psd";
             string destName = dataDir + @"jpeg_out.jpg";
 
             // Load an image in an instance of Image and Setting for image data to be cashed

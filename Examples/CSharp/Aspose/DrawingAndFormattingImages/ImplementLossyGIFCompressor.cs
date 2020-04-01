@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.FileFormats.Psd;
-using Aspose.PSD.FileFormats.Tiff.Enums;
-using Aspose.PSD.ImageOptions;
-using Aspose.PSD.Sources;
+﻿using Aspose.PSD.ImageOptions;
 
 namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 {
@@ -19,7 +11,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 
             //ExStart:ImplementLossyGIFCompressor
 
-            String sourceFile = dataDir + @"sample.psd";
+            string sourceFile = dataDir + @"sample.psd";
             string destName = dataDir + @"anim_lossy-200.gif";
 
             GifOptions gifExport = new GifOptions();

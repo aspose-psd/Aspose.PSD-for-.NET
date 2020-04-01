@@ -4,11 +4,6 @@ using Aspose.PSD.FileFormats.Psd.Layers.LayerEffects;
 using Aspose.PSD.ImageLoadOptions;
 using Aspose.PSD.ImageOptions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 {
@@ -16,18 +11,18 @@ namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 	{
 		public static void Run()
 		{
-			//ExStart:RenderingDropShadow
-			
 			string dataDir = RunExamples.GetDataDir_PSD();
-			string sourceFileName = dataDir+ "Shadow.psd";
-			string pngExportPath = dataDir+"Shadowchanged1.png";
+
+			//ExStart:RenderingDropShadow
+			string sourceFileName = dataDir + "Shadow.psd";
+			string pngExportPath = dataDir + "Shadowchanged1.png";
 			var loadOptions = new PsdLoadOptions()
 			{
 				LoadEffectsResource = true
 			};
 
 			using (var im = (PsdImage)Image.Load(sourceFileName, loadOptions))
-		
+
 			{
 				var shadowEffect = (DropShadowEffect)(im.Layers[1].BlendingOptions.Effects[0]);
 

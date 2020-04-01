@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.FileFormats.Psd;
-using Aspose.PSD.ImageOptions;
-using Aspose.PSD.Sources;
+﻿using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.Xmp;
 using Aspose.PSD.Xmp.Schemas.DublinCore;
 using Aspose.PSD.Xmp.Schemas.Photoshop;
+using System;
+using System.IO;
 
 namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 {
@@ -64,7 +58,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
                     // Update XMP metadata into image and Save image on the disk or in memory stream
                     image.XmpData = xmpData;
                     image.Save(ms);
-                    image.Save(dataDir+"ee.psd");
+                    image.Save(dataDir + "ee.psd");
                     ms.Seek(0, System.IO.SeekOrigin.Begin);
 
                     // Load the image from memory stream or from disk to read/get the metadata

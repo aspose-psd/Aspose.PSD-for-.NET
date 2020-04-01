@@ -2,18 +2,14 @@
 using Aspose.PSD.FileFormats.Psd.Layers.LayerResources;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerResources.VectorPaths;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
     class SupportOfVsmsResource
     {
-        public static void Run() {
-
-            //ExStart:SupportOfVsmsResource
+        //ExStart:SupportOfVsmsResource
+        public static void Run()
+        {
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
 
@@ -41,6 +37,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                 var pathFillRule = (PathFillRuleRecord)resource.Paths[0];
                 var initialFillRule = (InitialFillRuleRecord)resource.Paths[1];
                 var subpathLength = (LengthRecord)resource.Paths[2];
+
                 // Path fill rule doesn't contain any additional information
                 if (pathFillRule.Type != VectorPathType.PathFillRuleRecord ||
                 initialFillRule.Type != VectorPathType.InitialFillRuleRecord ||
@@ -51,6 +48,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                 {
                     throw new Exception("VsmsResource paths were read wrong");
                 }
+
                 // Editing
                 resource.IsDisabled = true;
                 resource.IsInverted = true;
@@ -63,11 +61,8 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                 subpathLength.IsClosed = false;
                 im.Save(exportPath);
             }
-            //ExEnd:SupportOfVsmsResource
-
         }
 
-        //ExStart:GetVsmsResource
         static VsmsResource GetVsmsResource(PsdImage image)
         {
             var layer = image.Layers[1];

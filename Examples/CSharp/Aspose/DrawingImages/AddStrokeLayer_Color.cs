@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.FileFormats.Psd;
+﻿using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers;
+using Aspose.PSD.FileFormats.Psd.Layers.FillSettings;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerEffects;
 using Aspose.PSD.ImageLoadOptions;
-using Aspose.PSD.ImageOptions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Aspose.PSD.FileFormats.Psd.Layers.FillSettings;
 
 namespace Aspose.PSD.Examples.Aspose.DrawingImages
 {
@@ -17,16 +11,15 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
     {
         public static void Run()
         {
-
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
 
             //ExStart:AddStrokeLayer_Color
 
             // Stroke effect. FillType - Color. Example
-            string sourceFileName = dataDir+ "Stroke.psd";
-            string exportPath = dataDir+"StrokeGradientChanged.psd";
-            
+            string sourceFileName = dataDir + "Stroke.psd";
+            string exportPath = dataDir + "StrokeGradientChanged.psd";
+
             var loadOptions = new PsdLoadOptions()
             {
                 LoadEffectsResource = true

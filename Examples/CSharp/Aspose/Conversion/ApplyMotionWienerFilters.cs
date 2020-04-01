@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.ImageFilters.FilterOptions;
+﻿using Aspose.PSD.ImageFilters.FilterOptions;
 using Aspose.PSD.ImageOptions;
 
 namespace Aspose.PSD.Examples.Aspose.Conversion
@@ -17,7 +12,7 @@ namespace Aspose.PSD.Examples.Aspose.Conversion
 
             //ExStart:ApplyMotionWienerFilters
 
-            String sourceFile = dataDir + @"sample.psd";
+            string sourceFile = dataDir + @"sample.psd";
             string destName = dataDir + @"motion_filter_out.gif";
 
             // Load the noisy image 

@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.ImageFilters.FilterOptions;
-using Aspose.PSD.ImageOptions;
-
-namespace Aspose.PSD.Examples.Aspose.Conversion
+﻿namespace Aspose.PSD.Examples.Aspose.Conversion
 {
     class SyncRoot
     {
@@ -16,7 +8,7 @@ namespace Aspose.PSD.Examples.Aspose.Conversion
             string dataDir = RunExamples.GetDataDir_PSD();
 
             //ExStart:SyncRoot
-            
+
             // Create an instance of Memory stream class.
             using (System.IO.MemoryStream memoryStream = new System.IO.MemoryStream())
             {

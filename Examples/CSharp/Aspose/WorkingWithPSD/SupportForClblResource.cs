@@ -12,7 +12,7 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithPSD
             string SourceDir = RunExamples.GetDataDir_PSD();
             string OutputDir = RunExamples.GetDataDir_Output();
 
-            //ExStart:1
+            //ExStart:SupportForClblResource
             string sourceFileName = SourceDir + "SampleForClblResource.psd";
             string destinationFileName = OutputDir + "SampleForClblResource_out.psd";
 
@@ -47,7 +47,7 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithPSD
                 var resource = GetClblResource(psdImage);
                 Console.WriteLine("ClblResource.BlendClippedElements [should change to false]: " + resource.BlendClippedElements);
             }
-            //ExEnd:1
+            //ExEnd:SupportForClblResource
 
             Console.WriteLine("SupportForClblResource executed successfully");
         }

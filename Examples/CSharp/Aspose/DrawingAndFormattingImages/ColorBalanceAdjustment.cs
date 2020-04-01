@@ -1,21 +1,15 @@
 ﻿using Aspose.PSD.FileFormats.Psd.Layers.AdjustmentLayers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 {
     class ColorBalanceAdjustment
     {
-        public static void Run() {
-
-            //ExStart:ColorBalanceAdjustmentLayer
+        public static void Run()
+        {
             // Add color overlay layer effect at runtime
             string dataDir = RunExamples.GetDataDir_PSD();
 
-
+            //ExStart:ColorBalanceAdjustmentLayer
             var filePath = dataDir + "ColorBalance.psd";
             var outputPath = dataDir + "ColorBalance_out.psd";
             using (var im = (FileFormats.Psd.PsdImage)Image.Load(filePath))
@@ -40,8 +34,8 @@ namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 
                 im.Save(outputPath);
             }
-            //ExEnd:ColorBalanceAdjustmentLayer
 
+            //ExEnd:ColorBalanceAdjustmentLayer
 
         }
     }

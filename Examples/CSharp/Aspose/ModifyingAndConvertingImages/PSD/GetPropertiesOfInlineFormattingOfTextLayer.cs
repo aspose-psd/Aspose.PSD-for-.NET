@@ -3,9 +3,6 @@ using Aspose.PSD.FileFormats.Psd.Layers;
 using Aspose.PSD.FileFormats.Psd.Layers.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples
 {
@@ -14,11 +11,10 @@ namespace Aspose.PSD.Examples
 
         public static void Run()
         {
-            //ExStart:GetPropertiesOfInlineFormattingOfTextLayer
-
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
 
+            //ExStart:GetPropertiesOfInlineFormattingOfTextLayer
             using (var psdImage = (PsdImage)Image.Load(dataDir + "inline_formatting.psd"))
             {
                 List<ITextPortion> regularText = new List<ITextPortion>();

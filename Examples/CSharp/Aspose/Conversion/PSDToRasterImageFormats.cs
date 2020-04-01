@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD;
-using Aspose.PSD.ImageOptions;
+﻿using Aspose.PSD.ImageOptions;
 
 namespace Aspose.PSD.Examples.Aspose.Conversion
 {
@@ -18,8 +12,8 @@ namespace Aspose.PSD.Examples.Aspose.Conversion
 
             //ExStart:PSDToRasterImageFormats
 
-            String srcPath = dataDir + @"sample.psd";
-            string destName = dataDir+ @"export";
+            string srcPath = dataDir + @"sample.psd";
+            string destName = dataDir + @"export";
 
             // Load an existing PSD image as Image
             using (Image image = Image.Load(srcPath))

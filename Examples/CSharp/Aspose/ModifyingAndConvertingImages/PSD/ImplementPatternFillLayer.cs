@@ -3,25 +3,19 @@ using Aspose.PSD.FileFormats.Psd.Layers.FillLayers;
 using Aspose.PSD.FileFormats.Psd.Layers.FillSettings;
 using Aspose.PSD.ImageOptions;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
     class ImplementPatternFillLayer
     {
-        public static void Run() {
-
-            //ExStart:ImplementPatternFillLayer
-
-
+        public static void Run()
+        {
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
 
-            string sourceFile = dataDir+ "PatternFillLayer.psd";
-            string destName   = dataDir + "PatternFillLayer_out.psd";
+            //ExStart:ImplementPatternFillLayer
+            string sourceFile = dataDir + "PatternFillLayer.psd";
+            string destName = dataDir + "PatternFillLayer_out.psd";
 
             // Load an existing image into an instance of PsdImage class
             using (var image = (PsdImage)Image.Load(sourceFile))

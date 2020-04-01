@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.FileFormats.Psd;
-using Aspose.PSD.ImageOptions;
+﻿using Aspose.PSD.FileFormats.Psd;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
@@ -12,11 +6,12 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
     {
         public static void Run()
         {
-            //ExStart:MergeOnePSDlayerToOther
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
 
-            var sourceFile1 = dataDir+"FillOpacitySample.psd";
+            //ExStart:MergeOnePSDlayerToOther
+
+            var sourceFile1 = dataDir + "FillOpacitySample.psd";
             var sourceFile2 = dataDir + "ThreeRegularLayersSemiTransparent.psd";
             var exportPath = dataDir + "MergedLayersFromTwoDifferentPsd.psd";
 
@@ -37,6 +32,5 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
             //ExEnd:MergeOnePSDlayerToOther
 
         }
-
     }
 }

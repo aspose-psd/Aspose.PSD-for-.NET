@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.Brushes;
+﻿using Aspose.PSD.Brushes;
 using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.ImageOptions;
 
@@ -13,7 +8,6 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
     {
         public static void Run()
         {
-
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
 
@@ -44,12 +38,12 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                 }
 
                 // Export the image into PNG file format.
-                psdImage.Save(dataDir+"AddDiagnolWatermark_output.png", new PngOptions());
-                }
-
-
-                //ExEnd:AddDiagnolWatermark
+                psdImage.Save(dataDir + "AddDiagnolWatermark_output.png", new PngOptions());
             }
+
+
+            //ExEnd:AddDiagnolWatermark
+        }
 
     }
 }

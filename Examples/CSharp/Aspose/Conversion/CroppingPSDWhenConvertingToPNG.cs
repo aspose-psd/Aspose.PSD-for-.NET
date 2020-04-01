@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.ImageOptions;
+﻿using Aspose.PSD.ImageOptions;
 
 namespace Aspose.PSD.Examples.Aspose.Conversion
 {
     class CroppingPSDWhenConvertingToPNG
     {
-        
+
         public static void Run()
         {
             // The path to the documents directory.
@@ -17,7 +12,7 @@ namespace Aspose.PSD.Examples.Aspose.Conversion
 
             //ExStart:CroppingPSDWhenConvertingToPNG
 
-            String srcPath = dataDir + @"sample.psd";
+            string srcPath = dataDir + @"sample.psd";
             string destName = dataDir + @"export.png";
 
             // Load an existing PSD image
@@ -37,4 +32,4 @@ namespace Aspose.PSD.Examples.Aspose.Conversion
             //ExEnd:CroppingPSDWhenConvertingToPNG
         }
     }
-    }
+}

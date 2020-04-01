@@ -1,21 +1,16 @@
 ﻿using Aspose.PSD.FileFormats.Psd;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
     class ExtractLayerName
     {
 
-        public static void Run() {
-
-            //ExStart:ExtractLayerName
-
+        public static void Run()
+        {
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
+
+            //ExStart:ExtractLayerName
 
             // make changes in layer names and save it
             using (var image = (PsdImage)Image.Load(dataDir + "Korean_layers.psd"))

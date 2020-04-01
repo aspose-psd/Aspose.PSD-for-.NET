@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.FileFormats.Psd;
-using Aspose.PSD.FileFormats.Tiff.Enums;
-using Aspose.PSD.ImageOptions;
-using Aspose.PSD.Sources;
+﻿using Aspose.PSD.FileFormats.Psd;
+using System;
 
 namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 {
@@ -19,7 +12,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 
             //ExStart:VerifyImageTransparency
 
-            String sourceFile = dataDir + @"sample.psd";
+            string sourceFile = dataDir + @"sample.psd";
             string destName = dataDir + @"AdjustBrightness_out.tiff";
 
             // Load an existing image into an instance of RasterImage class

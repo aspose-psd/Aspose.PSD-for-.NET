@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.FileFormats.Png;
-using Aspose.PSD.FileFormats.Psd;
+﻿using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers.AdjustmentLayers;
-using Aspose.PSD.FileFormats.Psd.Layers.LayerResources;
-using Aspose.PSD.ImageOptions;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
@@ -39,7 +31,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
             }
 
             // Photo Filter layer adding
-            sourceFileName = dataDir+"PhotoExample.psd";
+            sourceFileName = dataDir + "PhotoExample.psd";
             psdPathAfterChange = dataDir + "PhotoExampleAddedPhotoFilter.psd";
 
             using (PsdImage im = (PsdImage)Image.Load(sourceFileName))

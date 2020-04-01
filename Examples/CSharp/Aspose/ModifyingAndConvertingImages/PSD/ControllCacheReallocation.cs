@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.ImageOptions;
+﻿using Aspose.PSD.ImageOptions;
 using Aspose.PSD.Sources;
+using System.IO;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
@@ -13,14 +8,10 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
     {
         public static void Run()
         {
-
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
 
             //ExStart:ControllCacheReallocation
-
-            // The path to the documents directory.
-          //  string dataDir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
 
             // By default the cache folder is set to the local temp directory.  You can specify a different cache folder from the default this way:
             Cache.CacheFolder = dataDir;
@@ -40,7 +31,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
             long l2 = Cache.AllocatedMemoryBytesCount;
 
             PsdOptions options = new PsdOptions();
-            
+
             //GifOptions options = new GifOptions();
             options.Palette = new ColorPalette(new[] { Color.Red, Color.Blue, Color.Black, Color.White });
             options.Source = new StreamSource(new MemoryStream(), true);

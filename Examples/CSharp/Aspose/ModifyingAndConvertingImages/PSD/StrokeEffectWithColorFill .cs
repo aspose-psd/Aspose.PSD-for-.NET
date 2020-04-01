@@ -4,18 +4,13 @@ using Aspose.PSD.FileFormats.Psd.Layers.FillSettings;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerEffects;
 using Aspose.PSD.ImageLoadOptions;
 using Aspose.PSD.ImageOptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
     class StrokeEffectWithColorFill
     {
-        public static void Run() {
-
+        public static void Run()
+        {
             //ExStart:StrokeEffectWithColorFill
 
             // The path to the documents directory.
@@ -24,7 +19,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
             // Implement rendering of Stroke effect with Color Fill for export
             string sourceFileName = dataDir + "StrokeComplex.psd";
             string exportPath = dataDir + "StrokeComplexRendering.psd";
-            string exportPathPng = dataDir+"StrokeComplexRendering.png";
+            string exportPathPng = dataDir + "StrokeComplexRendering.png";
 
             var loadOptions = new PsdLoadOptions()
             {

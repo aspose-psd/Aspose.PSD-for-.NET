@@ -15,7 +15,7 @@ namespace Aspose.PSD.Examples.Aspose.Conversion
             string OutputDir = RunExamples.GetDataDir_Output();
 
             //ExStart:1
-            String sourceFile = SourceDir + @"text_ethalon_different_colors.psd";
+            string sourceFile = SourceDir + @"text_ethalon_different_colors.psd";
             string destName = OutputDir + @"RenderTextWithDifferentColorsInTextLayer_out.png";
 
             // Load the noisy image 

@@ -2,25 +2,19 @@
 using Aspose.PSD.FileFormats.Psd.Layers.FillLayers;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerResources;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
     class SupportOfSoCoResource
     {
-
-
-        public static void Run() {
+        public static void Run()
+        {
+            string dataDir = RunExamples.GetDataDir_PSD();
 
             //ExStart:SupportOfSoCoResource
 
-            string dataDir = RunExamples.GetDataDir_PSD();
             string sourceFileName = dataDir + "ColorFillLayer.psd";
-            string exportPath = dataDir +"SoCoResource_Edited.psd";
+            string exportPath = dataDir + "SoCoResource_Edited.psd";
 
             var im = (PsdImage)Image.Load(sourceFileName);
 
@@ -48,8 +42,6 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
             }
 
             //ExEnd:SupportOfSoCoResource
-
-
         }
     }
 }

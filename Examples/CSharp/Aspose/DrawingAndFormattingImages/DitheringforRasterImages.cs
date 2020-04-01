@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.FileFormats.Psd;
+﻿using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.ImageOptions;
-using Aspose.PSD.Sources;
 
 namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 {
@@ -18,7 +12,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 
             //ExStart:DitheringforRasterImages
 
-            String sourceFile = dataDir + @"sample.psd";
+            string sourceFile = dataDir + @"sample.psd";
             string destName = dataDir + @"SampleImage_out.bmp";
 
             // Load an existing image into an instance of RasterImage class

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.FileFormats.Psd;
+﻿using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers;
 using Aspose.PSD.FileFormats.Tiff.Enums;
 using Aspose.PSD.ImageOptions;
@@ -19,7 +14,7 @@ namespace Aspose.PSD.Examples.Aspose.Conversion
 
             //ExStart:GIFImageLayersToTIFF
 
-            String sourceFile = dataDir + @"sample.psd";
+            string sourceFile = dataDir + @"sample.psd";
             string destName = dataDir + @"output";
 
             // Load a PSD image and Convert the image's layers to Tiff images.
@@ -39,6 +34,6 @@ namespace Aspose.PSD.Examples.Aspose.Conversion
 
             //ExEnd:GIFImageLayersToTIFF
 
-            }
         }
+    }
 }

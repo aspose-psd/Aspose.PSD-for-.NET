@@ -1,11 +1,6 @@
 ﻿using Aspose.PSD.FileFormats.Ai;
 using Aspose.PSD.FileFormats.Tiff.Enums;
 using Aspose.PSD.ImageOptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.AI
 {
@@ -13,10 +8,10 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.AI
     {
         public static void Run()
         {
-
-            //ExStart:AIToTIFF
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_AI();
+
+            //ExStart:AIToTIFF
 
             string[] sourcesFiles = new string[]
             {

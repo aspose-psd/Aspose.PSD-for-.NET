@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.PSD.FileFormats.Png;
-using Aspose.PSD.FileFormats.Psd;
-using Aspose.PSD.ImageLoadOptions;
+﻿using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.ImageOptions;
 
 namespace Aspose.PSD.Examples.Aspose.Conversion
@@ -19,7 +12,7 @@ namespace Aspose.PSD.Examples.Aspose.Conversion
 
             //ExStart:SavingtoDisk
 
-            String sourceFile = dataDir + @"sample.psd";
+            string sourceFile = dataDir + @"sample.psd";
             string destName = dataDir + "result.png";
 
             // load PSD image and replace the non found fonts.
@@ -28,7 +21,7 @@ namespace Aspose.PSD.Examples.Aspose.Conversion
                 PsdImage psdImage = (PsdImage)image;
                 psdImage.Save(destName, new PngOptions());
             }
-           
+
             //ExEnd:SavingtoDisk
 
         }

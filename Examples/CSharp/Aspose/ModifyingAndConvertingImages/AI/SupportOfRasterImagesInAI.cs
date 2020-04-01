@@ -1,22 +1,16 @@
 ﻿using Aspose.PSD.FileFormats.Ai;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.AI
 {
     class SupportOfRasterImagesInAI
     {
-        public static void Run() {
+        public static void Run()
+        {
+            // The path to the documents directory.
+            string dataDir = RunExamples.GetDataDir_AI();
 
             //ExStart:SupportOfRasterImagesInAI
-
-                // The path to the documents directory.
-                string dataDir = RunExamples.GetDataDir_AI();
-
-
             const double DefaultTolerance = 1e-6;
 
             void AssertIsTrue(bool condition, string message)
@@ -55,8 +49,6 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.AI
             }
 
             //ExEnd:SupportOfRasterImagesInAI
-
-
         }
     }
 }

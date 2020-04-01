@@ -4,11 +4,6 @@ using Aspose.PSD.FileFormats.Psd.Layers.LayerEffects;
 using Aspose.PSD.ImageLoadOptions;
 using Aspose.PSD.ImageOptions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 {
@@ -16,10 +11,11 @@ namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 	{
 		public static void Run()
 		{
-			//ExStart:RenderingColorEffect
 			string dataDir = RunExamples.GetDataDir_PSD();
-			string sourceFileName = dataDir+"ColorOverlay.psd";
-			string pngExportPath = dataDir+"ColorOverlayresult.png";
+
+			//ExStart:RenderingColorEffect
+			string sourceFileName = dataDir + "ColorOverlay.psd";
+			string pngExportPath = dataDir + "ColorOverlayresult.png";
 			var loadOptions = new PsdLoadOptions()
 			{
 				LoadEffectsResource = true
