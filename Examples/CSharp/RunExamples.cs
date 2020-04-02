@@ -36,8 +36,6 @@ namespace Aspose.PSD.Examples
             //License lic = new License();
             //lic.SetLicense(licPath);
 
-            //bool isLicensd = lic.IsLicensed;
-
             //// =====================================================
             //// =====================================================
             ////            Conversion to Rasters Images
