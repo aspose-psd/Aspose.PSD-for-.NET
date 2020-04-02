@@ -33,24 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.PSD, Version=20.2.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.PSD.20.2.0\lib\net40\Aspose.PSD.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
+    <Reference Include="Aspose.PSD, Version=20.3.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.PSD.20.3.0\lib\net40\Aspose.PSD.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Drawing.Design" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Aspose\Conversion\RenderTextWithDifferentColorsInTextLayer.cs" />
@@ -104,10 +90,13 @@
     <Compile Include="Aspose\DrawingAndFormattingImages\CombiningImages.cs" />
     <Compile Include="Aspose\Conversion\GIFImageLayersToTIFF.cs" />
     <Compile Include="Aspose\Conversion\Garysacling.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\AI\AIToPDF.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\AI\SupportOfAiFormatVersion8.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\AI\SupportOfRasterImagesInAI.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSB\PSBToJPG.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSB\PSBToPDF.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSB\PSBToPSD.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\AddBlackAndWhiteAdjustmentLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\AddTextLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\ColorFillLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\CreateLayerGroups.cs" />
@@ -122,6 +111,7 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\PSDToPDFWithSelectableText.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\PSDToPSB.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\PSDToPDF.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\RenderingOfDifferentStylesInOneTextLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\RenderingOfRotatedTextLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\ResizePSDFile.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SetTextLayerPosition.cs" />
@@ -230,11 +220,13 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\TIFF\TIFFwithDeflateCompression.cs" />
     <Compile Include="Aspose\Opening\LoadingImageFromStream.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\GetPropertiesOfInlineFormattingOfTextLayer.cs" />
+    <Compile Include="Aspose\WorkingWithPSD\ChangingGroupVisibility.cs" />
     <Compile Include="Aspose\WorkingWithPSD\SupportForBlwhResource.cs" />
     <Compile Include="Aspose\WorkingWithPSD\ExportLayerGroupToImage.cs" />
     <Compile Include="Aspose\WorkingWithPSD\SupportForInfxResource.cs" />
     <Compile Include="Aspose\WorkingWithPSD\SupportForLspfResource.cs" />
     <Compile Include="Aspose\WorkingWithPSD\SupportForClblResource.cs" />
+    <Compile Include="Aspose\WorkingWithPSD\SupportOfPassThroughBlendingMode.cs" />
     <Compile Include="RunExamples.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

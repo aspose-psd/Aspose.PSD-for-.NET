@@ -1,6 +1,6 @@
 ﻿using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
@@ -24,12 +24,16 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 
                 // Size of the layer is the size of the rendered area
                 var opticalSize = textLayer.Size;
-                Assert.AreEqual(correctOpticalSize, opticalSize);
 
                 // TextBoundBox is the maximum layer size for Text Layer. 
                 // In this area PS will try to fit your text
                 var boundBox = textLayer.TextBoundBox;
-                Assert.AreEqual(correctBoundBox, boundBox);
+
+                if (opticalSize != correctOpticalSize ||
+                    boundBox != correctBoundBox)
+                {
+                    throw new Exception("Assertion failed");
+                }
             }
 
             //ExEnd:TextLayerBoundBox

@@ -36,8 +36,6 @@ namespace Aspose.PSD.Examples
             //License lic = new License();
             //lic.SetLicense(licPath);
 
-            //bool isLicensd = lic.IsLicensed;
-
             //// =====================================================
             //// =====================================================
             ////            Conversion to Rasters Images
@@ -70,6 +68,7 @@ namespace Aspose.PSD.Examples
             //PossibilityToFlattenLayers.Run();
             //FillOpacityOfLayers.Run ();
             //RenderingOfCurvesAdjustmentLayer.Run();
+            //AddBlackAndWhiteAdjustmentLayer.Run();
             //AddCurvesAdjustmentLayer.Run();
             //RenderingOfLevelAdjustmentLayer.Run();
             //AddLevelAdjustmentLayer.Run();
@@ -91,6 +90,8 @@ namespace Aspose.PSD.Examples
             //ExportLayerGroupToImage.Run();
             //SupportForLspfResource.Run();
             //SupportForInfxResource.Run();
+            //SupportOfPassThroughBlendingMode.Run();
+            //ChangingGroupVisibility.Run();
 
             //// =====================================================
             //// =====================================================
@@ -169,6 +170,7 @@ namespace Aspose.PSD.Examples
             //CreateThumbnailsFromPSDFiles.Run();
             //CreateIndexedPSDFiles.Run();
             //ExportPSDLayerToRasterImage.Run();
+            //RenderingOfDifferentStylesInOneTextLayer.Run();
             //UpdateTextLayerInPSDFile.Run();
             //DetectFlattenedPSD.Run();
             //MergePSDlayers.Run();
@@ -244,6 +246,8 @@ namespace Aspose.PSD.Examples
             //AIToJPG.Run();
             //AIToGIF.Run();
             //AIToTIFF.Run();
+            //AIToPDF.Run();
+            //SupportOfAiFormatVersion8.Run();
             //SupportOfRasterImagesInAI.Run();
 
             //Opening

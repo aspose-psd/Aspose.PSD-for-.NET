@@ -4,7 +4,6 @@ using Aspose.PSD.FileFormats.Psd.Layers.FillSettings;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerEffects;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerResources;
 using Aspose.PSD.ImageLoadOptions;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
 namespace Aspose.PSD.Examples.Aspose.DrawingImages
@@ -42,21 +41,28 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
             {
                 var patternOverlay = (PatternOverlayEffect)im.Layers[1].BlendingOptions.Effects[0];
 
-                Assert.AreEqual(BlendMode.Normal, patternOverlay.BlendMode);
-                Assert.AreEqual(127, patternOverlay.Opacity);
-                Assert.AreEqual(true, patternOverlay.IsVisible);
+                if ((patternOverlay.BlendMode != BlendMode.Normal) ||
+                    (patternOverlay.Opacity != 127) ||
+                    (patternOverlay.IsVisible != true)
+                    )
+                {
+                    throw new Exception("Pattern overlay effect properties were read wrong");
+                }
 
                 var settings = patternOverlay.Settings;
-                Assert.AreEqual(Color.Empty, settings.Color);
-                Assert.AreEqual(FillType.Pattern, settings.FillType);
-                Assert.AreEqual("85163837-eb9e-5b43-86fb-e6d5963ea29a\0", settings.PatternId);
-                Assert.AreEqual("$$$/Presets/Patterns/OpticalSquares=Optical Squares\0", settings.PatternName);
-                Assert.AreEqual(null, settings.PointType);
-                Assert.AreEqual(100, settings.Scale);
 
-                Assert.AreEqual(false, settings.Linked);
-                Assert.IsTrue(Math.Abs(0 - settings.HorizontalOffset) < 0.001, "Horizontal offset is incorrect");
-                Assert.IsTrue(Math.Abs(0 - settings.VerticalOffset) < 0.001, "Vertical offset is incorrect");
+                if ((settings.Color != Color.Empty) ||
+                    (settings.FillType != FillType.Pattern) ||
+                    (settings.PatternId != "85163837-eb9e-5b43-86fb-e6d5963ea29a\0") ||
+                    (settings.PatternName != "$$$/Presets/Patterns/OpticalSquares=Optical Squares\0") ||
+                    (settings.PointType != null) ||
+                    (Math.Abs(settings.Scale - 100) > 0.001) ||
+                    (settings.Linked != true) ||
+                    (Math.Abs(0 - settings.HorizontalOffset) > 0.001) ||
+                    (Math.Abs(0 - settings.VerticalOffset) > 0.001))
+                {
+                    throw new Exception("Pattern overlay effect settings were read wrong");
+                }
 
                 // Test editing
                 settings.Color = Color.Green;
@@ -90,13 +96,22 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                 var patternOverlay = (PatternOverlayEffect)im.Layers[1].BlendingOptions.Effects[0];
                 try
                 {
-                    Assert.AreEqual(BlendMode.Difference, patternOverlay.BlendMode);
-                    Assert.AreEqual(193, patternOverlay.Opacity);
-                    Assert.AreEqual(true, patternOverlay.IsVisible);
+
+                    if ((patternOverlay.BlendMode != BlendMode.Difference) ||
+                        (patternOverlay.Opacity != 193) ||
+                        (patternOverlay.IsVisible != true))
+                    {
+                        throw new Exception("Pattern overlay effect properties were read wrong");
+                    }
 
                     var fillSettings = patternOverlay.Settings;
-                    Assert.AreEqual(Color.Empty, fillSettings.Color);
-                    Assert.AreEqual(FillType.Pattern, fillSettings.FillType);
+
+
+                    if ((fillSettings.Color != Color.Empty) ||
+                        (fillSettings.FillType != FillType.Pattern))
+                    {
+                        throw new Exception("Pattern overlay effect settings were read wrong");
+                    }
 
                     PattResource resource = null;
                     foreach (var globalLayerResource in im.GlobalLayerResources)
@@ -113,10 +128,14 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                     }
 
                     // Check the pattern data
-                    Assert.AreEqual(newPattern, resource.PatternData);
-                    Assert.AreEqual(newPatternBounds, new Rectangle(0, 0, resource.Width, resource.Height));
-                    Assert.AreEqual(guid.ToString(), resource.PatternId);
-                    Assert.AreEqual(newPatternName, resource.Name);
+                    if ((resource.PatternData != newPattern) ||
+                        (newPatternBounds != new Rectangle(0, 0, resource.Width, resource.Height)) ||
+                        (resource.PatternId != guid.ToString()) ||
+                        (resource.Name != newPatternName)
+                        )
+                    {
+                        throw new Exception("Pattern was set wrong");
+                    }
                 }
                 catch (Exception e)
                 {

@@ -1,5 +1,4 @@
 ﻿using Aspose.PSD.FileFormats.Psd;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
@@ -22,13 +21,19 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                 var creationDateTime = layer.LayerCreationDateTime;
                 var expectedDateTime = new DateTime(2018, 7, 17, 8, 57, 24, 769);
 
-                Assert.AreEqual(expectedDateTime, creationDateTime);
+                if (expectedDateTime != creationDateTime)
+                {
+                    throw new Exception("Assertion fails");
+                }
 
                 var now = DateTime.Now;
                 var createdLayer = im.AddLevelsAdjustmentLayer();
 
                 // Check if Creation Date Time Updated on newly created layers
-                Assert.IsTrue(now <= createdLayer.LayerCreationDateTime);
+                if (!(now <= createdLayer.LayerCreationDateTime))
+                {
+                    throw new Exception("Assertion fails");
+                }
             }
 
             //ExEnd:LayerCreationDateTime

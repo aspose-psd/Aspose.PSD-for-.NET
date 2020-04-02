@@ -1,41 +1,45 @@
 ﻿using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerEffects;
 using Aspose.PSD.ImageLoadOptions;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 {
-	class ColorOverLayEffect
-	{
-		public static void Run()
-		{
-			// The path to the documents directory.
-			string dataDir = RunExamples.GetDataDir_PSD();
+    class ColorOverLayEffect
+    {
+        public static void Run()
+        {
+            // The path to the documents directory.
+            string dataDir = RunExamples.GetDataDir_PSD();
 
-			//ExStart:ColorOverLayEffect
+            //ExStart:ColorOverLayEffect
 
-			// ColorOverlay effect editing
-			string sourceFileName = dataDir + "ColorOverlay.psd";
-			string psdPathAfterChange = dataDir + "ColorOverlayChanged.psd";
+            // ColorOverlay effect editing
+            string sourceFileName = dataDir + "ColorOverlay.psd";
+            string psdPathAfterChange = dataDir + "ColorOverlayChanged.psd";
 
-			var loadOptions = new PsdLoadOptions()
-			{
-				LoadEffectsResource = true
-			};
+            var loadOptions = new PsdLoadOptions()
+            {
+                LoadEffectsResource = true
+            };
 
-			using (var im = (PsdImage)Image.Load(sourceFileName, loadOptions))
-			{
+            using (var im = (PsdImage)Image.Load(sourceFileName, loadOptions))
+            {
 
-				var colorOverlay = (ColorOverlayEffect)(im.Layers[1].BlendingOptions.Effects[0]);
-				Assert.AreEqual(Color.Red, colorOverlay.Color);
-				Assert.AreEqual(153, colorOverlay.Opacity);
+                var colorOverlay = (ColorOverlayEffect)(im.Layers[1].BlendingOptions.Effects[0]);
 
-				colorOverlay.Color = Color.Green;
-				colorOverlay.Opacity = 128;
+                if (colorOverlay.Color != Color.Red ||
+                    colorOverlay.Opacity != 153)
+                {
+                    throw new Exception("Color overlay read wrong");
+                }
 
-				im.Save(psdPathAfterChange);
-			}
-			//ExEnd:ColorOverLayEffect
-		}
-	}
+                colorOverlay.Color = Color.Green;
+                colorOverlay.Opacity = 128;
+
+                im.Save(psdPathAfterChange);
+            }
+            //ExEnd:ColorOverLayEffect
+        }
+    }
 }
