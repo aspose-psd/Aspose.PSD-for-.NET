@@ -28,7 +28,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                     throw new Exception("Assertion failed");
                 }
 
-                    layer1.SheetColorHighlight = SheetColorHighlightEnum.Yellow;
+                layer1.SheetColorHighlight = SheetColorHighlightEnum.Yellow;
 
                 im.Save(exportPath);
             }

@@ -66,7 +66,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
 
                 // Transparency points
                 var transparencyPoints = fillSettings.TransparencyPoints;
-                AssertIsTrue( transparencyPoints.Length == 2);
+                AssertIsTrue(transparencyPoints.Length == 2);
 
                 AssertIsTrue(transparencyPoints[0].Location == 0);
                 AssertIsTrue(transparencyPoints[0].MedianPointLocation == 50);
@@ -130,7 +130,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                 {
                     throw new Exception("Assertion fails");
                 }
-      
+
                 // Check color points
                 var point = fillSettings.ColorPoints[0];
 

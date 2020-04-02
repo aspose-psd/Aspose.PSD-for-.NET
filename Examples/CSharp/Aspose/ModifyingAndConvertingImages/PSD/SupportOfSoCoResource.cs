@@ -35,7 +35,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                                 {
                                     throw new Exception("Color from SoCoResource was read wrong");
                                 }
-                          
+
                                 socoResource.Color = Color.Red;
                                 break;
                             }

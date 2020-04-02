@@ -109,10 +109,13 @@
     <Compile Include="Aspose\DrawingAndFormattingImages\CombiningImages.cs" />
     <Compile Include="Aspose\Conversion\GIFImageLayersToTIFF.cs" />
     <Compile Include="Aspose\Conversion\Garysacling.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\AI\AIToPDF.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\AI\SupportOfAiFormatVersion8.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\AI\SupportOfRasterImagesInAI.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSB\PSBToJPG.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSB\PSBToPDF.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSB\PSBToPSD.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\AddBlackAndWhiteAdjustmentLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\AddTextLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\ColorFillLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\CreateLayerGroups.cs" />
@@ -127,6 +130,7 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\PSDToPDFWithSelectableText.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\PSDToPSB.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\PSDToPDF.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\RenderingOfDifferentStylesInOneTextLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\RenderingOfRotatedTextLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\ResizePSDFile.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SetTextLayerPosition.cs" />
@@ -235,11 +239,13 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\TIFF\TIFFwithDeflateCompression.cs" />
     <Compile Include="Aspose\Opening\LoadingImageFromStream.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\GetPropertiesOfInlineFormattingOfTextLayer.cs" />
+    <Compile Include="Aspose\WorkingWithPSD\ChangingGroupVisibility.cs" />
     <Compile Include="Aspose\WorkingWithPSD\SupportForBlwhResource.cs" />
     <Compile Include="Aspose\WorkingWithPSD\ExportLayerGroupToImage.cs" />
     <Compile Include="Aspose\WorkingWithPSD\SupportForInfxResource.cs" />
     <Compile Include="Aspose\WorkingWithPSD\SupportForLspfResource.cs" />
     <Compile Include="Aspose\WorkingWithPSD\SupportForClblResource.cs" />
+    <Compile Include="Aspose\WorkingWithPSD\SupportOfPassThroughBlendingMode.cs" />
     <Compile Include="RunExamples.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
