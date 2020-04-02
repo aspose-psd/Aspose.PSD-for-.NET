@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
@@ -94,7 +94,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                 try
                 {
                     image.Save(this.outputPath, this.saveOptions);
-                    Assert.Fail("Expected interruption.");
+                    throw new Exception("Expected interruption.");
                 }
                 catch (CoreExceptions.OperationInterruptedException e)
                 {

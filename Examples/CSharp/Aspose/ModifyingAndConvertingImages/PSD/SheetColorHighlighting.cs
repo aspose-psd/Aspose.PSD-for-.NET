@@ -1,6 +1,6 @@
 ﻿using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerResources;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
@@ -20,12 +20,15 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
             using (var im = (PsdImage)(Image.Load(sourceFileName)))
             {
                 var layer1 = im.Layers[0];
-                Assert.AreEqual(SheetColorHighlightEnum.Violet, layer1.SheetColorHighlight);
-
                 var layer2 = im.Layers[1];
-                Assert.AreEqual(SheetColorHighlightEnum.Orange, layer2.SheetColorHighlight);
 
-                layer1.SheetColorHighlight = SheetColorHighlightEnum.Yellow;
+                if (layer1.SheetColorHighlight != SheetColorHighlightEnum.Violet ||
+                    layer2.SheetColorHighlight != SheetColorHighlightEnum.Orange)
+                {
+                    throw new Exception("Assertion failed");
+                }
+
+                    layer1.SheetColorHighlight = SheetColorHighlightEnum.Yellow;
 
                 im.Save(exportPath);
             }

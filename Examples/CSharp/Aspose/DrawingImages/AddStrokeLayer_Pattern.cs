@@ -4,7 +4,6 @@ using Aspose.PSD.FileFormats.Psd.Layers.FillSettings;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerEffects;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerResources;
 using Aspose.PSD.ImageLoadOptions;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
 namespace Aspose.PSD.Examples.Aspose.DrawingImages
@@ -42,13 +41,15 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
             using (var im = (PsdImage)Image.Load(sourceFileName, loadOptions))
             {
                 var patternStroke = (StrokeEffect)im.Layers[3].BlendingOptions.Effects[0];
-
-                Assert.AreEqual(BlendMode.Normal, patternStroke.BlendMode);
-                Assert.AreEqual(255, patternStroke.Opacity);
-                Assert.AreEqual(true, patternStroke.IsVisible);
-
                 var fillSettings = (PatternFillSettings)patternStroke.FillSettings;
-                Assert.AreEqual(FillType.Pattern, fillSettings.FillType);
+
+                if ((patternStroke.BlendMode != BlendMode.Normal) ||
+                    (patternStroke.Opacity != 255) ||
+                    (patternStroke.IsVisible != true) ||
+                    (fillSettings.FillType != FillType.Pattern))
+                {
+                    throw new Exception("Pattern effect properties were read wrong");
+                }
 
                 patternStroke.Opacity = 127;
                 patternStroke.BlendMode = BlendMode.Color;
@@ -94,17 +95,18 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                 try
                 {
                     // Check the pattern data
-                    Assert.AreEqual(newPattern, resource.PatternData);
-                    Assert.AreEqual(newPatternBounds, new Rectangle(0, 0, resource.Width, resource.Height));
-                    Assert.AreEqual(guid.ToString(), resource.PatternId);
-
-                    Assert.AreEqual(BlendMode.Color, patternStroke.BlendMode);
-                    Assert.AreEqual(127, patternStroke.Opacity);
-                    Assert.AreEqual(true, patternStroke.IsVisible);
-
                     var fillSettings = (PatternFillSettings)patternStroke.FillSettings;
 
-                    Assert.AreEqual(FillType.Pattern, fillSettings.FillType);
+                    if ((resource.PatternData != newPattern) ||
+                        (newPatternBounds != new Rectangle(0, 0, resource.Width, resource.Height)) ||
+                        (resource.PatternId != guid.ToString()) ||
+                        (patternStroke.BlendMode != BlendMode.Color) ||
+                        (patternStroke.Opacity != 127) ||
+                        (patternStroke.IsVisible != true) ||
+                        (fillSettings.FillType != FillType.Pattern))
+                    {
+                        throw new Exception("Pattern stroke effect properties were read wrong");
+                    }
                 }
                 catch (Exception e)
                 {

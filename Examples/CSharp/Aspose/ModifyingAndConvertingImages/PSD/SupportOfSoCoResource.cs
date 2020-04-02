@@ -1,7 +1,7 @@
 ﻿using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers.FillLayers;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerResources;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
@@ -30,7 +30,12 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                             if (resource is SoCoResource)
                             {
                                 var socoResource = (SoCoResource)resource;
-                                Assert.AreEqual(Color.FromArgb(63, 83, 141), socoResource.Color);
+
+                                if (socoResource.Color != Color.FromArgb(63, 83, 141))
+                                {
+                                    throw new Exception("Color from SoCoResource was read wrong");
+                                }
+                          
                                 socoResource.Color = Color.Red;
                                 break;
                             }

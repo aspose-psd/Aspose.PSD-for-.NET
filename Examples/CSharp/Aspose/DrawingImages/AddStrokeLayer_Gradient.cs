@@ -3,7 +3,6 @@ using Aspose.PSD.FileFormats.Psd.Layers;
 using Aspose.PSD.FileFormats.Psd.Layers.FillSettings;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerEffects;
 using Aspose.PSD.ImageLoadOptions;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
 namespace Aspose.PSD.Examples.Aspose.DrawingImages
@@ -18,6 +17,14 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
             //ExStart:AddStrokeLayer_Gradient
 
             // Stroke effect. FillType - Gradient. Example
+            void AssertIsTrue(bool condition, string message = "Assertion fails")
+            {
+                if (!condition)
+                {
+                    throw new FormatException(message);
+                }
+            }
+
             string sourceFileName = dataDir + "Stroke.psd";
             string exportPath = dataDir + "StrokeGradientChanged.psd";
 
@@ -30,44 +37,44 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
             {
                 var gradientStroke = (StrokeEffect)im.Layers[2].BlendingOptions.Effects[0];
 
-                Assert.AreEqual(BlendMode.Normal, gradientStroke.BlendMode);
-                Assert.AreEqual(255, gradientStroke.Opacity);
-                Assert.AreEqual(true, gradientStroke.IsVisible);
+                AssertIsTrue(gradientStroke.BlendMode == BlendMode.Normal);
+                AssertIsTrue(gradientStroke.Opacity == 255);
+                AssertIsTrue(gradientStroke.IsVisible);
 
                 var fillSettings = (GradientFillSettings)gradientStroke.FillSettings;
-                Assert.AreEqual(Color.Black, fillSettings.Color);
-                Assert.AreEqual(FillType.Gradient, fillSettings.FillType);
-                Assert.AreEqual(true, fillSettings.AlignWithLayer);
-                Assert.AreEqual(GradientType.Linear, fillSettings.GradientType);
-                Assert.IsTrue(Math.Abs(90 - fillSettings.Angle) < 0.001, "Angle is incorrect");
-                Assert.AreEqual(false, fillSettings.Dither);
-                Assert.IsTrue(Math.Abs(0 - fillSettings.HorizontalOffset) < 0.001, "Horizontal offset is incorrect");
-                Assert.IsTrue(Math.Abs(0 - fillSettings.VerticalOffset) < 0.001, "Vertical offset is incorrect");
-                Assert.AreEqual(false, fillSettings.Reverse);
+                AssertIsTrue(fillSettings.Color == Color.Black);
+                AssertIsTrue(fillSettings.FillType == FillType.Gradient);
+                AssertIsTrue(fillSettings.AlignWithLayer);
+                AssertIsTrue(fillSettings.GradientType == GradientType.Linear);
+                AssertIsTrue(Math.Abs(90 - fillSettings.Angle) < 0.001, "Angle is incorrect");
+                AssertIsTrue(fillSettings.Dither == false);
+                AssertIsTrue(Math.Abs(0 - fillSettings.HorizontalOffset) < 0.001, "Horizontal offset is incorrect");
+                AssertIsTrue(Math.Abs(0 - fillSettings.VerticalOffset) < 0.001, "Vertical offset is incorrect");
+                AssertIsTrue(fillSettings.Reverse == false);
 
                 // Color Points
                 var colorPoints = fillSettings.ColorPoints;
-                Assert.AreEqual(2, colorPoints.Length);
+                AssertIsTrue(colorPoints.Length == 2);
 
-                Assert.AreEqual(Color.Black, colorPoints[0].Color);
-                Assert.AreEqual(0, colorPoints[0].Location);
-                Assert.AreEqual(50, colorPoints[0].MedianPointLocation);
+                AssertIsTrue(colorPoints[0].Color == Color.Black);
+                AssertIsTrue(colorPoints[0].Location == 0);
+                AssertIsTrue(colorPoints[0].MedianPointLocation == 50);
 
-                Assert.AreEqual(Color.White, colorPoints[1].Color);
-                Assert.AreEqual(4096, colorPoints[1].Location);
-                Assert.AreEqual(50, colorPoints[1].MedianPointLocation);
+                AssertIsTrue(colorPoints[1].Color == Color.White);
+                AssertIsTrue(colorPoints[1].Location == 4096);
+                AssertIsTrue(colorPoints[1].MedianPointLocation == 50);
 
                 // Transparency points
                 var transparencyPoints = fillSettings.TransparencyPoints;
-                Assert.AreEqual(2, transparencyPoints.Length);
+                AssertIsTrue( transparencyPoints.Length == 2);
 
-                Assert.AreEqual(0, transparencyPoints[0].Location);
-                Assert.AreEqual(50, transparencyPoints[0].MedianPointLocation);
-                Assert.AreEqual(100, transparencyPoints[0].Opacity);
+                AssertIsTrue(transparencyPoints[0].Location == 0);
+                AssertIsTrue(transparencyPoints[0].MedianPointLocation == 50);
+                AssertIsTrue(transparencyPoints[0].Opacity == 100);
 
-                Assert.AreEqual(4096, transparencyPoints[1].Location);
-                Assert.AreEqual(50, transparencyPoints[1].MedianPointLocation);
-                Assert.AreEqual(100, transparencyPoints[1].Opacity);
+                AssertIsTrue(transparencyPoints[1].Location == 4096);
+                AssertIsTrue(transparencyPoints[1].MedianPointLocation == 50);
+                AssertIsTrue(transparencyPoints[1].Opacity == 100);
 
                 // Test editing
                 fillSettings.Color = Color.Green;
@@ -109,49 +116,55 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
             {
                 var gradientStroke = (StrokeEffect)im.Layers[2].BlendingOptions.Effects[0];
 
-                Assert.AreEqual(BlendMode.Color, gradientStroke.BlendMode);
-                Assert.AreEqual(127, gradientStroke.Opacity);
-                Assert.AreEqual(true, gradientStroke.IsVisible);
+                if ((gradientStroke.BlendMode != BlendMode.Color) ||
+                    (gradientStroke.Opacity != 127) ||
+                    (gradientStroke.IsVisible != true))
+                {
+                    throw new Exception("Assertion of Gradient Stroke fails");
+                }
 
                 var fillSettings = (GradientFillSettings)gradientStroke.FillSettings;
-                Assert.AreEqual(Color.Green, fillSettings.Color);
-                Assert.AreEqual(FillType.Gradient, fillSettings.FillType);
-
+                if ((fillSettings.Color != Color.Green) ||
+                    (fillSettings.FillType != FillType.Gradient) ||
+                    fillSettings.ColorPoints.Length != 3)
+                {
+                    throw new Exception("Assertion fails");
+                }
+      
                 // Check color points
-                Assert.AreEqual(3, fillSettings.ColorPoints.Length);
-
                 var point = fillSettings.ColorPoints[0];
-                Assert.AreEqual(50, point.MedianPointLocation);
-                Assert.AreEqual(Color.Black, point.Color);
-                Assert.AreEqual(0, point.Location);
+
+                AssertIsTrue(point.MedianPointLocation == 50);
+                AssertIsTrue(point.Color == Color.Black);
+                AssertIsTrue(point.Location == 0);
 
                 point = fillSettings.ColorPoints[1];
-                Assert.AreEqual(50, point.MedianPointLocation);
-                Assert.AreEqual(Color.White, point.Color);
-                Assert.AreEqual(1899, point.Location);
+                AssertIsTrue(point.MedianPointLocation == 50);
+                AssertIsTrue(point.Color == Color.White);
+                AssertIsTrue(point.Location == 1899);
 
                 point = fillSettings.ColorPoints[2];
-                Assert.AreEqual(75, point.MedianPointLocation);
-                Assert.AreEqual(Color.Green, point.Color);
-                Assert.AreEqual(4096, point.Location);
+                AssertIsTrue(point.MedianPointLocation == 75);
+                AssertIsTrue(point.Color == Color.Green);
+                AssertIsTrue(point.Location == 4096);
 
                 // Check transparent points
-                Assert.AreEqual(3, fillSettings.TransparencyPoints.Length);
+                AssertIsTrue(fillSettings.TransparencyPoints.Length == 3);
 
                 var transparencyPoint = fillSettings.TransparencyPoints[0];
-                Assert.AreEqual(50, transparencyPoint.MedianPointLocation);
-                Assert.AreEqual(100, transparencyPoint.Opacity);
-                Assert.AreEqual(0, transparencyPoint.Location);
+                AssertIsTrue(transparencyPoint.MedianPointLocation == 50);
+                AssertIsTrue(transparencyPoint.Opacity == 100);
+                AssertIsTrue(transparencyPoint.Location == 0);
 
                 transparencyPoint = fillSettings.TransparencyPoints[1];
-                Assert.AreEqual(50, transparencyPoint.MedianPointLocation);
-                Assert.AreEqual(100, transparencyPoint.Opacity);
-                Assert.AreEqual(2411, transparencyPoint.Location);
+                AssertIsTrue(transparencyPoint.MedianPointLocation == 50);
+                AssertIsTrue(transparencyPoint.Opacity == 100);
+                AssertIsTrue(transparencyPoint.Location == 2411);
 
                 transparencyPoint = fillSettings.TransparencyPoints[2];
-                Assert.AreEqual(25, transparencyPoint.MedianPointLocation);
-                Assert.AreEqual(25, transparencyPoint.Opacity);
-                Assert.AreEqual(4096, transparencyPoint.Location);
+                AssertIsTrue(transparencyPoint.MedianPointLocation == 25);
+                AssertIsTrue(transparencyPoint.Opacity == 25);
+                AssertIsTrue(transparencyPoint.Location == 4096);
             }
             //ExEnd:AddStrokeLayer_Gradient
         }
