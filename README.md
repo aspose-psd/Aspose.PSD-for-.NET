@@ -2,7 +2,7 @@
 
 [Aspose.PSD for .NET](https://products.aspose.com/psd/net) is an advanced image  processing API whic provide extensive manipulation of PSD & PSB file formats without requiring Adobe Photoshop.
 Aspose.PSD for .NET allows to create and edit the Photoshop files. The API allows provides the ability to update layer properties, add watermarks, perform graphics operations or convert one file format to another.
-This repository contains [Examples](Examples) and Showcase projects for [Aspose.PSD for .NET](https://products.aspose.com/psd/net) to help you learn and write your own applications.
+This repository contains [Examples](Examples), [LiveDemos](LiveDemos) and Showcase projects for [Aspose.PSD for .NET](https://products.aspose.com/psd/net) to help you learn and write your own applications.
 
 <p align="center">
   <a title="Download ZIP" href="https://github.com/aspose-psd/Aspose.PSD-for-.NET/archive/master.zip">
@@ -13,7 +13,7 @@ This repository contains [Examples](Examples) and Showcase projects for [Aspose.
 Directory | Description
 --------- | -----------
 [Examples](Examples)  | A collection of .NET examples that help you learn the product features
-
+[LiveDemos](LiveDemos)  | Aspose.PSD for .NET Live Demos Source Code
 
 
 ## How to Run the Examples
