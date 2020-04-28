@@ -236,8 +236,11 @@
     <Compile Include="Aspose\LayerResources\SupportForLspfResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportForClblResource.cs" />
     <Compile Include="Aspose\WorkingWithPSD\SupportOfPassThroughBlendingMode.cs" />
+    <Compile Include="Runner\ExamplesRunner.cs" />
     <Compile Include="RunExamples.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Runner\ExamplesMainSection.cs" />
+    <Compile Include="Runner\ExamplesSubSectionPsd.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

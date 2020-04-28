@@ -16,6 +16,12 @@ using Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSB;
 using Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.AI;
 using Aspose.PSD.Examples.Aspose.Opening;
 using Aspose.PSD.Examples.Aspose.WorkingWithPSD;
+using Aspose.PSD.Examples.Aspose.LayerResources;
+using Aspose.PSD.Examples.Aspose.GlobalResources;
+using Aspose.PSD.Examples.Aspose.FillLayers;
+using Aspose.PSD.Examples.Aspose.Ai;
+using Aspose.PSD.Examples.Aspose.LayerEffects;
+using Aspose.PSD.Examples.Runner;
 
 namespace Aspose.PSD.Examples
 {
@@ -23,9 +29,11 @@ namespace Aspose.PSD.Examples
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Open RunExamples.cs. \nIn Main() method uncomment the example that you want to run.");
-            Console.WriteLine("=====================================================");
+            // Running tester
+            var mainSection = ExamplesRunner.RequestForSections();
+            var subSection = ExamplesRunner.RequestForSubSection(mainSection);
 
+            ExamplesRunner.RunExamples(mainSection, subSection);
 
             // Uncomment the one you want to try out
 
@@ -43,21 +51,16 @@ namespace Aspose.PSD.Examples
             //// =====================================================
 
             //PSDToRasterImageFormats.Run();
+
+
+
+
             //CroppingPSDWhenConvertingToPNG.Run();
-            //ApplyMedianAndWienerFilters.Run();
-            //ApplyGausWienerFilters.Run();
-            //ApplyGausWienerFiltersForColorImage.Run();
-            //ApplyMotionWienerFilters.Run();
-            //BinarizationWithFixedThreshold.Run();
-            //BinarizationWithOtsuThreshold.Run();
-            //Garysacling.Run();
+
             //GIFImageLayersToTIFF.Run();
             //CMYKPSDtoCMYKTiff.Run();
             //SettingforReplacingMissingFonts.Run();
-            //SavingtoDisk.Run();
-            //SavingtoStream.Run();
-            //LoadingFromStream.Run();
-            //ExportImagesinMultiThreadEnv.Run();
+
             //LayerCreationDateTime.Run();
             //SheetColorHighlighting.Run();
             //MergeOnePSDlayerToOther.Run();
@@ -85,11 +88,7 @@ namespace Aspose.PSD.Examples
             //SupportOfAdjusmentLayers.Run();
             //AddTextLayerOnRuntime.Run();
             //RenderTextWithDifferentColorsInTextLayer.Run();
-            //SupportForClblResource.Run();
-            //SupportForBlwhResource.Run();
             //ExportLayerGroupToImage.Run();
-            //SupportForLspfResource.Run();
-            //SupportForInfxResource.Run();
             //SupportOfPassThroughBlendingMode.Run();
             //ChangingGroupVisibility.Run();
 
@@ -130,15 +129,7 @@ namespace Aspose.PSD.Examples
             //InvertAdjustmentLayer.Run();
             //ImplementBicubicResampler.Run();
 
-            //Drawing Images
-            //DrawingLines.Run();
-            //DrawingEllipse.Run();
-            //DrawingRectangle.Run();
-            //DrawingArc.Run();
-            //DrawingBezier.Run();
-            //CoreDrawingFeatures.Run();
-            //DrawingUsingGraphics.Run();
-            //DrawingUsingGraphicsPath.Run();
+           
             //AddStrokeLayer_Pattern.Run();
             //AddStrokeLayer_Gradient.Run();
             //AddStrokeLayer_Color.Run();
@@ -164,40 +155,39 @@ namespace Aspose.PSD.Examples
             //ColorTypeAndCompressionType.Run();
 
             //PSD
-            //ExportImageToPSD.Run();
-            //ImportImageToPSDLayer.Run();
+
+
             //ColorReplacementInPSD.Run();
             //CreateThumbnailsFromPSDFiles.Run();
             //CreateIndexedPSDFiles.Run();
-            //ExportPSDLayerToRasterImage.Run();
+
             //RenderingOfDifferentStylesInOneTextLayer.Run();
             //UpdateTextLayerInPSDFile.Run();
             //DetectFlattenedPSD.Run();
             //MergePSDlayers.Run();
             //GrayScaleSupportForAlpha.Run();
             //SupportLayerForPSD.Run();
-            //LoadImageToPSD.Run();
+
             //SupportOfRGBColor.Run();
             //SupportOfRotateLayer.Run();
             //PatternFillLayer.Run();
             //SupportOfPtFlResource.Run();
             //CropPSDFile.Run();
             //SupportOfVsmsResource.Run();
-            //PSDToPSB.Run();
+
             //SetTextLayerPosition.Run();
             //SupportOfLayerVectorMask.Run();
             //ResizePSDFile.Run();
-            //PSDToPDF.Run();
+
             //GradientFillLayers.Run();
-            //PSDToPDFWithSelectableText.Run();
+
             //AddTextLayer.Run();
-            //LoadPSDWithReadOnlyMode.Run();
+       
             //ExtractLayerName.Run();
             //SupportOfScaleProperty.Run();
             //CreateLayerGroups.Run();
             //GetTextPropertiesFromTextLayer.Run();
-            //PSDToPDFWithClippingMask.Run();
-            //PSDToPDFWithAdjustmentLayers.Run();
+           
             //SupportOfInnerShadowLayerEffect.Run();
             //ImplementPatternFillLayer.Run();
             //GetPropertiesOfInlineFormattingOfTextLayer.Run();
@@ -213,11 +203,7 @@ namespace Aspose.PSD.Examples
             //ChangeBackgroundColor.Run();
 
             //TIFF
-            //ExportToMultiPageTiff.Run();
-            //TiffOptionsConfiguration.Run();
-            //TIFFwithDeflateCompression.Run();
-            //TIFFwithAdobeDeflateCompression.Run();
-            //CompressingTiff.Run();
+            
 
 
 
@@ -235,23 +221,30 @@ namespace Aspose.PSD.Examples
             //AddSignatureToImage.Run();
             //SupportForInterruptMonitor.Run();
 
-            //PSB
-            //PSBToPSD.Run();
-            // PSBToJPG.Run();
-            //PSBToPDF.Run();
-
-            //AI
-            //AIToPSD.Run();
-            //AIToPNG.Run();
-            //AIToJPG.Run();
-            //AIToGIF.Run();
-            //AIToTIFF.Run();
-            //AIToPDF.Run();
-            //SupportOfAiFormatVersion8.Run();
-            //SupportOfRasterImagesInAI.Run();
+          
 
             //Opening
             //LoadingImageFromStream.Run();
+
+            // Layer Resources
+            SupportOfVogkResource.Run();
+            SupportOfLclrResource.Run();
+            VsmsResourceLengthRecordSupport.Run();
+            SupportForClblResource.Run();
+            SupportForBlwhResource.Run();
+            SupportForLspfResource.Run();
+            SupportForInfxResource.Run();
+
+            // Global Resources of Psd Image
+            SupportOfBackgroundColorResource.Run();           
+            SupportOfBorderInformationResource.Run();
+
+            // Fill Layers
+            AddingFillLayerAtRuntime.Run();
+
+            // Layer Effects
+            SupportOfGradientOverlayEffect.Run();
+            RenderingOfGradientOverlayEffect.Run();
 
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
