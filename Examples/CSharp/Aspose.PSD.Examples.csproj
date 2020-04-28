@@ -39,6 +39,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aspose\Ai\SupportOfLayersInAi.cs" />
     <Compile Include="Aspose\Conversion\RenderTextWithDifferentColorsInTextLayer.cs" />
     <Compile Include="Aspose\Conversion\ColorConversionUsingDefaultProfiles.cs" />
     <Compile Include="Aspose\Conversion\ColorConversionUsingICCProfiles.cs" />
@@ -90,7 +91,11 @@
     <Compile Include="Aspose\DrawingAndFormattingImages\CombiningImages.cs" />
     <Compile Include="Aspose\Conversion\GIFImageLayersToTIFF.cs" />
     <Compile Include="Aspose\Conversion\Garysacling.cs" />
+    <Compile Include="Aspose\FillLayers\AddingFillLayerAtRuntime.cs" />
     <Compile Include="Aspose\GlobalResources\SupportOfBackgroundColorResource.cs" />
+    <Compile Include="Aspose\GlobalResources\SupportOfBorderInformationResource.cs" />
+    <Compile Include="Aspose\LayerEffects\RenderingOfGradientOverlayEffect.cs" />
+    <Compile Include="Aspose\LayerEffects\SupportOfGradientOverlayEffect.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfLclrResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfVogkResource.cs" />
     <Compile Include="Aspose\LayerResources\VsmsResourceLengthRecordSupport.cs" />
@@ -225,11 +230,11 @@
     <Compile Include="Aspose\Opening\LoadingImageFromStream.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\GetPropertiesOfInlineFormattingOfTextLayer.cs" />
     <Compile Include="Aspose\WorkingWithPSD\ChangingGroupVisibility.cs" />
-    <Compile Include="Aspose\WorkingWithPSD\SupportForBlwhResource.cs" />
+    <Compile Include="Aspose\LayerResources\SupportForBlwhResource.cs" />
     <Compile Include="Aspose\WorkingWithPSD\ExportLayerGroupToImage.cs" />
-    <Compile Include="Aspose\WorkingWithPSD\SupportForInfxResource.cs" />
-    <Compile Include="Aspose\WorkingWithPSD\SupportForLspfResource.cs" />
-    <Compile Include="Aspose\WorkingWithPSD\SupportForClblResource.cs" />
+    <Compile Include="Aspose\LayerResources\SupportForInfxResource.cs" />
+    <Compile Include="Aspose\LayerResources\SupportForLspfResource.cs" />
+    <Compile Include="Aspose\LayerResources\SupportForClblResource.cs" />
     <Compile Include="Aspose\WorkingWithPSD\SupportOfPassThroughBlendingMode.cs" />
     <Compile Include="RunExamples.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

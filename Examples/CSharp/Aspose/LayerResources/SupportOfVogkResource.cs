@@ -2,6 +2,7 @@
 using Aspose.PSD.FileFormats.Psd.Layers.LayerResources;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerResources.VectorPaths;
 using System;
+using System.IO;
 
 namespace Aspose.PSD.Examples.Aspose.LayerResources
 {
@@ -17,8 +18,8 @@ namespace Aspose.PSD.Examples.Aspose.LayerResources
                 string SourceDir = RunExamples.GetDataDir_PSD();
                 string OutputDir = RunExamples.GetDataDir_Output();
 
-                string fileName = SourceDir + "VectorOriginationDataResource.psd";
-                string outFileName = OutputDir + "out_VectorOriginationDataResource_.psd";
+                string fileName = Path.Combine(SourceDir, "VectorOriginationDataResource.psd");
+                string outFileName = Path.Combine(OutputDir, "out_VectorOriginationDataResource_.psd");
 
                 using (var psdImage = (PsdImage)Image.Load(fileName))
                 {
