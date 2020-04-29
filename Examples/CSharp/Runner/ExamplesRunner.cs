@@ -14,23 +14,93 @@ using Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSB;
 using Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD;
 using Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.TIFF;
 using Aspose.PSD.Examples.Aspose.Opening;
+using Aspose.PSD.Examples.Aspose.WorkingWithPSD;
 using System;
-using System.Collections.Generic;
 
 namespace Aspose.PSD.Examples.Runner
 {
     class ExamplesRunner
     {
-        public ExamplesRunner()
-        {
-         
-        }
-
+        /// <summary>
+        /// Requests for examples sections of Aspose.PSD
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException">Please enter your choise as number between [0..13]</exception>
         public static int RequestForSections()
         {
+            Console.WriteLine("================================================");
             Console.WriteLine(
-            "Please select the features you want to test: \n0 -  Test all features of Aspose.PSD,  \n1 - Open/Save Basics, \n2 - Conversion and Export Basics, \n3 - Graphic operations basics, \n4 - Psd Format Features\n5 - Psb Format Features, \n6 - AI Format Features, \n7 - AI Common Advanced Features");
-            Console.WriteLine("=====================================================");
+                       "Please select the Aspose.PSD features you want to test: \n" +
+                       "0 - Test all features of PSD format,  \n" +
+                       "1 - Open/Save Basics, \n" +
+                       "2 - Conversion and Export Basics, \n" +
+                       "3 - Graphic operations basics, \n" +
+                       "4 - Psd Format Features\n" +
+                       "5 - Psb Format Features, \n" +
+                       "6 - AI Format Features, \n" +
+                       "7 - AI Common Advanced Features");
+            Console.WriteLine("================================================");
+            Console.Write("Enter section number: ");
+            string key = Console.ReadLine();
+
+            int keyNumber = 0;
+
+            if (keyNumber - 1 >= 0)
+            {
+                keyNumber = (int)Math.Pow(2, keyNumber);
+            }
+
+            if (!int.TryParse(key, out keyNumber)
+                || (!typeof(ExamplesMainSection).IsEnumDefined(keyNumber - 1 >= 0 ? keyNumber = (int)Math.Pow(2, keyNumber - 1) : keyNumber = (int)ExamplesMainSection.All)))
+            {
+                throw new ArgumentException("Please enter your choise as number between [0..7]");
+            }
+
+            return keyNumber;
+        }
+
+        /// <summary>
+        /// Requests for Examples Sub Sections of Aspose.PSD
+        /// </summary>
+        /// <param name="subSection">The sub section.</param>
+        /// <returns>Number of selected Sub Section or 0</returns>
+        public static int RequestForSubSection(int subSection)
+        {
+            switch ((ExamplesMainSection)subSection)
+            {
+                case ExamplesMainSection.Psd:
+                    return RequestForPsdSection();
+            }
+
+            return 0;
+        }
+
+        /// <summary>
+        /// Requests for PSD section of Aspose.PSD
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException">Please enter your choise as number between [0..5]</exception>
+        private static int RequestForPsdSection()
+        {
+            Console.WriteLine("================================================");
+            Console.WriteLine(
+            "Please select the PSD features you want to test: \n" +
+            "0 - Test all features of PSD format,  \n" +
+            "1 - Psd Format Basics,  \n" +
+            "2 - Layer Resources, \n" +
+            "3 - Global PSD Image Resources, \n" +
+            "4 - Layers Operations, \n" +
+            "5 - Text Layers\n" +
+            "6 - Adjustment Layers, \n" +
+            "7 - Fill Layers, \n" +
+            "8 - Group Layers, \n" +
+            "9 - Smart Objects, \n" +
+            "10 - Smart Filters, \n" +
+            "11 - Working with Masks, \n" +
+            "12 - Layer Effects, \n" +
+            "13 - Specific Cases, \n");
+            Console.WriteLine("================================================");
+            Console.Write("Enter section number: ");
 
             string key = Console.ReadLine();
 
@@ -43,20 +113,19 @@ namespace Aspose.PSD.Examples.Runner
 
 
             if (!int.TryParse(key, out keyNumber)
-                || (!typeof(ExamplesMainSection).IsEnumDefined(keyNumber - 1 >= 0 ? keyNumber = (int)Math.Pow(2, keyNumber - 1) : keyNumber = (int)ExamplesMainSection.All)))
+                || (!typeof(ExamplesSubSectionPsd).IsEnumDefined(keyNumber - 1 >= 0 ? keyNumber = (int)Math.Pow(2, keyNumber - 1) : keyNumber = (int)ExamplesSubSectionPsd.All)))
             {
-                throw new ArgumentException("Please enter your choise as number between [0..5]");
+                throw new ArgumentException("Please enter your choise as number between [0..13]");
             }
 
             return keyNumber;
-
         }
 
-        public static int RequestForSubSection(int mainSection)
-        {
-            return 0;
-        }
-
+        /// <summary>
+        /// Runs the selected examples.
+        /// </summary>
+        /// <param name="mainSection">The main section.</param>
+        /// <param name="subSection">The sub section.</param>
         public static void RunExamples(int mainSection, int subSection)
         {
             var section = (ExamplesMainSection)mainSection;
@@ -90,11 +159,17 @@ namespace Aspose.PSD.Examples.Runner
             }
         }
 
+        /// <summary>
+        /// Runs the advanced features examples
+        /// </summary>
         private static void RunAdvancedFeatures()
         {
+            Console.WriteLine("Starting Advanced Features");
+
             //Technical Articles
             UncompressedImageUsingFile.Run();
             UncompressedImageStreamObject.Run();
+
             ControllCacheReallocation.Run();
             ColorConversionUsingICCProfiles.Run();
             ColorConversionUsingDefaultProfiles.Run();
@@ -108,6 +183,8 @@ namespace Aspose.PSD.Examples.Runner
         /// </summary>
         private static void RunAiSection()
         {
+            Console.WriteLine("Starting AI (Adobe Illustrator Format) Examples");
+
             AIToPSD.Run();
             AIToPNG.Run();
             AIToJPG.Run();
@@ -119,14 +196,23 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfLayersInAi.Run();
         }
 
+        /// <summary>
+        /// Runs the PSB section examples.
+        /// </summary>
         private static void RunPsbSection()
         {
+            Console.WriteLine("Starting PSB Image Examples");
+
             //PSB
             PSBToPSD.Run();
             PSBToJPG.Run();
             PSBToPDF.Run();
         }
 
+        /// <summary>
+        /// Runs the PSD section examples
+        /// </summary>
+        /// <param name="subSection">The sub section.</param>
         private static void RunPsdSection(int subSection)
         {
             var section = (ExamplesSubSectionPsd)subSection;
@@ -178,17 +264,26 @@ namespace Aspose.PSD.Examples.Runner
             }
         }
 
+        /// <summary>
+        /// Runs the group layers examples.
+        /// </summary>
         private static void RunGroupLayersExamples()
         {
-            //ExportLayerGroupToImage.Run();    
-            //ChangingGroupVisibility.Run();
-            //CreateLayerGroups.Run();
-            //SupportOfPassThroughBlendingMode.Run();
+            Console.WriteLine("Starting Group Layers Examples");
 
+            ExportLayerGroupToImage.Run();    
+            ChangingGroupVisibility.Run();
+            CreateLayerGroups.Run();
+            SupportOfPassThroughBlendingMode.Run();
         }
 
+        /// <summary>
+        /// Runs the basic layers operations examples.
+        /// </summary>
         private static void RunBasicLayersOperationsExamples()
         {
+            Console.WriteLine("Starting Basic Layer Operation Examples");
+
             LayerCreationDateTime.Run();
             SheetColorHighlighting.Run();
             FillOpacityOfLayers.Run();
@@ -196,11 +291,15 @@ namespace Aspose.PSD.Examples.Runner
             ExtractLayerName.Run();
             SupportOfScaleProperty.Run();
             SupportOfRotateLayer.Run();
-
         }
 
+        /// <summary>
+        /// Runs the PSD specific cases examples
+        /// </summary>
         private static void RunPsdSpecificCases()
         {
+            Console.WriteLine("Starting PSD Specific Cases Examples");
+
             SettingforReplacingMissingFonts.Run();
             ImplementBicubicResampler.Run();
             DetectFlattenedPSD.Run();
@@ -223,8 +322,13 @@ namespace Aspose.PSD.Examples.Runner
 
         }
 
+        /// <summary>
+        /// Runs the PSD format basics examples.
+        /// </summary>
         private static void RunPsdFormatBasicsExamples()
-        {           
+        {
+            Console.WriteLine("Starting PSD Format Basics Examples");
+
             PSDToRasterImageFormats.Run();
             LoadingImageFromStreamAsALayer.Run();
             CroppingPSDWhenConvertingToPNG.Run();
@@ -246,6 +350,8 @@ namespace Aspose.PSD.Examples.Runner
         /// </summary>
         private static void RunWorkingWithMasksExamples()
         {
+            Console.WriteLine("Starting Working with masks Examples");
+
             SupportOfLayerMask.Run();
             SupportOfClippingMask.Run();
             SupportOfLayerVectorMask.Run();
@@ -253,6 +359,8 @@ namespace Aspose.PSD.Examples.Runner
 
         private static void RunAdjustmentLayersExamples()
         {
+            Console.WriteLine("Starting Adjustment Layers Examples");
+
             SupportOfAdjusmentLayers.Run();
             RenderingOfCurvesAdjustmentLayer.Run();
             AddBlackAndWhiteAdjustmentLayer.Run();
@@ -269,6 +377,8 @@ namespace Aspose.PSD.Examples.Runner
 
         private static void RunLayerEffectsExamples()
         {
+            Console.WriteLine("Starting Layer Effects Examples");
+
             // Layer Effects
             LayerEffectsForPSD.Run();
             AddStrokeLayer_Pattern.Run();
@@ -290,6 +400,8 @@ namespace Aspose.PSD.Examples.Runner
 
         private static void RunFillLayersExamples()
         {
+            Console.WriteLine("Starting Fill Layers Examples");
+
             // Fill Layers
             PatternFillLayer.Run();
             GradientFillLayers.Run();
@@ -299,6 +411,8 @@ namespace Aspose.PSD.Examples.Runner
 
         private static void RunTextLayersExamples()
         {
+            Console.WriteLine("Starting Text Layer Examples");
+
             AddTextLayer.Run();
             SetTextLayerPosition.Run();
             GetTextPropertiesFromTextLayer.Run();
@@ -312,15 +426,22 @@ namespace Aspose.PSD.Examples.Runner
 
         private static void RunGlobalResourcesExamples()
         {
+            Console.WriteLine("Starting Gloabal PSD Resources Examples");
+
             // Global Resources of Psd Image
             SupportOfBackgroundColorResource.Run();
             SupportOfBorderInformationResource.Run();
         }
 
+        /// <summary>
+        /// Runs the layer resources examples.
+        /// </summary>
         private static void RunLayerResourcesExamples()
         {
+            Console.WriteLine("Starting Layer Resources Examples");
+
             // Layer Resources
-            //AddIopaResource.Run();
+            AddIopaResource.Run();
             SupportOfVogkResource.Run();
             SupportOfLclrResource.Run();
             VsmsResourceLengthRecordSupport.Run();
@@ -333,8 +454,13 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfPtFlResource.Run();
         }
 
+        /// <summary>
+        /// Graphics operations basics examples.
+        /// </summary>
         private static void GraphicOperationsBasics()
         {
+            Console.WriteLine("Starting Graphic Operations Basics Example");
+
             //Drawing Images
             DrawingLines.Run();
             DrawingEllipse.Run();
@@ -344,7 +470,6 @@ namespace Aspose.PSD.Examples.Runner
             CoreDrawingFeatures.Run();
             DrawingUsingGraphics.Run();
             DrawingUsingGraphicsPath.Run();
-
 
             // Filters
             ApplyMedianAndWienerFilters.Run();
@@ -379,8 +504,12 @@ namespace Aspose.PSD.Examples.Runner
             ExpandandCropImages.Run();
         }
 
+        /// <summary>
+        /// Conversions and export basics examples
+        /// </summary>
         private static void ConversionAndExportBasics()
         {
+            Console.WriteLine("Starting Conversion and Export Basics Examples");
             PSDToPDFWithClippingMask.Run();
             PSDToPDFWithAdjustmentLayers.Run();
             ExportImageToPSD.Run();
@@ -413,6 +542,7 @@ namespace Aspose.PSD.Examples.Runner
         /// </summary>
         private static void RunOpenSaveCreateBasics()
         {
+            Console.WriteLine("Starting Open/Save/Create Basics Examples");
             //Opening and saving
             SavingtoDisk.Run();
             SavingtoStream.Run();
@@ -420,7 +550,6 @@ namespace Aspose.PSD.Examples.Runner
             ExportImagesinMultiThreadEnv.Run();
             LoadPSDWithReadOnlyMode.Run();
             CreatingbySettingPath.Run();
-
         }
     }
 }
