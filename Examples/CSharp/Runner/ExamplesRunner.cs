@@ -29,7 +29,7 @@ namespace Aspose.PSD.Examples.Runner
         public static int RequestForSections()
         {
             Console.WriteLine(
-            "Please select the features you want to test: \n0 - Open/Save Basics, \n1 - Conversion and Export basics, \n2 - Graphic operations basics, \n3 - Psd Format Advanced Features\n4 - Psb Format Advanced Features, \n5 - AI Format Advanced Features");
+            "Please select the features you want to test: \n0 -  Test all features of Aspose.PSD,  \n1 - Open/Save Basics, \n2 - Conversion and Export Basics, \n3 - Graphic operations basics, \n4 - Psd Format Features\n5 - Psb Format Features, \n6 - AI Format Features, \n7 - AI Common Advanced Features");
             Console.WriteLine("=====================================================");
 
             string key = Console.ReadLine();

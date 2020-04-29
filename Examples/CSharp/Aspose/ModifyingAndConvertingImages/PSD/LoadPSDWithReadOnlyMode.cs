@@ -20,7 +20,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 
             LoadOptions loadOptions = new PsdLoadOptions() { ReadOnlyMode = true };
             ImageOptionsBase saveOptions = new PngOptions() { ColorType = PngColorType.TruecolorWithAlpha };
-            using (PsdImage image = (PsdImage)Image.Load(sourceFileName))
+            using (PsdImage image = (PsdImage)Image.Load(sourceFileName, loadOptions))
             {
                 image.Save(outFileName, saveOptions);
             }
