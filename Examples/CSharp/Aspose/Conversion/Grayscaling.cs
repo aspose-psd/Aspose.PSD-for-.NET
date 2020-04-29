@@ -2,7 +2,7 @@
 
 namespace Aspose.PSD.Examples.Aspose.Conversion
 {
-    class Garysacling
+    class Grayscaling
     {
         public static void Run()
         {

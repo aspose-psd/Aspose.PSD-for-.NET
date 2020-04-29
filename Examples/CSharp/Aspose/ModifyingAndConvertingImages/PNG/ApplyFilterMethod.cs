@@ -4,7 +4,7 @@ using Aspose.PSD.ImageOptions;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PNG
 {
-    class ApplyFilterMethod
+    class ApplyFilterMethodOnPng
     {
         public static void Run()
         {

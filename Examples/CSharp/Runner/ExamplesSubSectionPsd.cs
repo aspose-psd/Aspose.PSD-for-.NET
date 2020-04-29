@@ -6,28 +6,34 @@ namespace Aspose.PSD.Examples.Runner
     [Flags]
     enum ExamplesSubSectionPsd
     {
-        WorkingWithLayerResources = 1,
+        PsdFormatBasics = 1,
 
-        WorkingWithGlobalResources = 2,
+        WorkingWithLayerResources = 2,
 
-        WorkingWithRegularLayers = 4,
+        WorkingWithGlobalResources = 4,
 
-        WorkingWithTextLayers = 8,
+        BasicLayersOperations = 8,
 
-        WorkingWithAdjustmentLayers = 16,
+        WorkingWithTextLayers = 16,
 
-        WorkingWithFillLayers = 32,
+        WorkingWithAdjustmentLayers = 32,
 
-        WorkingWithSmartObjectLayers = 64,
+        WorkingWithFillLayers = 64,
 
-        WorkingWithSmartFiltersLayers = 128,
+        WorkingWithGroupLayers = 128,
 
-        WorkingWithMasks = 256,
+        WorkingWithSmartObjectLayers = 256,
 
-        WorkingWithLayerEffects = 512,
+        WorkingWithSmartFilters = 512,
+
+        WorkingWithMasks = 1024,
+
+        WorkingWithLayerEffects = 2048,
+
+        SpecificCases = 4096,
 
         All = WorkingWithLayerResources | WorkingWithGlobalResources
-              | WorkingWithRegularLayers | WorkingWithTextLayers | WorkingWithAdjustmentLayers | WorkingWithFillLayers |
-            WorkingWithSmartObjectLayers | WorkingWithSmartFiltersLayers | WorkingWithMasks | WorkingWithLayerEffects
+              | BasicLayersOperations | WorkingWithTextLayers | WorkingWithAdjustmentLayers | WorkingWithFillLayers |
+            WorkingWithSmartObjectLayers | WorkingWithSmartFilters | WorkingWithMasks | WorkingWithLayerEffects
     }
 }

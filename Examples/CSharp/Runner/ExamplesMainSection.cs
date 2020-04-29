@@ -5,7 +5,7 @@ namespace Aspose.PSD.Examples.Runner
     [Flags]
     enum ExamplesMainSection
     {
-        OpenSaveBasics = 1,
+        OpenSaveCreateBasics = 1,
 
         ConversionAndExportBasics = 2,
 
@@ -17,6 +17,8 @@ namespace Aspose.PSD.Examples.Runner
 
         Ai = 32,
 
-        All = OpenSaveBasics | ConversionAndExportBasics | GraphicOperationsBasics | Psd | Psb | Ai
+        CommonAdvancedFeatures = 64,
+
+        All = OpenSaveCreateBasics | ConversionAndExportBasics | GraphicOperationsBasics | Psd | Psb | Ai | CommonAdvancedFeatures
     }
 }
