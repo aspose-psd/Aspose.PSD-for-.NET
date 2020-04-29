@@ -2,11 +2,7 @@
 using Aspose.PSD.FileFormats.Psd.Resources;
 using Aspose.PSD.FileFormats.Psd.Resources.ResolutionEnums;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.GlobalResources
 {

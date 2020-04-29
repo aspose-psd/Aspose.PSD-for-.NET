@@ -1,11 +1,6 @@
 ﻿using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers.AdjustmentLayers;
 using Aspose.PSD.ImageOptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {

@@ -271,7 +271,7 @@ namespace Aspose.PSD.Examples.Runner
         {
             Console.WriteLine("Starting Group Layers Examples");
 
-            ExportLayerGroupToImage.Run();    
+            ExportLayerGroupToImage.Run();
             ChangingGroupVisibility.Run();
             CreateLayerGroups.Run();
             SupportOfPassThroughBlendingMode.Run();
@@ -316,7 +316,7 @@ namespace Aspose.PSD.Examples.Runner
             FontReplacement.Run();
             ReadAllEXIFTags.Run();
             ReadSpecificEXIFTagsInformation.Run();
-            WritingAndModifyingEXIFData.Run(); 
+            WritingAndModifyingEXIFData.Run();
             SupportForJPEG_LSWithCMYK.Run();
             SupportFor2_7BitsJPEG.Run();
 

@@ -2,11 +2,7 @@
 using Aspose.PSD.FileFormats.Psd.Layers.FillLayers;
 using Aspose.PSD.FileFormats.Psd.Layers.FillSettings;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.FillLayers
 {

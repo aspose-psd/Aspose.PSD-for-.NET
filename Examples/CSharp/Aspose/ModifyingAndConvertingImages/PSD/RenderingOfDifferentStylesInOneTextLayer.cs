@@ -1,11 +1,6 @@
 ﻿using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers;
 using Aspose.PSD.FileFormats.Psd.Layers.Text;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
@@ -18,7 +13,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 
             //ExStart:RenderingOfDifferentStylesInOneTextLayer
             //ExSummary:The following example demonstrates how you can render different styles in one text layer in Aspose.PSD
-            string sourceFile = dataDir + "text212.psd";            
+            string sourceFile = dataDir + "text212.psd";
             string outputFile = dataDir + "Output_text212.psd";
 
             using (var img = (PsdImage)Image.Load(sourceFile))
