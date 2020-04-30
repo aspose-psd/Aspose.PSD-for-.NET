@@ -5,7 +5,7 @@ using System.IO;
 
 namespace Aspose.PSD.Examples.Aspose.Opening
 {
-    class LoadingImageFromStream
+    class LoadingImageFromStreamAsALayer
     {
         public static void Run()
         {

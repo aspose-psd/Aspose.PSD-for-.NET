@@ -3,7 +3,7 @@ using Aspose.PSD.ImageOptions;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PNG
 {
-    class SpecifyTransparency
+    class SpecifyTransparencyOfPngOnExport
     {
         public static void Run()
         {

@@ -18,7 +18,6 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                 {
                     if (layer.Name == "Rectangle 1")
                     {
-                        int dd = 0;
                         layer.HasBackgroundColor = true;
                         layer.BackgroundColor = Color.Orange;
                     }

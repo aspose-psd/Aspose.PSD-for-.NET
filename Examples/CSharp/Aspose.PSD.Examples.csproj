@@ -33,12 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.PSD, Version=20.3.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.PSD.20.3.0\lib\net40\Aspose.PSD.dll</HintPath>
+    <Reference Include="Aspose.PSD, Version=20.4.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.PSD.20.4.0\lib\net40\Aspose.PSD.dll</HintPath>
     </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aspose\Ai\SupportOfLayersInAi.cs" />
     <Compile Include="Aspose\Conversion\RenderTextWithDifferentColorsInTextLayer.cs" />
     <Compile Include="Aspose\Conversion\ColorConversionUsingDefaultProfiles.cs" />
     <Compile Include="Aspose\Conversion\ColorConversionUsingICCProfiles.cs" />
@@ -89,7 +90,15 @@
     <Compile Include="Aspose\DrawingAndFormattingImages\ExpandandCropImages.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\CombiningImages.cs" />
     <Compile Include="Aspose\Conversion\GIFImageLayersToTIFF.cs" />
-    <Compile Include="Aspose\Conversion\Garysacling.cs" />
+    <Compile Include="Aspose\Conversion\Grayscaling.cs" />
+    <Compile Include="Aspose\FillLayers\AddingFillLayerAtRuntime.cs" />
+    <Compile Include="Aspose\GlobalResources\SupportOfBackgroundColorResource.cs" />
+    <Compile Include="Aspose\GlobalResources\SupportOfBorderInformationResource.cs" />
+    <Compile Include="Aspose\LayerEffects\RenderingOfGradientOverlayEffect.cs" />
+    <Compile Include="Aspose\LayerEffects\SupportOfGradientOverlayEffect.cs" />
+    <Compile Include="Aspose\LayerResources\SupportOfLclrResource.cs" />
+    <Compile Include="Aspose\LayerResources\SupportOfVogkResource.cs" />
+    <Compile Include="Aspose\LayerResources\VsmsResourceLengthRecordSupport.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\AI\AIToPDF.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\AI\SupportOfAiFormatVersion8.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\AI\SupportOfRasterImagesInAI.cs" />
@@ -100,7 +109,6 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\AddTextLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\ColorFillLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\CreateLayerGroups.cs" />
-    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\ImplementPatternFillLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\PSDToPDFWithAdjustmentLayers.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\PSDToPDFWithClippingMask.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\ExtractLayerName.cs" />
@@ -115,7 +123,7 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\RenderingOfRotatedTextLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\ResizePSDFile.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SetTextLayerPosition.cs" />
-    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\StrokeEffectWithColorFill .cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\StrokeEffectWithColorFill.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfGdFlResource.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfInnerShadowLayerEffect.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfLinkedLayer.cs" />
@@ -149,7 +157,6 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\AI\AIToTIFF.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\JPEG\AddThumbnailToEXIFSegment.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\JPEG\AddThumbnailToJFIFSegment.cs" />
-    <Compile Include="Aspose\ModifyingAndConvertingImages\JPEG\AutoCorrectOrientationOfJPEGImages.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\JPEG\ColorTypeAndCompressionType.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\JPEG\ExtractThumbnailFromJFIF.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\JPEG\ExtractThumbnailFromPSD.cs" />
@@ -191,7 +198,7 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\PossibilityToFlattenLayers.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\LayerEffectsForPSD.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\AddIopaResource.cs" />
-    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfRGBColor.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfRGBColorModeWith16BitPerChannel.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfRotateLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\TextLayerBoundBox.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\MergeOnePSDlayerToOther.cs" />
@@ -206,7 +213,6 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\DetectFlattenedPSD.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\ExportImageToPSD.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\ExportPSDLayerToRasterImage.cs" />
-    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\GrayScaleSupportForAlpha.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\ImportImageToPSDLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\MergePSDlayers.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportLayerForPSD.cs" />
@@ -221,14 +227,18 @@
     <Compile Include="Aspose\Opening\LoadingImageFromStream.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\GetPropertiesOfInlineFormattingOfTextLayer.cs" />
     <Compile Include="Aspose\WorkingWithPSD\ChangingGroupVisibility.cs" />
-    <Compile Include="Aspose\WorkingWithPSD\SupportForBlwhResource.cs" />
+    <Compile Include="Aspose\LayerResources\SupportForBlwhResource.cs" />
     <Compile Include="Aspose\WorkingWithPSD\ExportLayerGroupToImage.cs" />
-    <Compile Include="Aspose\WorkingWithPSD\SupportForInfxResource.cs" />
-    <Compile Include="Aspose\WorkingWithPSD\SupportForLspfResource.cs" />
-    <Compile Include="Aspose\WorkingWithPSD\SupportForClblResource.cs" />
+    <Compile Include="Aspose\LayerResources\SupportForInfxResource.cs" />
+    <Compile Include="Aspose\LayerResources\SupportForLspfResource.cs" />
+    <Compile Include="Aspose\LayerResources\SupportForClblResource.cs" />
     <Compile Include="Aspose\WorkingWithPSD\SupportOfPassThroughBlendingMode.cs" />
+    <Compile Include="ExamplesPaths.cs" />
+    <Compile Include="Runner\ExamplesRunner.cs" />
     <Compile Include="RunExamples.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Runner\ExamplesMainSection.cs" />
+    <Compile Include="Runner\ExamplesSubSectionPsd.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -1,9 +1,6 @@
 ﻿using Aspose.PSD.FileFormats.Ai;
 using Aspose.PSD.FileFormats.Png;
 using Aspose.PSD.ImageOptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.AI
 {
     class SupportOfAiFormatVersion8

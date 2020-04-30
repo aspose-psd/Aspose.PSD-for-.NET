@@ -3,7 +3,7 @@ using Aspose.PSD.ImageOptions;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PNG
 {
-    class ChangeBackgroundColor
+    class ChangeBackgroundColorOfPng
     {
         public static void Run()
         {
