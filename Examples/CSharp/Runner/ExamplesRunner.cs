@@ -150,6 +150,15 @@ namespace Aspose.PSD.Examples.Runner
                     RunAiSection();
                     break;
                 case ExamplesMainSection.All:
+                    foreach (ExamplesMainSection main in Enum.GetValues(typeof(ExamplesMainSection)))
+                    {
+                        if (main == ExamplesMainSection.All)
+                        {
+                            continue;
+                        }
+
+                        RunExamples((int)main, 0);
+                    }
                     break;
                 case ExamplesMainSection.CommonAdvancedFeatures:
                     RunAdvancedFeatures();
@@ -215,7 +224,7 @@ namespace Aspose.PSD.Examples.Runner
         /// <param name="subSection">The sub section.</param>
         private static void RunPsdSection(int subSection)
         {
-            var section = (ExamplesSubSectionPsd)subSection;
+            ExamplesSubSectionPsd section = CorrectAllSectionSelect(subSection);
 
             switch (section)
             {
@@ -256,12 +265,41 @@ namespace Aspose.PSD.Examples.Runner
                     RunLayerEffectsExamples();
                     break;
                 case ExamplesSubSectionPsd.All:
+                    foreach (ExamplesSubSectionPsd sub in Enum.GetValues(typeof(ExamplesSubSectionPsd)))
+                    {
+                        if (sub == ExamplesSubSectionPsd.All)
+                        {
+                            continue;
+                        }
+
+                        RunPsdSection((int)sub);
+                    }
                     break;
 
                 case ExamplesSubSectionPsd.SpecificCases:
                     RunPsdSpecificCases();
                     break;
             }
+        }
+
+        /// <summary>
+        /// Corrects "all" section select.
+        /// </summary>
+        /// <param name="subSection">The sub section.</param>
+        /// <returns></returns>
+        private static ExamplesSubSectionPsd CorrectAllSectionSelect(int subSection)
+        {
+            ExamplesSubSectionPsd section;
+            if (subSection == 0)
+            {
+                section = ExamplesSubSectionPsd.All;
+            }
+            else
+            {
+                section = (ExamplesSubSectionPsd)subSection;
+            }
+
+            return section;
         }
 
         /// <summary>
