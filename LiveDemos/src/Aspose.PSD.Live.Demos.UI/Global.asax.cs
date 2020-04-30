@@ -39,8 +39,8 @@ namespace Aspose.PSD.Live.Demos.UI
 
 		private void SetResourceFile(string strLanguage)
 		{
-			if (Session["AsposeThreeDResources"] == null)
-				Session["AsposeThreeDResources"] = new GlobalAppHelper(HttpContext.Current, Application, Configuration.ResourceFileSessionName, strLanguage);
+			if (Session["AsposePSDResources"] == null)
+				Session["AsposePSDResources"] = new GlobalAppHelper(HttpContext.Current, Application, Configuration.ResourceFileSessionName, strLanguage);
 		}
 
 		void RegisterCustomRoutes(RouteCollection routes)
