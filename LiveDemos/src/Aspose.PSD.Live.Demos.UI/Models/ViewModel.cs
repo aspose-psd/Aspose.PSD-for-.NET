@@ -124,9 +124,7 @@ namespace Aspose.PSD.Live.Demos.UI.Models
 
 		protected string TitleCase(string value) => new System.Globalization.CultureInfo("en-US", false).TextInfo.ToTitleCase(value);
 
-		/// <summary>
-		/// e.g., .doc|.docx|.dot|.dotx|.rtf|.odt|.ott|.txt|.html|.xhtml|.mhtml
-		/// </summary>
+		
 		public string ExtensionsString { get; set; }
 
 		#region SaveAs
@@ -335,22 +333,7 @@ namespace Aspose.PSD.Live.Demos.UI.Models
 				var key1 = $"{Product}{AppName}ValidationExpression";
 				var key2 = $"{Product}ValidationExpression";
 				ExtensionsString = Resources.ContainsKey(key1) ? Resources[key1] : Resources[key2];
-				if ("pdf".Equals(Product))
-				{
-					switch (Extension)
-					{
-						case "mhtml":
-						case "mht":
-							ExtensionsString = ".mht|.mhtml";
-							break;
-						default:
-							if (!IsCanonical)
-								ExtensionsString = $".{Extension}";
-							else
-								ExtensionsString = $".pdf";
-							break;
-					}
-				}
+				
 			}
 			else
 			{
