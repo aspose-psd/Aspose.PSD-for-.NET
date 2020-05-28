@@ -490,6 +490,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfVsmsResource.Run();
             SupportOfSoCoResource.Run();
             SupportOfPtFlResource.Run();
+            SupportOfNvrtResource.Run();
         }
 
         /// <summary>
@@ -562,6 +563,9 @@ namespace Aspose.PSD.Examples.Runner
             TIFFwithDeflateCompression.Run();
             TIFFwithAdobeDeflateCompression.Run();
             CompressingTiff.Run();
+            Saving16BitGrayscalePsdImage.Run();
+            Saving16BitGrayscalePsdTo8BitGrayscale.Run();
+            Saving16BitGrayscalePsdTo8BitRgb.Run();
 
             GIFImageLayersToTIFF.Run();
             CMYKPSDtoCMYKTiff.Run();
@@ -588,6 +592,7 @@ namespace Aspose.PSD.Examples.Runner
             ExportImagesinMultiThreadEnv.Run();
             LoadPSDWithReadOnlyMode.Run();
             CreatingbySettingPath.Run();
+            UsingDocumentConversionProgressHandler.Run();
         }
     }
 }
