@@ -33,8 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.PSD, Version=20.4.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.PSD.20.4.0\lib\net40\Aspose.PSD.dll</HintPath>
+    <Reference Include="Aspose.PSD, Version=20.5.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.PSD.20.5.0\lib\net40\Aspose.PSD.dll</HintPath>
     </Reference>
     <Reference Include="System" />
   </ItemGroup>
@@ -97,6 +97,7 @@
     <Compile Include="Aspose\LayerEffects\RenderingOfGradientOverlayEffect.cs" />
     <Compile Include="Aspose\LayerEffects\SupportOfGradientOverlayEffect.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfLclrResource.cs" />
+    <Compile Include="Aspose\LayerResources\SupportOfNvrtResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfVogkResource.cs" />
     <Compile Include="Aspose\LayerResources\VsmsResourceLengthRecordSupport.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\AI\AIToPDF.cs" />
@@ -122,6 +123,9 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\RenderingOfDifferentStylesInOneTextLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\RenderingOfRotatedTextLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\ResizePSDFile.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\Saving16BitGrayscalePsdTo8BitRgb.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\Saving16BitGrayscalePsdTo8BitGrayscale.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\Saving16BitGrayscalePsdImage.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SetTextLayerPosition.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\StrokeEffectWithColorFill.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfGdFlResource.cs" />
@@ -219,6 +223,7 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\UncompressedImageStreamObject.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\UncompressedImageUsingFile.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\UpdateTextLayerInPSDFile.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\UsingDocumentConversionProgressHandler.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\TIFF\CompressingTiff.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\TIFF\ExportToMultiPageTiff.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\TIFF\TiffOptionsConfiguration.cs" />
@@ -246,6 +251,9 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>nuget restore "../../../"</PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
