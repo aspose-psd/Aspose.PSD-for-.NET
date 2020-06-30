@@ -491,6 +491,8 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfSoCoResource.Run();
             SupportOfPtFlResource.Run();
             SupportOfNvrtResource.Run();
+            SupportOfBritResource.Run();
+            SupportOfLnkEResource.Run();
         }
 
         /// <summary>

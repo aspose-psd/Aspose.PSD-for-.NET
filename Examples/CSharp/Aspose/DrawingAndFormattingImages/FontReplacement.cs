@@ -1,4 +1,6 @@
-﻿using Aspose.PSD.FileFormats.Psd;
+﻿using System.IO;
+using Aspose.PSD.FileFormats.Psd;
+using Aspose.PSD.FileFormats.Tiff.Enums;
 using Aspose.PSD.ImageLoadOptions;
 using Aspose.PSD.ImageOptions;
 
@@ -10,19 +12,29 @@ namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
         {
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
+            string outputFolder = RunExamples.GetDataDir_Output();
 
             //ExStart:FontReplacement
 
-            // Load an image in an instance of image and setting default replacement font.
-            PsdLoadOptions psdLoadOptions = new PsdLoadOptions() { DefaultReplacementFont = "Arial" };
+            string sourceFileName = Path.Combine(dataDir, "sample_konstanting.psd");
 
-            using (PsdImage psdImage = (PsdImage)Image.Load(dataDir + "Cloud_AzPlat_Banner3A_SB_EN_US_160x600_chinese_font.psd", psdLoadOptions))
+            string[] outputs = new string[]
             {
-                var pngOptions = new PngOptions();
-                psdImage.Save(dataDir + "replaced_font.png", new ImageOptions.PngOptions());
-            }
+                "replacedfont0.tiff",
+                "replacedfont1.png",
+                "replacedfont2.jpg"
+            };
 
+            using (PsdImage image = (PsdImage)Image.Load(sourceFileName, new PsdLoadOptions()))
+            {
+                // This way you can use different fonts for different outputs 
+                image.Save(Path.Combine(outputFolder, outputs[0]), new TiffOptions(TiffExpectedFormat.TiffJpegRgb) { DefaultReplacementFont = "Arial" });
+                image.Save(Path.Combine(outputFolder, outputs[1]), new PngOptions { DefaultReplacementFont = "Verdana" });
+                image.Save(Path.Combine(outputFolder, outputs[2]), new JpegOptions { DefaultReplacementFont = "Times New Roman" });
+            }
             //ExEnd:FontReplacement
+
+            Console.WriteLine("FontReplacement executed successfully");
         }
     }
 }
