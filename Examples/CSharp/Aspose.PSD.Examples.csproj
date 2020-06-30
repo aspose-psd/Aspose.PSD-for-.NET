@@ -109,6 +109,9 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\AddBlackAndWhiteAdjustmentLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\AddTextLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\ColorFillLayer.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\ConvertPsdToPdf.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\ConvertPsdToPng.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\ConvertPsdToJpg.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\CreateLayerGroups.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\PSDToPDFWithAdjustmentLayers.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\PSDToPDFWithClippingMask.cs" />

@@ -566,6 +566,9 @@ namespace Aspose.PSD.Examples.Runner
             Saving16BitGrayscalePsdImage.Run();
             Saving16BitGrayscalePsdTo8BitGrayscale.Run();
             Saving16BitGrayscalePsdTo8BitRgb.Run();
+            ConvertPsdToJpg.Run();
+            ConvertPsdToPng.Run();
+            ConvertPsdToPdf.Run();
 
             GIFImageLayersToTIFF.Run();
             CMYKPSDtoCMYKTiff.Run();
