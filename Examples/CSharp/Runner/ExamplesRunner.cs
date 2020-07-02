@@ -491,6 +491,8 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfSoCoResource.Run();
             SupportOfPtFlResource.Run();
             SupportOfNvrtResource.Run();
+            SupportOfBritResource.Run();
+            SupportOfLnkEResource.Run();
         }
 
         /// <summary>
@@ -566,6 +568,9 @@ namespace Aspose.PSD.Examples.Runner
             Saving16BitGrayscalePsdImage.Run();
             Saving16BitGrayscalePsdTo8BitGrayscale.Run();
             Saving16BitGrayscalePsdTo8BitRgb.Run();
+            ConvertPsdToJpg.Run();
+            ConvertPsdToPng.Run();
+            ConvertPsdToPdf.Run();
 
             GIFImageLayersToTIFF.Run();
             CMYKPSDtoCMYKTiff.Run();
