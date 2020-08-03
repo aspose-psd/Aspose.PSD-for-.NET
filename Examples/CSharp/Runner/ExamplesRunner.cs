@@ -422,6 +422,7 @@ namespace Aspose.PSD.Examples.Runner
             AddStrokeLayer_Pattern.Run();
             AddStrokeLayer_Gradient.Run();
             AddStrokeLayer_Color.Run();
+            AddStrokeEffect.Run();
             AddGradientEffects.Run();
             AddPatternEffects.Run();
             SupportOfInnerShadowLayerEffect.Run();
@@ -469,6 +470,7 @@ namespace Aspose.PSD.Examples.Runner
             // Global Resources of Psd Image
             SupportOfBackgroundColorResource.Run();
             SupportOfBorderInformationResource.Run();
+            SupportOfWorkingPathResource.Run();
         }
 
         /// <summary>
@@ -493,6 +495,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfNvrtResource.Run();
             SupportOfBritResource.Run();
             SupportOfLnkEResource.Run();
+            SupportOfLnk2AndLnk3Resource.Run();
         }
 
         /// <summary>

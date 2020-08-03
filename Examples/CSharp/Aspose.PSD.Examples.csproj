@@ -33,8 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.PSD, Version=20.6.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.PSD.20.6.0\lib\net40\Aspose.PSD.dll</HintPath>
+    <Reference Include="Aspose.PSD, Version=20.7.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.PSD.20.7.0\lib\net40\Aspose.PSD.dll</HintPath>
     </Reference>
     <Reference Include="System" />
   </ItemGroup>
@@ -91,11 +91,14 @@
     <Compile Include="Aspose\DrawingAndFormattingImages\CombiningImages.cs" />
     <Compile Include="Aspose\Conversion\GIFImageLayersToTIFF.cs" />
     <Compile Include="Aspose\Conversion\Grayscaling.cs" />
+    <Compile Include="Aspose\DrawingImages\AddStrokeEffect.cs" />
     <Compile Include="Aspose\FillLayers\AddingFillLayerAtRuntime.cs" />
     <Compile Include="Aspose\GlobalResources\SupportOfBackgroundColorResource.cs" />
     <Compile Include="Aspose\GlobalResources\SupportOfBorderInformationResource.cs" />
+    <Compile Include="Aspose\GlobalResources\SupportOfWorkingPathResource.cs" />
     <Compile Include="Aspose\LayerEffects\RenderingOfGradientOverlayEffect.cs" />
     <Compile Include="Aspose\LayerEffects\SupportOfGradientOverlayEffect.cs" />
+    <Compile Include="Aspose\LayerEffects\SupportOfLnk2AndLnk3Resource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfBritResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfLclrResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfLnkEResource.cs" />
