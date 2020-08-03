@@ -98,7 +98,7 @@
     <Compile Include="Aspose\GlobalResources\SupportOfWorkingPathResource.cs" />
     <Compile Include="Aspose\LayerEffects\RenderingOfGradientOverlayEffect.cs" />
     <Compile Include="Aspose\LayerEffects\SupportOfGradientOverlayEffect.cs" />
-    <Compile Include="Aspose\LayerEffects\SupportOfLnk2AndLnk3Resource.cs" />
+    <Compile Include="Aspose\LayerResources\SupportOfLnk2AndLnk3Resource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfBritResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfLclrResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfLnkEResource.cs" />
