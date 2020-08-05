@@ -13,7 +13,7 @@ namespace Aspose.PSD.Examples.Aspose.GlobalResources
             string baseFolder = RunExamples.GetDataDir_PSD();
             string outputFolder = RunExamples.GetDataDir_Output();
 
-            //ExStart
+            //ExStart:SupportOfWorkingPathResource
             //ExSummary:This example demonstrates the support of 'WorkingPathResource' resource in PsdImage.ImageResources fo correct working of Crop operation.
 
             string sourceFile = Path.Combine(baseFolder, "WorkingPathResourceInput.psd");
@@ -67,7 +67,7 @@ namespace Aspose.PSD.Examples.Aspose.GlobalResources
                 }
             }
 
-            //ExEnd
+            //ExEnd:SupportOfWorkingPathResource
 
             Console.WriteLine("SupportOfWorkingPathResource executed successfully");
         }

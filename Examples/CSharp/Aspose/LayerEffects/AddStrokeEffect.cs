@@ -6,7 +6,7 @@ using Aspose.PSD.FileFormats.Psd.Layers.LayerEffects;
 using Aspose.PSD.ImageLoadOptions;
 using Aspose.PSD.ImageOptions;
 
-namespace Aspose.PSD.Examples.Aspose.DrawingImages
+namespace Aspose.PSD.Examples.Aspose.LayerEffects
 {
     class AddStrokeEffect
     {
@@ -15,7 +15,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
             string SourceDir = RunExamples.GetDataDir_PSD();
             string OutputDir = RunExamples.GetDataDir_Output();
 
-            //ExStart
+            //ExStart:AddStrokeEffect
             //ExSummary:This example demonstrates the ability to add the stroke effect with different types of fill like Color, Gradient or Pattern.
 
             string srcFile = Path.Combine(SourceDir, "AddStrokeEffect.psd");
@@ -97,7 +97,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                 psdImage.Save(outputFilePng, new PngOptions());
             }
 
-            //ExEnd
+            //ExEnd:AddStrokeEffect
 
             Console.WriteLine("AddStrokeEffect executed successfully");
         }
