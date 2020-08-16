@@ -51,7 +51,7 @@ Aspose.PSD for .NET can work in any environment that supports .NET framework 2.0
 
 Are you ready to give Aspose.PSD for .NET a try? Simply execute `Install-Package Aspose.PSD` from Package Manager Console in Visual Studio to fetch the NuGet package. If you already have Aspose.PSD for .NET and want to upgrade the version, please execute `Update-Package Aspose.PSD` to get the latest version.
 
-## Crop a PhotoShop PSD to Save Result in PNG format
+## Crop a PSD to Save Result as PNG
 
 ```csharp
 // implement correct Crop method for PSD files.
