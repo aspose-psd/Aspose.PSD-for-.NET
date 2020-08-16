@@ -15,7 +15,7 @@ Directory | Description
 
 
 
-## Photoshop File Processing Features
+## Photoshop File Manipulation via .NET
 
 - Create Photoshop PSD & PSB files via API.
 - Export PSD images to [popular image formats](https://docs.aspose.com/psd/net/supported-file-formats/).
