@@ -1,6 +1,6 @@
-# Aspose.PSD for .NET
+# .NET API for Photoshop File Processing
 
-[Aspose.PSD for .NET](https://products.aspose.com/psd/net) is an advanced image  processing API whic provide extensive manipulation of PSD & PSB file formats without requiring Adobe Photoshop. Aspose.PSD for .NET allows to create and edit the Photoshop files. The API allows provides the ability to update layer properties, add watermarks, perform graphics operations or convert one file format to another.
+A standalone .NET API to read, write, process & convert Adobe Photoshop PSD & PSB formats without needing to install Adobe Photoshop®. [Aspose.PSD for .NET](https://products.aspose.com/psd/net) allows to create and edit the Photoshop files as well as provides the ability to update layer properties, add watermarks, perform graphics operations and convert one file format to another.
 
 <p align="center">
   <a title="Download ZIP" href="https://github.com/aspose-psd/Aspose.PSD-for-.NET/archive/master.zip">
@@ -8,33 +8,27 @@
   </a>
 </p>
 
-This repository contains [Demos](Demos), [Examples](Examples) and Showcase projects for [Aspose.PSD for .NET](https://products.aspose.com/psd/net) to help you learn and write your own applications.
-
 Directory | Description
 --------- | -----------
-[Demos](Demos)  | Aspose.PSD for .NET Live Demos Source Code
-[Examples](Examples)  | A collection of .NET examples that help you learn the product features
+[Demos](Demos)  | Source code for live demos hosted at https://products.aspose.app/psd/family.
+[Examples](Examples)  | A collection of .NET examples that help you learn the product features.
 
-# .NET API for Photoshop File Processing
 
-A standalone .NET API to read, write, process & convert Adobe Photoshop PSD & PSB formats without needing to install Adobe Photoshop®.
-
-[Aspose.PSD for .NET](https://products.aspose.com/psd/net) API allows to create and edit the Photoshop files as well as provides the ability to update layer properties, add watermarks, perform graphics operations and convert one file format to another.
 
 ## Photoshop File Processing Features
 
 - Create Photoshop PSD & PSB files via API.
-- Export PSD images to [popular image formats](https://docs.aspose.com/display/psdnet/Supported+File+Formats).
+- Export PSD images to [popular image formats](https://docs.aspose.com/psd/net/supported-file-formats/).
 - Binarization with fixed & Otsu threshold.
-- [Convert GIF image layers to TIFF](https://docs.aspose.com/display/psdnet/Converting+Images#ConvertingImages-ConvertGIFImageLayersToTIFFImage) & CMYK PSD to CMYK TIFF.
+- [Convert GIF image layers to TIFF](https://docs.aspose.com/psd/net/converting-images/) & CMYK PSD to CMYK TIFF.
 - Combine, expand or crop images.
 - Create, read and write XMP data.
 - Set default font as a replacement for all the missing fonts.
 - Apply Median & Wiener filters to reduce image noise.
 - Transform images to black-n-white or grayscale.
-- [Crop images](https://docs.aspose.com/display/psdnet/Crop%2C+Rotate+and+Resize+Images#Crop,RotateandResizeImages-CroppingImages) by shifts or rectangle.
-- [Rotate an image](https://docs.aspose.com/display/psdnet/Crop%2C+Rotate+and+Resize+Images#Crop,RotateandResizeImages-RotateandFlipanImage) on a specific angle
-- Perform simple [image resize](https://docs.aspose.com/display/psdnet/Crop%2C+Rotate+and+Resize+Images#Crop,RotateandResizeImages-ResizingImages), or by image proportions.
+- Crop images by shifts or rectangle.
+- Rotate images on a specific angle.
+- Perform simple image resize or by image proportions.
 - Support for dithering of raster images.
 - Adjust image brightness, contrast and gamma.
 - Implement Lossy GIF Compression & Bicubic Resampling.
@@ -59,8 +53,6 @@ Are you ready to give Aspose.PSD for .NET a try? Simply execute `Install-Package
 
 ## Crop a PhotoShop PSD to Save Result in PNG format
 
-You can execute below code snippet to see how Aspose.PSD API works in your own development environment or check the [GitHub Repository](https://github.com/aspose-psd/Aspose.PSD-for-.NET) for other common usage scenarios. 
-
 ```csharp
 // implement correct Crop method for PSD files.
 using (RasterImage image = Image.Load(dir + "template.psd") as RasterImage)
@@ -71,8 +63,6 @@ using (RasterImage image = Image.Load(dir + "template.psd") as RasterImage)
 ```
 
 ## Draw Rectangles in a PSD Image
-
-Aspose.PSD for .NET provides options to process and manipulate Adobe Photoshop files including drawing new objects.
 
 ```csharp
 // create an instance of Image
@@ -87,4 +77,4 @@ using (Image image = new PsdImage(100, 100))
 }
 ```
 
-[Product Page](https://products.aspose.com/psd/net) | [Docs](https://docs.aspose.com/display/psdnet/Home) | [Demos](https://products.aspose.app/psd/family) | [API Reference](https://apireference.aspose.com/psd/net) | [Examples](https://github.com/aspose-psd/Aspose.PSD-for-.NET) | [Blog](https://blog.aspose.com/category/psd/) | [Free Support](https://forum.aspose.com/c/psd) |  [Temporary License](https://purchase.aspose.com/temporary-license)
+[Home](https://www.aspose.com/) | [Product Page](https://products.aspose.com/psd/net) | [Docs](https://docs.aspose.com/psd/net/) | [Demos](https://products.aspose.app/psd/family) | [API Reference](https://apireference.aspose.com/psd/net) | [Examples](https://github.com/aspose-psd/Aspose.PSD-for-.NET) | [Blog](https://blog.aspose.com/category/psd/) | [Free Support](https://forum.aspose.com/c/psd) |  [Temporary License](https://purchase.aspose.com/temporary-license)
