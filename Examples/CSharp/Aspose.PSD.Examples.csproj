@@ -138,6 +138,7 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\Saving16BitGrayscalePsdImage.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SetTextLayerPosition.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\StrokeEffectWithColorFill.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfCMYKColorMode16bit.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfGdFlResource.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfInnerShadowLayerEffect.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfLinkedLayer.cs" />
