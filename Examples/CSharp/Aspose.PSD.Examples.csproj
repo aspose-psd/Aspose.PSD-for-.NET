@@ -143,6 +143,7 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfCMYKColorMode16bit.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfGdFlResource.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfInnerShadowLayerEffect.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfITextStyleProperties.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfLinkedLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfScaleProperty.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfSoCoResource.cs" />
