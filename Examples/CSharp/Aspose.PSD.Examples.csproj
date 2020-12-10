@@ -104,6 +104,7 @@
     <Compile Include="Aspose\LayerResources\SupportOfLnkEResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfNvrtResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfPlLdResource.cs" />
+    <Compile Include="Aspose\LayerResources\SupportOfSoLdResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfVogkResource.cs" />
     <Compile Include="Aspose\LayerResources\VsmsResourceLengthRecordSupport.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\AI\AIToPDF.cs" />
