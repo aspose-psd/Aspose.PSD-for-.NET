@@ -329,6 +329,7 @@ namespace Aspose.PSD.Examples.Runner
             ExtractLayerName.Run();
             SupportOfScaleProperty.Run();
             SupportOfRotateLayer.Run();
+            SupportOfUpdatingLinkedSmartObjects.Run();
         }
 
         /// <summary>
@@ -381,6 +382,8 @@ namespace Aspose.PSD.Examples.Runner
             ExtractThumbnailFromPSD.Run();
             SupportOfRGBColorModeWith16BitPerChannel.Run();
             ColorTypeAndCompressionType.Run();
+            SupportOfCMYKColorMode16bit.Run();
+            SupportOfObArAndUnFlSignatures.Run();
         }
 
         /// <summary>
@@ -496,6 +499,9 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfBritResource.Run();
             SupportOfLnkEResource.Run();
             SupportOfLnk2AndLnk3Resource.Run();
+            SupportOfPlLdResource.Run();
+            SupportOfSoLdResource.Run();
+            SupportOfPlacedResource.Run();
         }
 
         /// <summary>

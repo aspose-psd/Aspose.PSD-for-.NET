@@ -146,6 +146,7 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfLinkedLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfScaleProperty.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfSoCoResource.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfUpdatingLinkedSmartObjects.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfVmskResource.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfLayerVectorMask.cs" />
     <Compile Include="Aspose\Conversion\Bradleythreshold.cs" />

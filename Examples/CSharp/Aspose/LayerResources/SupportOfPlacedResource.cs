@@ -298,7 +298,7 @@ namespace Aspose.PSD.Examples.Aspose.LayerResources
                 image.Save(outputPath, new PsdOptions(image));
                 using (PsdImage savedImage = (PsdImage)Image.Load(outputPath))
                 {
-                    foreach (Layer imageLayer in image.Layers)
+                    foreach (Layer imageLayer in savedImage.Layers)
                     {
                         foreach (var imageResource in imageLayer.Resources)
                         {
