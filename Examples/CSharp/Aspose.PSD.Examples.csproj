@@ -245,6 +245,7 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\TIFF\TIFFwithDeflateCompression.cs" />
     <Compile Include="Aspose\Opening\LoadingImageFromStream.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\GetPropertiesOfInlineFormattingOfTextLayer.cs" />
+    <Compile Include="Aspose\SmartObjects\SupportOfEmbeddedSmartObjects.cs" />
     <Compile Include="Aspose\WorkingWithPSD\ChangingGroupVisibility.cs" />
     <Compile Include="Aspose\LayerResources\SupportForBlwhResource.cs" />
     <Compile Include="Aspose\WorkingWithPSD\ExportLayerGroupToImage.cs" />

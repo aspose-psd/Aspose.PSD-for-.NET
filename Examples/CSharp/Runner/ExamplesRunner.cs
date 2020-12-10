@@ -16,6 +16,7 @@ using Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.TIFF;
 using Aspose.PSD.Examples.Aspose.Opening;
 using Aspose.PSD.Examples.Aspose.WorkingWithPSD;
 using System;
+using Aspose.PSD.Examples.Aspose.SmartObjects;
 
 namespace Aspose.PSD.Examples.Runner
 {
@@ -253,7 +254,7 @@ namespace Aspose.PSD.Examples.Runner
                     RunGroupLayersExamples();
                     break;
                 case ExamplesSubSectionPsd.WorkingWithSmartObjectLayers:
-                    // Support of Photoshop Smart Object is in the our Roadmap
+                    RunSmartObjectsExamples();
                     break;
                 case ExamplesSubSectionPsd.WorkingWithSmartFilters:
                     // Support of Photoshop Smart Filters is in the our Roadmap
@@ -449,6 +450,14 @@ namespace Aspose.PSD.Examples.Runner
             GradientFillLayers.Run();
             PatternFillLayer.Run();
             AddingFillLayerAtRuntime.Run();
+        }
+
+        private static void RunSmartObjectsExamples()
+        {
+            Console.WriteLine("Starting Smart objects Examples");
+
+            // Smart objects
+            SupportOfEmbeddedSmartObjects.Run();
         }
 
         private static void RunTextLayersExamples()
