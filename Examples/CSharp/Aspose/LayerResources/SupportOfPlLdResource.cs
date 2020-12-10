@@ -182,12 +182,10 @@ namespace Aspose.PSD.Examples.Aspose.LayerResources
                                 resource.VerticalMeshPoints = resource.HorizontalMeshPoints;
                                 resource.HorizontalMeshPoints = temp;
                             }
-
-                            resource.UniqueId = Guid.NewGuid();
+                            
                             resource.PageNumber = 2;
                             resource.TotalPages = 3;
                             resource.AntiAliasPolicy = 30;
-                            resource.PlacedLayerType = PlacedLayerType.Vector;
                             resource.Value = 1.23456789;
                             resource.Perspective = 0.123456789;
                             resource.PerspectiveOther = 0.987654321;
@@ -195,8 +193,17 @@ namespace Aspose.PSD.Examples.Aspose.LayerResources
                             resource.Left = -215;
                             resource.Bottom = 248;
                             resource.Right = 145;
-                            resource.UOrder = 6;
-                            resource.VOrder = 9;
+
+                            // Be careful with some parameters: image may became unreadable by Adobe® Photoshop®
+                            ////resource.UOrder = 6;
+                            ////resource.VOrder = 9;
+
+                            // Do no change this otherwise you won't be able to use free transform
+                            // or change the underlining smart object to the vector type
+                            ////resource.PlacedLayerType = PlacedLayerType.Vector;
+
+                            // There should be valid PlLdResource with this unique Id
+                            ////resource.UniqueId = new Guid("98765432-10fe-cba0-1234-56789abcdef0");
 
                             break;
                         }
