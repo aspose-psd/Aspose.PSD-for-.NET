@@ -104,6 +104,7 @@
     <Compile Include="Aspose\LayerResources\SupportOfLclrResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfLnkEResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfNvrtResource.cs" />
+    <Compile Include="Aspose\LayerResources\SupportOfPlacedResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfPlLdResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfSoLdResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfVogkResource.cs" />
