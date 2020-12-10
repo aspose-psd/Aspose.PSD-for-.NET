@@ -70,6 +70,7 @@
     <Compile Include="Aspose\DrawingAndFormattingImages\RenderingColorEffect.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\RenderingDropShadow.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\SupportBlendModes.cs" />
+    <Compile Include="Aspose\DrawingAndFormattingImages\SupportOfObArAndUnFlSignatures.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\SupportShadowEffect.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\VerifyImageTransparency.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\BluranImage.cs" />
