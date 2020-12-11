@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Aspose\Ai\SupportOfLayersInAi.cs" />
+    <Compile Include="Aspose\Conversion\ConversionPSDToGrayscaleRgbCmyk.cs" />
     <Compile Include="Aspose\Conversion\RenderTextWithDifferentColorsInTextLayer.cs" />
     <Compile Include="Aspose\Conversion\ColorConversionUsingDefaultProfiles.cs" />
     <Compile Include="Aspose\Conversion\ColorConversionUsingICCProfiles.cs" />

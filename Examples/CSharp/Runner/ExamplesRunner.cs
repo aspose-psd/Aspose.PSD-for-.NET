@@ -593,6 +593,7 @@ namespace Aspose.PSD.Examples.Runner
 
             GIFImageLayersToTIFF.Run();
             CMYKPSDtoCMYKTiff.Run();
+            ConversionPSDToGrayscaleRgbCmyk.Run();
 
             // Png export abilities
             SpecifyTransparencyOfPngOnExport.Run();
