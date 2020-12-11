@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Aspose.PSD.FileFormats.Png;
 using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.ImageOptions;
@@ -20,7 +16,7 @@ namespace Aspose.PSD.Examples.Aspose.Conversion
             //ExStart:ConversionPSDToGrayscaleRgbCmyk
             //ExSummary:These examples demonstrate conversion of the PSD image format to other Color Modes/BitDepth.
 
-            string dataDir = baseFolder + "\\";
+            string dataDir = baseFolder;
             string outputDir = output;
 
             // These examples demonstrate conversion of the PSD image format to other Color Modes/BitDepth.

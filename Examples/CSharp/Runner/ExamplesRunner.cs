@@ -459,6 +459,7 @@ namespace Aspose.PSD.Examples.Runner
 
             // Smart objects
             SupportOfEmbeddedSmartObjects.Run();
+            SupportOfCopyingOfSmartObjectLayers.Run();
         }
 
         private static void RunTextLayersExamples()
