@@ -33,13 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.PSD, Version=20.7.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.PSD.20.7.0\lib\net40\Aspose.PSD.dll</HintPath>
+    <Reference Include="Aspose.PSD, Version=20.11.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.PSD.20.11.0\lib\net40\Aspose.PSD.dll</HintPath>
     </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Aspose\Ai\SupportOfLayersInAi.cs" />
+    <Compile Include="Aspose\Conversion\ConversionPSDToGrayscaleRgbCmyk.cs" />
     <Compile Include="Aspose\Conversion\RenderTextWithDifferentColorsInTextLayer.cs" />
     <Compile Include="Aspose\Conversion\ColorConversionUsingDefaultProfiles.cs" />
     <Compile Include="Aspose\Conversion\ColorConversionUsingICCProfiles.cs" />
@@ -70,6 +71,8 @@
     <Compile Include="Aspose\DrawingAndFormattingImages\RenderingColorEffect.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\RenderingDropShadow.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\SupportBlendModes.cs" />
+    <Compile Include="Aspose\DrawingAndFormattingImages\SupportOfMeSaSignature.cs" />
+    <Compile Include="Aspose\DrawingAndFormattingImages\SupportOfObArAndUnFlSignatures.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\SupportShadowEffect.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\VerifyImageTransparency.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\BluranImage.cs" />
@@ -103,6 +106,9 @@
     <Compile Include="Aspose\LayerResources\SupportOfLclrResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfLnkEResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfNvrtResource.cs" />
+    <Compile Include="Aspose\LayerResources\SupportOfPlacedResource.cs" />
+    <Compile Include="Aspose\LayerResources\SupportOfPlLdResource.cs" />
+    <Compile Include="Aspose\LayerResources\SupportOfSoLdResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfVogkResource.cs" />
     <Compile Include="Aspose\LayerResources\VsmsResourceLengthRecordSupport.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\AI\AIToPDF.cs" />
@@ -136,11 +142,14 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\Saving16BitGrayscalePsdImage.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SetTextLayerPosition.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\StrokeEffectWithColorFill.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfCMYKColorMode16bit.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfGdFlResource.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfInnerShadowLayerEffect.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfITextStyleProperties.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfLinkedLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfScaleProperty.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfSoCoResource.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfUpdatingLinkedSmartObjects.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfVmskResource.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfLayerVectorMask.cs" />
     <Compile Include="Aspose\Conversion\Bradleythreshold.cs" />
@@ -239,6 +248,8 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\TIFF\TIFFwithDeflateCompression.cs" />
     <Compile Include="Aspose\Opening\LoadingImageFromStream.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\GetPropertiesOfInlineFormattingOfTextLayer.cs" />
+    <Compile Include="Aspose\SmartObjects\SupportOfCopyingOfSmartObjectLayers.cs" />
+    <Compile Include="Aspose\SmartObjects\SupportOfEmbeddedSmartObjects.cs" />
     <Compile Include="Aspose\WorkingWithPSD\ChangingGroupVisibility.cs" />
     <Compile Include="Aspose\LayerResources\SupportForBlwhResource.cs" />
     <Compile Include="Aspose\WorkingWithPSD\ExportLayerGroupToImage.cs" />

@@ -30,7 +30,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                 var boundBox = textLayer.TextBoundBox;
 
                 if (opticalSize != correctOpticalSize ||
-                    boundBox != correctBoundBox)
+                    boundBox.Size != correctBoundBox)
                 {
                     throw new Exception("Assertion failed");
                 }
