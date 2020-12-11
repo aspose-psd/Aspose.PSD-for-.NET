@@ -385,6 +385,7 @@ namespace Aspose.PSD.Examples.Runner
             ColorTypeAndCompressionType.Run();
             SupportOfCMYKColorMode16bit.Run();
             SupportOfObArAndUnFlSignatures.Run();
+            SupportOfMeSaSignature.Run();
         }
 
         /// <summary>
