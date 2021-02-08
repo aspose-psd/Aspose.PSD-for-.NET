@@ -1,4 +1,4 @@
-![Nuget](https://img.shields.io/nuget/v/Aspose.Psd) ![Nuget](https://img.shields.io/nuget/dt/Aspose.Psd) 
+![Nuget](https://img.shields.io/nuget/v/Aspose.PSD) ![Nuget](https://img.shields.io/nuget/dt/Aspose.PSD) 
 
 # .NET API for Photoshop File Processing
 
