@@ -1,3 +1,5 @@
+![Nuget](https://img.shields.io/nuget/v/Aspose.PSD) ![Nuget](https://img.shields.io/nuget/dt/Aspose.PSD) 
+
 # .NET API for Photoshop File Processing
 
 A standalone .NET API to read, write, process & convert Adobe Photoshop PSD & PSB formats without needing to install Adobe Photoshop®. [Aspose.PSD for .NET](https://products.aspose.com/psd/net) allows to create and edit the Photoshop files as well as provides the ability to update layer properties, add watermarks, perform graphics operations and convert one file format to another.
