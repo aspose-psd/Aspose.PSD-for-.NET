@@ -15,7 +15,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSB
             string outputFilePathPsd = dataDir + "ConvertFromPsb.psd";
             using (Image img = Image.Load(sourceFilePathPsb))
             {
-                var options = new PsdOptions((PsdImage)img) { FileFormatVersion = FileFormatVersion.Psd };
+                var options = new PsdOptions((PsdImage)img) { PsdVersion = PsdVersion.Psd };
                 img.Save(outputFilePathPsd, options);
             }
             //ExEnd:PSBToPSD

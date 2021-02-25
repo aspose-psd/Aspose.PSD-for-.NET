@@ -5,6 +5,7 @@ using Aspose.PSD.FileFormats.Psd.Layers.LayerEffects;
 using Aspose.PSD.ImageLoadOptions;
 using System;
 using System.IO;
+using Aspose.PSD.FileFormats.Core.Blending;
 
 namespace Aspose.PSD.Examples.Aspose.LayerEffects
 {

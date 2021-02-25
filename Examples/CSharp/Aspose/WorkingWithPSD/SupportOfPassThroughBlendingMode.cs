@@ -3,6 +3,7 @@ using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers;
 using Aspose.PSD.ImageOptions;
 using System;
+using Aspose.PSD.FileFormats.Core.Blending;
 
 namespace Aspose.PSD.Examples.Aspose.WorkingWithPSD
 {

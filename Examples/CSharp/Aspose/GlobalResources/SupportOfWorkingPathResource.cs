@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
+using Aspose.PSD.FileFormats.Core.VectorPaths;
 using Aspose.PSD.FileFormats.Psd;
-using Aspose.PSD.FileFormats.Psd.Layers.LayerResources.VectorPaths;
 using Aspose.PSD.FileFormats.Psd.Resources;
 
 namespace Aspose.PSD.Examples.Aspose.GlobalResources
