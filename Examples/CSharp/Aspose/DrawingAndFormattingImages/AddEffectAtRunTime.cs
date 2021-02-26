@@ -1,5 +1,5 @@
-﻿using Aspose.PSD.FileFormats.Psd;
-using Aspose.PSD.FileFormats.Psd.Layers;
+﻿using Aspose.PSD.FileFormats.Core.Blending;
+using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.ImageLoadOptions;
 
 namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages

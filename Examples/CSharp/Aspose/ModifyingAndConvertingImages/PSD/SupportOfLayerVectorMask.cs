@@ -1,7 +1,7 @@
-﻿using Aspose.PSD.FileFormats.Png;
+﻿using Aspose.PSD.FileFormats.Core.VectorPaths;
+using Aspose.PSD.FileFormats.Png;
 using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerResources;
-using Aspose.PSD.FileFormats.Psd.Layers.LayerResources.VectorPaths;
 using Aspose.PSD.ImageOptions;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD

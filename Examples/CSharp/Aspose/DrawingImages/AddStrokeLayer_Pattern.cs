@@ -1,10 +1,10 @@
 ﻿using Aspose.PSD.FileFormats.Psd;
-using Aspose.PSD.FileFormats.Psd.Layers;
 using Aspose.PSD.FileFormats.Psd.Layers.FillSettings;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerEffects;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerResources;
 using Aspose.PSD.ImageLoadOptions;
 using System;
+using Aspose.PSD.FileFormats.Core.Blending;
 
 namespace Aspose.PSD.Examples.Aspose.DrawingImages
 {

@@ -460,6 +460,8 @@ namespace Aspose.PSD.Examples.Runner
             // Smart objects
             SupportOfEmbeddedSmartObjects.Run();
             SupportOfCopyingOfSmartObjectLayers.Run();
+            SupportOfConvertingLayerToSmartObject.Run();
+            SupportOfReplaceContentsInSmartObjects.Run();
         }
 
         private static void RunTextLayersExamples()
@@ -498,6 +500,7 @@ namespace Aspose.PSD.Examples.Runner
             // Layer Resources
             AddIopaResource.Run();
             SupportOfVogkResource.Run();
+            SupportOfVogkResourceProperties.Run();
             SupportOfLclrResource.Run();
             VsmsResourceLengthRecordSupport.Run();
             SupportForClblResource.Run();
