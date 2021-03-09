@@ -17,6 +17,7 @@ using Aspose.PSD.Examples.Aspose.Opening;
 using Aspose.PSD.Examples.Aspose.WorkingWithPSD;
 using System;
 using Aspose.PSD.Examples.Aspose.SmartObjects;
+using Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths;
 
 namespace Aspose.PSD.Examples.Runner
 {
@@ -359,7 +360,7 @@ namespace Aspose.PSD.Examples.Runner
             WritingAndModifyingEXIFData.Run();
             SupportForJPEG_LSWithCMYK.Run();
             SupportFor2_7BitsJPEG.Run();
-
+            ClassesToManipulateVectorPathObjects.Run();
         }
 
         /// <summary>
