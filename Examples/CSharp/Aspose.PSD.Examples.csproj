@@ -260,6 +260,7 @@
     <Compile Include="Aspose\LayerResources\SupportForLspfResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportForClblResource.cs" />
     <Compile Include="Aspose\WorkingWithPSD\SupportOfPassThroughBlendingMode.cs" />
+    <Compile Include="Aspose\WorkingWithVectorPaths\ClassesToManipulateVectorPathObjects.cs" />
     <Compile Include="ExamplesPaths.cs" />
     <Compile Include="Runner\ExamplesRunner.cs" />
     <Compile Include="RunExamples.cs" />
@@ -273,9 +274,7 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PreBuildEvent>nuget restore "../../../"</PreBuildEvent>
-  </PropertyGroup>
+
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
