@@ -53,6 +53,8 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithPSD
             }
 
             //ExEnd:SupportOfPassThroughBlendingMode
+
+            Console.WriteLine("SupportOfPassThroughBlendingMode executed successfully");
         }
     }
 }
