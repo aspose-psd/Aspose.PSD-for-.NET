@@ -260,6 +260,7 @@
     <Compile Include="Aspose\LayerResources\SupportForLspfResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportForClblResource.cs" />
     <Compile Include="Aspose\WorkingWithPSD\SupportOfPassThroughBlendingMode.cs" />
+    <Compile Include="Aspose\WorkingWithPSD\SupportOfSectionDividerLayer.cs" />
     <Compile Include="Aspose\WorkingWithVectorPaths\ClassesToManipulateVectorPathObjects.cs" />
     <Compile Include="ExamplesPaths.cs" />
     <Compile Include="Runner\ExamplesRunner.cs" />
