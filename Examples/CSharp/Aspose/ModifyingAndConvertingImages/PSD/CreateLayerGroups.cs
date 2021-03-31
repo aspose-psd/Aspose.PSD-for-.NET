@@ -1,4 +1,5 @@
-﻿using Aspose.PSD.FileFormats.Psd;
+﻿using System;
+using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers;
 using Aspose.PSD.ImageOptions;
 using Aspose.PSD.Sources;
@@ -46,7 +47,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
             }
             //ExEnd:CreateLayerGroups
 
-
+            Console.WriteLine("CreateLayerGroups executed successfully");
         }
     }
 }

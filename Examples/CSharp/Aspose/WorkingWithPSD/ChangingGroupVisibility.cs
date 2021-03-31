@@ -1,4 +1,5 @@
-﻿using Aspose.PSD.FileFormats.Psd;
+﻿using System;
+using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers;
 
 namespace Aspose.PSD.Examples.Aspose.WorkingWithPSD
@@ -34,6 +35,8 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithPSD
             }
 
             //ExEnd
+
+            Console.WriteLine("ChangingGroupVisibility executed successfully");
         }
     }
 }
