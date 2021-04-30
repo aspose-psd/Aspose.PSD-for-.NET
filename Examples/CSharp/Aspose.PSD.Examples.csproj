@@ -106,6 +106,7 @@
     <Compile Include="Aspose\LayerResources\SupportOfPlacedResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfPlLdResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfSoLdResource.cs" />
+    <Compile Include="Aspose\LayerResources\SupportOfVectorShapeTransformOfVogkResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfVogkResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfVogkResourceProperties.cs" />
     <Compile Include="Aspose\LayerResources\VsmsResourceLengthRecordSupport.cs" />
@@ -271,7 +272,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Aspose.PSD">
-      <Version>21.3.0</Version>
+      <Version>21.4.0</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
