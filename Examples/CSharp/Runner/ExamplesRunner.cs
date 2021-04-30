@@ -503,6 +503,7 @@ namespace Aspose.PSD.Examples.Runner
             AddIopaResource.Run();
             SupportOfVogkResource.Run();
             SupportOfVogkResourceProperties.Run();
+            SupportOfVectorShapeTransformOfVogkResource.Run();
             SupportOfLclrResource.Run();
             VsmsResourceLengthRecordSupport.Run();
             SupportForClblResource.Run();
