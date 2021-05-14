@@ -362,6 +362,8 @@ namespace Aspose.PSD.Examples.Runner
             SupportForJPEG_LSWithCMYK.Run();
             SupportFor2_7BitsJPEG.Run();
             ClassesToManipulateVectorPathObjects.Run();
+            ResizeLayersWithVogkResourceAndVectorPaths.Run();
+            ResizeLayersWithVectorPaths.Run();
         }
 
         /// <summary>
