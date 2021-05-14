@@ -260,6 +260,8 @@
     <Compile Include="Aspose\WorkingWithPSD\SupportOfPassThroughBlendingMode.cs" />
     <Compile Include="Aspose\WorkingWithPSD\SupportOfSectionDividerLayer.cs" />
     <Compile Include="Aspose\WorkingWithVectorPaths\ClassesToManipulateVectorPathObjects.cs" />
+    <Compile Include="Aspose\WorkingWithVectorPaths\ResizeLayersWithVectorPaths.cs" />
+    <Compile Include="Aspose\WorkingWithVectorPaths\ResizeLayersWithVogkResourceAndVectorPaths.cs" />
     <Compile Include="ExamplesPaths.cs" />
     <Compile Include="Runner\ExamplesRunner.cs" />
     <Compile Include="RunExamples.cs" />
@@ -272,7 +274,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Aspose.PSD">
-      <Version>21.4.0</Version>
+      <Version>21.5.0</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
