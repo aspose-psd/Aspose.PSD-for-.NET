@@ -1,1 +1,0 @@
-C:\Github\Official Git\Aspose_PSD_NET\Examples\CSharp\bin\Debug\Aspose.PSD.Examples.exe.config
