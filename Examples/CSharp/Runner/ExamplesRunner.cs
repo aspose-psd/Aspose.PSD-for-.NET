@@ -482,6 +482,7 @@ namespace Aspose.PSD.Examples.Runner
             AddTextLayerOnRuntime.Run();
             RenderTextWithDifferentColorsInTextLayer.Run();
             SupportOfITextStyleProperties.Run();
+            SupportOfEditFontNameInTextPortionStyle.Run();
         }
 
         private static void RunGlobalResourcesExamples()
