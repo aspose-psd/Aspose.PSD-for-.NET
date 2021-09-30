@@ -18,6 +18,7 @@ using Aspose.PSD.Examples.Aspose.WorkingWithPSD;
 using System;
 using Aspose.PSD.Examples.Aspose.SmartObjects;
 using Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths;
+using Aspose.PSD.Examples.Aspose.SmartFilters;
 
 namespace Aspose.PSD.Examples.Runner
 {
@@ -258,7 +259,7 @@ namespace Aspose.PSD.Examples.Runner
                     RunSmartObjectsExamples();
                     break;
                 case ExamplesSubSectionPsd.WorkingWithSmartFilters:
-                    // Support of Photoshop Smart Filters is in the our Roadmap
+                    RunSmartFiltersExamples();
                     break;
                 case ExamplesSubSectionPsd.WorkingWithMasks:
                     RunWorkingWithMasksExamples();
@@ -468,6 +469,14 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfReplaceContentsInSmartObjects.Run();
         }
 
+        private static void RunSmartFiltersExamples()
+        {
+            Console.WriteLine("Starting Smart filters Examples");
+
+            // Smart filters
+            SupportAccessToSmartFilters.Run();
+        }
+
         private static void RunTextLayersExamples()
         {
             Console.WriteLine("Starting Text Layer Examples");
@@ -523,6 +532,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfPlLdResource.Run();
             SupportOfSoLdResource.Run();
             SupportOfPlacedResource.Run();
+            SupportOfFXidResource.Run();
         }
 
         /// <summary>

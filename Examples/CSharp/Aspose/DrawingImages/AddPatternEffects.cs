@@ -5,6 +5,7 @@ using Aspose.PSD.FileFormats.Psd.Layers.LayerResources;
 using Aspose.PSD.ImageLoadOptions;
 using System;
 using Aspose.PSD.FileFormats.Core.Blending;
+using System.IO;
 
 namespace Aspose.PSD.Examples.Aspose.DrawingImages
 {
@@ -13,19 +14,19 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir_PSD();
+            string SourceDir = RunExamples.GetDataDir_PSD();
+            string OutputDir = RunExamples.GetDataDir_Output();
 
             //ExStart:AddPatternEffects
 
             // Pattern overlay effect. Example
-            string sourceFileName = dataDir + "PatternOverlay.psd";
-            string exportPath = dataDir + "PatternOverlayChanged.psd";
+            string sourceFileName = Path.Combine(SourceDir, "PatternOverlay.psd");
+            string exportPath = Path.Combine(OutputDir, "PatternOverlayChanged.psd");
 
             var newPattern = new int[]
             {
                  Color.Aqua.ToArgb(), Color.Red.ToArgb(), Color.Red.ToArgb(), Color.Aqua.ToArgb(),
                  Color.Aqua.ToArgb(), Color.White.ToArgb(), Color.White.ToArgb(), Color.Aqua.ToArgb(),
-
             };
 
             var newPatternBounds = new Rectangle(0, 0, 4, 2);
@@ -91,7 +92,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
             }
 
             // Test file after edit
-            using (var im = (PsdImage)Image.Load(sourceFileName, loadOptions))
+            using (var im = (PsdImage)Image.Load(exportPath, loadOptions))
             {
                 var patternOverlay = (PatternOverlayEffect)im.Layers[1].BlendingOptions.Effects[0];
                 try
@@ -128,10 +129,10 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                     }
 
                     // Check the pattern data
-                    if ((resource.PatternData != newPattern) ||
-                        (newPatternBounds != new Rectangle(0, 0, resource.Width, resource.Height)) ||
+
+                    if ((newPatternBounds != new Rectangle(0, 0, resource.Width, resource.Height)) ||
                         (resource.PatternId != guid.ToString()) ||
-                        (resource.Name != newPatternName)
+                        ((resource.Name + "\0") != newPatternName)
                         )
                     {
                         throw new Exception("Pattern was set wrong");
@@ -143,6 +144,8 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                 }
             }
             //ExEnd:AddPatternEffects
+
+            File.Delete(exportPath);
         }
     }
 }

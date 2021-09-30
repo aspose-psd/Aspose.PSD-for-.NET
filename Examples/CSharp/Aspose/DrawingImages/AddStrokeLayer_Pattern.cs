@@ -5,6 +5,7 @@ using Aspose.PSD.FileFormats.Psd.Layers.LayerResources;
 using Aspose.PSD.ImageLoadOptions;
 using System;
 using Aspose.PSD.FileFormats.Core.Blending;
+using System.IO;
 
 namespace Aspose.PSD.Examples.Aspose.DrawingImages
 {
@@ -13,13 +14,14 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir_PSD();
+            string SourceDir = RunExamples.GetDataDir_PSD();
+            string OutputDir = RunExamples.GetDataDir_Output();
 
             //ExStart:AddStrokeLayer_Pattern
 
             // Stroke effect. FillType - Pattern. Example
-            string sourceFileName = dataDir + "Stroke.psd";
-            string exportPath = dataDir + "StrokePatternChanged.psd";
+            string sourceFileName = Path.Combine(SourceDir, "Stroke.psd");
+            string exportPath = Path.Combine(OutputDir, "StrokePatternChanged.psd");
 
             var loadOptions = new PsdLoadOptions()
             {
@@ -74,7 +76,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
             }
 
             // Test file after edit
-            using (var im = (PsdImage)Image.Load(sourceFileName, loadOptions))
+            using (var im = (PsdImage)Image.Load(exportPath, loadOptions))
             {
                 var patternStroke = (StrokeEffect)im.Layers[3].BlendingOptions.Effects[0];
 
@@ -97,8 +99,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                     // Check the pattern data
                     var fillSettings = (PatternFillSettings)patternStroke.FillSettings;
 
-                    if ((resource.PatternData != newPattern) ||
-                        (newPatternBounds != new Rectangle(0, 0, resource.Width, resource.Height)) ||
+                    if ((newPatternBounds != new Rectangle(0, 0, resource.Width, resource.Height)) ||
                         (resource.PatternId != guid.ToString()) ||
                         (patternStroke.BlendMode != BlendMode.Color) ||
                         (patternStroke.Opacity != 127) ||
@@ -111,11 +112,12 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                 catch (Exception e)
                 {
                     string ex = e.StackTrace;
-
                 }
             }
 
             //ExEnd:AddStrokeLayer_Pattern
+
+            File.Delete(exportPath);
         }
     }
 }

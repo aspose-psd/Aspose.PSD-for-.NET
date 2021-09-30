@@ -2,6 +2,7 @@
 using Aspose.PSD.FileFormats.Psd.Layers;
 using Aspose.PSD.ImageOptions;
 using System;
+using System.IO;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
@@ -10,13 +11,14 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir_PSD();
+            string SourceDir = RunExamples.GetDataDir_PSD();
+            string OutputDir = RunExamples.GetDataDir_Output();
 
             //ExStart:GetTextPropertiesFromTextLayer
 
             const double Tolerance = 0.0001;
-            var filePath = dataDir + "ThreeColorsParagraphs.psd";
-            var outputPath = dataDir + "ThreeColorsParagraph_out.psd";
+            var filePath = Path.Combine(SourceDir, "ThreeColorsParagraphs.psd");
+            var outputPath = Path.Combine(OutputDir, "ThreeColorsParagraph_out.psd");
             using (var im = (PsdImage)Image.Load(filePath))
             {
                 for (int i = 0; i < im.Layers.Length; i++)
@@ -113,7 +115,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                         {
                             var style = portions[j].Style;
 
-                            if (style.AutoLeading != false ||
+                            if (style.AutoLeading != true ||
                                 style.HindiNumbers != false ||
                                 style.Kerning != 0 ||
                                 style.Leading != 0 ||
@@ -166,8 +168,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 
             //ExEnd:GetTextPropertiesFromTextLayer
 
-
-
+            File.Delete(outputPath);
         }
 
     }
