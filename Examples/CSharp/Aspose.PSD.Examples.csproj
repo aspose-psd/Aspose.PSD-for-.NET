@@ -98,6 +98,7 @@
     <Compile Include="Aspose\GlobalResources\SupportOfWorkingPathResource.cs" />
     <Compile Include="Aspose\LayerEffects\RenderingOfGradientOverlayEffect.cs" />
     <Compile Include="Aspose\LayerEffects\SupportOfGradientOverlayEffect.cs" />
+    <Compile Include="Aspose\LayerResources\SupportOfFXidResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfLnk2AndLnk3Resource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfBritResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfLclrResource.cs" />
@@ -248,6 +249,7 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\TIFF\TIFFwithDeflateCompression.cs" />
     <Compile Include="Aspose\Opening\LoadingImageFromStream.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\GetPropertiesOfInlineFormattingOfTextLayer.cs" />
+    <Compile Include="Aspose\SmartFilters\SupportAccessToSmartFilters.cs" />
     <Compile Include="Aspose\SmartObjects\SupportOfConvertingLayerToSmartObject.cs" />
     <Compile Include="Aspose\SmartObjects\SupportOfCopyingOfSmartObjectLayers.cs" />
     <Compile Include="Aspose\SmartObjects\SupportOfEmbeddedSmartObjects.cs" />
@@ -275,7 +277,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Aspose.PSD">
-      <Version>21.7.0</Version>
+      <Version>21.10.0</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

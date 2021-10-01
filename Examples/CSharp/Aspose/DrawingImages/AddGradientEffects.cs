@@ -4,6 +4,7 @@ using Aspose.PSD.FileFormats.Psd.Layers.LayerEffects;
 using Aspose.PSD.ImageLoadOptions;
 using System;
 using Aspose.PSD.FileFormats.Core.Blending;
+using System.IO;
 
 namespace Aspose.PSD.Examples.Aspose.DrawingImages
 {
@@ -12,7 +13,8 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
         public static void Run()
         {
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir_PSD();
+            string SourceDir = RunExamples.GetDataDir_PSD();
+            string OutputDir = RunExamples.GetDataDir_Output();
 
             //ExStart:AddGradientEffects
             void AssertIsTrue(bool condition, string message = "Assertion fails")
@@ -24,8 +26,8 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
             }
 
             // Gradient overlay effect. Example
-            string sourceFileName = dataDir + "GradientOverlay.psd";
-            string exportPath = dataDir + "GradientOverlayChanged.psd";
+            string sourceFileName = Path.Combine(SourceDir, "GradientOverlay.psd");
+            string exportPath = Path.Combine(OutputDir, "GradientOverlayChanged.psd");
 
             var loadOptions = new PsdLoadOptions()
             {
@@ -114,7 +116,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
             }
 
             // Test file after edit
-            using (var im = (PsdImage)Image.Load(sourceFileName, loadOptions))
+            using (var im = (PsdImage)Image.Load(exportPath, loadOptions))
             {
                 var gradientOverlay = (GradientOverlayEffect)im.Layers[1].BlendingOptions.Effects[0];
                 try
@@ -155,17 +157,17 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
 
                     var transparencyPoint = fillSettings.TransparencyPoints[0];
                     AssertIsTrue(transparencyPoint.MedianPointLocation == 50);
-                    AssertIsTrue(transparencyPoint.Opacity == 100);
+                    AssertIsTrue(transparencyPoint.Opacity == 100.0);
                     AssertIsTrue(transparencyPoint.Location == 0);
 
                     transparencyPoint = fillSettings.TransparencyPoints[1];
                     AssertIsTrue(transparencyPoint.MedianPointLocation == 50);
-                    AssertIsTrue(transparencyPoint.Opacity == 100);
+                    AssertIsTrue(transparencyPoint.Opacity == 100.0);
                     AssertIsTrue(transparencyPoint.Location == 2315);
 
                     transparencyPoint = fillSettings.TransparencyPoints[2];
                     AssertIsTrue(transparencyPoint.MedianPointLocation == 25);
-                    AssertIsTrue(transparencyPoint.Opacity == 25);
+                    AssertIsTrue(transparencyPoint.Opacity == 25.0);
                     AssertIsTrue(transparencyPoint.Location == 4096);
                 }
                 catch (Exception e)
@@ -174,6 +176,8 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                 }
             }
             //ExEnd:AddGradientEffects
+
+            File.Delete(exportPath);
         }
     }
 }

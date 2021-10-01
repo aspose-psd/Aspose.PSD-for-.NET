@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using System.IO;
 using Aspose.PSD.FileFormats.Core.VectorPaths;
+using Aspose.PSD.FileFormats.Png;
 using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers;
+using Aspose.PSD.FileFormats.Psd.Layers.FillLayers;
+using Aspose.PSD.FileFormats.Psd.Layers.FillSettings;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerResources;
+using Aspose.PSD.ImageOptions;
 
 namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
 {
@@ -16,33 +20,32 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
             string SourceDir = RunExamples.GetDataDir_PSD();
             string OutputDir = RunExamples.GetDataDir_Output();
 
-            string sourceFilePath = Path.Combine(SourceDir, "PathExample.psd");
-            string outputFilePath = Path.Combine(OutputDir, "output_PathExample.psd");
+            string fileName = Path.Combine(SourceDir, "PathExample2.psd");
+            string outputPsd = Path.Combine(OutputDir, "out_CreatingVectorPathExampleTest.psd");
+            string outputPng = Path.Combine(OutputDir, "out_CreatingVectorPathExampleTest.png");
 
-            PathManipulationExample(sourceFilePath, outputFilePath);
+            CreatingVectorPathExample(fileName, outputPsd, outputPng);
 
-            File.Delete(outputFilePath);
             Console.WriteLine("ClassesToManipulateVectorPathObjects executed successfully");
+
+            File.Delete(outputPsd);
+            File.Delete(outputPng);
         }
 
         //ExStart:ClassesToManipulateVectorPathObjects
         //ExSummary:The following code example provides classes to manipulate the vector path objects and demonstrates how to use those classes.
 
-        private static void PathManipulationExample(string fileName = "PathExample.psd", string output = "output_PathExample.psd")
+        private static void CreatingVectorPathExample(string fileName = "PathExample2.psd", string outputPsd = "out_CreatingVectorPathExampleTest.psd", string outputPng = "out_CreatingVectorPathExampleTest.png")
         {
             using (var psdImage = (PsdImage)Image.Load(fileName))
             {
-                // Now we can use VectorPath instance and manipulate path data.
+                VectorDataProvider.RemoveVectorPathDataFromLayer(psdImage.Layers[2]);
+
+                // creating VectorPath object for existing layer without vector path data.
                 VectorPath vectorPath = VectorDataProvider.CreateVectorPathForLayer(psdImage.Layers[1]);
 
-                // Change the fill color of vector path
-                vectorPath.FillColor = Color.Violet;
-
-                // removing the first point, changing IsClosed state of the shape and move one point upper.
-                PathShape heartShape = vectorPath.Shapes[0];
-                heartShape.Points.RemoveAt(0);
-                heartShape.IsClosed = false;
-                heartShape.Points[2].Shift(0, 25);
+                // Set the fill color of vector path
+                vectorPath.FillColor = Color.MediumPurple;
 
                 // add new shape
                 PathShape newShape = new PathShape();
@@ -53,9 +56,30 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
                 vectorPath.Shapes.Add(newShape);
 
                 // update path data in layer
-                VectorDataProvider.UpdateLayerFromVectorPath(psdImage.Layers[1], vectorPath);
+                VectorDataProvider.UpdateLayerFromVectorPath(psdImage.Layers[1], vectorPath, true);
 
-                psdImage.Save(output);
+
+                // creating VectorPath object for new layer.
+                FillLayer layer2 = FillLayer.CreateInstance(FillType.Color);
+                layer2.DisplayName = "Layer 2";
+                psdImage.AddLayer(layer2);
+                VectorPath vectorPath2 = VectorDataProvider.CreateVectorPathForLayer(layer2);
+
+                // Set the fill color of vector path
+                vectorPath2.FillColor = Color.IndianRed;
+
+                // add new shape
+                PathShape newShape2 = new PathShape();
+                newShape2.Points.Add(new BezierKnot(new PointF(50, 150), true));
+                newShape2.Points.Add(new BezierKnot(new PointF(100, 200), true));
+                newShape2.Points.Add(new BezierKnot(new PointF(0, 200), true));
+                vectorPath2.Shapes.Add(newShape2);
+
+                // update path data in layer
+                VectorDataProvider.UpdateLayerFromVectorPath(layer2, vectorPath2, true);
+
+                psdImage.Save(outputPsd);
+                psdImage.Save(outputPng, new PngOptions() { ColorType = PngColorType.TruecolorWithAlpha });
             }
         }
 
@@ -73,12 +97,12 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
             /// <returns>the <see cref="VectorPath"/> instance based on resources from input layer.</returns>
             public static VectorPath CreateVectorPathForLayer(Layer psdLayer)
             {
-                VectorPathDataResource pathResource = FindVectorPathDataResource(psdLayer);
-                SoCoResource soCoResource = FindSoCoResource(psdLayer);
+                VectorPathDataResource pathResource = FindVectorPathDataResource(psdLayer, true);
+                SoCoResource socoResource = FindSoCoResource(psdLayer, true);
                 VectorPath vectorPath = new VectorPath(pathResource);
-                if (soCoResource != null)
+                if (socoResource != null)
                 {
-                    vectorPath.FillColor = soCoResource.Color;
+                    vectorPath.FillColor = socoResource.Color;
                 }
 
                 return vectorPath;
@@ -89,25 +113,41 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
             /// </summary>
             /// <param name="psdLayer">The psd layer.</param>
             /// <param name="vectorPath">The vector path.</param>
-            /// <param name="pathResource">The new path resource.</param>
-            public static void UpdateLayerFromVectorPath(Layer psdLayer, VectorPath vectorPath, VectorPathDataResource pathResource = null)
+            /// <param name="createIfNotExist">If resources not exists, then for <see cref="true"/> creates a new resource, otherwise return <see cref="null"/>.</param>
+            public static void UpdateLayerFromVectorPath(Layer psdLayer, VectorPath vectorPath, bool createIfNotExist = false)
             {
-                if (pathResource == null)
+                VectorPathDataResource pathResource = FindVectorPathDataResource(psdLayer, createIfNotExist);
+                VogkResource vogkResource = FindVogkResource(psdLayer, createIfNotExist);
+                SoCoResource socoResource = FindSoCoResource(psdLayer, createIfNotExist);
+
+                UpdateResources(pathResource, vogkResource, socoResource, vectorPath);
+
+                ReplaceVectorPathDataResourceInLayer(psdLayer, pathResource, vogkResource, socoResource);
+            }
+
+            /// <summary>
+            /// Removes the vector path data from input layer.
+            /// </summary>
+            /// <param name="psdLayer">The psd layer.</param>
+            public static void RemoveVectorPathDataFromLayer(Layer psdLayer)
+            {
+                List<LayerResource> oldResources = new List<LayerResource>(psdLayer.Resources);
+                List<LayerResource> newResources = new List<LayerResource>();
+                for (int i = 0; i < oldResources.Count; i++)
                 {
-                    pathResource = FindVectorPathDataResource(psdLayer);
+                    LayerResource resource = oldResources[i];
+
+                    if (resource is VectorPathDataResource || resource is VogkResource || resource is SoCoResource)
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        newResources.Add(resource);
+                    }
                 }
 
-                VogkResource vogkResource = FindVogkResource(psdLayer);
-
-                SoCoResource soCoResource = FindSoCoResource(psdLayer);
-                if (soCoResource == null)
-                {
-                    soCoResource = new SoCoResource();
-                }
-
-                UpdateResources(pathResource, vogkResource, soCoResource, vectorPath);
-
-                ReplaceVectorPathDataResourceInLayer(psdLayer, pathResource, vogkResource, soCoResource);
+                psdLayer.Resources = newResources.ToArray();
             }
 
             /// <summary>
@@ -115,9 +155,9 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
             /// </summary>
             /// <param name="pathResource">The path resource.</param>
             /// <param name="vogkResource">The vector origination data resource.</param>
-            /// <param name="soCoResource">The solid color resource.</param>
+            /// <param name="socoResource">The solid color resource.</param>
             /// <param name="vectorPath">The vector path.</param>
-            private static void UpdateResources(VectorPathDataResource pathResource, VogkResource vogkResource, SoCoResource soCoResource, VectorPath vectorPath)
+            private static void UpdateResources(VectorPathDataResource pathResource, VogkResource vogkResource, SoCoResource socoResource, VectorPath vectorPath)
             {
                 pathResource.Version = vectorPath.Version;
                 pathResource.IsNotLinked = vectorPath.IsNotLinked;
@@ -133,13 +173,13 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
                     PathShape shape = vectorPath.Shapes[i];
                     shape.ShapeIndex = i;
                     path.AddRange(shape.ToVectorPathRecords());
-                    originSettings.Add(new VectorShapeOriginSettings(true, i));
+                    originSettings.Add(new VectorShapeOriginSettings() { IsShapeInvalidated = true, OriginIndex = i });
                 }
 
                 pathResource.Paths = path.ToArray();
                 vogkResource.ShapeOriginSettings = originSettings.ToArray();
 
-                soCoResource.Color = vectorPath.FillColor;
+                socoResource.Color = vectorPath.FillColor;
             }
 
             /// <summary>
@@ -148,10 +188,12 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
             /// <param name="psdLayer">The psd layer.</param>
             /// <param name="pathResource">The path resource.</param>
             /// <param name="vogkResource">The vector origination data resource.</param>
-            /// <param name="soCoResource">The solid color resource.</param>
-            private static void ReplaceVectorPathDataResourceInLayer(Layer psdLayer, VectorPathDataResource pathResource, VogkResource vogkResource, SoCoResource soCoResource)
+            /// <param name="socoResource">The solid color resource.</param>
+            private static void ReplaceVectorPathDataResourceInLayer(Layer psdLayer, VectorPathDataResource pathResource, VogkResource vogkResource, SoCoResource socoResource)
             {
-                bool soCoResourceExist = false;
+                bool pathResourceExist = false;
+                bool vogkResourceExist = false;
+                bool socoResourceExist = false;
 
                 List<LayerResource> resources = new List<LayerResource>(psdLayer.Resources);
                 for (int i = 0; i < resources.Count; i++)
@@ -160,21 +202,33 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
                     if (resource is VectorPathDataResource)
                     {
                         resources[i] = pathResource;
+                        pathResourceExist = true;
                     }
                     else if (resource is VogkResource)
                     {
                         resources[i] = vogkResource;
+                        vogkResourceExist = true;
                     }
                     else if (resource is SoCoResource)
                     {
-                        resources[i] = soCoResource;
-                        soCoResourceExist = true;
+                        resources[i] = socoResource;
+                        socoResourceExist = true;
                     }
                 }
 
-                if (!soCoResourceExist)
+                if (!pathResourceExist)
                 {
-                    resources.Add(soCoResource);
+                    resources.Add(pathResource);
+                }
+
+                if (!vogkResourceExist)
+                {
+                    resources.Add(vogkResource);
+                }
+
+                if (!socoResourceExist)
+                {
+                    resources.Add(socoResource);
                 }
 
                 psdLayer.Resources = resources.ToArray();
@@ -184,8 +238,9 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
             /// Finds the <see cref="VectorPathDataResource"/> resource in input layer resources.
             /// </summary>
             /// <param name="psdLayer">The psd layer.</param>
+            /// <param name="createIfNotExist">If resource not exists, then for <see cref="true"/> creates a new resource, otherwise return <see cref="null"/>.</param>
             /// <returns>The <see cref="VectorPathDataResource"/> resource.</returns>
-            private static VectorPathDataResource FindVectorPathDataResource(Layer psdLayer)
+            private static VectorPathDataResource FindVectorPathDataResource(Layer psdLayer, bool createIfNotExist = false)
             {
                 VectorPathDataResource pathResource = null;
                 foreach (var resource in psdLayer.Resources)
@@ -197,6 +252,11 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
                     }
                 }
 
+                if (createIfNotExist && pathResource == null)
+                {
+                    pathResource = new VmskResource();
+                }
+
                 return pathResource;
             }
 
@@ -204,8 +264,9 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
             /// Finds the <see cref="VogkResource"/> resource in input layer resources.
             /// </summary>
             /// <param name="psdLayer">The psd layer.</param>
+            /// <param name="createIfNotExist">If resource not exists, then for <see cref="true"/> creates a new resource, otherwise return <see cref="null"/>.</param>
             /// <returns>The <see cref="VogkResource"/> resource.</returns>
-            private static VogkResource FindVogkResource(Layer psdLayer)
+            private static VogkResource FindVogkResource(Layer psdLayer, bool createIfNotExist = false)
             {
                 VogkResource vogkResource = null;
                 foreach (var resource in psdLayer.Resources)
@@ -217,6 +278,11 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
                     }
                 }
 
+                if (createIfNotExist && vogkResource == null)
+                {
+                    vogkResource = new VogkResource();
+                }
+
                 return vogkResource;
             }
 
@@ -224,20 +290,26 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
             /// Finds the <see cref="SoCoResource"/> resource in input layer resources.
             /// </summary>
             /// <param name="psdLayer">The psd layer.</param>
+            /// <param name="createIfNotExist">If resource not exists, then for <see cref="true"/> creates a new resource, otherwise return <see cref="null"/>.</param>
             /// <returns>The <see cref="SoCoResource"/> resource.</returns>
-            private static SoCoResource FindSoCoResource(Layer psdLayer)
+            private static SoCoResource FindSoCoResource(Layer psdLayer, bool createIfNotExist = false)
             {
-                SoCoResource soCoResource = null;
+                SoCoResource socoResource = null;
                 foreach (var resource in psdLayer.Resources)
                 {
                     if (resource is SoCoResource)
                     {
-                        soCoResource = (SoCoResource)resource;
+                        socoResource = (SoCoResource)resource;
                         break;
                     }
                 }
 
-                return soCoResource;
+                if (createIfNotExist && socoResource == null)
+                {
+                    socoResource = new SoCoResource();
+                }
+
+                return socoResource;
             }
         }
 
@@ -475,7 +547,7 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
             public List<PathShape> Shapes { get; private set; }
 
             /// <summary>
-            /// The vector path fill color.
+            /// Gets or sets the vector path fill color.
             /// </summary>
             public Color FillColor { get; set; }
 
