@@ -1,42 +1,34 @@
 ﻿using Aspose.PSD.FileFormats.Psd;
-using Aspose.PSD.FileFormats.Psd.Layers;
-using System;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
-    class TextLayerBoundBox
+    class MergeOnePSDlayerToOther
     {
         public static void Run()
         {
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_PSD();
 
-            //ExStart:TextLayerBoundBox
+            //ExStart:MergeOnePSDlayerToOther
 
-            string sourceFileName = dataDir + "LayerWithText.psd";
+            var sourceFile1 = dataDir + "FillOpacitySample.psd";
+            var sourceFile2 = dataDir + "ThreeRegularLayersSemiTransparent.psd";
+            var exportPath = dataDir + "MergedLayersFromTwoDifferentPsd.psd";
 
-            var correctOpticalSize = new Size(127, 45);
-            var correctBoundBox = new Size(172, 62);
-
-            using (var im = (PsdImage)(Image.Load(sourceFileName)))
+            using (var im1 = (PsdImage)(Image.Load(sourceFile1)))
             {
-                var textLayer = (TextLayer)im.Layers[1];
+                var layer1 = im1.Layers[1];
 
-                // Size of the layer is the size of the rendered area
-                var opticalSize = textLayer.Size;
-
-                // TextBoundBox is the maximum layer size for Text Layer. 
-                // In this area PS will try to fit your text
-                var boundBox = textLayer.TextBoundBox;
-
-                if (opticalSize != correctOpticalSize ||
-                    boundBox.Size != correctBoundBox)
+                using (var im2 = (PsdImage)(Image.Load(sourceFile2)))
                 {
-                    throw new Exception("Assertion failed");
+                    var layer2 = im2.Layers[0];
+
+                    layer1.MergeLayerTo(layer2);
+                    im2.Save(exportPath);
                 }
             }
 
-            //ExEnd:TextLayerBoundBox
+            //ExEnd:MergeOnePSDlayerToOther
         }
     }
 }
