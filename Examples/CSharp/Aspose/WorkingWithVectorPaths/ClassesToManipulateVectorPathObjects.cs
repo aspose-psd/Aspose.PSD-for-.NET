@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.IO;
 using Aspose.PSD.FileFormats.Core.VectorPaths;
-using Aspose.PSD.FileFormats.Png;
 using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers;
 using Aspose.PSD.FileFormats.Psd.Layers.FillLayers;
 using Aspose.PSD.FileFormats.Psd.Layers.FillSettings;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerResources;
 using Aspose.PSD.ImageOptions;
+using Aspose.PSD.Sources;
 
 namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
 {
@@ -20,66 +20,35 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
             string SourceDir = RunExamples.GetDataDir_PSD();
             string OutputDir = RunExamples.GetDataDir_Output();
 
-            string fileName = Path.Combine(SourceDir, "PathExample2.psd");
             string outputPsd = Path.Combine(OutputDir, "out_CreatingVectorPathExampleTest.psd");
-            string outputPng = Path.Combine(OutputDir, "out_CreatingVectorPathExampleTest.png");
 
-            CreatingVectorPathExample(fileName, outputPsd, outputPng);
+            CreatingVectorPathExample(outputPsd);
 
             Console.WriteLine("ClassesToManipulateVectorPathObjects executed successfully");
 
             File.Delete(outputPsd);
-            File.Delete(outputPng);
         }
 
         //ExStart:ClassesToManipulateVectorPathObjects
         //ExSummary:The following code example provides classes to manipulate the vector path objects and demonstrates how to use those classes.
 
-        private static void CreatingVectorPathExample(string fileName = "PathExample2.psd", string outputPsd = "out_CreatingVectorPathExampleTest.psd", string outputPng = "out_CreatingVectorPathExampleTest.png")
+        private static void CreatingVectorPathExample(string outputPsd = "outputPsd.psd")
         {
-            using (var psdImage = (PsdImage)Image.Load(fileName))
+            using (var psdImage = (PsdImage)Image.Create(new PsdOptions() { Source = new StreamSource(new MemoryStream()), }, 500, 500))
             {
-                VectorDataProvider.RemoveVectorPathDataFromLayer(psdImage.Layers[2]);
+                FillLayer layer = FillLayer.CreateInstance(FillType.Color);
+                psdImage.AddLayer(layer);
 
-                // creating VectorPath object for existing layer without vector path data.
-                VectorPath vectorPath = VectorDataProvider.CreateVectorPathForLayer(psdImage.Layers[1]);
-
-                // Set the fill color of vector path
-                vectorPath.FillColor = Color.MediumPurple;
-
-                // add new shape
-                PathShape newShape = new PathShape();
-                newShape.Points.Add(new BezierKnot(new PointF(65, 175), true));
-                newShape.Points.Add(new BezierKnot(new PointF(65, 210), true));
-                newShape.Points.Add(new BezierKnot(new PointF(190, 210), true));
-                newShape.Points.Add(new BezierKnot(new PointF(190, 175), true));
-                vectorPath.Shapes.Add(newShape);
-
-                // update path data in layer
-                VectorDataProvider.UpdateLayerFromVectorPath(psdImage.Layers[1], vectorPath, true);
-
-
-                // creating VectorPath object for new layer.
-                FillLayer layer2 = FillLayer.CreateInstance(FillType.Color);
-                layer2.DisplayName = "Layer 2";
-                psdImage.AddLayer(layer2);
-                VectorPath vectorPath2 = VectorDataProvider.CreateVectorPathForLayer(layer2);
-
-                // Set the fill color of vector path
-                vectorPath2.FillColor = Color.IndianRed;
-
-                // add new shape
-                PathShape newShape2 = new PathShape();
-                newShape2.Points.Add(new BezierKnot(new PointF(50, 150), true));
-                newShape2.Points.Add(new BezierKnot(new PointF(100, 200), true));
-                newShape2.Points.Add(new BezierKnot(new PointF(0, 200), true));
-                vectorPath2.Shapes.Add(newShape2);
-
-                // update path data in layer
-                VectorDataProvider.UpdateLayerFromVectorPath(layer2, vectorPath2, true);
+                VectorPath vectorPath = VectorDataProvider.CreateVectorPathForLayer(layer);
+                vectorPath.FillColor = Color.IndianRed;
+                PathShape shape = new PathShape();
+                shape.Points.Add(new BezierKnot(new PointF(50, 150), true));
+                shape.Points.Add(new BezierKnot(new PointF(100, 200), true));
+                shape.Points.Add(new BezierKnot(new PointF(0, 200), true));
+                vectorPath.Shapes.Add(shape);
+                VectorDataProvider.UpdateLayerFromVectorPath(layer, vectorPath, true);
 
                 psdImage.Save(outputPsd);
-                psdImage.Save(outputPng, new PngOptions() { ColorType = PngColorType.TruecolorWithAlpha });
             }
         }
 
@@ -97,9 +66,13 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
             /// <returns>the <see cref="VectorPath"/> instance based on resources from input layer.</returns>
             public static VectorPath CreateVectorPathForLayer(Layer psdLayer)
             {
+                ValidateLayer(psdLayer);
+
+                Size imageSize = psdLayer.Container.Size;
+
                 VectorPathDataResource pathResource = FindVectorPathDataResource(psdLayer, true);
                 SoCoResource socoResource = FindSoCoResource(psdLayer, true);
-                VectorPath vectorPath = new VectorPath(pathResource);
+                VectorPath vectorPath = new VectorPath(pathResource, imageSize);
                 if (socoResource != null)
                 {
                     vectorPath.FillColor = socoResource.Color;
@@ -113,14 +86,17 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
             /// </summary>
             /// <param name="psdLayer">The psd layer.</param>
             /// <param name="vectorPath">The vector path.</param>
-            /// <param name="createIfNotExist">If resources not exists, then for <see cref="true"/> creates a new resource, otherwise return <see cref="null"/>.</param>
+            /// <param name="imageSize">The image size to correct converting point coordinates.</param>
             public static void UpdateLayerFromVectorPath(Layer psdLayer, VectorPath vectorPath, bool createIfNotExist = false)
             {
+                ValidateLayer(psdLayer);
+
                 VectorPathDataResource pathResource = FindVectorPathDataResource(psdLayer, createIfNotExist);
                 VogkResource vogkResource = FindVogkResource(psdLayer, createIfNotExist);
                 SoCoResource socoResource = FindSoCoResource(psdLayer, createIfNotExist);
 
-                UpdateResources(pathResource, vogkResource, socoResource, vectorPath);
+                Size imageSize = psdLayer.Container.Size;
+                UpdateResources(pathResource, vogkResource, socoResource, vectorPath, imageSize);
 
                 ReplaceVectorPathDataResourceInLayer(psdLayer, pathResource, vogkResource, socoResource);
             }
@@ -157,7 +133,8 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
             /// <param name="vogkResource">The vector origination data resource.</param>
             /// <param name="socoResource">The solid color resource.</param>
             /// <param name="vectorPath">The vector path.</param>
-            private static void UpdateResources(VectorPathDataResource pathResource, VogkResource vogkResource, SoCoResource socoResource, VectorPath vectorPath)
+            /// <param name="imageSize">The image size to correct converting point coordinates.</param>
+            private static void UpdateResources(VectorPathDataResource pathResource, VogkResource vogkResource, SoCoResource socoResource, VectorPath vectorPath, Size imageSize)
             {
                 pathResource.Version = vectorPath.Version;
                 pathResource.IsNotLinked = vectorPath.IsNotLinked;
@@ -172,7 +149,7 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
                 {
                     PathShape shape = vectorPath.Shapes[i];
                     shape.ShapeIndex = i;
-                    path.AddRange(shape.ToVectorPathRecords());
+                    path.AddRange(shape.ToVectorPathRecords(imageSize));
                     originSettings.Add(new VectorShapeOriginSettings() { IsShapeInvalidated = true, OriginIndex = i });
                 }
 
@@ -311,6 +288,24 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
 
                 return socoResource;
             }
+
+            /// <summary>
+            /// Validates the layer to work with <see cref="VectorDataProvider"/> class.
+            /// </summary>
+            /// <param name="layer"></param>
+            /// <exception cref="ArgumentNullException"></exception>
+            private static void ValidateLayer(Layer layer)
+            {
+                if (layer == null)
+                {
+                    throw new ArgumentNullException("The layer is NULL.");
+                }
+
+                if (layer.Container == null || layer.Container.Size.IsEmpty)
+                {
+                    throw new ArgumentNullException("The layer should have a Container with no empty size.");
+                }
+            }
         }
 
         /// <summary>
@@ -318,6 +313,11 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
         /// </summary>
         public class BezierKnot
         {
+            /// <summary>
+            /// Image to path point ratio.
+            /// </summary>
+            private const int ImgToPsdRatio = 256 * 65535;
+
             /// <summary>
             /// Initializes a new instance of the <see cref="BezierKnot" /> class.
             /// </summary>
@@ -337,12 +337,13 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
             /// Initializes a new instance of the <see cref="BezierKnot" /> class based on <see cref="BezierKnotRecord"/>.
             /// </summary>
             /// <param name="bezierKnotRecord">The <see cref="BezierKnotRecord"/>.</param>
-            public BezierKnot(BezierKnotRecord bezierKnotRecord)
+            /// <param name="imageSize">The image size to correct converting point coordinates.</param>
+            public BezierKnot(BezierKnotRecord bezierKnotRecord, Size imageSize)
             {
                 this.IsLinked = bezierKnotRecord.IsLinked;
-                this.ControlPoint1 = ResourcePointToPointF(bezierKnotRecord.Points[0]);
-                this.AnchorPoint = ResourcePointToPointF(bezierKnotRecord.Points[1]);
-                this.ControlPoint2 = ResourcePointToPointF(bezierKnotRecord.Points[2]);
+                this.ControlPoint1 = ResourcePointToPointF(bezierKnotRecord.Points[0], imageSize);
+                this.AnchorPoint = ResourcePointToPointF(bezierKnotRecord.Points[1], imageSize);
+                this.ControlPoint2 = ResourcePointToPointF(bezierKnotRecord.Points[2], imageSize);
             }
 
             /// <summary>
@@ -379,15 +380,16 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
             /// Creates the instance of <see cref="BezierKnotRecord"/> based on this instance.
             /// </summary>
             /// <param name="isClosed">Indicating whether this knot is in closed shape.</param>
+            /// <param name="imageSize">The image size to correct converting point coordinates.</param>
             /// <returns>The instance of <see cref="BezierKnotRecord"/> based on this instance.</returns>
-            public BezierKnotRecord ToBezierKnotRecord(bool isClosed)
+            public BezierKnotRecord ToBezierKnotRecord(bool isClosed, Size imageSize)
             {
                 BezierKnotRecord record = new BezierKnotRecord();
                 record.Points = new Point[]
                 {
-                    PointFToResourcePoint(this.ControlPoint1),
-                    PointFToResourcePoint(this.AnchorPoint),
-                    PointFToResourcePoint(this.ControlPoint2),
+                    PointFToResourcePoint(this.ControlPoint1, imageSize),
+                    PointFToResourcePoint(this.AnchorPoint, imageSize),
+                    PointFToResourcePoint(this.ControlPoint2, imageSize),
                 };
                 record.IsLinked = this.IsLinked;
                 record.IsClosed = isClosed;
@@ -411,20 +413,22 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
             /// Converts point values from resource to normal.
             /// </summary>
             /// <param name="point">The point with values from resource.</param>
+            /// <param name="imageSize">The image size to correct converting point coordinates.</param>
             /// <returns>The converted to normal point.</returns>
-            private static PointF ResourcePointToPointF(Point point)
+            private static PointF ResourcePointToPointF(Point point, Size imageSize)
             {
-                return new PointF(point.Y / 65535, point.X / 65535);
+                return new PointF(point.Y / (ImgToPsdRatio / imageSize.Width), point.X / (ImgToPsdRatio / imageSize.Height));
             }
 
             /// <summary>
             /// Converts normal point values to resource point.
             /// </summary>
             /// <param name="point">The point.</param>
+            /// <param name="imageSize">The image size to correct converting point coordinates.</param>
             /// <returns>The point with values for resource.</returns>
-            private static Point PointFToResourcePoint(PointF point)
+            private static Point PointFToResourcePoint(PointF point, Size imageSize)
             {
-                return new Point((int)Math.Round(point.Y * 65535), (int)Math.Round(point.X * 65535));
+                return new Point((int)Math.Round(point.Y * (ImgToPsdRatio / imageSize.Height)), (int)Math.Round(point.X * (ImgToPsdRatio / imageSize.Width)));
             }
         }
 
@@ -447,13 +451,14 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
             /// </summary>
             /// <param name="lengthRecord">The length record.</param>
             /// <param name="bezierKnotRecords">The bezier knot records.</param>
-            public PathShape(LengthRecord lengthRecord, List<BezierKnotRecord> bezierKnotRecords)
+            /// <param name="imageSize">The image size to correct converting point coordinates.</param>
+            public PathShape(LengthRecord lengthRecord, List<BezierKnotRecord> bezierKnotRecords, Size imageSize)
             : this()
             {
                 this.IsClosed = lengthRecord.IsClosed;
                 this.PathOperations = lengthRecord.PathOperations;
                 this.ShapeIndex = lengthRecord.ShapeIndex;
-                this.InitFromResources(bezierKnotRecords);
+                this.InitFromResources(bezierKnotRecords, imageSize);
             }
 
             /// <summary>
@@ -482,8 +487,9 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
             /// <summary>
             /// Creates the <see cref="VectorPathRecord"/> records based on this instance.
             /// </summary>
+            /// <param name="imageSize">The image size to correct converting point coordinates.</param>
             /// <returns>Returns one <see cref="LengthRecord"/> and <see cref="BezierKnotRecord"/> for each point in this instance.</returns>
-            public IEnumerable<VectorPathRecord> ToVectorPathRecords()
+            public IEnumerable<VectorPathRecord> ToVectorPathRecords(Size imageSize)
             {
                 List<VectorPathRecord> shapeRecords = new List<VectorPathRecord>();
 
@@ -496,7 +502,7 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
 
                 foreach (var bezierKnot in this.Points)
                 {
-                    shapeRecords.Add(bezierKnot.ToBezierKnotRecord(this.IsClosed));
+                    shapeRecords.Add(bezierKnot.ToBezierKnotRecord(this.IsClosed, imageSize));
                 }
 
                 return shapeRecords;
@@ -506,13 +512,14 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
             /// Initializes a values based on input records.
             /// </summary>
             /// <param name="bezierKnotRecords">The bezier knot records.</param>
-            private void InitFromResources(IEnumerable<BezierKnotRecord> bezierKnotRecords)
+            /// <param name="imageSize">The image size to correct converting point coordinates.</param>
+            private void InitFromResources(IEnumerable<BezierKnotRecord> bezierKnotRecords, Size imageSize)
             {
                 List<BezierKnot> newPoints = new List<BezierKnot>();
 
                 foreach (var record in bezierKnotRecords)
                 {
-                    newPoints.Add(new BezierKnot(record));
+                    newPoints.Add(new BezierKnot(record, imageSize));
                 }
 
                 this.Points = newPoints;
@@ -528,9 +535,10 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
             /// Initializes a new instance of the <see cref="VectorPath" /> class based on <see cref="VectorPathDataResource"/>.
             /// </summary>
             /// <param name="vectorPathDataResource">The vector path data resource.</param>
-            public VectorPath(VectorPathDataResource vectorPathDataResource)
+            /// <param name="imageSize">The image size to correct converting point coordinates.</param>
+            public VectorPath(VectorPathDataResource vectorPathDataResource, Size imageSize)
             {
-                this.InitFromResource(vectorPathDataResource);
+                this.InitFromResource(vectorPathDataResource, imageSize);
             }
 
             /// <summary>
@@ -587,7 +595,8 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
             /// Initializes a values based on input <see cref="VectorPathDataResource"/> resource.
             /// </summary>
             /// <param name="resource">The vector path data resource.</param>
-            private void InitFromResource(VectorPathDataResource resource)
+            /// <param name="imageSize">The image size to correct converting point coordinates.</param>
+            private void InitFromResource(VectorPathDataResource resource, Size imageSize)
             {
                 List<PathShape> newShapes = new List<PathShape>();
                 InitialFillRuleRecord initialFillRuleRecord = null;
@@ -600,7 +609,7 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
                     {
                         if (bezierKnotRecords.Count > 0)
                         {
-                            newShapes.Add(new PathShape(lengthRecord, bezierKnotRecords));
+                            newShapes.Add(new PathShape(lengthRecord, bezierKnotRecords, imageSize));
                             lengthRecord = null;
                             bezierKnotRecords.Clear();
                         }
@@ -619,7 +628,7 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
 
                 if (bezierKnotRecords.Count > 0)
                 {
-                    newShapes.Add(new PathShape(lengthRecord, bezierKnotRecords));
+                    newShapes.Add(new PathShape(lengthRecord, bezierKnotRecords, imageSize));
                     lengthRecord = null;
                     bezierKnotRecords.Clear();
                 }
