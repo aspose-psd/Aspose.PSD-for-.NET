@@ -344,6 +344,7 @@ namespace Aspose.PSD.Examples.Runner
             Console.WriteLine("Starting PSD Specific Cases Examples");
 
             SettingforReplacingMissingFonts.Run();
+            SupportEditingGlobalFontList.Run();
             ImplementBicubicResampler.Run();
             DetectFlattenedPSD.Run();
             ColorReplacementInPSD.Run();
