@@ -103,7 +103,7 @@ namespace Aspose.PSD.Examples
             {
                 startDirectory = parent.FullName;
             }
-            return System.IO.Path.Combine(startDirectory, "Data\\");
+            return System.IO.Path.Combine(startDirectory, "Data" + Path.DirectorySeparatorChar);
         }
     }
 }

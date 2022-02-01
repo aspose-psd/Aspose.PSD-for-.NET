@@ -1,6 +1,6 @@
 ﻿using Aspose.PSD.FileFormats.Core.Blending;
 using Aspose.PSD.FileFormats.Psd;
-using Aspose.PSD.FileFormats.Psd.Layers.LayerResources.SmartObjectResources.SmartFilters.Filters;
+using Aspose.PSD.FileFormats.Psd.Layers.SmartFilters;
 using Aspose.PSD.FileFormats.Psd.Layers.SmartObjects;
 using System;
 using System.Collections.Generic;
