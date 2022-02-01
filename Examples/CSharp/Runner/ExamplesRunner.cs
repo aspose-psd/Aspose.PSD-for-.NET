@@ -395,7 +395,7 @@ namespace Aspose.PSD.Examples.Runner
         }
 
         /// <summary>
-        /// Runs the examples that demostrates how you can work with all types of masks
+        /// Runs the examples that demonstrates how you can work with all types of masks
         /// </summary>
         private static void RunWorkingWithMasksExamples()
         {
@@ -422,6 +422,7 @@ namespace Aspose.PSD.Examples.Runner
             ColorBalanceAdjustment.Run();
             InvertAdjustmentLayer.Run();
             RenderingExportOfChannelMixerAdjusmentLyer.Run();
+            AddVibranceAdjustmentLayer.Run();
         }
 
         private static void RunLayerEffectsExamples()
@@ -476,6 +477,7 @@ namespace Aspose.PSD.Examples.Runner
 
             // Smart filters
             SupportAccessToSmartFilters.Run();
+            SupportCustomSmartFilterRenderer.Run();
         }
 
         private static void RunTextLayersExamples()
@@ -534,6 +536,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfSoLdResource.Run();
             SupportOfPlacedResource.Run();
             SupportOfFXidResource.Run();
+            SupportOfVibAResource.Run();
         }
 
         /// <summary>
