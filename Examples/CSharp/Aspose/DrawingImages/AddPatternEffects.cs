@@ -54,8 +54,8 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
 
                 if ((settings.Color != Color.Empty) ||
                     (settings.FillType != FillType.Pattern) ||
-                    (settings.PatternId != "85163837-eb9e-5b43-86fb-e6d5963ea29a\0") ||
-                    (settings.PatternName != "$$$/Presets/Patterns/OpticalSquares=Optical Squares\0") ||
+                    (settings.PatternId != "85163837-EB9E-5B43-86FB-E6D5963EA29A") ||
+                    (settings.PatternName != "$$$/Presets/Patterns/OpticalSquares=Optical Squares") ||
                     (settings.PointType != null) ||
                     (Math.Abs(settings.Scale - 100) > 0.001) ||
                     (settings.Linked != true) ||
@@ -73,21 +73,27 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                 settings.HorizontalOffset = 15;
                 settings.VerticalOffset = 11;
 
+                settings.PatternData = newPattern;
+                settings.PatternWidth = newPatternBounds.Width;
+                settings.PatternHeight = newPatternBounds.Height;
+                
+                settings.PatternName = newPatternName;
+                settings.PatternId = guid.ToString();
+                
                 PattResource resource;
                 foreach (var globalLayerResource in im.GlobalLayerResources)
                 {
                     if (globalLayerResource is PattResource)
                     {
                         resource = (PattResource)globalLayerResource;
-                        resource.PatternId = guid.ToString();
-                        resource.Name = newPatternName;
-                        resource.SetPattern(newPattern, newPatternBounds);
+                        var patternData = resource.Patterns[0];
+                        patternData.PatternId = guid.ToString();
+                        patternData.Name = newPatternName;
+                        patternData.SetPattern(newPattern, newPatternBounds);
+                        break;
                     }
                 }
-
-                settings.PatternName = newPatternName;
-
-                settings.PatternId = guid.ToString() + "\0";
+                
                 im.Save(exportPath);
             }
 
@@ -97,7 +103,6 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                 var patternOverlay = (PatternOverlayEffect)im.Layers[1].BlendingOptions.Effects[0];
                 try
                 {
-
                     if ((patternOverlay.BlendMode != BlendMode.Difference) ||
                         (patternOverlay.Opacity != 193) ||
                         (patternOverlay.IsVisible != true))
@@ -106,7 +111,6 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                     }
 
                     var fillSettings = patternOverlay.Settings;
-
 
                     if ((fillSettings.Color != Color.Empty) ||
                         (fillSettings.FillType != FillType.Pattern))
@@ -120,6 +124,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                         if (globalLayerResource is PattResource)
                         {
                             resource = (PattResource)globalLayerResource;
+                            break;
                         }
                     }
 
@@ -129,10 +134,11 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                     }
 
                     // Check the pattern data
+                    var patternData = resource.Patterns[0];
 
-                    if ((newPatternBounds != new Rectangle(0, 0, resource.Width, resource.Height)) ||
-                        (resource.PatternId != guid.ToString()) ||
-                        ((resource.Name + "\0") != newPatternName)
+                    if ((newPatternBounds != new Rectangle(0, 0, patternData.Width, patternData.Height)) ||
+                        (patternData.PatternId != guid.ToString().ToUpperInvariant()) ||
+                        ((patternData.Name + "\0") != newPatternName)
                         )
                     {
                         throw new Exception("Pattern was set wrong");

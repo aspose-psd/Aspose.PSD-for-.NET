@@ -62,16 +62,22 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                     if (globalLayerResource is PattResource)
                     {
                         resource = (PattResource)globalLayerResource;
-                        resource.PatternId = guid.ToString();
-                        resource.Name = "$$$/Presets/Patterns/HorizontalLine1=Horizontal Line 9\0";
+                        var patternData = resource.Patterns[0];
+                        patternData.PatternId = guid.ToString();
+                        patternData.Name = "$$$/Presets/Patterns/HorizontalLine1=Horizontal Line 9";
 
-                        resource.SetPattern(newPattern, newPatternBounds);
+                        patternData.SetPattern(newPattern, newPatternBounds);
                     }
                 }
 
-                 ((PatternFillSettings)patternStroke.FillSettings).PatternName = "$$$/Presets/Patterns/HorizontalLine1=Horizontal Line 9\0";
+                var settings = (PatternFillSettings) patternStroke.FillSettings;
+                settings.PatternName = "$$$/Presets/Patterns/HorizontalLine1=Horizontal Line 9";
+                settings.PatternId = guid.ToString();
 
-                ((PatternFillSettings)patternStroke.FillSettings).PatternId = guid.ToString() + "\0";
+                settings.PatternData = newPattern;
+                settings.PatternWidth = newPatternBounds.Width;
+                settings.PatternHeight = newPatternBounds.Height;
+                
                 im.Save(exportPath);
             }
 
@@ -98,9 +104,10 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                 {
                     // Check the pattern data
                     var fillSettings = (PatternFillSettings)patternStroke.FillSettings;
+                    var patternData = resource.Patterns[0];
 
-                    if ((newPatternBounds != new Rectangle(0, 0, resource.Width, resource.Height)) ||
-                        (resource.PatternId != guid.ToString()) ||
+                    if ((newPatternBounds != new Rectangle(0, 0, patternData.Width, patternData.Height)) ||
+                        (patternData.PatternId != guid.ToString()) ||
                         (patternStroke.BlendMode != BlendMode.Color) ||
                         (patternStroke.Opacity != 127) ||
                         (patternStroke.IsVisible != true) ||
