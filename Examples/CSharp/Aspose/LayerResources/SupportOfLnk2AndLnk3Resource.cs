@@ -87,7 +87,7 @@ namespace Aspose.PSD.Examples.Aspose.LayerResources
                 "xmp.did:BDE940CBF51B11E59D759CDA690663E3",
                 7,
                 true,
-                0xF694l,
+                0xF694L,
                 0x10dd4L
             },
             new object[]

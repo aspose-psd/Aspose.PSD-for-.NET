@@ -317,6 +317,7 @@ namespace Aspose.PSD.Examples.Runner
             CreateLayerGroups.Run();
             SupportOfPassThroughBlendingMode.Run();
             SupportOfSectionDividerLayer.Run();
+            LayerGroupIsOpenSupport.Run();
         }
 
         /// <summary>
