@@ -224,6 +224,7 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\AddIopaResource.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfRGBColorModeWith16BitPerChannel.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfRotateLayer.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportTextStyleJustificationMode.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\TextLayerBoundBox.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\MergeOnePSDlayerToOther.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SheetColorHighlighting.cs" />
