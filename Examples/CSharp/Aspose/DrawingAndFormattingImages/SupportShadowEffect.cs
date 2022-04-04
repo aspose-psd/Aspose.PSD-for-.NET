@@ -47,7 +47,9 @@ namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
 
                 im.Save(psdPathAfterChange);
             }
+            
+            //ExEnd:SupportShadowEffect
+            
         }
-        //ExEnd:SupportShadowEffect
     }
 }

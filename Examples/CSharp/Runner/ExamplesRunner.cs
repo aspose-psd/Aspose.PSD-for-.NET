@@ -448,6 +448,7 @@ namespace Aspose.PSD.Examples.Runner
 
             SupportOfGradientOverlayEffect.Run();
             RenderingOfGradientOverlayEffect.Run();
+            SupportOfOuterGlowEffect.Run();
         }
 
         private static void RunFillLayersExamples()
