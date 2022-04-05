@@ -70,6 +70,7 @@
     <Compile Include="Aspose\DrawingAndFormattingImages\SupportBlendModes.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\SupportOfMeSaSignature.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\SupportOfObArAndUnFlSignatures.cs" />
+    <Compile Include="Aspose\DrawingAndFormattingImages\SupportOfOuterGlowEffect.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\SupportShadowEffect.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\VerifyImageTransparency.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\BluranImage.cs" />
@@ -224,6 +225,7 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\AddIopaResource.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfRGBColorModeWith16BitPerChannel.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfRotateLayer.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportTextStyleJustificationMode.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\TextLayerBoundBox.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\MergeOnePSDlayerToOther.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SheetColorHighlighting.cs" />
@@ -282,7 +284,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Aspose.PSD">
-      <Version>22.3.0</Version>
+      <Version>22.4.0</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

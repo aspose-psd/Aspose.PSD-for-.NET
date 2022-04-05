@@ -448,6 +448,7 @@ namespace Aspose.PSD.Examples.Runner
 
             SupportOfGradientOverlayEffect.Run();
             RenderingOfGradientOverlayEffect.Run();
+            SupportOfOuterGlowEffect.Run();
         }
 
         private static void RunFillLayersExamples()
@@ -496,6 +497,7 @@ namespace Aspose.PSD.Examples.Runner
             RenderTextWithDifferentColorsInTextLayer.Run();
             SupportOfITextStyleProperties.Run();
             SupportOfEditFontNameInTextPortionStyle.Run();
+            SupportTextStyleJustificationMode.Run();
         }
 
         private static void RunGlobalResourcesExamples()

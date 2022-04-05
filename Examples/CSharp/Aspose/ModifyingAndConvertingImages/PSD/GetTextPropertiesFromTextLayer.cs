@@ -46,10 +46,10 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                         // Checking paragraphs data
                         // Paragraphs have different justification
                         if (
-                            portions[0].Paragraph.Justification != 0 ||
-                            portions[1].Paragraph.Justification != 0 ||
-                            portions[2].Paragraph.Justification != 0 ||
-                            portions[3].Paragraph.Justification != 2)
+                            portions[0].Paragraph.Justification != JustificationMode.Left ||
+                            portions[1].Paragraph.Justification != JustificationMode.Left ||
+                            portions[2].Paragraph.Justification != JustificationMode.Left ||
+                            portions[3].Paragraph.Justification != JustificationMode.Center)
                         {
                             throw new Exception();
                         }
@@ -143,9 +143,9 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 
                         // Example of paragraph and style editing for portions
                         // Set right justification
-                        portions[0].Paragraph.Justification = 1;
-                        portions[1].Paragraph.Justification = 1;
-                        portions[2].Paragraph.Justification = 1;
+                        portions[0].Paragraph.Justification = JustificationMode.Right;
+                        portions[1].Paragraph.Justification = JustificationMode.Right;
+                        portions[2].Paragraph.Justification = JustificationMode.Right;
 
                         // Different colors for each style. The will be changed, but rendering is not fully supported
                         portions[0].Style.FillColor = Color.Aquamarine;
