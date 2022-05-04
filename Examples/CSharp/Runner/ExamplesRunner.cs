@@ -432,6 +432,7 @@ namespace Aspose.PSD.Examples.Runner
 
             // Layer Effects
             LayerEffectsForPSD.Run();
+            SupportOfEffectTypeProperty.Run();
             AddStrokeLayer_Pattern.Run();
             AddStrokeLayer_Gradient.Run();
             AddStrokeLayer_Color.Run();
@@ -445,6 +446,7 @@ namespace Aspose.PSD.Examples.Runner
             AddEffectAtRunTime.Run();
             ColorOverLayEffect.Run();
             SupportShadowEffect.Run();
+            SupportShadowEffectOpacity.Run();
 
             SupportOfGradientOverlayEffect.Run();
             RenderingOfGradientOverlayEffect.Run();
