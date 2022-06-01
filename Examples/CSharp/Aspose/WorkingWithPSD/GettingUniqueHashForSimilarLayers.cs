@@ -6,7 +6,7 @@ using Aspose.PSD.ImageLoadOptions;
 
 namespace Aspose.PSD.Examples.Aspose.WorkingWithPSD
 {
-    class GettingUniqHashForSimilarLayers
+    class GettingUniqueHashForSimilarLayers
     {
         public static void Run()
         {
@@ -32,10 +32,10 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithPSD
                 RegularLayerContentFromDifferentFilesHashTest(srcFile, outFile);
             }
 
-            Console.WriteLine("GettingUniqHashForSimilarLayers executed successfully");
+            Console.WriteLine("GettingUniqueHashForSimilarLayers executed successfully");
         }
         
-        //ExStart:GettingUniqHashForSimilarLayers
+        //ExStart:GettingUniqueHashForSimilarLayers
         //ExSummary:The following code demonstrates the API for getting the unique hash for similar layers in different files.
         
         /// <summary>
@@ -377,6 +377,6 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithPSD
             File.Delete(outputFile);
         }
         
-        //ExEnd:GettingUniqHashForSimilarLayers
+        //ExEnd:GettingUniqueHashForSimilarLayers
     }
 }

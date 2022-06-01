@@ -267,7 +267,7 @@
     <Compile Include="Aspose\LayerResources\SupportForInfxResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportForLspfResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportForClblResource.cs" />
-    <Compile Include="Aspose\WorkingWithPSD\GettingUniqHashForSimilarLayers.cs" />
+    <Compile Include="Aspose\WorkingWithPSD\GettingUniqueHashForSimilarLayers.cs" />
     <Compile Include="Aspose\WorkingWithPSD\LayerGroupIsOpenSupport.cs" />
     <Compile Include="Aspose\WorkingWithPSD\SupportEditingGlobalFontList.cs" />
     <Compile Include="Aspose\WorkingWithPSD\SupportOfPassThroughBlendingMode.cs" />
