@@ -62,7 +62,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
             {
                 // This example demonstrates how to change the smart object layer in the PSD file and export / update its contents.
                 string fileName = Path.GetFileNameWithoutExtension(filePath);
-                string dataDir = output + "updating_output\\";
+                string dataDir = output + "updating_output" + Path.DirectorySeparatorChar;
                 filePath = baseFolder + filePath;
                 string pngOutputPath = dataDir + fileName + "_modified.png";
                 string png2OutputPath = dataDir + fileName + "_updated_modified.png";
@@ -132,7 +132,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                 // This demonstrates how to convert an embedded smart object layer in the PSD file to external one.
                 var formatExt = GetFormatExt(format);
                 string fileName = Path.GetFileNameWithoutExtension(filePath);
-                string dataDir = output + "to_linked_output\\";
+                string dataDir = output + "to_linked_output" + Path.DirectorySeparatorChar;
                 filePath = baseFolder + filePath;
                 string pngOutputPath = dataDir + fileName + "_to_external.png";
                 string psdOutputPath = dataDir + fileName + "_to_external.psd";
@@ -180,7 +180,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                 FileFormat format)
             {
                 string fileName = Path.GetFileNameWithoutExtension(filePath);
-                string dataDir = output + "to_embedded_output\\";
+                string dataDir = output + "to_embedded_output" + Path.DirectorySeparatorChar;
                 filePath = baseFolder + filePath;
                 string pngOutputPath = dataDir + fileName + "_to_embedded.png";
                 string psdOutputPath = dataDir + fileName + "_to_embedded.psd";
@@ -236,7 +236,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
             {
                 string formatExt = GetFormatExt(format);
                 string fileName = Path.GetFileNameWithoutExtension(filePath);
-                string dataDir = output + "external_support_output\\";
+                string dataDir = output + "external_support_output" + Path.DirectorySeparatorChar;
                 filePath = baseFolder + filePath;
                 string pngOutputPath = dataDir + fileName + ".png";
                 string psdOutputPath = dataDir + fileName + ".psd";

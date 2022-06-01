@@ -106,7 +106,7 @@ namespace Aspose.PSD.Examples.Aspose.LayerResources
             },
             };
 
-            var basePath = Path.Combine(baseFolder, "") + "\\";
+            var basePath = Path.Combine(baseFolder, "") + Path.DirectorySeparatorChar;
 
             // Saves the data of a smart object in PSD file to a file.
             void SaveSmartObjectData(string prefix, string fileName, byte[] data)
