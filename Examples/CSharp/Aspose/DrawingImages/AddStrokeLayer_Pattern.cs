@@ -107,7 +107,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                     var patternData = resource.Patterns[0];
 
                     if ((newPatternBounds != new Rectangle(0, 0, patternData.Width, patternData.Height)) ||
-                        (patternData.PatternId != guid.ToString()) ||
+                        (patternData.PatternId != guid.ToString().ToUpperInvariant()) ||
                         (patternStroke.BlendMode != BlendMode.Color) ||
                         (patternStroke.Opacity != 127) ||
                         (patternStroke.IsVisible != true) ||

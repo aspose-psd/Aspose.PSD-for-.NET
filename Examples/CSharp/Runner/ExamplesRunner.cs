@@ -367,6 +367,7 @@ namespace Aspose.PSD.Examples.Runner
             ClassesToManipulateVectorPathObjects.Run();
             ResizeLayersWithVogkResourceAndVectorPaths.Run();
             ResizeLayersWithVectorPaths.Run();
+            GettingUniqueHashForSimilarLayers.Run();
         }
 
         /// <summary>

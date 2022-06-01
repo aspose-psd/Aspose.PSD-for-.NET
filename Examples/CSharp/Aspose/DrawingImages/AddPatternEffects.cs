@@ -54,7 +54,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
 
                 if ((settings.Color != Color.Empty) ||
                     (settings.FillType != FillType.Pattern) ||
-                    (settings.PatternId != "85163837-EB9E-5B43-86FB-E6D5963EA29A") ||
+                    (settings.PatternId != "85163837-EB9E-5B43-86FB-E6D5963EA29A".ToUpperInvariant()) ||
                     (settings.PatternName != "$$$/Presets/Patterns/OpticalSquares=Optical Squares") ||
                     (settings.PointType != null) ||
                     (Math.Abs(settings.Scale - 100) > 0.001) ||
@@ -73,26 +73,11 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                 settings.HorizontalOffset = 15;
                 settings.VerticalOffset = 11;
 
+                settings.PatternName = newPatternName;
+                settings.PatternId = guid.ToString();
                 settings.PatternData = newPattern;
                 settings.PatternWidth = newPatternBounds.Width;
                 settings.PatternHeight = newPatternBounds.Height;
-                
-                settings.PatternName = newPatternName;
-                settings.PatternId = guid.ToString();
-                
-                PattResource resource;
-                foreach (var globalLayerResource in im.GlobalLayerResources)
-                {
-                    if (globalLayerResource is PattResource)
-                    {
-                        resource = (PattResource)globalLayerResource;
-                        var patternData = resource.Patterns[0];
-                        patternData.PatternId = guid.ToString();
-                        patternData.Name = newPatternName;
-                        patternData.SetPattern(newPattern, newPatternBounds);
-                        break;
-                    }
-                }
                 
                 im.Save(exportPath);
             }
@@ -134,7 +119,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                     }
 
                     // Check the pattern data
-                    var patternData = resource.Patterns[0];
+                    var patternData = resource.Patterns[1];
 
                     if ((newPatternBounds != new Rectangle(0, 0, patternData.Width, patternData.Height)) ||
                         (patternData.PatternId != guid.ToString().ToUpperInvariant()) ||
