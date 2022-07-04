@@ -30,6 +30,11 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                 portions[1].Paragraph.Justification = JustificationMode.Right;
                 portions[2].Paragraph.Justification = JustificationMode.Center;
 
+                foreach (var portion in portions)
+                {
+                    portion.Style.FontSize = 24;
+                }
+
                 txtLayer.TextData.UpdateLayerData();
 
                 image.Save(outputPsd);

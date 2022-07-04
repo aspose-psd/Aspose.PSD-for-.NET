@@ -30,10 +30,13 @@ namespace Aspose.PSD.Examples.Runner
 
         WorkingWithLayerEffects = 2048,
 
-        SpecificCases = 4096,
+        WorkingWithAnimationAndTimeLine = 4096,
+
+        SpecificCases = 8192,
 
         All = WorkingWithLayerResources | WorkingWithGlobalResources
               | BasicLayersOperations | WorkingWithTextLayers | WorkingWithAdjustmentLayers | WorkingWithFillLayers |
             WorkingWithSmartObjectLayers | WorkingWithSmartFilters | WorkingWithMasks | WorkingWithLayerEffects
+              | WorkingWithAnimationAndTimeLine
     }
 }

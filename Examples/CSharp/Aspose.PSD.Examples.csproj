@@ -37,6 +37,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Aspose\Ai\SupportOfLayersInAi.cs" />
+    <Compile Include="Aspose\Animation\SupportOfAnimatedDataSection.cs" />
     <Compile Include="Aspose\Conversion\ConversionPSDToGrayscaleRgbCmyk.cs" />
     <Compile Include="Aspose\Conversion\RenderTextWithDifferentColorsInTextLayer.cs" />
     <Compile Include="Aspose\Conversion\ColorConversionUsingDefaultProfiles.cs" />
@@ -287,7 +288,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Aspose.PSD">
-      <Version>22.6.0</Version>
+      <Version>22.7.0</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
