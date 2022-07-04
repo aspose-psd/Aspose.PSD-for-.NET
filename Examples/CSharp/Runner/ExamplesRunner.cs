@@ -16,6 +16,7 @@ using Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.TIFF;
 using Aspose.PSD.Examples.Aspose.Opening;
 using Aspose.PSD.Examples.Aspose.WorkingWithPSD;
 using System;
+using Aspose.PSD.Examples.Aspose.Animation;
 using Aspose.PSD.Examples.Aspose.SmartObjects;
 using Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths;
 using Aspose.PSD.Examples.Aspose.SmartFilters;
@@ -266,6 +267,9 @@ namespace Aspose.PSD.Examples.Runner
                     break;
                 case ExamplesSubSectionPsd.WorkingWithLayerEffects:
                     RunLayerEffectsExamples();
+                    break;
+                case ExamplesSubSectionPsd.WorkingWithAnimationAndTimeLine:
+                    RunAnimationExamples();
                     break;
                 case ExamplesSubSectionPsd.All:
                     foreach (ExamplesSubSectionPsd sub in Enum.GetValues(typeof(ExamplesSubSectionPsd)))
@@ -649,6 +653,16 @@ namespace Aspose.PSD.Examples.Runner
             LoadPSDWithReadOnlyMode.Run();
             CreatingbySettingPath.Run();
             UsingDocumentConversionProgressHandler.Run();
+        }
+        
+        /// <summary>
+        /// Runs the examples that demonstrates work with timeline and other animation data.
+        /// </summary>
+        private static void RunAnimationExamples()
+        {
+            Console.WriteLine("Starting Animation Examples");
+
+            SupportOfAnimatedDataSection.Run();
         }
     }
 }
