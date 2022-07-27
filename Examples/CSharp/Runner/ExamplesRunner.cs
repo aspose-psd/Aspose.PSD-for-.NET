@@ -663,6 +663,8 @@ namespace Aspose.PSD.Examples.Runner
             Console.WriteLine("Starting Animation Examples");
 
             SupportOfAnimatedDataSection.Run();
+            SupportOfMlstResource.Run();
+            SupportOfTimeLine.Run();
         }
     }
 }
