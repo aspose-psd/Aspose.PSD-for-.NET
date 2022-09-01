@@ -37,7 +37,7 @@ namespace Aspose.PSD.Examples.Aspose.Animation
 
                 // move 'Layer 1' to left-bottom corner on frame 3
                 LayerState layerState21 = timeLine.Frames[2].LayerStates[timeLine.LayerIds[1]];
-                layerState21.Offset = new Point(-50, 230);
+                layerState21.PositionOffset = new Point(-50, 230);
 
                 // Adds new frame
                 List<Frame> frames = new List<Frame>(timeLine.Frames);

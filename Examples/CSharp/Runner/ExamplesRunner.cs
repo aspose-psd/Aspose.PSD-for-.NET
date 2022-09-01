@@ -665,6 +665,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfAnimatedDataSection.Run();
             SupportOfMlstResource.Run();
             SupportOfTimeLine.Run();
+            SupportOfLayerStateEffects.Run();
         }
     }
 }
