@@ -505,6 +505,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfITextStyleProperties.Run();
             SupportOfEditFontNameInTextPortionStyle.Run();
             SupportTextStyleJustificationMode.Run();
+            SupportTextOrientationPropertyEdit.Run();
         }
 
         private static void RunGlobalResourcesExamples()
