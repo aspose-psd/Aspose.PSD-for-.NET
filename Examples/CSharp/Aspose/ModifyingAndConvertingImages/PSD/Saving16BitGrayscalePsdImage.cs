@@ -16,6 +16,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
             string outputFolder = RunExamples.GetDataDir_Output();
 
             //ExStart:Saving16BitGrayscalePsdImage
+            
             Stack<string> outputFilePathStack = new Stack<string>();
 
             //The following example demonstrates that reading and saving the Grayscale 16 bit PSD files works correctly and without an exception.

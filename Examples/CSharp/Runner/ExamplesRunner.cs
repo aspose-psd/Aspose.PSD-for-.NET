@@ -506,6 +506,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfEditFontNameInTextPortionStyle.Run();
             SupportTextStyleJustificationMode.Run();
             SupportTextOrientationPropertyEdit.Run();
+            SupportIsStandardVerticalRomanAlignmentEnabledPropertyEdit.Run();
         }
 
         private static void RunGlobalResourcesExamples()
@@ -548,6 +549,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfPlacedResource.Run();
             SupportOfFXidResource.Run();
             SupportOfVibAResource.Run();
+            SupportOfVstkResource.Run();
         }
 
         /// <summary>

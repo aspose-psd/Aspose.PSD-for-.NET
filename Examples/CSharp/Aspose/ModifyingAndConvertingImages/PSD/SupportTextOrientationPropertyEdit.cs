@@ -2,8 +2,6 @@ using System;
 using System.IO;
 using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers;
-using Aspose.PSD.FileFormats.Psd.Layers.Animation;
-using Aspose.PSD.FileFormats.Psd.Layers.FillSettings;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
