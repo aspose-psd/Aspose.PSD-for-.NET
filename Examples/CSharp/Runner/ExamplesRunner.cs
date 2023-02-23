@@ -478,6 +478,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfCopyingOfSmartObjectLayers.Run();
             SupportOfConvertingLayerToSmartObject.Run();
             SupportOfReplaceContentsInSmartObjects.Run();
+            SupportOfWarpTransformationToSmartObject.Run();
         }
 
         private static void RunSmartFiltersExamples()
@@ -507,6 +508,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportTextStyleJustificationMode.Run();
             SupportTextOrientationPropertyEdit.Run();
             SupportIsStandardVerticalRomanAlignmentEnabledPropertyEdit.Run();
+            SupportOfLeadingTypeInTextPortion.Run();
         }
 
         private static void RunGlobalResourcesExamples()
