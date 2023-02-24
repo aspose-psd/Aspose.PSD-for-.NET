@@ -78,7 +78,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                                 Math.Abs(paragraph.LetterSpacing[0]) > Tolerance ||
                                 Math.Abs(paragraph.LetterSpacing[1]) > Tolerance ||
                                 Math.Abs(paragraph.LetterSpacing[2]) > Tolerance ||
-                                paragraph.LeadingType != LeadingMode.Auto ||
+                                paragraph.LeadingType != LeadingType.BottomToBottom ||
                                 paragraph.PreHyphen != 2 ||
                                 paragraph.PostHyphen != 2 ||
                                 Math.Abs(paragraph.SpaceBefore) > Tolerance ||
