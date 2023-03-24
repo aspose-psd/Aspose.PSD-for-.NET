@@ -36,7 +36,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                 ((IColorFillSettings)backgroundFillLayer.FillSettings).Color = Color.White;
                 image.AddLayer(backgroundFillLayer);
 
-                TextLayer textLayer = image.AddTextLayer("Text 1", new Rectangle(10, 35, image.Width, 35));
+                TextLayer textLayer = image.AddTextLayer("Text 1", new Rectangle(10, 35, image.Width, 60));
 
                 ITextPortion firstPortion = textLayer.TextData.Items[0];
                 firstPortion.Style.FontSize = 24;
@@ -68,10 +68,10 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 
             //ExEnd:SupportOfEditFontNameInTextPortionStyle
 
-            Console.WriteLine("SupportOfEditFontNameInTextPortionStyle executed successfully");
-
             File.Delete(outputFilePng);
             File.Delete(outputFilePsd);
+            
+            Console.WriteLine("SupportOfEditFontNameInTextPortionStyle executed successfully");
         }
     }
 }
