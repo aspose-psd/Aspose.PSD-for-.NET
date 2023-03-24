@@ -429,6 +429,7 @@ namespace Aspose.PSD.Examples.Runner
             InvertAdjustmentLayer.Run();
             RenderingExportOfChannelMixerAdjusmentLyer.Run();
             AddVibranceAdjustmentLayer.Run();
+            SupportOfPosterizeAdjustmentLayer.Run();
         }
 
         private static void RunLayerEffectsExamples()
@@ -552,6 +553,8 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfFXidResource.Run();
             SupportOfVibAResource.Run();
             SupportOfVstkResource.Run();
+            SupportOfVscgResource.Run();
+            SupportOfPostResource.Run();
         }
 
         /// <summary>
