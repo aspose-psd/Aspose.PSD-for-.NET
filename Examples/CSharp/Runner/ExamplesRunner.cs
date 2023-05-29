@@ -369,6 +369,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportForJPEG_LSWithCMYK.Run();
             SupportFor2_7BitsJPEG.Run();
             ClassesToManipulateVectorPathObjects.Run();
+            SupportIPathToManipulateVectorPathObjects.Run();
             ResizeLayersWithVogkResourceAndVectorPaths.Run();
             ResizeLayersWithVectorPaths.Run();
             GettingUniqueHashForSimilarLayers.Run();
@@ -489,6 +490,7 @@ namespace Aspose.PSD.Examples.Runner
             // Smart filters
             SupportAccessToSmartFilters.Run();
             SupportCustomSmartFilterRenderer.Run();
+            SupportSharpenSmartFilter.Run();
         }
 
         private static void RunTextLayersExamples()
