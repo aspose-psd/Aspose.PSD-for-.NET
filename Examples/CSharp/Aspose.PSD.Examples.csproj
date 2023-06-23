@@ -37,9 +37,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Aspose\Ai\SupportOfLayersInAi.cs" />
+    <Compile Include="Aspose\Animation\SupportExportToGifImage.cs" />
     <Compile Include="Aspose\Animation\SupportOfAnimatedDataSection.cs" />
     <Compile Include="Aspose\Animation\SupportOfLayerStateEffects.cs" />
     <Compile Include="Aspose\Animation\SupportOfMlstResource.cs" />
+    <Compile Include="Aspose\Animation\SupportOfPsdImageTimelineProperty.cs" />
     <Compile Include="Aspose\Animation\SupportOfTimeLine.cs" />
     <Compile Include="Aspose\Conversion\ConversionPSDToGrayscaleRgbCmyk.cs" />
     <Compile Include="Aspose\Conversion\RenderTextWithDifferentColorsInTextLayer.cs" />
@@ -165,7 +167,9 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfPosterizeAdjustmentLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfPostResource.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfScaleProperty.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfSelectiveColorAdjustmentLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfSoCoResource.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfThresholdAdjustmentLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfUpdatingLinkedSmartObjects.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfVmskResource.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfLayerVectorMask.cs" />
@@ -291,6 +295,7 @@
     <Compile Include="Aspose\WorkingWithVectorPaths\ResizeLayersWithVectorPaths.cs" />
     <Compile Include="Aspose\WorkingWithVectorPaths\ResizeLayersWithVogkResourceAndVectorPaths.cs" />
     <Compile Include="Aspose\WorkingWithVectorPaths\SupportIPathToManipulateVectorPathObjects.cs" />
+    <Compile Include="Aspose\WorkingWithVectorPaths\SupportOfShapeLayer.cs" />
     <Compile Include="ExamplesPaths.cs" />
     <Compile Include="Runner\ExamplesRunner.cs" />
     <Compile Include="RunExamples.cs" />
