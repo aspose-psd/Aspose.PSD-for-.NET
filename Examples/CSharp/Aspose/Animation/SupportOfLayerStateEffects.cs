@@ -22,19 +22,16 @@ namespace Aspose.PSD.Examples.Aspose.Animation
 
             using (var psdImage = (PsdImage)Image.Load(sourceFile))
             {
-                TimeLine timeLine = TimeLine.InitializeFrom(psdImage);
-                int[] layerIds = timeLine.LayerIds;
+                Timeline timeline = psdImage.Timeline;
 
-                var layerStateEffects11 = timeLine.Frames[1].LayerStates[layerIds[1]].StateEffects;
+                var layerStateEffects11 = timeline.Frames[1].LayerStates[1].StateEffects;
 
                 layerStateEffects11.AddDropShadow();
                 layerStateEffects11.AddGradientOverlay();
 
-                var layerStateEffects21 = timeLine.Frames[2].LayerStates[layerIds[1]].StateEffects;
+                var layerStateEffects21 = timeline.Frames[2].LayerStates[1].StateEffects;
                 layerStateEffects21.AddStroke(FillType.Color);
                 layerStateEffects21.IsVisible = false;
-
-                timeLine.ApplyTo(psdImage);
 
                 psdImage.Save(outputFile);
             }

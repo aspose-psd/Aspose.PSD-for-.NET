@@ -373,6 +373,7 @@ namespace Aspose.PSD.Examples.Runner
             ResizeLayersWithVogkResourceAndVectorPaths.Run();
             ResizeLayersWithVectorPaths.Run();
             GettingUniqueHashForSimilarLayers.Run();
+            SupportOfShapeLayer.Run();
         }
 
         /// <summary>
@@ -431,6 +432,8 @@ namespace Aspose.PSD.Examples.Runner
             RenderingExportOfChannelMixerAdjusmentLyer.Run();
             AddVibranceAdjustmentLayer.Run();
             SupportOfPosterizeAdjustmentLayer.Run();
+            SupportOfThresholdAdjustmentLayer.Run();
+            SupportOfSelectiveColorAdjustmentLayer.Run();
         }
 
         private static void RunLayerEffectsExamples()
@@ -678,6 +681,8 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfMlstResource.Run();
             SupportOfTimeLine.Run();
             SupportOfLayerStateEffects.Run();
+            SupportOfPsdImageTimelineProperty.Run();
+            SupportExportToGifImage.Run();
         }
     }
 }
