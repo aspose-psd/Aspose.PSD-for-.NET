@@ -189,6 +189,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportForInterruptMonitor.Run();
             InterruptMonitorTest.Run();
             CreateXMPMetadata.Run();
+            UpdatingCreatorToolInPSDFile.Run();
         }
 
         /// <summary>
@@ -374,6 +375,7 @@ namespace Aspose.PSD.Examples.Runner
             ResizeLayersWithVectorPaths.Run();
             GettingUniqueHashForSimilarLayers.Run();
             SupportOfShapeLayer.Run();
+            SupportShapeLayerFillProperty.Run();
         }
 
         /// <summary>
