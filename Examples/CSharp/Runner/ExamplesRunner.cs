@@ -429,6 +429,7 @@ namespace Aspose.PSD.Examples.Runner
             AddChannelMixerAdjustmentLayer.Run();
             AddHueSaturationAdjustmentLayer.Run();
             RenderingExposureAdjustmentLayer.Run();
+            RenderingOfPosterizeAdjustmentLayer.Run();
             ColorBalanceAdjustment.Run();
             InvertAdjustmentLayer.Run();
             RenderingExportOfChannelMixerAdjusmentLyer.Run();

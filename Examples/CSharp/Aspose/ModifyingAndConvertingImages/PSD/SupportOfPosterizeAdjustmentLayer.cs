@@ -1,7 +1,6 @@
 using System;
 using System.IO;
 using Aspose.PSD.FileFormats.Psd;
-using Aspose.PSD.FileFormats.Psd.Layers;
 using Aspose.PSD.FileFormats.Psd.Layers.AdjustmentLayers;
 using Aspose.PSD.ImageLoadOptions;
 
@@ -16,28 +15,40 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
             string outputDir = RunExamples.GetDataDir_Output();
 
             //ExStart:SupportOfPosterizeAdjustmentLayer
-            //ExSummary:The following code demonstrates the support of PosterizeLayer.
+            //ExSummary:The following code demonstrates the ability to add PosterizeAdjustmentLayer through PsdImage.
+            
+            string srcFile = Path.Combine(baseDir, "zendeya.psd");
+            string outFile = Path.Combine(outputDir, "zendeya.psd.out.psd");
 
-            string sourceFile = Path.Combine(baseDir, "zendeya_posterize.psd");
-            string outputFile = Path.Combine(outputDir, "zendeya_posterize_10.psd");
-
-            using (var image = (PsdImage)Image.Load(sourceFile, new PsdLoadOptions()))
+            using (PsdImage psdImage = (PsdImage)Image.Load(srcFile))
             {
-                foreach (Layer layer in image.Layers)
-                {
-                    if (layer is PosterizeLayer)
-                    {
-                        ((PosterizeLayer)layer).Levels = 10;
-                        image.Save(outputFile);
+                psdImage.AddPosterizeAdjustmentLayer();
+                psdImage.Save(outFile);
+            }
 
-                        break;
-                    }
+            // Check saved changes
+            using (PsdImage image = (PsdImage)Image.Load(
+                       outFile,
+                       new PsdLoadOptions { LoadEffectsResource = true }))
+            {
+                AssertAreEqual(2, image.Layers.Length);
+
+                PosterizeLayer posterizeLayer = (PosterizeLayer)image.Layers[1];
+
+                AssertAreEqual(true, posterizeLayer is PosterizeLayer);
+            }
+
+            void AssertAreEqual(object expected, object actual, string message = null)
+            {
+                if (!object.Equals(expected, actual))
+                {
+                    throw new Exception(message ?? "Objects are not equal.");
                 }
             }
 
             //ExEnd:SupportOfPosterizeAdjustmentLayer
 
-            File.Delete(outputFile);
+            File.Delete(outFile);
 
             Console.WriteLine("SupportOfPosterizeAdjustmentLayer executed successfully");
         }
