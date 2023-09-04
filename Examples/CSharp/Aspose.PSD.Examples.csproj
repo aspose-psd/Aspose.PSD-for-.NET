@@ -148,6 +148,7 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\PSDToPSB.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\PSDToPDF.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\RenderingOfDifferentStylesInOneTextLayer.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\RenderingOfPosterizeAdjustmentLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\RenderingOfRotatedTextLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\ResizePSDFile.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\Saving16BitGrayscalePsdTo8BitRgb.cs" />
@@ -310,7 +311,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Aspose.PSD">
-      <Version>23.7.0</Version>
+      <Version>23.8.0</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
