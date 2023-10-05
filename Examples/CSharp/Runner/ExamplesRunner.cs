@@ -414,6 +414,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfLayerMask.Run();
             SupportOfClippingMask.Run();
             SupportOfLayerVectorMask.Run();
+            SupportOfBlendClippedElementsProperty.Run();
         }
 
         private static void RunAdjustmentLayersExamples()
