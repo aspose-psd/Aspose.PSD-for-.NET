@@ -157,6 +157,7 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SetTextLayerPosition.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\StrokeEffectWithColorFill.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportIsStandardVerticalRomanAlignmentEnabledPropertyEdit.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfBlendClippedElementsProperty.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfCMYKColorMode16bit.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfEditFontNameInTextPortionStyle.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfEffectTypeProperty.cs" />
@@ -311,7 +312,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Aspose.PSD">
-      <Version>23.8.0</Version>
+      <Version>23.9.0</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

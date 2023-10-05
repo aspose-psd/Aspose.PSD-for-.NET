@@ -26,7 +26,6 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                 im.Save(exportPath, saveOptions);
             }
             //ExEnd:SupportOfClippingMask
-
         }
 
     }
