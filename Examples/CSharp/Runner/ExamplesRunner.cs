@@ -376,6 +376,7 @@ namespace Aspose.PSD.Examples.Runner
             GettingUniqueHashForSimilarLayers.Run();
             SupportOfShapeLayer.Run();
             SupportShapeLayerFillProperty.Run();
+            SupportOfShapeLayerRendering.Run();
         }
 
         /// <summary>
