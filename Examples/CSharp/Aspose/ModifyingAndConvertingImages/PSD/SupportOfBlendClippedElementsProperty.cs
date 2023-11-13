@@ -14,7 +14,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
             string outputDir = RunExamples.GetDataDir_Output();
 
             //ExStart:SupportOfBlendClippedElementsProperty
-            //ExSummary:The following code demonstrates 
+            //ExSummary:The following code demonstrates support of BlendClippedElements property.
             
             string sourceFile = Path.Combine(baseDir, "example_source.psd");
             string outputPsd = Path.Combine(outputDir, "example_output.psd");
