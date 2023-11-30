@@ -364,6 +364,7 @@ namespace Aspose.PSD.Examples.Runner
             ImplementLossyGIFCompressor.Run();
             ForceFontCache.Run();
             FontReplacement.Run();
+            RemoveFontCacheFile.Run();
             ReadAllEXIFTags.Run();
             ReadSpecificEXIFTagsInformation.Run();
             WritingAndModifyingEXIFData.Run();
@@ -566,6 +567,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfVscgResource.Run();
             SupportOfPostResource.Run();
             SupportOfGrdmResource.Run();
+            SupportOfLMskResource.Run();
         }
 
         /// <summary>
