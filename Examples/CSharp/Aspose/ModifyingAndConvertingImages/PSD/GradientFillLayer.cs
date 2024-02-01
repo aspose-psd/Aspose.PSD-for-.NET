@@ -31,7 +31,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                         {
                             throw new Exception("Wrong Fill Layer");
                         }
-                        var settings = (IGradientFillSettings)fillLayer.FillSettings;
+                        var settings = (GradientFillSettings)fillLayer.FillSettings;
 
                         if (
                          Math.Abs(settings.Angle - 45) > 0.25 ||

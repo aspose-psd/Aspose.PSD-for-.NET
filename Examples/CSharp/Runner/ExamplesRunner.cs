@@ -208,6 +208,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfAiFormatVersion8.Run();
             SupportOfRasterImagesInAI.Run();
             SupportOfLayersInAi.Run();
+            SupportOfActivePageIndex.Run();
         }
 
         /// <summary>
