@@ -610,6 +610,7 @@ namespace Aspose.PSD.Examples.Runner
             SimpleResizing.Run();
             ResizingwithResizeTypeEnumeration.Run();
             ResizeImageProportionally.Run();
+            RotatePatternSupport.Run();
 
             // Common operations
             VerifyImageTransparency.Run();

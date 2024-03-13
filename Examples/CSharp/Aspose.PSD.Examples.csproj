@@ -102,6 +102,7 @@
     <Compile Include="Aspose\DrawingAndFormattingImages\CombiningImages.cs" />
     <Compile Include="Aspose\Conversion\GIFImageLayersToTIFF.cs" />
     <Compile Include="Aspose\Conversion\Grayscaling.cs" />
+    <Compile Include="Aspose\FillLayers\RotatePatternSupport.cs" />
     <Compile Include="Aspose\LayerEffects\AddStrokeEffect.cs" />
     <Compile Include="Aspose\FillLayers\AddingFillLayerAtRuntime.cs" />
     <Compile Include="Aspose\GlobalResources\SupportOfBackgroundColorResource.cs" />
