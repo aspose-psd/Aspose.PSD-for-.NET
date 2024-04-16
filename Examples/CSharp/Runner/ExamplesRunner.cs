@@ -377,6 +377,7 @@ namespace Aspose.PSD.Examples.Runner
             ResizeLayersWithVectorPaths.Run();
             GettingUniqueHashForSimilarLayers.Run();
             SupportOfShapeLayer.Run();
+            AddShapeLayer.Run();
             SupportShapeLayerFillProperty.Run();
             SupportOfShapeLayerRendering.Run();
         }
