@@ -129,6 +129,7 @@
     <Compile Include="Aspose\LayerResources\VsmsResourceLengthRecordSupport.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\AI\AIToPDF.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\AI\SupportOfAiFormatVersion8.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\AI\SupportOfHasMultiLayerMasksAndColorIndexProperties.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\AI\SupportOfRasterImagesInAI.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSB\PSBToJPG.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSB\PSBToPDF.cs" />
@@ -172,6 +173,7 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfLinkedLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfPosterizeAdjustmentLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfPostResource.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfPsdOptionsBackgroundContentsProperty.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfScaleProperty.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfSelectiveColorAdjustmentLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\SupportOfSoCoResource.cs" />
@@ -318,7 +320,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Aspose.PSD">
-      <Version>24.4.0</Version>
+      <Version>24.5.0</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

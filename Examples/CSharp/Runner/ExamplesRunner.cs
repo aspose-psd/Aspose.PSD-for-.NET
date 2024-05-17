@@ -209,6 +209,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfRasterImagesInAI.Run();
             SupportOfLayersInAi.Run();
             SupportOfActivePageIndex.Run();
+            SupportOfHasMultiLayerMasksAndColorIndexProperties.Run();
         }
 
         /// <summary>
@@ -662,6 +663,8 @@ namespace Aspose.PSD.Examples.Runner
             SpecifyBitDepthOnPng.Run();
             ApplyFilterMethodOnPng.Run();
             ChangeBackgroundColorOfPng.Run();
+
+            SupportOfPsdOptionsBackgroundContentsProperty.Run();
         }
 
         /// <summary>
