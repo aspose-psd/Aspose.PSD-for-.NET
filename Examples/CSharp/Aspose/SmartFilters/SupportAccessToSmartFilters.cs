@@ -13,14 +13,14 @@ namespace Aspose.PSD.Examples.Aspose.SmartFilters
         public static void Run()
         {
             // The path to the documents directory.
-            string SourceDir = RunExamples.GetDataDir_PSD();
-            string OutputDir = RunExamples.GetDataDir_Output();
+            string sourceDir = RunExamples.GetDataDir_PSD();
+            string outputDir = RunExamples.GetDataDir_Output();
 
             //ExStart:SupportAccessToSmartFilters
             //ExSummary:This example demonstrates the support of the smart filters interface.
 
-            string sourceFilte = Path.Combine(SourceDir, "r2_SmartFilters.psd");
-            string outputPsd = Path.Combine(OutputDir, "out_r2_SmartFilters.psd");
+            string sourceFile = Path.Combine(sourceDir, "r2_SmartFilters.psd");
+            string outputPsd = Path.Combine(outputDir, "out_r2_SmartFilters.psd");
 
             void AssertAreEqual(object expected, object actual)
             {
@@ -30,7 +30,7 @@ namespace Aspose.PSD.Examples.Aspose.SmartFilters
                 }
             }
 
-            using (var image = (PsdImage)Image.Load(sourceFilte))
+            using (var image = (PsdImage)Image.Load(sourceFile))
             {
                 SmartObjectLayer smartObj = (SmartObjectLayer)image.Layers[1];
 
