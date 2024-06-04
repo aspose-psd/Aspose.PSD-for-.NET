@@ -1,4 +1,6 @@
-﻿using Aspose.PSD.FileFormats.Ai;
+﻿using System;
+using System.IO;
+using Aspose.PSD.FileFormats.Ai;
 using Aspose.PSD.ImageOptions;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.AI
@@ -7,31 +9,25 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.AI
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir_AI();
+            // The path to the document's directory.
+            string baseDir = RunExamples.GetDataDir_PSD();
+            string outputDir = RunExamples.GetDataDir_Output();
 
             //ExStart:AIToPDF
-            string[] sourcesFiles = new string[]
+            string sourceFileName = Path.Combine(baseDir, "rect2_color.ai");
+            string outFileName = Path.Combine(outputDir, "rect2_color.pdf");
+
+            ImageOptionsBase pdfOptions = new PdfOptions();
+            
+            using (AiImage image = (AiImage)Image.Load(sourceFileName))
             {
-                @"rect2_color",
-            };
-
-            for (int i = 0; i < sourcesFiles.Length; i++)
-            {
-                string name = sourcesFiles[i];
-                string sourceFileName = dataDir + name + ".ai";
-                string outFileName = dataDir + name + ".pdf";
-
-
-                using (AiImage image = (AiImage)Image.Load(sourceFileName))
-                {
-
-                    ImageOptionsBase options = new PdfOptions();
-                    image.Save(outFileName, options);
-                }
+                image.Save(outFileName, pdfOptions);
             }
-
             //ExEnd:AIToPDF
+
+            File.Delete(outFileName);
+
+            Console.WriteLine("AIToPDF executed successfully");
         }
     }
 }

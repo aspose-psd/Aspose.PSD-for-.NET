@@ -205,6 +205,7 @@ namespace Aspose.PSD.Examples.Runner
             AIToGIF.Run();
             AIToTIFF.Run();
             AIToPDF.Run();
+            AIToPDFA1a.Run();
             SupportOfAiFormatVersion8.Run();
             SupportOfRasterImagesInAI.Run();
             SupportOfLayersInAi.Run();
@@ -379,6 +380,7 @@ namespace Aspose.PSD.Examples.Runner
             GettingUniqueHashForSimilarLayers.Run();
             SupportOfShapeLayer.Run();
             AddShapeLayer.Run();
+            ShapeLayerManipulation.Run();
             SupportShapeLayerFillProperty.Run();
             SupportOfShapeLayerRendering.Run();
         }
@@ -419,6 +421,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfLayerMask.Run();
             SupportOfClippingMask.Run();
             SupportOfLayerVectorMask.Run();
+            WorkingWithMasks.Run();
             SupportOfBlendClippedElementsProperty.Run();
         }
 
@@ -443,6 +446,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfPosterizeAdjustmentLayer.Run();
             SupportOfThresholdAdjustmentLayer.Run();
             SupportOfSelectiveColorAdjustmentLayer.Run();
+            UsingAdjustmentLayers.Run();
         }
 
         private static void RunLayerEffectsExamples()
@@ -493,6 +497,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfConvertingLayerToSmartObject.Run();
             SupportOfReplaceContentsInSmartObjects.Run();
             SupportOfWarpTransformationToSmartObject.Run();
+            SupportOfExportContentsFromSmartObject.Run();
         }
 
         private static void RunSmartFiltersExamples()
@@ -503,6 +508,8 @@ namespace Aspose.PSD.Examples.Runner
             SupportAccessToSmartFilters.Run();
             SupportCustomSmartFilterRenderer.Run();
             SupportSharpenSmartFilter.Run();
+            DirectlyApplySmartFilter.Run();
+            ManipulatingSmartFiltersInSmartObjects.Run();
         }
 
         private static void RunTextLayersExamples()
@@ -589,6 +596,7 @@ namespace Aspose.PSD.Examples.Runner
             CoreDrawingFeatures.Run();
             DrawingUsingGraphics.Run();
             DrawingUsingGraphicsPath.Run();
+            PixelDataManipulation.Run();
 
             // Filters
             ApplyMedianAndWienerFilters.Run();
