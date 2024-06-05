@@ -72,6 +72,7 @@
     <Compile Include="Aspose\DrawingAndFormattingImages\ImplementBicubicResampler.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\ImplementLossyGIFCompressor.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\InvertAdjustmentLayer.cs" />
+    <Compile Include="Aspose\DrawingAndFormattingImages\PixelDataManipulation.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\RawColorClass.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\RemoveFontCacheFile.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\RenderingColorEffect.cs" />
@@ -128,6 +129,7 @@
     <Compile Include="Aspose\LayerResources\SupportOfVstkResource.cs" />
     <Compile Include="Aspose\LayerResources\VsmsResourceLengthRecordSupport.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\AI\AIToPDF.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\AI\AIToPDFA1a.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\AI\SupportOfAiFormatVersion8.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\AI\SupportOfHasMultiLayerMasksAndColorIndexProperties.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\AI\SupportOfRasterImagesInAI.cs" />
@@ -272,7 +274,9 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\UncompressedImageStreamObject.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\UncompressedImageUsingFile.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\UpdateTextLayerInPSDFile.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\UsingAdjustmentLayers.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\UsingDocumentConversionProgressHandler.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\WorkingWithMasks.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\TIFF\CompressingTiff.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\TIFF\ExportToMultiPageTiff.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\TIFF\TiffOptionsConfiguration.cs" />
@@ -280,12 +284,15 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\TIFF\TIFFwithDeflateCompression.cs" />
     <Compile Include="Aspose\Opening\LoadingImageFromStream.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\GetPropertiesOfInlineFormattingOfTextLayer.cs" />
+    <Compile Include="Aspose\SmartFilters\DirectlyApplySmartFilter.cs" />
+    <Compile Include="Aspose\SmartFilters\ManipulatingSmartFiltersInSmartObjects.cs" />
     <Compile Include="Aspose\SmartFilters\SupportAccessToSmartFilters.cs" />
     <Compile Include="Aspose\SmartFilters\SupportCustomSmartFilterRenderer.cs" />
     <Compile Include="Aspose\SmartFilters\SupportSharpenSmartFilter.cs" />
     <Compile Include="Aspose\SmartObjects\SupportOfConvertingLayerToSmartObject.cs" />
     <Compile Include="Aspose\SmartObjects\SupportOfCopyingOfSmartObjectLayers.cs" />
     <Compile Include="Aspose\SmartObjects\SupportOfEmbeddedSmartObjects.cs" />
+    <Compile Include="Aspose\SmartObjects\SupportOfExportContentsFromSmartObject.cs" />
     <Compile Include="Aspose\SmartObjects\SupportOfReplaceContentsInSmartObjects.cs" />
     <Compile Include="Aspose\SmartObjects\SupportOfWarpTransformationToSmartObject.cs" />
     <Compile Include="Aspose\WorkingWithPSD\ChangingGroupVisibility.cs" />
@@ -304,6 +311,7 @@
     <Compile Include="Aspose\WorkingWithVectorPaths\ClassesToManipulateVectorPathObjects.cs" />
     <Compile Include="Aspose\WorkingWithVectorPaths\ResizeLayersWithVectorPaths.cs" />
     <Compile Include="Aspose\WorkingWithVectorPaths\ResizeLayersWithVogkResourceAndVectorPaths.cs" />
+    <Compile Include="Aspose\WorkingWithVectorPaths\ShapeLayerManipulation.cs" />
     <Compile Include="Aspose\WorkingWithVectorPaths\SupportIPathToManipulateVectorPathObjects.cs" />
     <Compile Include="Aspose\WorkingWithVectorPaths\SupportOfShapeLayer.cs" />
     <Compile Include="Aspose\WorkingWithVectorPaths\SupportOfShapeLayerRendering.cs" />

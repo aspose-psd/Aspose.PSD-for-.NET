@@ -15,8 +15,7 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
     {
         public static void Run()
         {
-            // The path to the documents directory.
-            string baseDir = RunExamples.GetDataDir_PSD();
+            // The path to the document's directory.
             string outputDir = RunExamples.GetDataDir_Output();
 
             //ExStart:AddShapeLayer
