@@ -21,8 +21,8 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
             {
                 // The most simple is the using of Clipping masks
                 // Some Layer and Adjustment Layer Become Clipping Masks
-                image.Layers[4].Clipping = 1;
-                image.Layers[5].Clipping = 1;
+                image.Layers[2].Clipping = 1;
+                image.Layers[3].Clipping = 1;
 
                 // Example how to add Mask to Layer
                 LayerMaskDataShort mask = new LayerMaskDataShort
@@ -39,7 +39,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                 }
 
                 mask.ImageData = maskData;
-                image.Layers[2].AddLayerMask(mask);
+                image.Layers[1].AddLayerMask(mask);
 
                 image.Save(outputUpdated);
             }

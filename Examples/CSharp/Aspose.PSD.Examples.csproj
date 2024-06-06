@@ -131,12 +131,14 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\AI\AIToPDF.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\AI\AIToPDFA1a.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\AI\SupportOfAiFormatVersion8.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\AI\SupportOfAiImageXmpDataProperty.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\AI\SupportOfHasMultiLayerMasksAndColorIndexProperties.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\AI\SupportOfRasterImagesInAI.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSB\PSBToJPG.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSB\PSBToPDF.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSB\PSBToPSD.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\AddBlackAndWhiteAdjustmentLayer.cs" />
+    <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\AddGradientMapAdjustmentLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\AddTextLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\AddVibranceAdjustmentLayer.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\ColorFillLayer.cs" />
@@ -328,7 +330,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Aspose.PSD">
-      <Version>24.5.0</Version>
+      <Version>24.6.0</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

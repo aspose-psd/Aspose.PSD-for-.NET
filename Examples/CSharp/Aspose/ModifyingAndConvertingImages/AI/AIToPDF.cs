@@ -14,7 +14,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.AI
             string outputDir = RunExamples.GetDataDir_Output();
 
             //ExStart:AIToPDF
-            string sourceFileName = Path.Combine(baseDir, "rect2_color.ai");
+            string sourceFileName = Path.Combine(baseDir, "ai_one.ai");
             string outFileName = Path.Combine(outputDir, "rect2_color.pdf");
 
             ImageOptionsBase pdfOptions = new PdfOptions();

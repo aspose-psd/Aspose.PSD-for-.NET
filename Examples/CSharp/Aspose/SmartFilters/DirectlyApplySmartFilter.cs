@@ -10,12 +10,12 @@ namespace Aspose.PSD.Examples.Aspose.SmartFilters
     {
         public static void Run()
         {
-            // The path to the documents directory.
+            // The path to the document's directory.
             string sourceDir = RunExamples.GetDataDir_PSD();
             string outputDir = RunExamples.GetDataDir_Output();
 
             //ExStart:DirectlyApplySmartFilter
-            string source = Path.Combine(sourceDir, "VerySmoothPicture.psd");
+            string source = Path.Combine(sourceDir, "sharpen_source.psd");
             string outputUpdated = Path.Combine(outputDir, "output_updated.psd");
 
             using (PsdImage im = (PsdImage)Image.Load(source))
