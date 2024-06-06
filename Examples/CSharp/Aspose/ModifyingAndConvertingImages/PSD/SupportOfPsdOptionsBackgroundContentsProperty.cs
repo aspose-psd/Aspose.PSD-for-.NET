@@ -10,7 +10,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
     {
         public static void Run()
         {
-            // The path to the documents directory.
+            // The path to the document's directory.
             string baseDir = RunExamples.GetDataDir_PSD();
             string outputDir = RunExamples.GetDataDir_Output();
 

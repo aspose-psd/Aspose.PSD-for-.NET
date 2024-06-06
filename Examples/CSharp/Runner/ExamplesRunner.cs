@@ -211,6 +211,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfLayersInAi.Run();
             SupportOfActivePageIndex.Run();
             SupportOfHasMultiLayerMasksAndColorIndexProperties.Run();
+            SupportOfAiImageXmpDataProperty.Run();
         }
 
         /// <summary>
@@ -447,6 +448,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfThresholdAdjustmentLayer.Run();
             SupportOfSelectiveColorAdjustmentLayer.Run();
             UsingAdjustmentLayers.Run();
+            AddGradientMapAdjustmentLayer.Run();
         }
 
         private static void RunLayerEffectsExamples()
