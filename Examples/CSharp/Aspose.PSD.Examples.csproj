@@ -293,6 +293,7 @@
     <Compile Include="Aspose\SmartObjects\SupportOfExportContentsFromSmartObject.cs" />
     <Compile Include="Aspose\SmartObjects\SupportOfReplaceContentsInSmartObjects.cs" />
     <Compile Include="Aspose\SmartObjects\SupportOfWarpTransformationToSmartObject.cs" />
+    <Compile Include="Aspose\SmartObjects\WarpSettingsForSmartObjectLayerAndTextLayer.cs" />
     <Compile Include="Aspose\WorkingWithPSD\ChangingGroupVisibility.cs" />
     <Compile Include="Aspose\LayerResources\SupportForBlwhResource.cs" />
     <Compile Include="Aspose\WorkingWithPSD\ExportLayerGroupToImage.cs" />

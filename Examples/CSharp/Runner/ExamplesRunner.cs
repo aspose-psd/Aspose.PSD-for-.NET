@@ -500,6 +500,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfReplaceContentsInSmartObjects.Run();
             SupportOfWarpTransformationToSmartObject.Run();
             SupportOfExportContentsFromSmartObject.Run();
+            WarpSettingsForSmartObjectLayerAndTextLayer.Run();
         }
 
         private static void RunSmartFiltersExamples()
