@@ -52,7 +52,6 @@
     <Compile Include="Aspose\Conversion\LoadingFromStream.cs" />
     <Compile Include="Aspose\Conversion\SaveImageWorker.cs" />
     <Compile Include="Aspose\Conversion\SavingtoStream.cs" />
-    <Compile Include="Aspose\Conversion\SavingtoDisk.cs" />
     <Compile Include="Aspose\Conversion\SettingforReplacingMissingFonts.cs" />
     <Compile Include="Aspose\Conversion\SupportForInterruptMonitor.cs" />
     <Compile Include="Aspose\Conversion\SyncRoot.cs" />
@@ -89,13 +88,10 @@
     <Compile Include="Aspose\DrawingAndFormattingImages\AdjustingContrast.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\AdjustingBrightness.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\ResizeImageProportionally.cs" />
-    <Compile Include="Aspose\DrawingAndFormattingImages\ResizingwithResizeTypeEnumeration.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\DitheringforRasterImages.cs" />
-    <Compile Include="Aspose\DrawingAndFormattingImages\SimpleResizing.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\RotatinganImageonaSpecificAngle.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\RotatinganImage.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\CroppingbyRectangle.cs" />
-    <Compile Include="Aspose\DrawingAndFormattingImages\CroppingbyShifts.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\CreatingUsingStream.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\CreatingbySettingPath.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\CreateXMPMetadata.cs" />
