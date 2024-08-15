@@ -52,7 +52,6 @@
     <Compile Include="Aspose\Conversion\LoadingFromStream.cs" />
     <Compile Include="Aspose\Conversion\SaveImageWorker.cs" />
     <Compile Include="Aspose\Conversion\SavingtoStream.cs" />
-    <Compile Include="Aspose\Conversion\SavingtoDisk.cs" />
     <Compile Include="Aspose\Conversion\SettingforReplacingMissingFonts.cs" />
     <Compile Include="Aspose\Conversion\SupportForInterruptMonitor.cs" />
     <Compile Include="Aspose\Conversion\SyncRoot.cs" />
@@ -89,13 +88,10 @@
     <Compile Include="Aspose\DrawingAndFormattingImages\AdjustingContrast.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\AdjustingBrightness.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\ResizeImageProportionally.cs" />
-    <Compile Include="Aspose\DrawingAndFormattingImages\ResizingwithResizeTypeEnumeration.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\DitheringforRasterImages.cs" />
-    <Compile Include="Aspose\DrawingAndFormattingImages\SimpleResizing.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\RotatinganImageonaSpecificAngle.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\RotatinganImage.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\CroppingbyRectangle.cs" />
-    <Compile Include="Aspose\DrawingAndFormattingImages\CroppingbyShifts.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\CreatingUsingStream.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\CreatingbySettingPath.cs" />
     <Compile Include="Aspose\DrawingAndFormattingImages\CreateXMPMetadata.cs" />
@@ -297,6 +293,7 @@
     <Compile Include="Aspose\SmartObjects\SupportOfExportContentsFromSmartObject.cs" />
     <Compile Include="Aspose\SmartObjects\SupportOfReplaceContentsInSmartObjects.cs" />
     <Compile Include="Aspose\SmartObjects\SupportOfWarpTransformationToSmartObject.cs" />
+    <Compile Include="Aspose\SmartObjects\WarpSettingsForSmartObjectLayerAndTextLayer.cs" />
     <Compile Include="Aspose\WorkingWithPSD\ChangingGroupVisibility.cs" />
     <Compile Include="Aspose\LayerResources\SupportForBlwhResource.cs" />
     <Compile Include="Aspose\WorkingWithPSD\ExportLayerGroupToImage.cs" />
@@ -330,7 +327,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Aspose.PSD">
-      <Version>24.6.0</Version>
+      <Version>24.8.0</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -7,12 +7,13 @@ namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
     {
         public static void Run()
         {
-            // Add color overlay layer effect at runtime
-            string dataDir = RunExamples.GetDataDir_PSD();
+            // The path to the document's directory.
+            string baseDir = RunExamples.GetDataDir_PSD();
+            string outputDir = RunExamples.GetDataDir_Output();
 
             //ExStart:ImplementBicubicResampler
-            string sourceFile = dataDir + "sample_bicubic.psd";
-            string destNameCubicConvolution = dataDir + "ResamplerCubicConvolutionStripes_after.psd";
+            string sourceFile = baseDir + "sample_bicubic.psd";
+            string destNameCubicConvolution = outputDir + "ResamplerCubicConvolutionStripes_after.psd";
 
             // Load an existing image into an instance of PsdImage class
             using (PsdImage image = (PsdImage)Image.Load(sourceFile))
@@ -22,7 +23,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
             }
 
 
-            string destNameCatmullRom = dataDir + "ResamplerCatmullRomStripes_after.psd";
+            string destNameCatmullRom = outputDir + "ResamplerCatmullRomStripes_after.psd";
 
             // Load an existing image into an instance of PsdImage class
             using (PsdImage image = (PsdImage)Image.Load(sourceFile))
@@ -32,7 +33,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
             }
 
 
-            string destNameMitchell = "ResamplerMitchellStripes_after.psd";
+            string destNameMitchell = outputDir + "ResamplerMitchellStripes_after.psd";
 
             // Load an existing image into an instance of PsdImage class
             using (PsdImage image = (PsdImage)Image.Load(sourceFile))
@@ -42,7 +43,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
             }
 
 
-            string destNameCubicBSpline = "ResamplerCubicBSplineStripes_after.psd";
+            string destNameCubicBSpline = outputDir + "ResamplerCubicBSplineStripes_after.psd";
 
             // Load an existing image into an instance of PsdImage class
             using (PsdImage image = (PsdImage)Image.Load(sourceFile))
@@ -52,7 +53,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
             }
 
 
-            string destNameSinC = "ResamplerSinCStripes_after.psd";
+            string destNameSinC = outputDir + "ResamplerSinCStripes_after.psd";
 
             // Load an existing image into an instance of PsdImage class
             using (PsdImage image = (PsdImage)Image.Load(sourceFile))
@@ -62,7 +63,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
             }
 
 
-            string destNameBell = "ResamplerBellStripes_after.psd";
+            string destNameBell = outputDir + "ResamplerBellStripes_after.psd";
 
             // Load an existing image into an instance of PsdImage class
             using (PsdImage image = (PsdImage)Image.Load(sourceFile))
@@ -72,9 +73,17 @@ namespace Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages
             }
 
 
+            string destNameLanczos = outputDir + "ResamplerLanczosStripes_after.psd";
+
+            // Load an existing image into an instance of PsdImage class
+            using (PsdImage image = (PsdImage)Image.Load(sourceFile))
+            {
+                image.Resize(300, 300, ResizeType.LanczosResample);
+                image.Save(destNameLanczos, new PsdOptions(image));
+            }
+
+
             //ExEnd:ImplementBicubicResampler
-
-
         }
     }
 }

@@ -500,6 +500,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfReplaceContentsInSmartObjects.Run();
             SupportOfWarpTransformationToSmartObject.Run();
             SupportOfExportContentsFromSmartObject.Run();
+            WarpSettingsForSmartObjectLayerAndTextLayer.Run();
         }
 
         private static void RunSmartFiltersExamples()
@@ -615,12 +616,9 @@ namespace Aspose.PSD.Examples.Runner
             BluranImage.Run();
 
             // Crop, Resize, Rotate
-            CroppingbyShifts.Run();
             CroppingbyRectangle.Run();
             RotatinganImage.Run();
             RotatinganImageonaSpecificAngle.Run();
-            SimpleResizing.Run();
-            ResizingwithResizeTypeEnumeration.Run();
             ResizeImageProportionally.Run();
             RotatePatternSupport.Run();
 
@@ -684,7 +682,6 @@ namespace Aspose.PSD.Examples.Runner
         {
             Console.WriteLine("Starting Open/Save/Create Basics Examples");
             //Opening and saving
-            SavingtoDisk.Run();
             SavingtoStream.Run();
             LoadingFromStream.Run();
             ExportImagesinMultiThreadEnv.Run();
