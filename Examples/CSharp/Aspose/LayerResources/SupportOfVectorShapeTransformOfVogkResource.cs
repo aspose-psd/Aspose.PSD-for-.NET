@@ -3,7 +3,7 @@ using System.IO;
 using Aspose.PSD.CoreExceptions.ImageFormats;
 using Aspose.PSD.FileFormats.Core.VectorPaths;
 using Aspose.PSD.FileFormats.Psd;
-using Aspose.PSD.FileFormats.Psd.Layers.FillLayers;
+using Aspose.PSD.FileFormats.Psd.Layers;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerResources;
 using Aspose.PSD.ImageOptions;
 
@@ -15,15 +15,15 @@ namespace Aspose.PSD.Examples.Aspose.LayerResources
         {
             //ExStart:SupportOfVectorShapeTransformOfVogkResource
 
-            // The path to the documents directory.
-            string SourceDir = RunExamples.GetDataDir_PSD();
-            string OutputDir = RunExamples.GetDataDir_Output();
+            // The path to the document's directory.
+            string sourceDir = RunExamples.GetDataDir_PSD();
+            string outputDir = RunExamples.GetDataDir_Output();
 
             // This example shows how to get and set new Transform and OriginBoxCorners properties
             // of ShapeOriginSettings in the Vogk resource of FillLayer in the PSD file
 
-            string sourceFileName = Path.Combine(SourceDir, "vectorShape_25_50.psd");
-            string outputPath = Path.Combine(OutputDir, "result.psd");
+            string sourceFileName = Path.Combine(sourceDir, "vectorShape_25_50.psd");
+            string outputPath = Path.Combine(outputDir, "result.psd");
 
             VectorShapeOriginSettings originalSetting;
             const int layerIndex = 0;
@@ -33,8 +33,8 @@ namespace Aspose.PSD.Examples.Aspose.LayerResources
             {
                 AssertIsTrue(layerIndex < image.Layers.Length);
                 var layer = image.Layers[layerIndex];
-                AssertIsTrue(layer is FillLayer);
-                var resource = GetVogkResource((FillLayer)layer);
+                AssertIsTrue(layer is ShapeLayer);
+                var resource = GetVogkResource(layer);
                 AssertAreEqual(1, resource.ShapeOriginSettings.Length);
 
                 // Assert after reading
@@ -86,8 +86,8 @@ namespace Aspose.PSD.Examples.Aspose.LayerResources
             using (PsdImage image = (PsdImage)Image.Load(outputPath))
             {
                 var layer = image.Layers[layerIndex];
-                AssertIsTrue(layer is FillLayer);
-                var resource = GetVogkResource((FillLayer)layer);
+                AssertIsTrue(layer is ShapeLayer);
+                var resource = GetVogkResource(layer);
                 AssertAreEqual(1, resource.ShapeOriginSettings.Length);
 
                 // Assert that properties are saved and loaded correctly 
@@ -117,7 +117,7 @@ namespace Aspose.PSD.Examples.Aspose.LayerResources
                 AssertAreEqual(originalSetting.OriginBoxCorners[7], setting.OriginBoxCorners[7]);
             }
 
-            VogkResource GetVogkResource(FillLayer layer)
+            VogkResource GetVogkResource(Layer layer)
             {
                 if (layer == null)
                 {

@@ -581,6 +581,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfPostResource.Run();
             SupportOfGrdmResource.Run();
             SupportOfLMskResource.Run();
+            SupportOfArtBResourceArtDResourceLyvrResource.Run();
         }
 
         /// <summary>
