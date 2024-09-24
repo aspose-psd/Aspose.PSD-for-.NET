@@ -107,6 +107,7 @@
     <Compile Include="Aspose\GlobalResources\SupportOfWorkingPathResource.cs" />
     <Compile Include="Aspose\LayerEffects\RenderingOfGradientOverlayEffect.cs" />
     <Compile Include="Aspose\LayerEffects\SupportOfGradientOverlayEffect.cs" />
+    <Compile Include="Aspose\LayerResources\SupportOfArtBResourceArtDResourceLyvrResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfFXidResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfGrdmResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfLMskResource.cs" />
@@ -327,7 +328,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Aspose.PSD">
-      <Version>24.8.0</Version>
+      <Version>24.9.0</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
