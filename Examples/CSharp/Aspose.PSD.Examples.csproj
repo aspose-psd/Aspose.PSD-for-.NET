@@ -304,6 +304,7 @@
     <Compile Include="Aspose\WorkingWithPSD\GettingUniqueHashForSimilarLayers.cs" />
     <Compile Include="Aspose\WorkingWithPSD\LayerGroupIsOpenSupport.cs" />
     <Compile Include="Aspose\WorkingWithPSD\SupportEditingGlobalFontList.cs" />
+    <Compile Include="Aspose\WorkingWithPSD\SupportOfArtboardLayer.cs" />
     <Compile Include="Aspose\WorkingWithPSD\SupportOfPassThroughBlendingMode.cs" />
     <Compile Include="Aspose\WorkingWithPSD\SupportOfSectionDividerLayer.cs" />
     <Compile Include="Aspose\WorkingWithPSD\UpdatingCreatorToolInPSDFile.cs" />
@@ -328,7 +329,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Aspose.PSD">
-      <Version>24.9.0</Version>
+      <Version>24.11.0</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
