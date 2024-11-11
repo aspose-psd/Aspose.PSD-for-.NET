@@ -327,6 +327,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfPassThroughBlendingMode.Run();
             SupportOfSectionDividerLayer.Run();
             LayerGroupIsOpenSupport.Run();
+            SupportOfArtboardLayer.Run();
         }
 
         /// <summary>
