@@ -212,6 +212,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfActivePageIndex.Run();
             SupportOfHasMultiLayerMasksAndColorIndexProperties.Run();
             SupportOfAiImageXmpDataProperty.Run();
+            SupportAiImagePageCountProperty.Run();
         }
 
         /// <summary>
