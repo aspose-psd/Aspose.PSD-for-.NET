@@ -36,6 +36,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aspose\Ai\SupportAiImagePageCountProperty.cs" />
     <Compile Include="Aspose\Ai\SupportOfActivePageIndex.cs" />
     <Compile Include="Aspose\Ai\SupportOfLayersInAi.cs" />
     <Compile Include="Aspose\Animation\SupportExportToGifImage.cs" />
