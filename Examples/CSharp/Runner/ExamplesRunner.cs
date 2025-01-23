@@ -500,6 +500,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfCopyingOfSmartObjectLayers.Run();
             SupportOfConvertingLayerToSmartObject.Run();
             SupportOfReplaceContentsInSmartObjects.Run();
+            SupportOfReplaceContentsByLink.Run();
             SupportOfWarpTransformationToSmartObject.Run();
             SupportOfExportContentsFromSmartObject.Run();
             WarpSettingsForSmartObjectLayerAndTextLayer.Run();
