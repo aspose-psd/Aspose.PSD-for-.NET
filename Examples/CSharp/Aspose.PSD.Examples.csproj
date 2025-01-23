@@ -293,6 +293,7 @@
     <Compile Include="Aspose\SmartObjects\SupportOfCopyingOfSmartObjectLayers.cs" />
     <Compile Include="Aspose\SmartObjects\SupportOfEmbeddedSmartObjects.cs" />
     <Compile Include="Aspose\SmartObjects\SupportOfExportContentsFromSmartObject.cs" />
+    <Compile Include="Aspose\SmartObjects\SupportOfReplaceContentsByLink.cs" />
     <Compile Include="Aspose\SmartObjects\SupportOfReplaceContentsInSmartObjects.cs" />
     <Compile Include="Aspose\SmartObjects\SupportOfWarpTransformationToSmartObject.cs" />
     <Compile Include="Aspose\SmartObjects\WarpSettingsForSmartObjectLayerAndTextLayer.cs" />
