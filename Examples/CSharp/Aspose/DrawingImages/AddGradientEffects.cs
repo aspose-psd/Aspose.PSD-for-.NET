@@ -42,7 +42,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                 AssertIsTrue(gradientOverlay.Opacity == 255);
                 AssertIsTrue(gradientOverlay.IsVisible == true);
 
-                var settings = gradientOverlay.Settings;
+                var settings = (GradientFillSettings)gradientOverlay.Settings;
                 AssertIsTrue(settings.Color == Color.Empty);
                 AssertIsTrue(settings.FillType == FillType.Gradient);
                 AssertIsTrue(settings.AlignWithLayer == true);
@@ -125,7 +125,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                     AssertIsTrue(gradientOverlay.Opacity == 193);
                     AssertIsTrue(gradientOverlay.IsVisible == true);
 
-                    var fillSettings = gradientOverlay.Settings;
+                    var fillSettings = (GradientFillSettings)gradientOverlay.Settings;
                     AssertIsTrue(fillSettings.Color == Color.Empty);
                     AssertIsTrue(fillSettings.FillType == FillType.Gradient);
 

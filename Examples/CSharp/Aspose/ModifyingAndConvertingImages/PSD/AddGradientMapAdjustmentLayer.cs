@@ -25,6 +25,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                 // Add Gradient map adjustment layer.
                 GradientMapLayer layer = im.AddGradientMapAdjustmentLayer();
                 layer.GradientSettings.Reverse = true;
+                layer.Update();
 
                 im.Save(outputFile);
             }
@@ -35,10 +36,10 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                 GradientMapLayer gradientMapLayer = im.Layers[1] as GradientMapLayer;
                 GradientFillSettings gradientSettings = (GradientFillSettings)gradientMapLayer.GradientSettings;
 
-                AssertAreEqual(0.0, gradientSettings.Angle);
+                AssertAreEqual(90.0, gradientSettings.Angle);
                 AssertAreEqual((short)4096, gradientSettings.Interpolation);
                 AssertAreEqual(true, gradientSettings.Reverse);
-                AssertAreEqual(false, gradientSettings.AlignWithLayer);
+                AssertAreEqual(true, gradientSettings.AlignWithLayer);
                 AssertAreEqual(false, gradientSettings.Dither);
                 AssertAreEqual(GradientType.Linear, gradientSettings.GradientType);
                 AssertAreEqual(100, gradientSettings.Scale);
