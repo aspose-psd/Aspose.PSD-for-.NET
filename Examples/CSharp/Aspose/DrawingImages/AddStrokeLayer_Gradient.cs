@@ -42,7 +42,6 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                 AssertIsTrue(gradientStroke.IsVisible);
 
                 var fillSettings = (GradientFillSettings)gradientStroke.FillSettings;
-                AssertIsTrue(fillSettings.Color == Color.Black);
                 AssertIsTrue(fillSettings.FillType == FillType.Gradient);
                 AssertIsTrue(fillSettings.AlignWithLayer);
                 AssertIsTrue(fillSettings.GradientType == GradientType.Linear);
@@ -77,8 +76,6 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                 AssertIsTrue(transparencyPoints[1].Opacity == 100);
 
                 // Test editing
-                fillSettings.Color = Color.Green;
-
                 gradientStroke.Opacity = 127;
                 gradientStroke.BlendMode = BlendMode.Color;
 
@@ -124,9 +121,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                 }
 
                 var fillSettings = (GradientFillSettings)gradientStroke.FillSettings;
-                if ((fillSettings.Color != Color.Green) ||
-                    (fillSettings.FillType != FillType.Gradient) ||
-                    fillSettings.ColorPoints.Length != 3)
+                if (fillSettings.FillType != FillType.Gradient || fillSettings.ColorPoints.Length != 3)
                 {
                     throw new Exception("Assertion fails");
                 }

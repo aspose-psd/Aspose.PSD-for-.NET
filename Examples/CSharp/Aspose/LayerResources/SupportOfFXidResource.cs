@@ -20,7 +20,7 @@ namespace Aspose.PSD.Examples.Aspose.LayerResources
             string output = Path.Combine(OutputDir, "out_psdnet414_3.psd");
 
             int resLength = 1144;
-            int maskLength = 369;
+            long maskLength = 369;
 
             void AssertAreEqual(object expected, object actual, string message = null)
             {

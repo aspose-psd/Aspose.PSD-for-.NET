@@ -108,6 +108,7 @@
     <Compile Include="Aspose\GlobalResources\SupportOfWorkingPathResource.cs" />
     <Compile Include="Aspose\LayerEffects\RenderingOfGradientOverlayEffect.cs" />
     <Compile Include="Aspose\LayerEffects\SupportOfGradientOverlayEffect.cs" />
+    <Compile Include="Aspose\LayerResources\SupportForImfxResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfArtBResourceArtDResourceLyvrResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfFXidResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfGrdmResource.cs" />
@@ -297,6 +298,7 @@
     <Compile Include="Aspose\SmartObjects\SupportOfReplaceContentsInSmartObjects.cs" />
     <Compile Include="Aspose\SmartObjects\SupportOfWarpTransformationToSmartObject.cs" />
     <Compile Include="Aspose\SmartObjects\WarpSettingsForSmartObjectLayerAndTextLayer.cs" />
+    <Compile Include="Aspose\SmartObjects\SupportOfProcessingAreaProperty.cs" />
     <Compile Include="Aspose\WorkingWithPSD\ChangingGroupVisibility.cs" />
     <Compile Include="Aspose\LayerResources\SupportForBlwhResource.cs" />
     <Compile Include="Aspose\WorkingWithPSD\ExportLayerGroupToImage.cs" />
@@ -331,7 +333,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Aspose.PSD">
-      <Version>24.11.0</Version>
+      <Version>25.5.0</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -15,7 +15,6 @@ using Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD;
 using Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.TIFF;
 using Aspose.PSD.Examples.Aspose.Opening;
 using Aspose.PSD.Examples.Aspose.WorkingWithPSD;
-using System;
 using Aspose.PSD.Examples.Aspose.Animation;
 using Aspose.PSD.Examples.Aspose.SmartObjects;
 using Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths;
@@ -504,6 +503,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfWarpTransformationToSmartObject.Run();
             SupportOfExportContentsFromSmartObject.Run();
             WarpSettingsForSmartObjectLayerAndTextLayer.Run();
+            SupportOfProcessingAreaProperty.Run();
         }
 
         private static void RunSmartFiltersExamples()
@@ -585,6 +585,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfGrdmResource.Run();
             SupportOfLMskResource.Run();
             SupportOfArtBResourceArtDResourceLyvrResource.Run();
+            SupportForImfxResource.Run();
         }
 
         /// <summary>
