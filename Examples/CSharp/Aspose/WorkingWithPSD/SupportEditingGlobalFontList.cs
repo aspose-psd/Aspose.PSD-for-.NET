@@ -1,8 +1,7 @@
 ﻿using Aspose.PSD.FileFormats.Png;
 using Aspose.PSD.FileFormats.Psd;
+using Aspose.PSD.ImageLoadOptions;
 using Aspose.PSD.ImageOptions;
-using System;
-using System.IO;
 
 namespace Aspose.PSD.Examples.Aspose.WorkingWithPSD
 {
@@ -35,7 +34,8 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithPSD
                 FontSettings.SetFontReplacements("Arial", arialReplacement);
                 FontSettings.SetFontReplacements("Times New Roman", timesReplacement);
 
-                using (PsdImage image = (PsdImage)Image.Load(srcFile))
+                using (PsdImage image = (PsdImage)Image.Load(srcFile,
+                    new PsdLoadOptions() { AllowNonChangedLayerRepaint = false }))
                 {
                     image.Save(output, new PngOptions() { ColorType = PngColorType.TruecolorWithAlpha });
                 }

@@ -345,6 +345,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfScaleProperty.Run();
             SupportOfRotateLayer.Run();
             SupportOfUpdatingLinkedSmartObjects.Run();
+            SupportOfApplyLayerMask.Run();
         }
 
         /// <summary>
@@ -411,6 +412,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfCMYKColorMode16bit.Run();
             SupportOfObArAndUnFlSignatures.Run();
             SupportOfMeSaSignature.Run();
+            SupportOfAllowNonChangedLayerRepaint.Run();
         }
 
         /// <summary>
