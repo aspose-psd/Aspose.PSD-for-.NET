@@ -26,7 +26,7 @@ namespace Aspose.PSD.Examples.Aspose.Conversion
                 "replacedfont2.jpg"
             };
 
-            using (PsdImage image = (PsdImage)Image.Load(sourceFileName, new PsdLoadOptions()))
+            using (PsdImage image = (PsdImage)Image.Load(sourceFileName, new PsdLoadOptions() { AllowNonChangedLayerRepaint = true }))
             {
                 // This way you can use different fonts for different outputs 
                 image.Save(Path.Combine(outputFolder, outputs[0]), new TiffOptions(TiffExpectedFormat.TiffJpegRgb) { DefaultReplacementFont = "Arial" });
