@@ -90,8 +90,13 @@ namespace Aspose.PSD.Examples
         public static string GetDataDir_Data()
         {
             string currDir = Directory.GetCurrentDirectory();
+            string parentDir = currDir;
+
             int binDirIndex = currDir.LastIndexOf(Path.DirectorySeparatorChar + "bin" + Path.DirectorySeparatorChar);
-            string parentDir = currDir.Substring(0, binDirIndex);
+            if (binDirIndex >= 0)
+            {
+                parentDir = currDir.Substring(0, binDirIndex);
+            }
 
             string startDirectory = Directory.GetParent(parentDir).FullName;
 
