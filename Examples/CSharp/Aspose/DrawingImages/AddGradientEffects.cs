@@ -2,9 +2,8 @@
 using Aspose.PSD.FileFormats.Psd.Layers.FillSettings;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerEffects;
 using Aspose.PSD.ImageLoadOptions;
-using System;
 using Aspose.PSD.FileFormats.Core.Blending;
-using System.IO;
+using Aspose.PSD.FileFormats.Psd.Layers.Gradient;
 
 namespace Aspose.PSD.Examples.Aspose.DrawingImages
 {
@@ -43,7 +42,8 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                 AssertIsTrue(gradientOverlay.IsVisible == true);
 
                 var settings = (GradientFillSettings)gradientOverlay.Settings;
-                AssertIsTrue(settings.Color == Color.Empty);
+                var solidGradient = (SolidGradient)gradientOverlay.Settings.Gradient;
+                AssertIsTrue(Color.Empty == solidGradient.Color);
                 AssertIsTrue(settings.FillType == FillType.Gradient);
                 AssertIsTrue(settings.AlignWithLayer == true);
                 AssertIsTrue(settings.GradientType == GradientType.Linear);
@@ -54,7 +54,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                 AssertIsTrue(settings.Reverse == false);
 
                 // Color Points
-                var colorPoints = settings.ColorPoints;
+                var colorPoints = solidGradient.ColorPoints;
                 AssertIsTrue(colorPoints.Length == 3);
 
                 AssertIsTrue(colorPoints[0].Color == Color.FromArgb(9, 0, 178));
@@ -70,7 +70,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                 AssertIsTrue(colorPoints[2].MedianPointLocation == 50);
 
                 // Transparency points
-                var transparencyPoints = settings.TransparencyPoints;
+                var transparencyPoints = solidGradient.TransparencyPoints;
                 AssertIsTrue(transparencyPoints.Length == 2);
 
                 AssertIsTrue(transparencyPoints[0].Location == 0);
@@ -82,7 +82,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                 AssertIsTrue(transparencyPoints[1].Opacity == 100);
 
                 // Test editing
-                settings.Color = Color.Green;
+                solidGradient.Color = Color.Green;
 
                 gradientOverlay.Opacity = 193;
                 gradientOverlay.BlendMode = BlendMode.Lighten;
@@ -96,22 +96,22 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                 settings.Reverse = true;
 
                 // Add new color point
-                var colorPoint = settings.AddColorPoint();
+                var colorPoint = solidGradient.AddColorPoint();
                 colorPoint.Color = Color.Green;
                 colorPoint.Location = 4096;
                 colorPoint.MedianPointLocation = 75;
 
                 // Change location of previous point
-                settings.ColorPoints[2].Location = 3000;
+                solidGradient.ColorPoints[2].Location = 3000;
 
                 // Add new transparency point
-                var transparencyPoint = settings.AddTransparencyPoint();
+                var transparencyPoint = solidGradient.AddTransparencyPoint();
                 transparencyPoint.Opacity = 25;
                 transparencyPoint.MedianPointLocation = 25;
                 transparencyPoint.Location = 4096;
 
                 // Change location of previous transparency point
-                settings.TransparencyPoints[1].Location = 2315;
+                solidGradient.TransparencyPoints[1].Location = 2315;
                 im.Save(exportPath);
             }
 
@@ -126,46 +126,49 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                     AssertIsTrue(gradientOverlay.IsVisible == true);
 
                     var fillSettings = (GradientFillSettings)gradientOverlay.Settings;
-                    AssertIsTrue(fillSettings.Color == Color.Empty);
+                    var solidGradient = (SolidGradient)gradientOverlay.Settings.Gradient;
+
+                    AssertIsTrue(Color.Empty == solidGradient.Color);
+
                     AssertIsTrue(fillSettings.FillType == FillType.Gradient);
 
                     // Check color points
-                    AssertIsTrue(fillSettings.ColorPoints.Length == 4);
+                    AssertIsTrue(solidGradient.ColorPoints.Length == 4);
 
-                    var point = fillSettings.ColorPoints[0];
+                    var point = solidGradient.ColorPoints[0];
                     AssertIsTrue(point.MedianPointLocation == 50);
                     AssertIsTrue(point.Color == Color.FromArgb(9, 0, 178));
                     AssertIsTrue(point.Location == 0);
 
-                    point = fillSettings.ColorPoints[1];
+                    point = solidGradient.ColorPoints[1];
                     AssertIsTrue(point.MedianPointLocation == 50);
                     AssertIsTrue(point.Color == Color.Red);
                     AssertIsTrue(point.Location == 2048);
 
-                    point = fillSettings.ColorPoints[2];
+                    point = solidGradient.ColorPoints[2];
                     AssertIsTrue(point.MedianPointLocation == 50);
                     AssertIsTrue(point.Color == Color.FromArgb(255, 252, 0));
                     AssertIsTrue(point.Location == 3000);
 
-                    point = fillSettings.ColorPoints[3];
+                    point = solidGradient.ColorPoints[3];
                     AssertIsTrue(point.MedianPointLocation == 75);
                     AssertIsTrue(point.Color == Color.Green);
                     AssertIsTrue(point.Location == 4096);
 
                     // Check transparent points
-                    AssertIsTrue(fillSettings.TransparencyPoints.Length == 3);
+                    AssertIsTrue(solidGradient.TransparencyPoints.Length == 3);
 
-                    var transparencyPoint = fillSettings.TransparencyPoints[0];
+                    var transparencyPoint = solidGradient.TransparencyPoints[0];
                     AssertIsTrue(transparencyPoint.MedianPointLocation == 50);
                     AssertIsTrue(transparencyPoint.Opacity == 100.0);
                     AssertIsTrue(transparencyPoint.Location == 0);
 
-                    transparencyPoint = fillSettings.TransparencyPoints[1];
+                    transparencyPoint = solidGradient.TransparencyPoints[1];
                     AssertIsTrue(transparencyPoint.MedianPointLocation == 50);
                     AssertIsTrue(transparencyPoint.Opacity == 100.0);
                     AssertIsTrue(transparencyPoint.Location == 2315);
 
-                    transparencyPoint = fillSettings.TransparencyPoints[2];
+                    transparencyPoint = solidGradient.TransparencyPoints[2];
                     AssertIsTrue(transparencyPoint.MedianPointLocation == 25);
                     AssertIsTrue(transparencyPoint.Opacity == 25.0);
                     AssertIsTrue(transparencyPoint.Location == 4096);

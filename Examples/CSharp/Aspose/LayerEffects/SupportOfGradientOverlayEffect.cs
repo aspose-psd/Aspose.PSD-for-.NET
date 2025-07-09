@@ -3,9 +3,8 @@ using Aspose.PSD.FileFormats.Psd.Layers;
 using Aspose.PSD.FileFormats.Psd.Layers.FillSettings;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerEffects;
 using Aspose.PSD.ImageLoadOptions;
-using System;
-using System.IO;
 using Aspose.PSD.FileFormats.Core.Blending;
+using Aspose.PSD.FileFormats.Psd.Layers.Gradient;
 
 namespace Aspose.PSD.Examples.Aspose.LayerEffects
 {
@@ -53,9 +52,10 @@ namespace Aspose.PSD.Examples.Aspose.LayerEffects
 
                 // Gets GradientFillSettings object to configure gradient overlay settings.
                 GradientFillSettings settings = (GradientFillSettings)gradientOverlayEffect.Settings;
+                SolidGradient solidGradient = (SolidGradient)settings.Gradient;
 
                 // Setting a new gradient with two colors.
-                settings.ColorPoints = new IGradientColorPoint[]
+                solidGradient.ColorPoints = new IGradientColorPoint[]
                 {
                     new GradientColorPoint(Color.GreenYellow, 0, 50),
                     new GradientColorPoint(Color.BlueViolet, 4096, 50),
@@ -71,8 +71,8 @@ namespace Aspose.PSD.Examples.Aspose.LayerEffects
                 settings.GradientType = GradientType.Linear;
 
                 // Make the gradient opaque by setting the opacity to 100% at each transparency point.
-                settings.TransparencyPoints[0].Opacity = 100;
-                settings.TransparencyPoints[1].Opacity = 100;
+                solidGradient.TransparencyPoints[0].Opacity = 100;
+                solidGradient.TransparencyPoints[1].Opacity = 100;
 
                 psdImage.Save(outputFilePath);
             }
