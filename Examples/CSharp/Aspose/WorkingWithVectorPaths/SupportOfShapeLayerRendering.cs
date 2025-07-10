@@ -1,8 +1,7 @@
-using System;
-using System.IO;
 using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers;
 using Aspose.PSD.FileFormats.Psd.Layers.FillSettings;
+using Aspose.PSD.FileFormats.Psd.Layers.Gradient;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerResources.StrokeResources;
 using Aspose.PSD.ImageOptions;
 
@@ -33,17 +32,18 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
 
                 ShapeLayer shapeLayer2 = (ShapeLayer)image.Layers[3];
                 GradientFillSettings gradientSettings = (GradientFillSettings)shapeLayer2.Fill;
+                SolidGradient solidGradient = (SolidGradient)gradientSettings.Gradient;
                 gradientSettings.Dither = true;
                 gradientSettings.Reverse = true;
                 gradientSettings.AlignWithLayer = false;
                 gradientSettings.Angle = 20;
                 gradientSettings.Scale = 50;
-                gradientSettings.ColorPoints[0].Location = 100;
-                gradientSettings.ColorPoints[1].Location = 4000;
-                gradientSettings.TransparencyPoints[0].Location = 200;
-                gradientSettings.TransparencyPoints[1].Location = 3800;
-                gradientSettings.TransparencyPoints[0].Opacity = 90;
-                gradientSettings.TransparencyPoints[1].Opacity = 10;
+                solidGradient.ColorPoints[0].Location = 100;
+                solidGradient.ColorPoints[1].Location = 4000;
+                solidGradient.TransparencyPoints[0].Location = 200;
+                solidGradient.TransparencyPoints[1].Location = 3800;
+                solidGradient.TransparencyPoints[0].Opacity = 90;
+                solidGradient.TransparencyPoints[1].Opacity = 10;
                 shapeLayer2.Update();
 
                 ShapeLayer shapeLayer3 = (ShapeLayer)image.Layers[5];
@@ -66,17 +66,18 @@ namespace Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths
 
                 ShapeLayer shapeLayer2 = (ShapeLayer)image.Layers[3];
                 GradientFillSettings gradientSettings = (GradientFillSettings)shapeLayer2.Fill;
+                SolidGradient solidGradient = (SolidGradient)gradientSettings.Gradient;
                 AssertAreEqual(true, gradientSettings.Dither);
                 AssertAreEqual(true, gradientSettings.Reverse);
                 AssertAreEqual(false, gradientSettings.AlignWithLayer);
                 AssertAreEqual(20.0, gradientSettings.Angle);
                 AssertAreEqual(50, gradientSettings.Scale);
-                AssertAreEqual(100, gradientSettings.ColorPoints[0].Location);
-                AssertAreEqual(4000, gradientSettings.ColorPoints[1].Location);
-                AssertAreEqual(200, gradientSettings.TransparencyPoints[0].Location);
-                AssertAreEqual(3800, gradientSettings.TransparencyPoints[1].Location);
-                AssertAreEqual(90.0, gradientSettings.TransparencyPoints[0].Opacity);
-                AssertAreEqual(10.0, gradientSettings.TransparencyPoints[1].Opacity);
+                AssertAreEqual(100, solidGradient.ColorPoints[0].Location);
+                AssertAreEqual(4000, solidGradient.ColorPoints[1].Location);
+                AssertAreEqual(200, solidGradient.TransparencyPoints[0].Location);
+                AssertAreEqual(3800, solidGradient.TransparencyPoints[1].Location);
+                AssertAreEqual(90.0, solidGradient.TransparencyPoints[0].Opacity);
+                AssertAreEqual(10.0, solidGradient.TransparencyPoints[1].Opacity);
 
                 ShapeLayer shapeLayer3 = (ShapeLayer)image.Layers[5];
                 StrokeSettings strokeSettings = (StrokeSettings)shapeLayer3.Stroke;

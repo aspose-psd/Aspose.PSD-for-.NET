@@ -1,9 +1,6 @@
-using System;
-using System.IO;
 using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerEffects;
-using Aspose.PSD.FileFormats.Psd.Layers.LayerResources.Lfx2Resources;
 using Aspose.PSD.ImageOptions;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD

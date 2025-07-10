@@ -1,8 +1,6 @@
-using System;
-using System.IO;
 using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers.AdjustmentLayers;
-using Aspose.PSD.FileFormats.Psd.Layers.FillSettings;
+using Aspose.PSD.FileFormats.Psd.Layers.Gradient;
 
 namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 {
@@ -34,18 +32,13 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
             using (PsdImage im = (PsdImage)Image.Load(outputFile))
             {
                 GradientMapLayer gradientMapLayer = im.Layers[1] as GradientMapLayer;
-                GradientFillSettings gradientSettings = (GradientFillSettings)gradientMapLayer.GradientSettings;
+                var gradientSettings = gradientMapLayer.GradientSettings;
+                SolidGradient solidGradient = (SolidGradient)gradientSettings.Gradient;
 
-                AssertAreEqual(90.0, gradientSettings.Angle);
-                AssertAreEqual((short)4096, gradientSettings.Interpolation);
+                AssertAreEqual((short)4096, solidGradient.Interpolation);
                 AssertAreEqual(true, gradientSettings.Reverse);
-                AssertAreEqual(true, gradientSettings.AlignWithLayer);
                 AssertAreEqual(false, gradientSettings.Dither);
-                AssertAreEqual(GradientType.Linear, gradientSettings.GradientType);
-                AssertAreEqual(100, gradientSettings.Scale);
-                AssertAreEqual(0.0, gradientSettings.HorizontalOffset);
-                AssertAreEqual(0.0, gradientSettings.VerticalOffset);
-                AssertAreEqual("Custom", gradientSettings.GradientName);
+                AssertAreEqual("Custom", solidGradient.GradientName);
             }
 
             void AssertAreEqual(object expected, object actual, string message = null)
