@@ -1,3 +1,5 @@
+using System;
+using System.IO;
 using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers;
 using Aspose.PSD.FileFormats.Psd.Layers.FillSettings;

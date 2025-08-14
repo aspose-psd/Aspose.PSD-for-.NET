@@ -1,4 +1,5 @@
 ﻿
+using System;
 using Aspose.PSD.Examples.Aspose.Ai;
 using Aspose.PSD.Examples.Aspose.Conversion;
 using Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages;

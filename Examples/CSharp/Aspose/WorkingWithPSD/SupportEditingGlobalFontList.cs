@@ -1,4 +1,6 @@
-﻿using Aspose.PSD.FileFormats.Png;
+﻿using System;
+using System.IO;
+using Aspose.PSD.FileFormats.Png;
 using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.ImageLoadOptions;
 using Aspose.PSD.ImageOptions;

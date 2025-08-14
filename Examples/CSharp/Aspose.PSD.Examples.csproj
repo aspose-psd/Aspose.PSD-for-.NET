@@ -288,6 +288,7 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\TIFF\TIFFwithDeflateCompression.cs" />
     <Compile Include="Aspose\Opening\LoadingImageFromStream.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\GetPropertiesOfInlineFormattingOfTextLayer.cs" />
+    <Compile Include="Aspose\Opening\SupportOfAllowNonChangedLayerRepaint.cs" />
     <Compile Include="Aspose\SmartFilters\DirectlyApplySmartFilter.cs" />
     <Compile Include="Aspose\SmartFilters\ManipulatingSmartFiltersInSmartObjects.cs" />
     <Compile Include="Aspose\SmartFilters\SupportAccessToSmartFilters.cs" />
@@ -311,6 +312,7 @@
     <Compile Include="Aspose\WorkingWithPSD\GettingUniqueHashForSimilarLayers.cs" />
     <Compile Include="Aspose\WorkingWithPSD\LayerGroupIsOpenSupport.cs" />
     <Compile Include="Aspose\WorkingWithPSD\SupportEditingGlobalFontList.cs" />
+    <Compile Include="Aspose\WorkingWithPSD\SupportOfApplyLayerMask.cs" />
     <Compile Include="Aspose\WorkingWithPSD\SupportOfArtboardLayer.cs" />
     <Compile Include="Aspose\WorkingWithPSD\SupportOfPassThroughBlendingMode.cs" />
     <Compile Include="Aspose\WorkingWithPSD\SupportOfSectionDividerLayer.cs" />
