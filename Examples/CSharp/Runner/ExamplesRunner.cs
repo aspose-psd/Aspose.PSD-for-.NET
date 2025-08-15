@@ -1,4 +1,5 @@
 ﻿
+using System;
 using Aspose.PSD.Examples.Aspose.Ai;
 using Aspose.PSD.Examples.Aspose.Conversion;
 using Aspose.PSD.Examples.Aspose.DrawingAndFormattingImages;
@@ -16,6 +17,7 @@ using Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.TIFF;
 using Aspose.PSD.Examples.Aspose.Opening;
 using Aspose.PSD.Examples.Aspose.WorkingWithPSD;
 using Aspose.PSD.Examples.Aspose.Animation;
+using Aspose.PSD.Examples.Aspose.LayerResources.Structures;
 using Aspose.PSD.Examples.Aspose.SmartObjects;
 using Aspose.PSD.Examples.Aspose.WorkingWithVectorPaths;
 using Aspose.PSD.Examples.Aspose.SmartFilters;
@@ -590,6 +592,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfLMskResource.Run();
             SupportOfArtBResourceArtDResourceLyvrResource.Run();
             SupportForImfxResource.Run();
+            SupportOfNameStructure.Run();
         }
 
         /// <summary>

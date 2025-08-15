@@ -1,3 +1,5 @@
+using System;
+using System.IO;
 using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers.AdjustmentLayers;
 using Aspose.PSD.FileFormats.Psd.Layers.Gradient;

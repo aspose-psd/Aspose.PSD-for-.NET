@@ -111,6 +111,7 @@
     <Compile Include="Aspose\LayerEffects\RenderingOfGradientOverlayEffect.cs" />
     <Compile Include="Aspose\LayerEffects\SupportOfGradientOverlayEffect.cs" />
     <Compile Include="Aspose\LayerEffects\SupportOfGradientPropery.cs" />
+    <Compile Include="Aspose\LayerResources\Structures\SupportOfNameStructure.cs" />
     <Compile Include="Aspose\LayerResources\SupportForImfxResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfArtBResourceArtDResourceLyvrResource.cs" />
     <Compile Include="Aspose\LayerResources\SupportOfFXidResource.cs" />
@@ -288,6 +289,7 @@
     <Compile Include="Aspose\ModifyingAndConvertingImages\TIFF\TIFFwithDeflateCompression.cs" />
     <Compile Include="Aspose\Opening\LoadingImageFromStream.cs" />
     <Compile Include="Aspose\ModifyingAndConvertingImages\PSD\GetPropertiesOfInlineFormattingOfTextLayer.cs" />
+    <Compile Include="Aspose\Opening\SupportOfAllowNonChangedLayerRepaint.cs" />
     <Compile Include="Aspose\SmartFilters\DirectlyApplySmartFilter.cs" />
     <Compile Include="Aspose\SmartFilters\ManipulatingSmartFiltersInSmartObjects.cs" />
     <Compile Include="Aspose\SmartFilters\SupportAccessToSmartFilters.cs" />
@@ -311,6 +313,7 @@
     <Compile Include="Aspose\WorkingWithPSD\GettingUniqueHashForSimilarLayers.cs" />
     <Compile Include="Aspose\WorkingWithPSD\LayerGroupIsOpenSupport.cs" />
     <Compile Include="Aspose\WorkingWithPSD\SupportEditingGlobalFontList.cs" />
+    <Compile Include="Aspose\WorkingWithPSD\SupportOfApplyLayerMask.cs" />
     <Compile Include="Aspose\WorkingWithPSD\SupportOfArtboardLayer.cs" />
     <Compile Include="Aspose\WorkingWithPSD\SupportOfPassThroughBlendingMode.cs" />
     <Compile Include="Aspose\WorkingWithPSD\SupportOfSectionDividerLayer.cs" />
@@ -336,7 +339,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Aspose.PSD">
-      <Version>25.7.0</Version>
+      <Version>25.8.0</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
