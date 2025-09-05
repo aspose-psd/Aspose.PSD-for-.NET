@@ -701,6 +701,7 @@ namespace Aspose.PSD.Examples.Runner
             LoadPSDWithReadOnlyMode.Run();
             CreatingbySettingPath.Run();
             UsingDocumentConversionProgressHandler.Run();
+            EditMetadataInReadonlyMode.Run();
         }
         
         /// <summary>
