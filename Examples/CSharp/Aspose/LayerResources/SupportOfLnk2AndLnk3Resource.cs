@@ -1,6 +1,4 @@
-﻿using System;
-using System.IO;
-using Aspose.PSD.FileFormats.Psd;
+﻿using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers.LayerResources;
 using Aspose.PSD.ImageOptions;
 
@@ -26,84 +24,84 @@ namespace Aspose.PSD.Examples.Aspose.LayerResources
 
             object[] Lnk2ResourceSupportCases = new object[]
             {
-            new object[]
-            {
-                "00af34a0-a90b-674d-a821-73ee508c5479",
-                "rgb8_2x2.png",
-                "png",
-                string.Empty,
-                0x53,
-                0d,
-                string.Empty,
-                7,
-                true,
-                0x124L,
-                0x74cL
-            }
+                new object[]
+                {
+                    "00af34a0-a90b-674d-a821-73ee508c5479",
+                    "rgb8_2x2.png",
+                    "png",
+                    string.Empty,
+                    0x53,
+                    0d,
+                    string.Empty,
+                    7,
+                    true,
+                    0x124L,
+                    0x74cL
+                }
             };
 
             object[] LayeredLnk2ResourceSupportCases = new object[]
             {
-            new object[]
-            {
-                "69ac1c0d-1b74-fd49-9c7e-34a7aa6299ef",
-                "huset.jpg",
-                "JPEG",
-                string.Empty,
-                0x9d46,
-                0d,
-                "xmp.did:0F94B342065B11E395B1FD506DED6B07",
-                7,
-                true,
-                0x9E60L,
-                0xc60cL
-            },
-            new object[]
-            {
-                "5a7d1965-0eae-b24e-a82f-98c7646424c2",
-                "panama-papers.jpg",
-                "JPEG",
-                string.Empty,
-                0xF56B,
-                0d,
-                "xmp.did:BDE940CBF51B11E59D759CDA690663E3",
-                7,
-                true,
-                0xF694L,
-                0x10dd4L
-            },
+                new object[]
+                {
+                    "69ac1c0d-1b74-fd49-9c7e-34a7aa6299ef",
+                    "huset.jpg",
+                    "JPEG",
+                    string.Empty,
+                    0x9d46,
+                    0d,
+                    "xmp.did:0F94B342065B11E395B1FD506DED6B07",
+                    7,
+                    true,
+                    0x9E60L,
+                    0xc60cL
+                },
+                new object[]
+                {
+                    "5a7d1965-0eae-b24e-a82f-98c7646424c2",
+                    "panama-papers.jpg",
+                    "JPEG",
+                    string.Empty,
+                    0xF56B,
+                    0d,
+                    "xmp.did:BDE940CBF51B11E59D759CDA690663E3",
+                    7,
+                    true,
+                    0xF694L,
+                    0x10dd4L
+                },
             };
 
             object[] LayeredLnk3ResourceSupportCases = new object[]
             {
-            new object[]
-            {
-                "2fd7ba52-0221-de4c-bdc4-1210580c6caa",
-                "panama-papers.jpg",
-                "JPEG",
-                string.Empty,
-                0xF56B,
-                0d,
-                "xmp.did:BDE940CBF51B11E59D759CDA690663E3",
-                7,
-                true,
-                0xF694L,
-                0x10dd4L
-            },
-            new object[]
-            {
-                "372d52eb-5825-8743-81a7-b6f32d51323d",
-                "huset.jpg",
-                "JPEG",
-                string.Empty,
-                0x9d46,
-                0d,
-                "xmp.did:0F94B342065B11E395B1FD506DED6B07",
-                7,
-                true,
-                0x9E60L,
-                0xc60cL
-            },
+                new object[]
+                {
+                    "2fd7ba52-0221-de4c-bdc4-1210580c6caa",
+                    "panama-papers.jpg",
+                    "JPEG",
+                    string.Empty,
+                    0xF56B,
+                    0d,
+                    "xmp.did:BDE940CBF51B11E59D759CDA690663E3",
+                    7,
+                    true,
+                    0xF694L,
+                    0x10dd4L
+                },
+                new object[]
+                {
+                    "372d52eb-5825-8743-81a7-b6f32d51323d",
+                    "huset.jpg",
+                    "JPEG",
+                    string.Empty,
+                    0x9d46,
+                    0d,
+                    "xmp.did:0F94B342065B11E395B1FD506DED6B07",
+                    7,
+                    true,
+                    0x9E60L,
+                    0xc60cL
+                },
             };
 
             var basePath = Path.Combine(baseFolder, "") + Path.DirectorySeparatorChar;

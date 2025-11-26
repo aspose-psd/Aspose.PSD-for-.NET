@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
 using Aspose.PSD.FileFormats.Png;
 using Aspose.PSD.FileFormats.Psd;
 using Aspose.PSD.FileFormats.Psd.Layers.SmartObjects;
@@ -10,7 +7,7 @@ using Aspose.PSD.ImageOptions;
 
 namespace Aspose.PSD.Examples.Aspose.SmartObjects
 {
-    public class SupportOfProcessingAreaProperty
+    public class SupportOfRenderQualityProperty
     {
         public static void Run()
         {
@@ -18,15 +15,15 @@ namespace Aspose.PSD.Examples.Aspose.SmartObjects
             string baseDir = RunExamples.GetDataDir_PSD();
             string outputDir = RunExamples.GetDataDir_Output();
 
-            //ExStart:SupportOfProcessingAreaProperty
-            //ExSummary:The following code demonstrates WarpSettings.ProcessingArea property to configure warp deformation.
+            //ExStart:SupportOfRenderQualityProperty
+            //ExSummary:The following code demonstrates WarpSettings.RenderQuality property to configure warp deformation.
 
             string sourceFile = Path.Combine(baseDir, "Warping.psd");
             List<string> outputFiles = new List<string>();
 
             PsdLoadOptions loadOptions = new PsdLoadOptions() { LoadEffectsResource = true, AllowWarpRepaint = true };
 
-            int[] areaValues = { 5, 10, 25, 40 };
+            RenderQuality[] qualityValues = { RenderQuality.Turbo, RenderQuality.Fast, RenderQuality.Normal, RenderQuality.Excellent };
 
             for (int i = 0; i < 4; i++)
             {
@@ -36,10 +33,10 @@ namespace Aspose.PSD.Examples.Aspose.SmartObjects
                     WarpSettings warpSettings = ((SmartObjectLayer)psdImage.Layers[1]).WarpSettings;
 
                     // It sets size of warp processing area
-                    warpSettings.ProcessingArea = areaValues[i];
+                    warpSettings.RenderQuality = qualityValues[i];
                     ((SmartObjectLayer)psdImage.Layers[1]).WarpSettings = warpSettings;
 
-                    string outputFile = Path.Combine(outputDir, "export" + areaValues[i] + ".png");
+                    string outputFile = Path.Combine(outputDir, "export" + qualityValues[i].ToString() + ".png");
                     outputFiles.Add(outputFile);
 
                     // There should no error here
@@ -47,14 +44,14 @@ namespace Aspose.PSD.Examples.Aspose.SmartObjects
                 }
             }
 
-            //ExEnd:SupportOfProcessingAreaProperty
+            //ExEnd:SupportOfRenderQualityProperty
 
             foreach (string outputFile in outputFiles)
             {
                 File.Delete(outputFile);
             }
 
-            Console.WriteLine("SupportOfProcessingAreaProperty executed successfully");
+            Console.WriteLine("SupportOfRenderQualityProperty executed successfully");
         }
     }
 }

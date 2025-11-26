@@ -509,7 +509,8 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfWarpTransformationToSmartObject.Run();
             SupportOfExportContentsFromSmartObject.Run();
             WarpSettingsForSmartObjectLayerAndTextLayer.Run();
-            SupportOfProcessingAreaProperty.Run();
+            SupportOfRenderQualityProperty.Run();
+            SupportOfGridSizeProperty.Run();
         }
 
         private static void RunSmartFiltersExamples()
