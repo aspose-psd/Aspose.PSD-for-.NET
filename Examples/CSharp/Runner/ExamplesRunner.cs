@@ -594,6 +594,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfArtBResourceArtDResourceLyvrResource.Run();
             SupportForImfxResource.Run();
             SupportOfNameStructure.Run();
+            SupportOfLsdkResource.Run();
         }
 
         /// <summary>
