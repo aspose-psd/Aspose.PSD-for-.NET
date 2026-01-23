@@ -595,6 +595,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportForImfxResource.Run();
             SupportOfNameStructure.Run();
             SupportOfLsdkResource.Run();
+            SupportOfBaseLayerSectionResource.Run();
         }
 
         /// <summary>
