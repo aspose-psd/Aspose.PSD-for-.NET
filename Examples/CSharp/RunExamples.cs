@@ -1,4 +1,5 @@
 using System;
+using Aspose.PSD.Examples.Aspose.LayerResources;
 using Aspose.PSD.Examples.Runner;
 
 namespace Aspose.PSD.Examples
