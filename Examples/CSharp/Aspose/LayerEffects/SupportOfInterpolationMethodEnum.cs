@@ -1,8 +1,7 @@
 using Aspose.PSD.FileFormats.Png;
 using Aspose.PSD.FileFormats.Psd;
-using Aspose.PSD.FileFormats.Psd.Layers.FillLayers;
 using Aspose.PSD.FileFormats.Psd.Layers.FillSettings;
-using Aspose.PSD.FileFormats.Psd.Layers.LayerResources;
+using Aspose.PSD.FileFormats.Psd.Layers.LayerEffects;
 using Aspose.PSD.ImageLoadOptions;
 using Aspose.PSD.ImageOptions;
 
@@ -19,44 +18,41 @@ namespace Aspose.PSD.Examples.Aspose.LayerResources
             //ExStart:SupportOfInterpolationMethodEnum
             //ExSummary:The following code demonstrates the support of gradient rendering with Smooth method.
             
-            string sourceFile = Path.Combine(baseDir, "Fill_Layer.psd");
-            string outputFile = Path.Combine(outputDir, "output_Fill_Layer.psd");
-            string outputFilePng = Path.Combine(outputDir, "output_Fill_Layer.png");
-            
+            string sourceFile = Path.Combine(baseDir, "2701_GradientOverlay.psd");
+            string outputFile = Path.Combine(outputDir, "output_GradientOverlay.psd");
+            string outputFilePng = Path.Combine(outputDir, "output_GradientOverlay.png");
+
             var srcMethod = InterpolationMethod.Linear;
-            var newMethod = InterpolationMethod.Classic;
-            
+            var newMethod = InterpolationMethod.Smooth;
+
             var opt = new PsdLoadOptions()
             {
                 LoadEffectsResource = true,
             };
-            
+
             using (var image = (PsdImage)Image.Load(sourceFile, opt))
             {
                 // Read
-                var fillLayer = image.Layers[1] as FillLayer;
-                var gradientSettings = fillLayer.FillSettings as GradientFillSettings;
+                var effect = image.Layers[1].BlendingOptions.Effects[0] as GradientOverlayEffect;
+                var gradientSettings = effect.Settings;
                 AssertAreEqual(srcMethod, gradientSettings.InterpolationMethod);
-            
+
                 // Change
                 gradientSettings.InterpolationMethod = newMethod;
-                fillLayer.Update();
-            
+
                 image.Save(outputFile);
                 image.Save(outputFilePng, new PngOptions() { ColorType = PngColorType.TruecolorWithAlpha });
             }
-            
+
             // Check saved data
             using (var image = (PsdImage)Image.Load(outputFile, opt))
             {
-                var fillLayer = image.Layers[1] as FillLayer;
-                var gradientSettings = fillLayer.FillSettings as GradientFillSettings;
-                var gdflResource = fillLayer.Resources[0] as GdFlResource;
-            
+                var effect = image.Layers[1].BlendingOptions.Effects[0] as GradientOverlayEffect;
+                var gradientSettings = effect.Settings;
+
                 AssertAreEqual(newMethod, gradientSettings.InterpolationMethod);
-                AssertAreEqual(newMethod, gdflResource.InterpolationMethod);
             }
-            
+
             void AssertAreEqual(object expected, object actual, string message = null)
             {
                 if (!object.Equals(expected, actual))
