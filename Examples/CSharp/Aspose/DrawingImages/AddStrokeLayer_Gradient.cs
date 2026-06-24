@@ -5,6 +5,7 @@ using Aspose.PSD.FileFormats.Psd.Layers.LayerEffects;
 using Aspose.PSD.ImageLoadOptions;
 using Aspose.PSD.FileFormats.Core.Blending;
 using Aspose.PSD.FileFormats.Psd.Layers.Gradient;
+using Aspose.PSD.FileFormats.Psd.Core.RawColor;
 
 namespace Aspose.PSD.Examples.Aspose.DrawingImages
 {
@@ -58,11 +59,11 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                 
                 AssertIsTrue(colorPoints.Length == 2);
 
-                AssertIsTrue(colorPoints[0].Color == Color.Black);
+                AssertIsTrue(colorPoints[0].RawColor == RawColorHelper.CreateArgb8BitColor(Color.Black));
                 AssertIsTrue(colorPoints[0].Location == 0);
                 AssertIsTrue(colorPoints[0].MedianPointLocation == 50);
 
-                AssertIsTrue(colorPoints[1].Color == Color.White);
+                AssertIsTrue(colorPoints[1].RawColor == RawColorHelper.CreateArgb8BitColor(Color.White));
                 AssertIsTrue(colorPoints[1].Location == 4096);
                 AssertIsTrue(colorPoints[1].MedianPointLocation == 50);
 
@@ -92,7 +93,7 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
 
                 // Add new color point
                 var colorPoint = solidGradient.AddColorPoint();
-                colorPoint.Color = Color.Green;
+                colorPoint.RawColor = RawColorHelper.CreateArgb8BitColor(Color.Green);
                 colorPoint.Location = 4096;
                 colorPoint.MedianPointLocation = 75;
 
@@ -135,17 +136,17 @@ namespace Aspose.PSD.Examples.Aspose.DrawingImages
                 var point = solidGradient.ColorPoints[0];
 
                 AssertIsTrue(point.MedianPointLocation == 50);
-                AssertIsTrue(point.Color == Color.Black);
+                AssertIsTrue(point.RawColor == RawColorHelper.CreateArgb8BitColor(Color.Black));
                 AssertIsTrue(point.Location == 0);
 
                 point = solidGradient.ColorPoints[1];
                 AssertIsTrue(point.MedianPointLocation == 50);
-                AssertIsTrue(point.Color == Color.White);
+                AssertIsTrue(point.RawColor == RawColorHelper.CreateArgb8BitColor(Color.White));
                 AssertIsTrue(point.Location == 1899);
 
                 point = solidGradient.ColorPoints[2];
                 AssertIsTrue(point.MedianPointLocation == 75);
-                AssertIsTrue(point.Color == Color.Green);
+                AssertIsTrue(point.RawColor == RawColorHelper.CreateArgb8BitColor(Color.Green));
                 AssertIsTrue(point.Location == 4096);
 
                 // Check transparent points

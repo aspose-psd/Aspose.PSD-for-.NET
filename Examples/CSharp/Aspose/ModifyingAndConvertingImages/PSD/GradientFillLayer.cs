@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Aspose.PSD.FileFormats.Psd;
+using Aspose.PSD.FileFormats.Psd.Core.RawColor;
 using Aspose.PSD.FileFormats.Psd.Layers;
 using Aspose.PSD.FileFormats.Psd.Layers.FillLayers;
 using Aspose.PSD.FileFormats.Psd.Layers.FillSettings;
@@ -47,7 +48,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
                          Math.Abs(100.0 - solidGradient.TransparencyPoints[0].Opacity) > 0.25 ||
                          solidGradient.TransparencyPoints[0].Location != 0 ||
                          solidGradient.TransparencyPoints[0].MedianPointLocation != 50 ||
-                         solidGradient.ColorPoints[0].Color != Color.FromArgb(203, 64, 140) ||
+                         solidGradient.ColorPoints[0].RawColor != RawColorHelper.CreateArgb8BitColor(255, 203, 64, 140) ||
                          solidGradient.ColorPoints[0].Location != 0 ||
                          solidGradient.ColorPoints[0].MedianPointLocation != 50)
                         {
@@ -66,7 +67,7 @@ namespace Aspose.PSD.Examples.Aspose.ModifyingAndConvertingImages.PSD
 
                         colorPoints.Add(new GradientColorPoint()
                         {
-                            Color = Color.Violet,
+                            RawColor = RawColorHelper.CreateArgb8BitColor(Color.Violet),
                             Location = 4096,
                             MedianPointLocation = 75
                         });

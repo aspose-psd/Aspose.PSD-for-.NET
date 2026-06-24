@@ -590,6 +590,7 @@ namespace Aspose.PSD.Examples.Runner
             SupportOfVscgResource.Run();
             SupportOfPostResource.Run();
             SupportOfGrdmResource.Run();
+            SupportOfGrdmResourcePsdVersionProperty.Run();
             SupportOfLMskResource.Run();
             SupportOfArtBResourceArtDResourceLyvrResource.Run();
             SupportForImfxResource.Run();
@@ -643,6 +644,7 @@ namespace Aspose.PSD.Examples.Runner
             AddWatermark.Run();
             AddDiagnolWatermark.Run();
             RawColorClass.Run();
+            RawColorHelperClass.Run();
 
             CombiningImages.Run();
             ExpandandCropImages.Run();
