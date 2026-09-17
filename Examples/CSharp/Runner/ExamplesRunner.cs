@@ -524,6 +524,7 @@ namespace Aspose.PSD.Examples.Runner
             DirectlyApplySmartFilter.Run();
             ManipulatingSmartFiltersInSmartObjects.Run();
             SupportDisplaceSmartFilter.Run();
+            SupportEmbossSmartFilter.Run();
         }
 
         private static void RunTextLayersExamples()
