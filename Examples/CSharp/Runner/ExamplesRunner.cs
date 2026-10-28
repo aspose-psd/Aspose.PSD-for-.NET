@@ -471,6 +471,7 @@ namespace Aspose.PSD.Examples.Runner
             AddPatternEffects.Run();
             SupportOfInnerShadowLayerEffect.Run();
             RenderingDropShadow.Run();
+            SupportOfBevelEmbossEffect.Run();
 
             RenderingColorEffect.Run();
             AddEffectAtRunTime.Run();
